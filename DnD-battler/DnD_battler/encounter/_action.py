@@ -1,6 +1,8 @@
 from ._base import EncounterBase
 from ..creature import Creature
 from ..victory import Victory
+from ..dice.ranks import dict_faserip
+print("BATTLE:", dict_faserip)
 import math
 N = "\n"
 
@@ -41,7 +43,7 @@ class EncounterAction(EncounterBase):
                      'blue-green',
                      'fuchsia',
                      'purple',
-                     'cream',
+                     'cream'
                      'grey']
         for schmuck in self:
             schmuck.alignment = colours.pop(0) + " team"
@@ -92,16 +94,21 @@ class EncounterAction(EncounterBase):
                     round(safediv(rate[b], (rate[a] + rate[b]) * 100))) + '%' + N)
 
     def battle(self, reset=1, verbose=1):
+        print("in battle")
         if verbose: self.masterlog.append('==NEW BATTLE==')
         self.tally['battles'] += 1
+        print("reset",reset)
+		
         if reset: self.reset()
         for schmuck in self: schmuck.tally['battles'] += 1
+        for schmuck in self: print(schmuck.name)
         self.roll_for_initiative(self.masterlog)
         while True:
             try:
                 if verbose: self.masterlog.append('**NEW ROUND**')
                 self.tally['rounds'] += 1
                 for character in self:
+                    print("ready",self.name)
                     character.ready()
                     if character.isalive():
                         self.active = character
