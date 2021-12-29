@@ -24,6 +24,16 @@ class CreatueInitAble(CreatureBase):
             print("SABSCOREBONUS:", score, bonus)			            
             self.set_ability_die(ability_name=ab, score=score, bonus=bonus)
 			
+        self.karma = dict_faserip[self.rrank] + dict_faserip[self.irank] + dict_faserip[self.prank]
+        self.stated_hp = dict_faserip[self.frank] + dict_faserip[self.arank] + dict_faserip[self.srank] + dict_faserip[self.prank]
+		
+        self.initiative.modifier = int(dict_faserip[self.irank] / 10)
+        if dict_faserip[self.irank] > 50:
+            self.initiative.modifier = 5
+        if dict_faserip[self.irank] > 50:
+            self.initiative.modifier = 6
+        print("HEALTH",self.stated_hp, "KARMA:", self.karma, "INIT:", self.initiative.modifier)
+			
 
     def set_ability_die(self, ability_name: str, score: Optional[int] = None, bonus: Optional[int] = None):
     #def set_ability_die(self, ability_name: f, score: Optional[int] = None, bonus: Optional[int] = None):
@@ -113,9 +123,7 @@ class CreatueInitAble(CreatureBase):
             else:
                 ability_bonuses[ability_name] = int(bonus)
         # ------- done -------------------------------------------------------------------------------------------------
-        return dict(abilities=abilities,
-                    ability_bonuses=ability_bonuses)
-
+        return dict(abilities=abilities, ability_bonuses=ability_bonuses)
     #
     # def change_attribute(self, **abilities):
     #     """
