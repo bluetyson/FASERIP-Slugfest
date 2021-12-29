@@ -43,6 +43,11 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
                 self[key] = settings[key]				
         # -------------- set complex values ----------------------------------------------------------------------------
         # abilities
+        if 'stated_ac' in settings:
+            self.armour_name = settings['stated_ac']
+        else:
+            self.armour_name = "Sh0"
+		
         self.set_ability_dice(**settings)
         # arena
         if 'arena' in settings:
@@ -73,3 +78,5 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
         # attacks
         if 'attack_parameters' in settings or 'attacks' in settings:
             self.attacks = self.parse_attacks(**settings)
+			
+			

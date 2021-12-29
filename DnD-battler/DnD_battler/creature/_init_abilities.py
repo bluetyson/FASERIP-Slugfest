@@ -38,7 +38,7 @@ class CreatueInitAble(CreatureBase):
 		#add slugfest attack
 		#add ranged attack
 		
-        print("HEALTH",self.stated_hp, "KARMA:", self.karma, "INIT:", self.initiative.modifier, "SLUGFESTD:",dict_faserip[self.srank])
+        print("HEALTH",self.stated_hp, "KARMA:", self.karma, "INIT:", self.initiative.modifier, "SLUGFESTD:",dict_faserip[self.srank], "BA:",self.armour_name)
 			
 
     def set_ability_die(self, ability_name: str, score: Optional[int] = None, bonus: Optional[int] = None):
