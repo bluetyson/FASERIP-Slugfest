@@ -14,7 +14,7 @@ class AbilityDie(Dice):
         :param bonus:
         :param proficieny:
         """
-        #super().__init__(num_faces=100,
+        #super().__init__(num_faces=20,
         super().__init__(num_faces=100,
                          bonus=bonus)
         self.temp_modifier = 0

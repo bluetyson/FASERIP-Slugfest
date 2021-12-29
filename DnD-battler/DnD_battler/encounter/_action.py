@@ -50,8 +50,12 @@ class EncounterAction(EncounterBase):
         return self
 
     def roll_for_initiative(self, verbose=0):
-        self.combattants = sorted(self.combattants, key=lambda fighter: fighter.initiative.roll(), reverse=True)
+        #self.combattants = sorted(self.combattants, key=lambda fighter: fighter.initiative.roll(), reverse=True)  #need a d10 initiative roll
+        self.combattants = sorted(self.combattants, key=lambda fighter: fighter.initiative.roll_initiative(), reverse=True)  #need a d10 initiative roll
+		
+        #print(self.combattants)
         self.log.debug(f"Turn order: {[x.name for x in self]}")
+        print(f"Turn order: {[x.name for x in self]}")
 
     def predict(self):
         def safediv(a, b, default=0):
@@ -116,6 +120,7 @@ class EncounterAction(EncounterBase):
                         character.act(self.masterlog)
                     else:
                         character.tally['dead'] += 1
+                break #got to take this one out
             except Victory:
                 break
         # closing up maths

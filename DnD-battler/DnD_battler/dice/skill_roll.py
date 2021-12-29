@@ -25,6 +25,10 @@ class SkillRoll:
 
     def roll(self, advantage:Optional[int]=None) -> int:
         return self.base_roll(advantage=advantage) + self.bonuses
+		
+    def roll_initiative(self, advantage:Optional[int]=None) -> int:
+        print("INIT ROLL", int(self.ability_die.base_roll(advantage=advantage)/10) + 1)
+        return int(self.ability_die.base_roll(advantage=advantage)/10) + 1
 
     @property
     def bonuses(self):

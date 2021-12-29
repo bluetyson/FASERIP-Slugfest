@@ -2,7 +2,7 @@
 
 from ._base import CreatureBase
 from ..dice.ability_die import AbilityDie
-from ..dice import Dice, AttackRoll
+from ..dice import Dice, AttackRoll, SkillRoll
 from typing import *
 from ..dice.ranks import dict_faserip
 print(dict_faserip)
@@ -27,6 +27,7 @@ class CreatueInitAble(CreatureBase):
 			
         self.karma = dict_faserip[self.rrank] + dict_faserip[self.irank] + dict_faserip[self.prank]
         self.stated_hp = dict_faserip[self.frank] + dict_faserip[self.arank] + dict_faserip[self.srank] + dict_faserip[self.prank]
+        self.hp = self.stated_hp
 		
         self.initiative.modifier = int(dict_faserip[self.irank] / 10)
         if dict_faserip[self.irank] > 50:
@@ -35,10 +36,11 @@ class CreatueInitAble(CreatureBase):
             self.initiative.modifier = 6
 		#add slugfest attack
         self.attacks = [AttackRoll(name='slugfest', ability_die=self.f, damage_dice=Dice(1,0), modifier=dict_faserip[self.srank])]
+        #self.initiative = SkillRoll(Dice(10,0), modifier=self.initiative.modifier, success_on_crit=False)
 		#add slugfest attack
 		#add ranged attack
 		
-        print("HEALTH",self.stated_hp, "KARMA:", self.karma, "INIT:", self.initiative.modifier, "SLUGFESTD:",dict_faserip[self.srank], "BA:",self.armour_name)
+        print("HEALTH",self.stated_hp, self.hp, "KARMA:", self.karma, "INIT:", self.initiative.modifier, "SLUGFESTD:",dict_faserip[self.srank], "BA:",self.armour_name)
 			
 
     def set_ability_die(self, ability_name: str, score: Optional[int] = None, bonus: Optional[int] = None):
