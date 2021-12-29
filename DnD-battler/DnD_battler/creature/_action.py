@@ -95,6 +95,7 @@ class CreatureAction(CreatureAdvBase):
             self.healing_spells -= 1
 
     def multiattack(self, verbose=0, assess=0):
+        print("multiattacking")
         if assess:
             return 0  # the default
         for i in range(len(self.attacks)):
@@ -104,6 +105,7 @@ class CreatureAction(CreatureAdvBase):
                 raise Victory()
             self.log.debug(f"{self.name} attacks {opponent.name} with {self.attacks[i].name}")
             # This was the hit method. put here for now.
+            # THE IMPORTANT PART TO WRITE, UNIVERSAL TABLE TIME!
             damage = self.attacks[i].attack(opponent.armor.ac, advantage=self.check_advantage(opponent))
             if damage > 0:
                 opponent.take_damage(damage, verbose)
@@ -133,6 +135,8 @@ class CreatureAction(CreatureAdvBase):
     def act(self, verbose=0):
         if not self.arena.find('alive enemy'):
             raise Victory()
+			
+        print("ALIVE", self.arena.find('alive enemy'))
         # BONUS ACTION
         # heal  -healing word, a bonus action.
         if self.healing_spells > 0:
@@ -141,6 +145,8 @@ class CreatureAction(CreatureAdvBase):
                 self.cast_healing(weakling, verbose)
         # Main action!
         economy = len(self.arena.find('allies')) > len(self.arena.find('opponents')) > 0
+        print("ECONOMY", economy)
+        print("condition", self.condition)
         # Buff?
         if self.condition == 'netted':
             # NOT-RAW: DC10 strength check or something equally easy for monsters
@@ -157,7 +163,7 @@ class CreatureAction(CreatureAdvBase):
                 print(self.name + " is dodging")
             self.dodge = 1
         elif economy and self.alt_attack['name'] == 'net':
-            opponent = self.arena.find('fiersomest enemy alive', self)[0]
+            opponent = self.arena.find('fearsomest enemy alive', self)[0]
             if opponent.condition != 'netted':
                 self.net(opponent, verbose)
             else:
