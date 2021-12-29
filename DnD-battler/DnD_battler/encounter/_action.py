@@ -58,6 +58,7 @@ class EncounterAction(EncounterBase):
         print(f"Turn order: {[x.name for x in self]}")
 
     def predict(self):
+        print("doing predict")
         def safediv(a, b, default=0):
             try:
                 return a / b
@@ -77,6 +78,7 @@ class EncounterAction(EncounterBase):
         t_ac = {x: [] for x in self.sides}
         for character in self:
             t_ac[character.alignment].append(character.armor.ac)
+            print["AC:", character.armor.ac]
         ac = {x: sum(t_ac[x]) / len(t_ac[x]) for x in t_ac.keys()}
         damage = {x: 0 for x in self.sides}
         hp = {x: 0 for x in self.sides}
@@ -112,7 +114,7 @@ class EncounterAction(EncounterBase):
                 if verbose: self.masterlog.append('**NEW ROUND**')
                 self.tally['rounds'] += 1
                 for character in self:
-                    print("ready",self.name)
+                    print("ready",character.name)
                     character.ready()
                     if character.isalive():
                         self.active = character
