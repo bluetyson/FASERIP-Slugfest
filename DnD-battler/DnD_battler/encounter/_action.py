@@ -125,7 +125,7 @@ class EncounterAction(EncounterBase):
                         character.act(self.masterlog)
                     else:
                         character.tally['dead'] += 1
-                break #got to take this one out
+                #break #got to take this one out
             except Victory:
                 break
         # closing up maths

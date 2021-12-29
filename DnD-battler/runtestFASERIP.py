@@ -14,3 +14,5 @@ print(arena2.battle())
 #loads into settings and checks json
 
 #make abilities and ability dice d100
+
+#make universal table combat system

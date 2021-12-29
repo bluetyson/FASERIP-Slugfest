@@ -55,7 +55,7 @@ class CreatureBase:
         self.armor = Armor(ability_dice=[self.a], bonus=0)
         # other
         self.initiative = SkillRoll(self.i, modifier=0, success_on_crit=False)
-        self.attacks = [AttackRoll(name='slugfest', ability_die=self.f, damage_dice=Dice(1,0), modifier=5)]
+        self.attacks = [AttackRoll(name='slugfest', ability_die=self.f, damage_dice=Dice(1,5), modifier=0)]
         self.alt_attack = {}
         self.alignment = 'undeclared'
         self.concentrating = 0

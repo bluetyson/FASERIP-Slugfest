@@ -35,7 +35,10 @@ class CreatueInitAble(CreatureBase):
         if dict_faserip[self.irank] > 75:
             self.initiative.modifier = 6
 		#add slugfest attack
-        self.attacks = [AttackRoll(name='slugfest', ability_die=self.f, damage_dice=Dice(1,0), modifier=dict_faserip[self.srank])]
+        #print ("STR CHECK:", dict_faserip[self.srank])
+        #self.attacks = [AttackRoll(name='slugfest', ability_die=self.f, damage_dice=Dice(1,dict_faserip[self.srank],avg=True), modifier=0)]
+        #sself.attacks = [AttackRoll(name='slugfest', ability_die=self.f, damage_dice=Dice(1,dict_faserip[self.srank],avg=True), modifier=0)]
+        self.attacks = [AttackRoll(name='slugfest', ability_die=self.f, damage_dice=Dice(1,dict_faserip[self.srank]), modifier=0)]
         #self.initiative = SkillRoll(Dice(10,0), modifier=self.initiative.modifier, success_on_crit=False)
 		#add slugfest attack
 		#add ranged attack
