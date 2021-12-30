@@ -1,5 +1,8 @@
+import random
 
 dict_faserip={"Sh0":0,"Fb":2,"Pr":4,"Ty":6,"Gd":10,"Ex":20,"Rm":30,"In":40,"Am":50,"Mn":75,"Un":100,"ShX":150,"ShY":200,"ShZ":500,"Cl1000":1000,"Cl3000":3000,"Cl5000":5000,"Beyond":1000000000}
+
+faserip_index={"Sh0":0,"Fb":1,"Pr":2,"Ty":3,"Gd":4,"Ex":5,"Rm":6,"In":7,"Am":8,"Mn":9,"Un":10,"ShX":11,"ShY":12,"ShZ":13,"Cl1000":14,"Cl3000":15,"Cl5000":16,"Beyond":17}
 
 Sh0 = {"W":-1, "G":66, "Y":95, "R":100}
 Fb = {"W":-1, "G":61, "Y":91, "R":100}
@@ -25,3 +28,53 @@ universal_table = {"Sh0":0,"Fb":2,"Pr":4,"Ty":6,"Gd":10,"Ex":20,"Rm":30,"In":40,
 
 for index, key in enumerate(universal_table.keys()):
 	universal_table[key] = universal_table_list[index]
+
+def universal_color(rank, roll):
+	if roll >= universal_table[rank]['R']:
+		color = 'R'
+	elif roll >= universal_table[rank]['Y']:
+		color = 'Y'
+	elif roll >= universal_table[rank]['G']:		
+		color = 'G'
+	else:
+		color = 'W'
+	return color
+
+def column_shift(rank, shift):
+	rank_list = []
+	rank_index = faserip_index[rank]
+	new_index = rank_index + shift
+	if new_index < 0: #lowest is zero
+		new_index = 0
+	if new_index > 13: #keep under cosmic
+		new_index = 13
+		
+	return rank_list[new_index]
+
+	
+def slam_check(endurance_rank):
+	endurance_roll = random.randint(1,100)
+	color = universal_color(endurance_rank, endurance_roll)
+	if color == "W":
+		result = "Grand Slam"
+	if color == "G":
+		result = "Slam"
+	if color == "Y":
+		result = "Stagger"
+	if color == "R":
+		result = "No"
+	return result
+	
+def stun_check(endurance_rank):
+	endurance_roll = random.randint(1,100)
+	color = universal_color(endurance_rank, endurance_roll)
+	if color == "W":
+		result = random.randint(1,10)
+	if color == "G":
+		result = 1
+	if color == "Y":
+		result = 0
+	if color == "R":
+		result = 0
+	return result
+	

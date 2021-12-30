@@ -2,7 +2,7 @@ from .skill_roll import SkillRoll
 from .ability_die import AbilityDie
 from .dice import Dice
 from typing import *
-from .ranks import dict_faserip, universal_table
+from .ranks import dict_faserip, universal_table, faserip_index, column_shift, slam_check
 import random
 
 class AttackRoll(SkillRoll):
@@ -44,6 +44,7 @@ class AttackRoll(SkillRoll):
                advantage: Optional[int] = None,
                attack_rank: str = None,
                damage_rank: str = None,
+               endurance_rank: str = None,
                add_ability_to_damage=False,
                munchkin=False) -> int:
         """
@@ -58,11 +59,30 @@ class AttackRoll(SkillRoll):
         """
         attack_roll = random.randint(1,100)
         #print("ATTACK ROLL:", attack_roll)
-        #need slam - endurance check - need opponent endurance for save and opponent armour
+        #need slam - endurance check - need opponent endurance for save and opponent armour #could get slammed too far but more complicated using movement and map
         #need stun - endurance check - need opponent endurance for save and opponent armour		
         if attack_roll >= universal_table[attack_rank]['G']:  #dumb basic green roll
             damage_roll = dict_faserip[damage_rank]
             print("HIT!:", attack_roll, damage_rank)
+            if attack_roll >= universal_table[attack_rank]['R']:
+               print("STUN?", attack_roll, damage_rank)
+			   #endurance_roll = random.randint(1,100) 
+            elif attack_roll >= universal_table[attack_rank]['Y']:
+               if dict_faserip[damage_rank] >= dict_faserip[endurance_rank]:
+               #slam eligible #basic version, not accounting for armour or martial arts			   
+                   slam_result = slam_check(endurance_rank)
+                   print("SLAM?", attack_roll, damage_rank, slam_result)
+					#slam_result = 2
+                   if slam_result == "Slam":
+                       damage_roll = damage_roll + dict_faserip[endurance_rank] + 2
+                   elif slam_result == "Grand Slam":
+                       damage_roll = damage_roll + dict_faserip[endurance_rank] + faserip_index[endurance_rank]*2 #many areas simulation hack
+                   else:
+                       pass
+				
+                       #3if slam_result == "Slam:
+				   
+					
         else:
             print("MISS!:", attack_roll)
             damage_roll = 0
