@@ -56,7 +56,10 @@ class CreatureBase:
         # other
         self.initiative = SkillRoll(self.i, modifier=0, success_on_crit=False)
         self.attacks = [AttackRoll(name='slugfest', ability_die=self.f, damage_dice=Dice(1,5), modifier=0)]
-        self.alt_attack = {}
+        self.alt_attack = {'throwing-blunt':0,'throwing-edged':0,'blunt':0,'edged':0,'shooting':0,'energy':0,'force':0}  #put other abilities/weapons here
+        self.powers = {}  #put other abilities/weapons here		
+        self.talents = {}  #put other abilities/weapons here				
+        self.contacts = {}  #put other abilities/weapons here				
         self.alignment = 'undeclared'
         self.concentrating = 0
         self.spellcasting_ability_name = None

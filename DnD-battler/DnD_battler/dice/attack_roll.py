@@ -60,7 +60,7 @@ class AttackRoll(SkillRoll):
         attack_roll = random.randint(1,100)
         effect_type = None
         effect = None
-        print("ATTACK ROLL:", attack_roll, "BA:", enemy_ac)
+        #print("ATTACK ROLL:", attack_roll, "BA:", enemy_ac)
         #need slam - endurance check - need opponent endurance for save and opponent armour #could get slammed too far but more complicated using movement and map
         #need stun - endurance check - need opponent endurance for save and opponent armour		
         if attack_roll >= universal_table[attack_rank]['G']:  #dumb basic green roll

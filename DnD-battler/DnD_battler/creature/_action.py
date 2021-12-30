@@ -162,7 +162,7 @@ class CreatureAction(CreatureAdvBase):
         if not self.arena.find('alive enemy'):
             raise Victory()
 			
-        print("ALIVE", self.arena.find('alive enemy'))
+        #print("ALIVE", self.arena.find('alive enemy'))
         # BONUS ACTION
         # heal  -healing word, a bonus action.
         if self.healing_spells > 0:

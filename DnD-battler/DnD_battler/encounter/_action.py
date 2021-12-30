@@ -1,7 +1,7 @@
 from ._base import EncounterBase
 from ..creature import Creature
 from ..victory import Victory
-from ..dice.ranks import dict_faserip
+from ..dice.ranks import dict_faserip, universal_table
 print("BATTLE:", dict_faserip)
 import math
 N = "\n"
@@ -92,7 +92,7 @@ class EncounterAction(EncounterBase):
                 #move = move1.ability_die
                 #move.avg = True
                 #damage[character.alignment] += safediv((20 + move.bonus - ac[not_us(character.alignment)]), 20 * move.roll())
-                damage[character.alignment] += safediv((dict_faserip[character.srank] - ac[not_us(character.alignment)]), 1)
+                damage[character.alignment] += safediv((dict_faserip[character.srank] - ac[not_us(character.alignment)]), 1) * universal_table[character.frank]['G'] / 100.0
                 #move.avg = False
                 hp[character.alignment] += character.starting_hp
         (a, b) = list(self.sides)

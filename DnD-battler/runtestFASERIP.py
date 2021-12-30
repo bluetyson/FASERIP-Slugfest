@@ -7,9 +7,9 @@ billbybob2 = Creature.load('Rat')
 print(billbybob2.alignment, billbybob2.starting_hp, billbybob2.hp)
 #billbybob2.alignment = "green dragon evil"
 arena2 = Encounter(level1, billbybob2)
-print(arena2)
+#print(arena2)
 #print(arena2.battle())
-print(arena2.go_to_war(100))
+#print(arena2.go_to_war(100))
 #print(arena2.go_to_war(1000))
 #print(arena2.go_to_war(10000))
 
@@ -29,3 +29,6 @@ print(arena2.go_to_war(100))
 #add in armour to slow things down - possible infinite loops though if no-one can get through each other's armour
 
 #set actions for stun and check if conscious
+
+#add edged
+#then add shooting - but for simulation purposes about the same - could assume high tech energy weapons similarly

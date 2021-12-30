@@ -49,7 +49,29 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
         else:
             self.armour_name = "Sh0"
         self.armor.ac = dict_faserip[self.armour_name]
+        
+        #T = Type of Damage: E = Edged, B= Blunt, S = Shooting, H = Advanced Technology, 2 = Blunt and Edged, W = S and 2
 		
+        if 'att' in settings:
+            print("OTHER ATTACKS:", settings['att'])
+            if settings['att'] == 'B':
+                self.alt_attack['blunt'] = 1
+            if settings['att'] == 'E':
+                self.alt_attack['edged'] = 1
+            if settings['att'] == 'S':
+                self.alt_attack['shooting'] = 1
+            if settings['att'] == 'H':
+                self.alt_attack['energy'] = 1
+                self.alt_attack['force'] = 1
+            if settings['att'] == '2':
+                self.alt_attack['blunt'] = 1
+                self.alt_attack['edged'] = 1
+            if settings['att'] == 'W':
+                self.alt_attack['blunt'] = 1
+                self.alt_attack['edged'] = 1
+                self.alt_attack['shooting'] = 1
+            print(self.alt_attack)
+			
         self.set_ability_dice(**settings)
         # arena
         if 'arena' in settings:
