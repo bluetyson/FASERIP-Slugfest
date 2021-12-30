@@ -16,6 +16,10 @@ It was written to determine victory probabilities and to test some hypotheses.
 ## Monster manual
 The simulator relies on creature information present in the `beastiaryFASERIP.csv` file. 
 This is basically taken from my FATERIP hack table https://docs.google.com/document/d/1Rmk-3fX2JG3tJPJrtTnhWatT8gcQfGf4e_nqK-4lNz0/edit
+- Sp = speed rank in usual terrain, relative to humans.
+- BA = Body Armour rank
+- T = Type of Damage: E = Edged, B= Blunt, S = Shooting, H = Advanced Technology, 2 = Blunt and Edged, W = S and 2
+
 
 #Documentation
 This module allows the simulation of a FASERIP encounter.
