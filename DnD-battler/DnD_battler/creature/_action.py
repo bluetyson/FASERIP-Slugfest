@@ -56,6 +56,9 @@ class CreatureAction(CreatureAdvBase):
         if self.concentrating:
             self.conc_fx()  # TODO this looks fishy
         self.healing_spells = self.starting_healing_spells
+        self.stun = 0
+        self.slam = 0
+        self.kill = 0
         if hard:
             self.tally = {'damage': 0, 'hp': 0, 'hits': 0, 'misses': 0, 'rounds': 0, 'healing_spells': 0, 'battles': 0,
                           'dead': 0, 'stun':0, 'slam':0}
