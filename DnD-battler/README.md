@@ -8,10 +8,6 @@ Based largely on :- https://github.com/matteoferla/DnD-battler/tree/dev
 > 
 Welcome to the FASERIP Encounter simulator.
 It was written to determine victory probabilities and to test some hypotheses.
-[An online version of the simulator](https://dnd.matteoferla.com).
-    
-
-**NB.** A repository of the server is available [here](https://github.com/matteoferla/DnD-encounter-simulator-site).
 
 ## Monster manual
 The simulator relies on creature information present in the `beastiaryFASERIP.csv` file. 
@@ -19,7 +15,6 @@ This is basically taken from my FATERIP hack table https://docs.google.com/docum
 - Sp = speed rank in usual terrain, relative to humans.
 - BA = Body Armour rank
 - T = Type of Damage: E = Edged, B= Blunt, S = Shooting, H = Advanced Technology, 2 = Blunt and Edged, W = S and 2
-
 
 #Documentation
 This module allows the simulation of a FASERIP encounter.
@@ -53,15 +48,15 @@ The creature class can be started from scratch or from a monster from the manual
 ```python
 from DnD_battler import Creature
 Creature()
-Creature.load('commoner')
+Creature.load('Scientist')
 ```
 Both accept several arguments. 
 ## SOME OF THE BELOW WILL NOT CURRENTLY BE RELEVANT
 
 ```python
 from DnD_battler import Creature
-Creature(name="Achilles", alignment='Achaeans')
-Creature.load(creature_name='commoner', name="Achilles", alignment='Achaeans')
+Creature(name="Lawyer", alignment='capital')
+Creature.load(creature_name='Lawyer', name="Cecil", alignment='capital')
 ```
 
 Technically, these are set via `apply_parameters`. These are:
@@ -81,7 +76,7 @@ Technically, these are set via `apply_parameters`. These are:
 * _hd_ (`int`) hit dice number of faces. Alters `.hit_die.num_faces`. Trigger hp recalculation if no hp specified.
 * _hp_ (`int`) hit points. Note this is calculated automatically otherwise. `.hp` is the current `.hp`,
     `.starting_hp` is the pre-battle one.
-* _abilities_ (`dict`), _ability_bonuses_ (`dict`), _str_ (`int`), _dex_ (`int`) etc. `ab_str` (`int`) etc.: 
+* _abilities_ (`dict`), _ability_bonuses_ (`dict`), _str_ (`int`), _f_ (`int`) etc. `ab_f` (`int`) etc.: 
     _abilities_ and _ability_bonuses_ are potentially incomplete dict of 3-letter ability and score/bonus. 
     3-letter ability take presendence. Bonus takes precedence over score
     (note that if a mismatching score/bonus is given the score will be kept
