@@ -65,7 +65,7 @@ class CreatureBase:
         self.healing = None  # Normally dice object
         # internal stuff
         self.tally = {'damage': 0, 'hits': 0, 'dead': 0, 'misses': 0, 'battles': 0, 'rounds': 0, 'hp': 0,
-                      'healing_spells': 0}
+                      'healing_spells': 0, 'stun':0, 'slam':0}
         self.copy_index = 1
         self.condition = 'normal'
         self.dodge = 0

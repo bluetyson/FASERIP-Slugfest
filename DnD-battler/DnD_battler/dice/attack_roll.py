@@ -60,13 +60,14 @@ class AttackRoll(SkillRoll):
         attack_roll = random.randint(1,100)
         effect_type = None
         effect = None
-        #print("ATTACK ROLL:", attack_roll)
+        print("ATTACK ROLL:", attack_roll, "BA:", enemy_ac)
         #need slam - endurance check - need opponent endurance for save and opponent armour #could get slammed too far but more complicated using movement and map
         #need stun - endurance check - need opponent endurance for save and opponent armour		
         if attack_roll >= universal_table[attack_rank]['G']:  #dumb basic green roll
             damage_roll = dict_faserip[damage_rank]
-            print("HIT!:", attack_roll, damage_rank)
-            if dict_faserip[damage_rank] >= dict_faserip[endurance_rank]:
+            damage_armour = damage_roll - enemy_ac
+            print("HIT!:", attack_roll, damage_rank, damage_roll, damage_armour)
+            if dict_faserip[damage_rank] >= dict_faserip[endurance_rank] and damage_armour >= 0:
 			
                if attack_roll >= universal_table[attack_rank]['R']:
                   print("STUN?", attack_roll, damage_rank)

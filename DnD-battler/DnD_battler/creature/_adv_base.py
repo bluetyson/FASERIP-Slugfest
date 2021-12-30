@@ -4,6 +4,7 @@ from ._init_abilities import CreatueInitAble
 from ._safe_property import CreatureSafeProp
 from ._level import CreatureLevel
 from ..dice import AbilityDie, AttackRoll
+from ..dice.ranks import dict_faserip
 
 class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, CreatureLevel):
     def __init__(self, **settings):
@@ -47,6 +48,7 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
             self.armour_name = settings['stated_ac']
         else:
             self.armour_name = "Sh0"
+        self.armor.ac = dict_faserip[self.armour_name]
 		
         self.set_ability_dice(**settings)
         # arena

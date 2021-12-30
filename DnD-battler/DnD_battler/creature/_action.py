@@ -5,11 +5,17 @@ class CreatureAction(CreatureAdvBase):
 
     def ready(self):
         self.dodge = 0
+        self.stun = 0
+        self.slam = 0
         # there should be a few more.
         # conditions.
 
     def isalive(self):
         if self.hp > 0:
+            return True
+
+    def isconscious(self):
+        if self.stun == 0:
             return True
 
     def take_damage(self, points, verbose=0):
@@ -24,7 +30,7 @@ class CreatureAction(CreatureAdvBase):
                 if verbose:
                     print(self.name + ' has lost their concentration')
 
-    def take_damageFASERIP(self, points, verbose=0):
+    def take_damageFASERIP(self, points, effect, effect_type, verbose=0):
         self.hp -= points
         if verbose:
             print(self.name + ' took ' + str(points) + ' of damage. Now on ' + str(self.hp) + ' hp.')
@@ -118,6 +124,13 @@ class CreatureAction(CreatureAdvBase):
 			
             print("DAMAGE", damage, "OPPONENTAC:", opponent.armor.ac)
             #damage = 2
+            if damage > 0:
+                opponent.take_damage(damage, verbose)
+                self.tally['damage'] += damage
+                self.tally['hits'] += 1
+            else:
+                self.tally['misses'] += 1
+
             if damage > 0:
                 opponent.take_damage(damage, verbose)
                 self.tally['damage'] += damage
