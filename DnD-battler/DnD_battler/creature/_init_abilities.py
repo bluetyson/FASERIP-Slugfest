@@ -22,7 +22,7 @@ class CreatueInitAble(CreatureBase):
         for ab in self.ability_names:
             score = settings['abilities'][ab]
             bonus = settings['ability_bonuses'][ab]
-            print("SABSCOREBONUS:", score, bonus)			            
+            #print("SABSCOREBONUS:", score, bonus)			            
             self.set_ability_die(ability_name=ab, score=score, bonus=bonus)
 			
         self.karma = dict_faserip[self.rrank] + dict_faserip[self.irank] + dict_faserip[self.prank]
@@ -50,7 +50,7 @@ class CreatueInitAble(CreatureBase):
     def set_ability_die(self, ability_name: str, score: Optional[int] = None, bonus: Optional[int] = None):
     #def set_ability_die(self, ability_name: f, score: Optional[int] = None, bonus: Optional[int] = None):
         ability_die = self[ability_name]
-        print(ability_name, ability_die.score, score, ability_die.bonus, bonus)
+        #print(ability_name, ability_die.score, score, ability_die.bonus, bonus)
         assert isinstance(ability_die, AbilityDie), f'The die for {ability_name} is not a die, but {type(ability_die)}'
         assert ability_name in self.ability_names, f'{ability_name} is not in {self.ability_names}'
         if score is not None and bonus is not None:
