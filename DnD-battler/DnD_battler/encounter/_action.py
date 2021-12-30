@@ -18,6 +18,16 @@ class EncounterAction(EncounterBase):
             self.append(Creature.load("commoner", alignment='mob'))
         return self
 
+    def addmobFASERIP(self, n:int):
+        """
+        Adds _n_ commoners to the battle
+        :param n: number of commoners
+        :return: self
+        """
+        for x in range(int(n)):
+            self.append(Creature.load("Plumber", alignment='mob'))
+        return self
+
     def set_deathmatch(self):
         """
         Alters all the alignments to make it a free-for-all deathmatch.

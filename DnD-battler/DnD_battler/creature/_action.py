@@ -207,7 +207,9 @@ class CreatureAction(CreatureAdvBase):
             if verbose:
                 print(self.name + " is dodging")
             self.dodge = 1
-        elif economy and self.alt_attack['name'] == 'net':
+        #elif economy and self.alt_attack['name'] == 'net':  #work out if an entangle attack to put in that lot
+        elif economy and self.alt_attack['grapple'] == 'net':  #work out if an entangle attack to put in that lot
+            #print(self.alt_attack)
             opponent = self.arena.find('fearsomest enemy alive', self)[0]
             if opponent.condition != 'netted':
                 self.net(opponent, verbose)
