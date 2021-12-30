@@ -122,6 +122,8 @@ class EncounterAction(EncounterBase):
                     print("ready",character.name)
                     character.ready()
                     if character.isalive():
+                        if not character.isconscious():
+                            character.tally['stun'] += 1
                         self.active = character
                         character.tally['rounds'] += 1
                         character.act(self.masterlog)

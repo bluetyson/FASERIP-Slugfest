@@ -62,8 +62,10 @@ class CreatureUtils(CreatureBase):
                 self.starting_hp) + "); avg healing spells left=" + str(
                 self.tally['healing_spells'] / battles) + " (from " + str(
                 self.starting_healing_spells) + "); damage done (per battle average)= " + str(
-                self.tally['damage'] / battles) + "; hits/misses (PBA)= " + str(
+                self.tally['damage'] / battles) + "; hits/slams/stuns/misses (PBA)= " + str(
                 self.tally['hits'] / battles) + "/" + str(
+                self.tally['slam'] / battles) + "/" + str(
+                self.tally['stun'] / battles) + "/" + str(
                 self.tally['misses'] / battles) + "; rounds (PBA)=" + str(
                 self.tally['rounds'] / battles) + ";}"
         else:

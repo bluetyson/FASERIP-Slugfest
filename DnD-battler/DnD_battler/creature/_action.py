@@ -32,6 +32,9 @@ class CreatureAction(CreatureAdvBase):
 
     def take_damageFASERIP(self, points, effect, effect_type, verbose=0):
         self.hp -= points
+        if effect_type == "STUN":
+            if effect_type == "STUN":
+                self.stun = effect
         if verbose:
             print(self.name + ' took ' + str(points) + ' of damage. Now on ' + str(self.hp) + ' hp.')
 
@@ -47,7 +50,7 @@ class CreatureAction(CreatureAdvBase):
         self.healing_spells = self.starting_healing_spells
         if hard:
             self.tally = {'damage': 0, 'hp': 0, 'hits': 0, 'misses': 0, 'rounds': 0, 'healing_spells': 0, 'battles': 0,
-                          'dead': 0}
+                          'dead': 0, 'stun':0, 'slam':0}
 
     def check_advantage(self, opponent):
         adv = 0
@@ -131,12 +134,11 @@ class CreatureAction(CreatureAdvBase):
             else:
                 self.tally['misses'] += 1
 
-            if damage > 0:
-                opponent.take_damage(damage, verbose)
-                self.tally['damage'] += damage
-                self.tally['hits'] += 1
-            else:
-                self.tally['misses'] += 1
+            if effect_type == "STUN":
+                self.tally['stun'] += 1
+            if effect_type == "SLAM":
+                self.tally['slam'] += 1
+
 
     # TODO
     def check_action(self, action, verbose):
@@ -156,7 +158,7 @@ class CreatureAction(CreatureAdvBase):
         best = sorted(choice.keys(), key=choice.get)[0]
         self.do_action(best)
 
-    def act(self, verbose=0):
+    def act(self, verbose=1):
         if not self.arena.find('alive enemy'):
             raise Victory()
 			
@@ -177,6 +179,11 @@ class CreatureAction(CreatureAdvBase):
             if verbose:
                 print(self.name + " freed himself from a net")
             self.condition = 'normal'
+        elif self.stun > 0:
+            if verbose:
+                print(self.name + " stunned for ", self.stun, "rounds")
+            self.stun -= 1
+            #self.condition = 'normal'
         elif self.buff_spells > 0 and self.concentrating == 0:
             self.conc_fx()
             if verbose:

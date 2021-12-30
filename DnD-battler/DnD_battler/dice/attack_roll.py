@@ -68,13 +68,12 @@ class AttackRoll(SkillRoll):
             damage_armour = damage_roll - enemy_ac
             print("HIT!:", attack_roll, damage_rank, damage_roll, damage_armour)
             if dict_faserip[damage_rank] >= dict_faserip[endurance_rank] and damage_armour >= 0:
-			
                if attack_roll >= universal_table[attack_rank]['R']:
                   print("STUN?", attack_roll, damage_rank)
                   stun_result = stun_check(endurance_rank)
                   effect = stun_result
                   effect_type = "STUN"
-			      #endurance_roll = random.randint(1,100) 
+
                elif attack_roll >= universal_table[attack_rank]['Y']:
                   #slam eligible #basic version, not accounting for armour or martial arts			   
                       slam_result = slam_check(endurance_rank)
