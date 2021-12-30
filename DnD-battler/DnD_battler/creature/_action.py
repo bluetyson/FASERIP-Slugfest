@@ -61,7 +61,7 @@ class CreatureAction(CreatureAdvBase):
         self.kill = 0
         if hard:
             self.tally = {'damage': 0, 'hp': 0, 'hits': 0, 'misses': 0, 'rounds': 0, 'healing_spells': 0, 'battles': 0,
-                          'dead': 0, 'stun':0, 'slam':0}
+                          'dead': 0, 'stun':0, 'slam':0, 'kill':0}
 
     def check_advantage(self, opponent):
         adv = 0
@@ -150,6 +150,8 @@ class CreatureAction(CreatureAdvBase):
                 self.tally['stun'] += 1
             if effect_type == "SLAM":
                 self.tally['slam'] += 1
+            if effect_type == "KILL":
+                self.tally['kill'] += 1
 
 
     # TODO

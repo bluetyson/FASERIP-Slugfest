@@ -57,19 +57,21 @@ class CreatureUtils(CreatureBase):
     def __str__(self):
         if self.tally['battles']:
             battles = self.tally['battles']
-            return self.name + ": {team=" + self.alignment + "; avg hp=" + str(
+            return self.name + ": {team=" + self.alignment + "; avg Health=" + str(
                 self.tally['hp'] / battles) + " (from " + str(
-                self.starting_hp) + "); avg healing spells left=" + str(
-                self.tally['healing_spells'] / battles) + " (from " + str(
-                self.starting_healing_spells) + "); damage done (per battle average)= " + str(
-                self.tally['damage'] / battles) + "; hits/slams/stuns/misses (PBA)= " + str(
-                self.tally['hits'] / battles) + "/" + str(
-                self.tally['slam'] / battles) + "/" + str(
-                self.tally['stun'] / battles) + "/" + str(
-                self.tally['misses'] / battles) + "; rounds (PBA)=" + str(
-                self.tally['rounds'] / battles) + ";}"
+                self.starting_hp) + "); damage done (per battle average)= " + str(
+                round(self.tally['damage'] / battles,2)) + "; hits/slams/stuns/kills/misses (PBA)= " + str(
+                round(self.tally['hits'] / battles,2)) + "/" + str(
+                round(self.tally['slam'] / battles,2)) + "/" + str(
+                round(self.tally['stun'] / battles,2)) + "/" + str(
+                round(self.tally['kill'] / battles,2)) + "/" + str(
+                round(self.tally['misses'] / battles,2)) + "; rounds (PBA)=" + str(
+                round(self.tally['rounds'] / battles,2)) + ";}"
         else:
             return self.name + ": UNTESTED IN BATTLE"
+#avg healing spells left=" + str(
+#                self.tally['healing_spells'] / battles) + " (from " + str(
+#                self.starting_healing_spells) + ");
 
     def copy(self):
         """
