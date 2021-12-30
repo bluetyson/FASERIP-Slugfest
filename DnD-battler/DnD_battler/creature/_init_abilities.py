@@ -26,7 +26,7 @@ class CreatueInitAble(CreatureBase):
             self.set_ability_die(ability_name=ab, score=score, bonus=bonus)
 			
         self.karma = dict_faserip[self.rrank] + dict_faserip[self.irank] + dict_faserip[self.prank]
-        self.stated_hp = dict_faserip[self.frank] + dict_faserip[self.arank] + dict_faserip[self.srank] + dict_faserip[self.prank]
+        self.stated_hp = dict_faserip[self.frank] + dict_faserip[self.arank] + dict_faserip[self.srank] + dict_faserip[self.erank]
         self.hp = self.stated_hp
         self.starting_hp = self.stated_hp #used for fighting
 		

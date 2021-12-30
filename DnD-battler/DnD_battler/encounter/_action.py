@@ -50,7 +50,7 @@ class EncounterAction(EncounterBase):
         return self
 
     def roll_for_initiative(self, verbose=0):
-        #self.combattants = sorted(self.combattants, key=lambda fighter: fighter.initiative.roll(), reverse=True)  #need a d10 initiative roll
+        #self.combattants = sorted(self.combattants, key=lambda fighter: fighter.initiative.roll(), reverse=True)  #need a d10 initiative roll below
         self.combattants = sorted(self.combattants, key=lambda fighter: fighter.initiative.roll_initiative()+fighter.initiative.modifier, reverse=True)  #need a d10 initiative roll
 		
         #print(self.combattants)
@@ -58,7 +58,7 @@ class EncounterAction(EncounterBase):
         print(f"Turn order: {[x.name for x in self]}")
 
     def predict(self):
-        print("doing predict")
+        #print("doing predict")
         def safediv(a, b, default=0):
             try:
                 return a / b
@@ -79,10 +79,12 @@ class EncounterAction(EncounterBase):
         #print(t_ac)
         for character in self:
             #t_ac[character.alignment].append(character.armor.ac)
-            t_ac[character.alignment].append(0)
+            #t_ac[character.alignment].append(0)
+            t_ac[character.alignment].append(dict_faserip[character.armour_name])  #put in dict faserip value of armour here to get a number? to use for later
+			
             #print["AC:", character.armor.ac]
         ac = {x: sum(t_ac[x]) / len(t_ac[x]) for x in t_ac.keys()}
-        print(t_ac)
+        print("T_AC", t_ac)
         damage = {x: 0 for x in self.sides}
         hp = {x: 0 for x in self.sides}
         for character in self:
@@ -106,11 +108,11 @@ class EncounterAction(EncounterBase):
         print("in battle")
         if verbose: self.masterlog.append('==NEW BATTLE==')
         self.tally['battles'] += 1
-        print("reset",reset)
+        #print("reset",reset)
 		
         if reset: self.reset()
         for schmuck in self: schmuck.tally['battles'] += 1
-        for schmuck in self: print(schmuck.name)
+        #for schmuck in self: print(schmuck.name)
         self.roll_for_initiative(self.masterlog)
         while True:
             try:

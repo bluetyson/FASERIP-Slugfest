@@ -74,6 +74,8 @@ class CreatureBase:
         self.conc_fx = None
         self.cr = 0
         self.custom = []
+        self.slam = 0
+        self.stun = 0
 
     @property
     def abilities(self):

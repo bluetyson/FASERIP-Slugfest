@@ -24,6 +24,11 @@ class CreatureAction(CreatureAdvBase):
                 if verbose:
                     print(self.name + ' has lost their concentration')
 
+    def take_damageFASERIP(self, points, verbose=0):
+        self.hp -= points
+        if verbose:
+            print(self.name + ' took ' + str(points) + ' of damage. Now on ' + str(self.hp) + ' hp.')
+
     def reset(self, hard=False):
         """
         Resets the creature back to health (a long rest). a hard reset resets its scores
@@ -94,7 +99,8 @@ class CreatureAction(CreatureAdvBase):
             weakling.heal(self.healing.roll(), verbose)
             self.healing_spells -= 1
 
-    def multiattack(self, verbose=0, assess=0):
+    #def multiattack(self, verbose=0, assess=0):
+    def multiattack(self, verbose=1, assess=0):	
         print("multiattacking")
         if assess:
             return 0  # the default
@@ -106,9 +112,9 @@ class CreatureAction(CreatureAdvBase):
             self.log.debug(f"{self.name} attacks {opponent.name} with {self.attacks[i].name}")
             # This was the hit method. put here for now.
             # THE IMPORTANT PART TO WRITE, UNIVERSAL TABLE TIME!
-            print("ATTACKS", self.attacks[i], "FIGHTING", self.frank, "STRENGTH", self.srank, "OPPEND", opponent.erank)
+            print("ATTACKS", self.attacks[i], "FIGHTING", self.frank, "STRENGTH", self.srank, "OPPEND", opponent.erank, "BA", opponent.ac, opponent.armor.ac)
             #damage = self.attacks[i].attack(opponent.armor.ac, advantage=self.check_advantage(opponent))
-            damage = self.attacks[i].attackFASERIP(opponent.armor.ac, advantage=self.check_advantage(opponent), attack_rank=self.frank, damage_rank=self.srank, endurance_rank=opponent.erank)  #put attack rank in
+            damage, effect_type, effect = self.attacks[i].attackFASERIP(opponent.armor.ac, advantage=self.check_advantage(opponent), attack_rank=self.frank, damage_rank=self.srank, endurance_rank=opponent.erank)  #put attack rank in
 			
             print("DAMAGE", damage, "OPPONENTAC:", opponent.armor.ac)
             #damage = 2
