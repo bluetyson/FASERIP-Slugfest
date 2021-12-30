@@ -2,7 +2,8 @@ from .skill_roll import SkillRoll
 from .ability_die import AbilityDie
 from .dice import Dice
 from typing import *
-
+from .ranks import dict_faserip, universal_table
+import random
 
 class AttackRoll(SkillRoll):
     def __init__(self, name, ability_die: AbilityDie, damage_dice: Dice, modifier: int = 0):
@@ -41,6 +42,8 @@ class AttackRoll(SkillRoll):
     def attackFASERIP(self,
                enemy_ac: int,
                advantage: Optional[int] = None,
+               attack_rank: str = None,
+               damage_rank: str = None,
                add_ability_to_damage=False,
                munchkin=False) -> int:
         """
@@ -53,16 +56,23 @@ class AttackRoll(SkillRoll):
         :param munchkin: proficiency is not added to damage RAW, however munchkins always do....
         :return:
         """
-        attack_roll = self.roll(advantage=advantage)
-        if attack_roll >= enemy_ac:
-            # note this can allow crit trains, were one to alter the crit value.
-            damage_roll = sum([self.damage_dice.roll() for i in range(self.ability_die.crit + 1)])
-            if add_ability_to_damage is True:
-                damage_roll += self.ability_die.bonus + self.ability_die.temp_modifier
-            # proficiency is not added to damage RAW, however munchkins always do.
-            if munchkin is True:
-                damage_roll += self.ability_die.proficiency.bonus
+        attack_roll = random.randint(1,100)
+        #print("ATTACK ROLL:", attack_roll)
+		
+        #if attack_roll >= enemy_ac:
+        if attack_roll >= universal_table[attack_rank]['G']:  #dumb basic green roll
+            damage_roll = dict_faserip[damage_rank]
+            print("HIT!:", attack_roll, damage_rank)
+            #if 1 == 2:
+			   # note this can allow crit trains, were one to alter the crit value.
+               #damage_roll = sum([self.damage_dice.roll() for i in range(self.ability_die.crit + 1)])
+			#if add_ability_to_damage is True:
+			   #damage_roll += self.ability_die.bonus + self.ability_die.temp_modifier
+			   # proficiency is not added to damage RAW, however munchkins always do.
+			#if munchkin is True:
+			   #damage_roll += self.ability_die.proficiency.bonus
         else:
+            print("MISS!:", attack_roll)
             damage_roll = 0
         return damage_roll  #want to return condition here
 

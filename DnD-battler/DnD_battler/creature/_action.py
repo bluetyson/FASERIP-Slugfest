@@ -106,10 +106,12 @@ class CreatureAction(CreatureAdvBase):
             self.log.debug(f"{self.name} attacks {opponent.name} with {self.attacks[i].name}")
             # This was the hit method. put here for now.
             # THE IMPORTANT PART TO WRITE, UNIVERSAL TABLE TIME!
-            print("ATTACKS", self.attacks[i])
-            damage = self.attacks[i].attack(opponent.armor.ac, advantage=self.check_advantage(opponent))
+            print("ATTACKS", self.attacks[i], "FIGHTING", self.frank)
+            #damage = self.attacks[i].attack(opponent.armor.ac, advantage=self.check_advantage(opponent))
+            damage = self.attacks[i].attackFASERIP(opponent.armor.ac, advantage=self.check_advantage(opponent), attack_rank=self.frank, damage_rank=self.srank)  #put attack rank in
+			
             print("DAMAGE", damage, "OPPONENTAC:", opponent.armor.ac)
-            damage = 2
+            #damage = 2
             if damage > 0:
                 opponent.take_damage(damage, verbose)
                 self.tally['damage'] += damage
