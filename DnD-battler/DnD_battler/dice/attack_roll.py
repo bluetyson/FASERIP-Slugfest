@@ -58,19 +58,11 @@ class AttackRoll(SkillRoll):
         """
         attack_roll = random.randint(1,100)
         #print("ATTACK ROLL:", attack_roll)
-		
-        #if attack_roll >= enemy_ac:
+        #need slam - endurance check - need opponent endurance for save and opponent armour
+        #need stun - endurance check - need opponent endurance for save and opponent armour		
         if attack_roll >= universal_table[attack_rank]['G']:  #dumb basic green roll
             damage_roll = dict_faserip[damage_rank]
             print("HIT!:", attack_roll, damage_rank)
-            #if 1 == 2:
-			   # note this can allow crit trains, were one to alter the crit value.
-               #damage_roll = sum([self.damage_dice.roll() for i in range(self.ability_die.crit + 1)])
-			#if add_ability_to_damage is True:
-			   #damage_roll += self.ability_die.bonus + self.ability_die.temp_modifier
-			   # proficiency is not added to damage RAW, however munchkins always do.
-			#if munchkin is True:
-			   #damage_roll += self.ability_die.proficiency.bonus
         else:
             print("MISS!:", attack_roll)
             damage_roll = 0

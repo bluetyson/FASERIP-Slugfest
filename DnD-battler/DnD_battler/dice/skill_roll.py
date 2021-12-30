@@ -1,6 +1,7 @@
 from .ability_die import AbilityDie
 from typing import *
 from ..log import log
+import random
 
 class SkillRoll:
 
@@ -27,8 +28,9 @@ class SkillRoll:
         return self.base_roll(advantage=advantage) + self.bonuses
 		
     def roll_initiative(self, advantage:Optional[int]=None) -> int:
-        print("INIT ROLL", int(self.ability_die.base_roll(advantage=advantage)/10) + 1)
-        return int(self.ability_die.base_roll(advantage=advantage)/10) + 1
+        initiative_roll = random.randint(1,10)
+        print("INIT ROLL", initiative_roll)
+        return initiative_roll
 
     @property
     def bonuses(self):

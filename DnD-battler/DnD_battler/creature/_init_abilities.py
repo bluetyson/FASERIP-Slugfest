@@ -28,6 +28,7 @@ class CreatueInitAble(CreatureBase):
         self.karma = dict_faserip[self.rrank] + dict_faserip[self.irank] + dict_faserip[self.prank]
         self.stated_hp = dict_faserip[self.frank] + dict_faserip[self.arank] + dict_faserip[self.srank] + dict_faserip[self.prank]
         self.hp = self.stated_hp
+        self.starting_hp = self.stated_hp #used for fighting
 		
         self.initiative.modifier = int(dict_faserip[self.irank] / 10)
         if dict_faserip[self.irank] > 50:

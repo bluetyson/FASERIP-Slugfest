@@ -51,7 +51,7 @@ class EncounterAction(EncounterBase):
 
     def roll_for_initiative(self, verbose=0):
         #self.combattants = sorted(self.combattants, key=lambda fighter: fighter.initiative.roll(), reverse=True)  #need a d10 initiative roll
-        self.combattants = sorted(self.combattants, key=lambda fighter: fighter.initiative.roll_initiative(), reverse=True)  #need a d10 initiative roll
+        self.combattants = sorted(self.combattants, key=lambda fighter: fighter.initiative.roll_initiative()+fighter.initiative.modifier, reverse=True)  #need a d10 initiative roll
 		
         #print(self.combattants)
         self.log.debug(f"Turn order: {[x.name for x in self]}")
