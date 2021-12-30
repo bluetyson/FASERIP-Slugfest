@@ -14,6 +14,10 @@ class CreatureAction(CreatureAdvBase):
         if self.hp > 0:
             return True
 
+    def isaliveFASERIP(self):
+        if self.hp > 0 and not self.kill:
+            return True
+
     def isconscious(self):
         if self.stun == 0:
             return True
@@ -30,11 +34,15 @@ class CreatureAction(CreatureAdvBase):
                 if verbose:
                     print(self.name + ' has lost their concentration')
 
-    def take_damageFASERIP(self, points, effect, effect_type, verbose=0):
+    def take_damageFASERIP(self, points, effect_type, effect, verbose=0):
         self.hp -= points
         if effect_type == "STUN":
-            if effect_type == "STUN":
-                self.stun = effect
+            self.stun = effect
+        if effect_type == "KILL":
+            if effect == "En Loss" or effect == "E S":
+                self.kill = 1
+		
+            
         if verbose:
             print(self.name + ' took ' + str(points) + ' of damage. Now on ' + str(self.hp) + ' hp.')
 
@@ -123,12 +131,13 @@ class CreatureAction(CreatureAdvBase):
             # THE IMPORTANT PART TO WRITE, UNIVERSAL TABLE TIME!
             print("ATTACKS", self.attacks[i], "FIGHTING", self.frank, "STRENGTH", self.srank, "OPPEND", opponent.erank, "BA", opponent.ac, opponent.armor.ac)
             #damage = self.attacks[i].attack(opponent.armor.ac, advantage=self.check_advantage(opponent))
-            damage, effect_type, effect = self.attacks[i].attackFASERIP(opponent.armor.ac, advantage=self.check_advantage(opponent), attack_rank=self.frank, damage_rank=self.srank, endurance_rank=opponent.erank)  #put attack rank in
-			
+            damage, effect_type, effect = self.attacks[i].attackFASERIP(opponent.armor.ac, advantage=self.check_advantage(opponent), attack_rank=self.frank, damage_rank=self.srank, endurance_rank=opponent.erank, other_attacks=self.alt_attack)  #put attack rank in
+            
             print("DAMAGE", damage, "OPPONENTAC:", opponent.armor.ac)
             #damage = 2
             if damage > 0:
-                opponent.take_damage(damage, verbose)
+                #opponent.take_damage(damage, verbose)
+                opponent.take_damageFASERIP(damage, effect_type, effect, verbose)
                 self.tally['damage'] += damage
                 self.tally['hits'] += 1
             else:

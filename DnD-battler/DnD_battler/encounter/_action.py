@@ -122,7 +122,7 @@ class EncounterAction(EncounterBase):
                 for character in self:
                     #print("ready",character.name)
                     character.ready()
-                    if character.isalive():
+                    if character.isaliveFASERIP():
                         if not character.isconscious():
                             character.tally['stunned'] += 1
                         self.active = character

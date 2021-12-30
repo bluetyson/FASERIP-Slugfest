@@ -2,7 +2,7 @@ from .skill_roll import SkillRoll
 from .ability_die import AbilityDie
 from .dice import Dice
 from typing import *
-from .ranks import dict_faserip, universal_table, faserip_index, column_shift, slam_check, stun_check
+from .ranks import dict_faserip, universal_table, faserip_index, column_shift, slam_check, stun_check, kill_check
 import random
 
 class AttackRoll(SkillRoll):
@@ -46,6 +46,7 @@ class AttackRoll(SkillRoll):
                damage_rank: str = None,
                endurance_rank: str = None,
                add_ability_to_damage=False,
+               other_attacks: Dict=None,
                munchkin=False) -> int:
         """
         Returns an integer of the damage incurred. 0 is fail.
@@ -63,22 +64,45 @@ class AttackRoll(SkillRoll):
         #print("ATTACK ROLL:", attack_roll, "BA:", enemy_ac)
         #need slam - endurance check - need opponent endurance for save and opponent armour #could get slammed too far but more complicated using movement and map
         #need stun - endurance check - need opponent endurance for save and opponent armour		
+        #need start with edged just relying on strength as claws or bite for test
+        #max rank or max prob attack somehow from list 
+        
+        if other_attacks['edged'] == 1 or other_attacks['shooting'] == 1 or other_attacks['throwing-edged'] == 1 or other_attacks['energy'] == 1:
+            kill_flag = 1
+        else:
+            kill_flag = 0
+        if other_attacks['force'] == 1:
+            stun_flag = 1
+        else:
+            stun_flag = 0
+        if other_attacks['throwing-blunt'] == 1:
+            throw_flag = 1
+        else:
+            throw_flag = 0
+
         if attack_roll >= universal_table[attack_rank]['G']:  #dumb basic green roll
             damage_roll = dict_faserip[damage_rank]
             damage_armour = damage_roll - enemy_ac
             print("HIT!:", attack_roll, damage_rank, damage_roll, damage_armour)
+            ##need other attack matrix here:
             if dict_faserip[damage_rank] >= dict_faserip[endurance_rank] and damage_armour >= 0:
                if attack_roll >= universal_table[attack_rank]['R']:
-                  print("STUN?", attack_roll, damage_rank)
-                  stun_result = stun_check(endurance_rank)
-                  effect = stun_result
-                  effect_type = "STUN"
+                  if kill_flag == 0:
+                      print("STUN?", attack_roll, damage_rank)
+                      stun_result = stun_check(endurance_rank)
+                      effect = stun_result
+                      effect_type = "STUN"
+                  else:
+                      print("KILL?", attack_roll, damage_rank)
+                      kill_result = kill_check(endurance_rank)
+                      effect = kill_result
+                      effect_type = "KILL"
 
                elif attack_roll >= universal_table[attack_rank]['Y']:
                   #slam eligible #basic version, not accounting for armour or martial arts			   
+                  if kill_flag == 0:
                       slam_result = slam_check(endurance_rank)
                       print("SLAM?", attack_roll, damage_rank, slam_result)
-					   #slam_result = 2
                       if slam_result == "Slam":
                           damage_roll = damage_roll + dict_faserip[endurance_rank] + 2
                       elif slam_result == "Grand Slam":
@@ -87,6 +111,11 @@ class AttackRoll(SkillRoll):
                           pass					  
                       effect = slam_result
                       effect_type = "SLAM"
+                  else:
+                      print("STUN from KILL?", attack_roll, damage_rank)
+                      stun_result = stun_check(endurance_rank)
+                      effect = stun_result
+                      effect_type = "STUN"
 				   
 					
         else:

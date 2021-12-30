@@ -79,6 +79,7 @@ class CreatureBase:
         self.custom = []
         self.slam = 0
         self.stun = 0
+        self.kill = 0
 
     @property
     def abilities(self):

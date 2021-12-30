@@ -78,3 +78,15 @@ def stun_check(endurance_rank):
 		result = 0
 	return result
 	
+def kill_check(endurance_rank):
+	endurance_roll = random.randint(1,100)
+	color = universal_color(endurance_rank, endurance_roll)
+	if color == "W":
+		result = "En Loss"
+	if color == "G":
+		result = "E S"
+	if color == "Y":
+		result = "No"
+	if color == "R":
+		result = "No"
+	return result
