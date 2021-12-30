@@ -1,5 +1,6 @@
 # FASERIP Slugfest simulator
 Simulate who would win in a FASERIP encounter
+Based largely on :- https://github.com/matteoferla/DnD-battler/tree/dev
 
 > This is a python 3 script and is not intended to work with 2. 
 > This is a very messy work in progress translating Matteo Ferla's DnD battler to work with FASERIP, so may go through many changes.
