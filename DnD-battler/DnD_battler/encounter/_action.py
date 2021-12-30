@@ -55,7 +55,7 @@ class EncounterAction(EncounterBase):
 		
         #print(self.combattants)
         self.log.debug(f"Turn order: {[x.name for x in self]}")
-        print(f"Turn order: {[x.name for x in self]}")
+        #print(f"Turn order: {[x.name for x in self]}")
 
     def predict(self):
         #print("doing predict")
@@ -84,15 +84,16 @@ class EncounterAction(EncounterBase):
 			
             #print["AC:", character.armor.ac]
         ac = {x: sum(t_ac[x]) / len(t_ac[x]) for x in t_ac.keys()}
-        print("T_AC", t_ac)
+        #print("T_AC", t_ac)
         damage = {x: 0 for x in self.sides}
         hp = {x: 0 for x in self.sides}
         for character in self:
             for move1 in character.attacks:
-                move = move1.ability_die
-                move.avg = True
-                damage[character.alignment] += safediv((20 + move.bonus - ac[not_us(character.alignment)]), 20 * move.roll())
-                move.avg = False
+                #move = move1.ability_die
+                #move.avg = True
+                #damage[character.alignment] += safediv((20 + move.bonus - ac[not_us(character.alignment)]), 20 * move.roll())
+                damage[character.alignment] += safediv((dict_faserip[character.srank] - ac[not_us(character.alignment)]), 1)
+                #move.avg = False
                 hp[character.alignment] += character.starting_hp
         (a, b) = list(self.sides)
         rate = {a: safediv(hp[a], damage[b], 0.0), b: safediv(hp[b], damage[a], 0.0)}
@@ -105,7 +106,7 @@ class EncounterAction(EncounterBase):
                     round(safediv(rate[b], (rate[a] + rate[b]) * 100))) + '%' + N)
 
     def battle(self, reset=1, verbose=1):
-        print("in battle")
+        #print("in battle")
         if verbose: self.masterlog.append('==NEW BATTLE==')
         self.tally['battles'] += 1
         #print("reset",reset)
@@ -119,11 +120,11 @@ class EncounterAction(EncounterBase):
                 if verbose: self.masterlog.append('**NEW ROUND**')
                 self.tally['rounds'] += 1
                 for character in self:
-                    print("ready",character.name)
+                    #print("ready",character.name)
                     character.ready()
                     if character.isalive():
                         if not character.isconscious():
-                            character.tally['stun'] += 1
+                            character.tally['stunned'] += 1
                         self.active = character
                         character.tally['rounds'] += 1
                         character.act(self.masterlog)
