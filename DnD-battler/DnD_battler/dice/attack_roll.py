@@ -81,7 +81,7 @@ class AttackRoll(SkillRoll):
         else:
             throw_flag = 0
 
-        if attack_roll >= universal_table[attack_rank]['G']:  #dumb basic green roll
+        if attack_roll >= universal_table[attack_rank]['G']:  #basic green roll - other possibilities below
             damage_roll = dict_faserip[damage_rank]
             damage_armour = damage_roll - enemy_ac
             print("HIT!:", attack_roll, damage_rank, damage_roll, damage_armour)
@@ -89,6 +89,7 @@ class AttackRoll(SkillRoll):
             #if dict_faserip[damage_rank] >= dict_faserip[endurance_rank] and damage_armour >= 0:
             if (dict_faserip[damage_rank] >= dict_faserip[endurance_rank] or talents['martial_arts']['A'] == 1) and (damage_armour >= 0 or talents['martial_arts']['D'] == 1):			
                if attack_roll >= universal_table[attack_rank]['R']:
+                  #stun or kill eligible
                   if kill_flag == 0:
                       print("STUN?", attack_roll, damage_rank)
                       stun_result = stun_check(endurance_rank)
@@ -101,14 +102,14 @@ class AttackRoll(SkillRoll):
                       effect_type = "KILL"
 
                elif attack_roll >= universal_table[attack_rank]['Y']:
-                  #slam eligible #basic version, not accounting for armour or martial arts			   
+                  #slam eligible
                   if kill_flag == 0:
                       slam_result = slam_check(endurance_rank)
                       print("SLAM?", attack_roll, damage_rank, slam_result)
                       if slam_result == "Slam":
                           damage_roll = damage_roll + dict_faserip[endurance_rank] + 2
                       elif slam_result == "Grand Slam":
-                          damage_roll = damage_roll + dict_faserip[endurance_rank] + faserip_index[endurance_rank]*2 #many areas simulation hack
+                          damage_roll = damage_roll + dict_faserip[endurance_rank] + faserip_index[damage_rank]*2 #many areas simulation hack
                       else:
                           pass					  
                       effect = slam_result
