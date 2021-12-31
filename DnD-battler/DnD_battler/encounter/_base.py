@@ -18,7 +18,7 @@ class EncounterBase:
         self.masterlog = []
         self.note = ''
         self.combattants = []
-        self.combattants.extend(lineup)
+        #self.combattants.extend(lineup)
         for chap in lineup:
             self.append(chap)
 
