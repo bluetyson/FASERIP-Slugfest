@@ -47,6 +47,7 @@ class AttackRoll(SkillRoll):
                endurance_rank: str = None,
                add_ability_to_damage=False,
                other_attacks: Dict=None,
+               talents: Dict=None,
                munchkin=False) -> int:
         """
         Returns an integer of the damage incurred. 0 is fail.
@@ -85,7 +86,8 @@ class AttackRoll(SkillRoll):
             damage_armour = damage_roll - enemy_ac
             print("HIT!:", attack_roll, damage_rank, damage_roll, damage_armour)
             ##need other attack matrix here:
-            if dict_faserip[damage_rank] >= dict_faserip[endurance_rank] and damage_armour >= 0:
+            #if dict_faserip[damage_rank] >= dict_faserip[endurance_rank] and damage_armour >= 0:
+            if (dict_faserip[damage_rank] >= dict_faserip[endurance_rank] or talents['martial_arts']['A'] == 1) and (damage_armour >= 0 or talents['martial_arts']['D'] == 1):			
                if attack_roll >= universal_table[attack_rank]['R']:
                   if kill_flag == 0:
                       print("STUN?", attack_roll, damage_rank)
@@ -141,7 +143,7 @@ class AttackRoll(SkillRoll):
         Returns an Attack roll
 
         :param name: name of weapon...
-        :param ability_die: generally creature.str ... but dex for finesse weapons or wis for shileyley
+        :param ability_die: generally creature.str ... but dex for finesse weapons or wis for shillelagh
         :param damage_dice: a dice obj, str or int.
         :param attack_modifier: the weapon modifier. No proficiency or ability bonus or poison etc.
             these come from the ability_die.

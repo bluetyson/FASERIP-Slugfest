@@ -28,6 +28,7 @@ billbybob19 = Creature.load('Boxer')
 billbybob20 = Creature.load('Boxer')
 billbybob21 = Creature.load('Boxer')
 billbybob22 = Creature.load('Boxer')
+billbybob23 = Creature.load('Boxer')
 
 #print(billbybob2.alignment, billbybob2.starting_hp, billbybob2.hp)
 #billbybob2.alignment = "green dragon evil"
@@ -98,8 +99,9 @@ print(arena2)
 #arena210 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, billbybob8, billbybob9, billbybob15, billbybob16, billbybob17, billbybob18)
 #arena211 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, billbybob8, billbybob9, billbybob15, billbybob16, billbybob17, billbybob18, billbybob19)
 #arena212 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, billbybob8, billbybob9, billbybob15, billbybob16, billbybob17, billbybob18, billbybob19, billbybob20)
-arena213 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, billbybob8, billbybob9, billbybob15, billbybob16, billbybob17, billbybob18, billbybob19, billbybob20, billbybob21)
+#arena213 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, billbybob8, billbybob9, billbybob15, billbybob16, billbybob17, billbybob18, billbybob19, billbybob20, billbybob21)
 #arena214 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, billbybob8, billbybob9, billbybob15, billbybob16, billbybob17, billbybob18, billbybob19, billbybob20, billbybob21, billbybob22)
+arena215 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, billbybob8, billbybob9, billbybob15, billbybob16, billbybob17, billbybob18, billbybob19, billbybob20, billbybob21, billbybob22, billbybob23)
 #print(arena2.go_to_war(1000))
 #print(arena2.go_to_war(10000))
 #print(arena21.go_to_war(100))
@@ -114,8 +116,10 @@ arena213 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, bil
 #print(arena210.go_to_war(1000))
 #print(arena211.go_to_war(1000))
 #print(arena212.go_to_war(1000))
-print(arena213.go_to_war(1000))
+#print(arena213.go_to_war(1000))
 #print(arena214.go_to_war(1000))
+print(arena215.go_to_war(100))
+#print(arena215.go_to_war(1000))
 #print(level1.hp)
 
 
@@ -124,17 +128,17 @@ print(arena213.go_to_war(1000))
 
 #loads into settings and checks json
 
-#make abilities and ability dice d100
+#make abilities and ability dice d100 - DONE
 
-#make universal table combat system
+#make universal table combat system - DONE
 
-#make slams and stuns
+#make slams and stuns - DONE
 
 #make other weapons - assume short range?
 
 #add in armour to slow things down - possible infinite loops though if no-one can get through each other's armour
 
-#set actions for stun and check if conscious
+#set actions for stun and check if conscious - DONE
 
 #add edged
 #then add shooting - but for simulation purposes about the same - could assume high tech energy weapons similarly
@@ -144,7 +148,8 @@ print(arena213.go_to_war(1000))
 
 #add group initiative
 
-#simulate maximum opponents slugfest at a time
+#simulate maximum opponents slugfest at a time - one roll to hit and damage everyone left have to work this out - have to be in waves, or it is just roll, then maybe take out a bunch of mooks in two hits? Whether
+#6 or 60 - half a dozen at once, six hex facing? how to 'damage all at once'?
 
 
 

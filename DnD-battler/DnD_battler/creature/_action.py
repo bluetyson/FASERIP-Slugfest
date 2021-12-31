@@ -129,13 +129,14 @@ class CreatureAction(CreatureAdvBase):
     def multiattack(self, verbose=1, assess=0):	
         print("multiattacking")
         extra_attacks = 0
+        fighting_rank = self.frank
+		
         if assess:
             return 0  # the default
         ##multi attack check here? add to range self.attacks #boost for Martial arts B to F rank
         if dict_faserip[self.frank] < 30:
             #no point doing multiattack except in a game karma type situation
             fighting_cs = 0
-            fighting_rank = self.frank
         elif dict_faserip[self.frank] < 50:
             #Rm or In fighting no point trying for 3 as Amazing intensity, try for two
             fighting_roll = random.randint(1,100)
@@ -161,7 +162,9 @@ class CreatureAction(CreatureAdvBase):
             if fighting_color == "Y" or fighting_color == "R":
                 extra_attacks = 2
                 fighting_cs = -1
-        
+        ##check martial arts adjustment - put other weapon skill type adjustments etc in a place similarly
+        if self.talents['martial_arts']['B'] == 1:
+            fighting_cs = fighting_cs + 1
         if fighting_cs != 0:
             fighting_rank = column_shift(self.frank, fighting_cs)
 		## loop for extra attacks
@@ -177,7 +180,7 @@ class CreatureAction(CreatureAdvBase):
                 print("ATTACKS", self.attacks[i], "FIGHTING", self.frank, "STRENGTH", self.srank, "OPPEND", opponent.erank, "BA", opponent.ac, opponent.armor.ac)
                 #damage = self.attacks[i].attack(opponent.armor.ac, advantage=self.check_advantage(opponent))
                 #damage, effect_type, effect = self.attacks[i].attackFASERIP(opponent.armor.ac, advantage=self.check_advantage(opponent), attack_rank=self.frank, damage_rank=self.srank, endurance_rank=opponent.erank, #other_attacks=self.alt_attack)  #put attack rank in
-                damage, effect_type, effect = self.attacks[i].attackFASERIP(opponent.armor.ac, advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=self.srank, endurance_rank=opponent.erank, other_attacks=self.alt_attack)  #put attack rank in
+                damage, effect_type, effect = self.attacks[i].attackFASERIP(opponent.armor.ac, advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=self.srank, endurance_rank=opponent.erank, other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
                  
                 print("DAMAGE", damage, "OPPONENTAC:", opponent.armor.ac)
                 #damage = 2
