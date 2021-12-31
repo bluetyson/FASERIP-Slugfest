@@ -42,6 +42,8 @@ def universal_color(rank, roll):
 
 def column_shift(rank, shift):
 	rank_list = []
+	for key in faserip_index.keys():
+		rank_list.append(key)
 	rank_index = faserip_index[rank]
 	new_index = rank_index + shift
 	if new_index < 0: #lowest is zero
@@ -49,7 +51,7 @@ def column_shift(rank, shift):
 	if new_index > 13: #keep under cosmic
 		new_index = 13
 		
-	return rank_list[new_index]
+	return rank_list[new_index] #give back adjusted rank
 
 	
 def slam_check(endurance_rank):

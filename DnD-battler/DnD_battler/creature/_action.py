@@ -1,6 +1,7 @@
 from ..victory import Victory
 from ._adv_base import CreatureAdvBase
-from ..dice.ranks import dict_faserip
+from ..dice.ranks import dict_faserip, universal_table, universal_color, column_shift
+import random
 
 class CreatureAction(CreatureAdvBase):
 
@@ -127,50 +128,72 @@ class CreatureAction(CreatureAdvBase):
     #def multiattack(self, verbose=0, assess=0):
     def multiattack(self, verbose=1, assess=0):	
         print("multiattacking")
+        extra_attacks = 0
         if assess:
             return 0  # the default
         ##multi attack check here? add to range self.attacks #boost for Martial arts B to F rank
         if dict_faserip[self.frank] < 30:
             #no point doing multiattack except in a game karma type situation
-            pass
+            fighting_cs = 0
+            fighting_rank = self.frank
         elif dict_faserip[self.frank] < 50:
             #Rm or In fighting no point trying for 3 as Amazing intensity, try for two
-            pass
+            fighting_roll = random.randint(1,100)
+            fighting_cs = -3  #going to need to change below to have an effective fighting rank from fighting_cs type things
+            if self.frank < 40:
+            #Rm
+                fighting_color = universal_color(self.frank, fighting_roll)
+                if fighting_color == "Y" or fighting_color == "R":
+                    extra_attacks = 1
+                    fighting_cs = -1
+            else:
+            #In
+                fighting_color = universal_color(self.frank, fighting_roll)
+                if fighting_color != "W":
+                    extra_attacks = 1
+                    fighting_cs = -1
+
         else:
             #Amazing fighting or better Amazing intensity, try for three
-            pass
-            
-        for i in range(len(self.attacks)):  ##multi attack check here? #boost for Martial arts B to F rank
-            try:
-                opponent = self.arena.find(self.arena.target, self)[0]
-            except IndexError:
-                raise Victory()
-            self.log.debug(f"{self.name} attacks {opponent.name} with {self.attacks[i].name}")
-            # This was the hit method. put here for now.
-            # THE IMPORTANT PART TO WRITE, UNIVERSAL TABLE TIME!
-            print("ATTACKS", self.attacks[i], "FIGHTING", self.frank, "STRENGTH", self.srank, "OPPEND", opponent.erank, "BA", opponent.ac, opponent.armor.ac)
-            #damage = self.attacks[i].attack(opponent.armor.ac, advantage=self.check_advantage(opponent))
-            damage, effect_type, effect = self.attacks[i].attackFASERIP(opponent.armor.ac, advantage=self.check_advantage(opponent), attack_rank=self.frank, damage_rank=self.srank, endurance_rank=opponent.erank, other_attacks=self.alt_attack)  #put attack rank in
-            
-            print("DAMAGE", damage, "OPPONENTAC:", opponent.armor.ac)
-            #damage = 2
-            if damage > 0:
-                #opponent.take_damage(damage, verbose)
-                opponent.take_damageFASERIP(damage, effect_type, effect, verbose)
-                self.tally['damage'] += damage
-                self.tally['hits'] += 1
-            else:
-                self.tally['misses'] += 1
-
-            if effect_type == "STUN":
-                self.tally['stun'] += 1
-            if effect_type == "SLAM":
-                self.tally['slam'] += 1
-            if effect_type == "KILL":
-                self.tally['kill'] += 1
-
-
-    # TODO
+            fighting_roll = random.randint(1,100)
+            fighting_cs = -3  #going to need to change below to have an effective fighting rank from fighting_cs type things
+            fighting_color = universal_color(self.frank, fighting_roll)
+            if fighting_color == "Y" or fighting_color == "R":
+                extra_attacks = 2
+                fighting_cs = -1
+        ## loop for extra attacks
+        for ea in range(extra_attacks + 1):
+            for i in range(len(self.attacks)):  ##multi attack check here? #boost for Martial arts B to F rank
+                try:
+                    opponent = self.arena.find(self.arena.target, self)[0]
+                except IndexError:
+                    raise Victory()
+                self.log.debug(f"{self.name} attacks {opponent.name} with {self.attacks[i].name}")
+                # This was the hit method. put here for now.
+                # THE IMPORTANT PART TO WRITE, UNIVERSAL TABLE TIME!
+                print("ATTACKS", self.attacks[i], "FIGHTING", self.frank, "STRENGTH", self.srank, "OPPEND", opponent.erank, "BA", opponent.ac, opponent.armor.ac)
+                #damage = self.attacks[i].attack(opponent.armor.ac, advantage=self.check_advantage(opponent))
+                damage, effect_type, effect = self.attacks[i].attackFASERIP(opponent.armor.ac, advantage=self.check_advantage(opponent), attack_rank=self.frank, damage_rank=self.srank, endurance_rank=opponent.erank, other_attacks=self.alt_attack)  #put attack rank in
+                
+                print("DAMAGE", damage, "OPPONENTAC:", opponent.armor.ac)
+                #damage = 2
+                if damage > 0:
+                    #opponent.take_damage(damage, verbose)
+                    opponent.take_damageFASERIP(damage, effect_type, effect, verbose)
+                    self.tally['damage'] += damage
+                    self.tally['hits'] += 1
+                else:
+                    self.tally['misses'] += 1
+    
+                if effect_type == "STUN":
+                    self.tally['stun'] += 1
+                if effect_type == "SLAM":
+                    self.tally['slam'] += 1
+                if effect_type == "KILL":
+                    self.tally['kill'] += 1
+                ### reset to base self attacks of 1
+    
+        # TODO
     def check_action(self, action, verbose):
         return getattr(self, action)(assess=1)
 
