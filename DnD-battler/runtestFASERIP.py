@@ -10,6 +10,7 @@ billbybob2 = Creature.load('Rat Pack')
 billbybob2 = Creature.load('Cat')
 
 level1 = Creature.load('Amazing Martial Artist')
+
 billbybob2 = Creature.load('Lawyer')
 billbybob3 = Creature.load('Lawyer')
 billbybob4 = Creature.load('Boxer')
@@ -38,6 +39,7 @@ print("AddMob Martial Artist v Boxer")
 
 billbybob4 = Creature.load('Boxer')
 level1 = Creature.load('Amazing Martial Artist')
+level1 = Creature.load('Psyched Amazing Martial Artist')
 
 arena2 = Encounter(level1, billbybob4)
 print("Encounter Martial Artist v Boxer")
@@ -77,9 +79,14 @@ arena5 = Encounter(level16, billbybob16)
 #print(arena5.go_to_war(1000))
 
 
-arena2 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, billbybob8, billbybob9, billbybob10)
+#arena2 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, billbybob8, billbybob9, billbybob10)
+print(arena2)
 arena21 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, billbybob8, billbybob9)
+#print(arena2.go_to_war(1000))
+#print(arena2.go_to_war(10000))
+#print(arena21.go_to_war(100))
 print(arena21.go_to_war(1000))
+#print(arena21.go_to_war(10000))
 
 
 ## notes on running

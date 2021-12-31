@@ -22,6 +22,10 @@ class CreatureAction(CreatureAdvBase):
         if self.stun == 0:
             return True
 
+    def isupright(self):
+        if self.slam == 0:
+            return True
+
     def take_damage(self, points, verbose=0):
         self.hp -= points
         if verbose:
@@ -197,6 +201,11 @@ class CreatureAction(CreatureAdvBase):
             if verbose:
                 print(self.name + " stunned for ", self.stun, "rounds")
             self.stun -= 1
+            #self.condition = 'normal'
+        elif self.slam > 0:
+            if verbose:
+                print(self.name + " slammed ", self.slam, "areas")  #don't have a grand slam distance currently - 2 area running - can normals do, check
+            self.slam -= 1
             #self.condition = 'normal'
         elif self.buff_spells > 0 and self.concentrating == 0:
             self.conc_fx()
