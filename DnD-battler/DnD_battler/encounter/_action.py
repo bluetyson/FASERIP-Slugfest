@@ -2,7 +2,7 @@ from ._base import EncounterBase
 from ..creature import Creature
 from ..victory import Victory
 from ..dice.ranks import dict_faserip, universal_table
-print("BATTLE:", dict_faserip)
+#print("BATTLE:", dict_faserip)
 import math
 N = "\n"
 
