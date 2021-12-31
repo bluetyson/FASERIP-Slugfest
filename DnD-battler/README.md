@@ -9,12 +9,17 @@ Based largely on :- https://github.com/matteoferla/DnD-battler/tree/dev
 Welcome to the FASERIP Encounter simulator.
 It was written to determine victory probabilities and to test some hypotheses.
 
-## Monster manual
+## Opponents list
 The simulator relies on creature information present in the `beastiaryFASERIP.csv` file. 
 This is basically taken from my FATERIP hack table https://docs.google.com/document/d/1Rmk-3fX2JG3tJPJrtTnhWatT8gcQfGf4e_nqK-4lNz0/edit
 - Sp = speed rank in usual terrain, relative to humans.
 - BA = Body Armour rank
 - T = Type of Damage: E = Edged, B= Blunt, S = Shooting, H = Advanced Technology, 2 = Blunt and Edged, W = S and 2
+    - It will currently check to see if a Killing type is possible - but doesn't do anything about ranged anything or movement.
+- martial_arts - add one letter to a string for each type, eg ABCDE, AE etc.
+    - other Talents can be handled similarly and put them in self.talents in the Creature class
+- If you want to simulate a -4 CS multiattack on everyone at once - set mook = 1 for one side and leave zero on the other.  To turn off, have everyone be mooks.
+    - still need a mode where can attack, say in groups of 6 at any given time.
 
 #Documentation
 This module allows the simulation of a FASERIP encounter.
@@ -38,7 +43,7 @@ The muchkinishness has a deleterious side-effect when the method deathmatch of t
 >>> print(arena.go_to_war(10000)) #simulate 10,000 times
 >>> print(arena.battle()) # simulate one encounter and tell what happens.
 >>> print(Creature.load('Cat').generate_character_sheet())  #md character sheet.
->>> print(Encounter.load("ancient blue dragon").addmob(85).go_to_war(10))  #An ancient blue dragon is nearly a match for 85 commoners (who crit evenutally)... #not looked at this yet, so probably won't work
+>>> print(Encounter.load("ancient blue dragon").addmob(85).go_to_war(10))  #An ancient blue dragon is nearly a match for 85 commoners (who crit evenutally)... #not looked at this yet, so probably won't work  #.addmob not working, so will have to do the hard way.
 ```
 
 ## Creature: parameters and attributes
