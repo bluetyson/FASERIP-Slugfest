@@ -143,15 +143,16 @@ print(arena215.go_to_war(1000))
 
 #add edged
 #then add shooting - but for simulation purposes about the same - could assume high tech energy weapons similarly
-#add martial arts in
+#add martial arts in - DONE
 #power fun
-#then random character gen? - java things
+#then random character gen? - java things - to this and get powers list - then need to somehow add them to a simulator - much more work than a random generator
+#could we get GPT or clone to name characters sensibly(ish)?
 
 #add group initiative
 
 #simulate maximum opponents slugfest at a time - one roll to hit and damage everyone left have to work this out - have to be in waves, or it is just roll, then maybe take out a bunch of mooks in two hits? Whether
 #6 or 60 - half a dozen at once, six hex facing? how to 'damage all at once'?
 
-#find > 2 opponents
-# do attack - apply results to all?
+#find > 2 opponents - DONE
+# do attack - apply results to all? - DONE
 
