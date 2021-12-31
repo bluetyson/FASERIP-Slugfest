@@ -71,7 +71,11 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
                 self.alt_attack['edged'] = 1
                 self.alt_attack['shooting'] = 1
             print(self.alt_attack)
-			
+        if 'martial_arts' in settings:
+            print("MARTIAL ARTS:", settings['martial_arts'])
+            for ma in settings['martial_arts']:
+                self.talents['martial_arts'][ma] = 1
+            print(self.talents['martial_arts'])
         self.set_ability_dice(**settings)
         # arena
         if 'arena' in settings:

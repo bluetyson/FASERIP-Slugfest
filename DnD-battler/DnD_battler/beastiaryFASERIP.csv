@@ -1,4 +1,4 @@
-name,alt,alignment,type,size,armour_name,stated_ac,armor_bonus,ac,stated_hp,hp,expected_hp,hp_fudge,level,hd,F,A,S,E,R,I,P,Res,Pop,Spd,Att,Martial_Arts,attack_parameters,CR,xp,regen,healing_spells,healing_dice,healing_bonus,sc_ability,log,proficiency,initiative_bonus,AB_F,AB_A,AB_S,AB_E,AB_R,AB_I,AB_P
+name,alt,alignment,type,size,armour_name,stated_ac,armor_bonus,ac,stated_hp,hp,expected_hp,hp_fudge,level,hd,F,A,S,E,R,I,P,Res,Pop,Spd,Att,martial_arts,attack_parameters,CR,xp,regen,healing_spells,healing_dice,healing_bonus,sc_ability,log,proficiency,initiative_bonus,AB_F,AB_A,AB_S,AB_E,AB_R,AB_I,AB_P
 Crocodile,,reptile,animal,,,,,,,,,,,,Pr,Gd,Rm,Ex,Fb,Fb,Fb,,,Gd,E,,,,,,,,,,,,,,,,,,,
 Chimp,,ape,animal,,,,,,,,,,,,Ty,Ty,Gd,Ex,Fb,Ty,Pr,,,,B,,,,,,,,,,,,,,,,,,,
 Gorilla,,ape,animal,,,,,,,,,,,,Ty,Ty,Ex,Ex,Fb,Ty,Pr,,,,B,,,,,,,,,,,,,,,,,,,
