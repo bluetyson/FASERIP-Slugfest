@@ -20,6 +20,14 @@ billbybob7 = Creature.load('Boxer')
 billbybob8 = Creature.load('Boxer')
 billbybob9 = Creature.load('Boxer')
 billbybob10 = Creature.load('Boxer')
+billbybob15 = Creature.load('Boxer')
+billbybob16 = Creature.load('Boxer')
+billbybob17 = Creature.load('Boxer')
+billbybob18 = Creature.load('Boxer')
+billbybob19 = Creature.load('Boxer')
+billbybob20 = Creature.load('Boxer')
+billbybob21 = Creature.load('Boxer')
+billbybob22 = Creature.load('Boxer')
 
 #print(billbybob2.alignment, billbybob2.starting_hp, billbybob2.hp)
 #billbybob2.alignment = "green dragon evil"
@@ -38,8 +46,9 @@ arena3 = Encounter(Creature.load('Amazing Martial Artist')).addmobFASERIP(1)
 print("AddMob Martial Artist v Boxer")
 
 billbybob4 = Creature.load('Boxer')
-level1 = Creature.load('Amazing Martial Artist')
-level1 = Creature.load('Psyched Amazing Martial Artist')
+#level1 = Creature.load('Amazing Martial Artist')
+#level1 = Creature.load('Psyched Amazing Martial Artist')
+level1 = Creature.load('GHOTMU Amazing Martial Artist')
 
 arena2 = Encounter(level1, billbybob4)
 print("Encounter Martial Artist v Boxer")
@@ -65,28 +74,41 @@ for x in arena3.__dict__:
 	print(x, arena3.__dict__[x])
 	
 	
-print(arena2.go_to_war(1))
-print(arena3.go_to_war(1))
+#print(arena2.go_to_war(1))
+#print(arena3.go_to_war(1))
 
-billbybob15 = Creature.load('Boxer', alignment="mob")
-level15 = Creature.load('Amazing Martial Artist')
-arena4 = Encounter(billbybob15, level15)
+#billbybob15 = Creature.load('Boxer', alignment="mob")
+#level15 = Creature.load('Amazing Martial Artist')
+#arena4 = Encounter(billbybob15, level15)
 #print(arena4.go_to_war(1))
 
-billbybob16 = Creature.load('Boxer', alignment="mob")
-level16 = Creature.load('Amazing Martial Artist')
-arena5 = Encounter(level16, billbybob16)
+#billbybob16 = Creature.load('Boxer', alignment="mob")
+#level16 = Creature.load('Amazing Martial Artist')
+#arena5 = Encounter(level16, billbybob16)
 #print(arena5.go_to_war(1000))
 
 
 #arena2 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, billbybob8, billbybob9, billbybob10)
 print(arena2)
+#level1.hp = 120
 arena21 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, billbybob8, billbybob9)
+#arena210 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, billbybob8, billbybob9, billbybob15, billbybob16, billbybob17, billbybob18)
+#arena211 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, billbybob8, billbybob9, billbybob15, billbybob16, billbybob17, billbybob18, billbybob19)
+#arena212 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, billbybob8, billbybob9, billbybob15, billbybob16, billbybob17, billbybob18, billbybob19, billbybob20)
+#arena213 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, billbybob8, billbybob9, billbybob15, billbybob16, billbybob17, billbybob18, billbybob19, billbybob20, billbybob21)
+#arena214 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, billbybob8, billbybob9, billbybob15, billbybob16, billbybob17, billbybob18, billbybob19, billbybob20, billbybob21, billbybob22)
 #print(arena2.go_to_war(1000))
 #print(arena2.go_to_war(10000))
 #print(arena21.go_to_war(100))
-print(arena21.go_to_war(1000))
-#print(arena21.go_to_war(10000))
+#print(arena21.go_to_war(1000))
+#print(arena22.go_to_war(1000))
+print(arena21.go_to_war(10000))
+#print(arena210.go_to_war(1000))
+#print(arena211.go_to_war(1000))
+#print(arena212.go_to_war(1000))
+#print(arena213.go_to_war(1000))
+#print(arena214.go_to_war(1000))
+#print(level1.hp)
 
 
 ## notes on running
@@ -113,6 +135,8 @@ print(arena21.go_to_war(1000))
 #then random character gen? - java things
 
 #add group initiative
+
+#simulate maximum opponents slugfest at a time
 
 
 

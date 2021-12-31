@@ -128,7 +128,7 @@ class CreatureAction(CreatureAdvBase):
         print("multiattacking")
         if assess:
             return 0  # the default
-        for i in range(len(self.attacks)):
+        for i in range(len(self.attacks)):  ##multi attack check here? #boost for Martial arts B to F rank
             try:
                 opponent = self.arena.find(self.arena.target, self)[0]
             except IndexError:

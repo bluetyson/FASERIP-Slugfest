@@ -58,7 +58,11 @@ class CreatureBase:
         self.attacks = [AttackRoll(name='slugfest', ability_die=self.f, damage_dice=Dice(1,5), modifier=0)]
         self.alt_attack = {'throwing-blunt':0,'throwing-edged':0,'blunt':0,'edged':0,'shooting':0,'energy':0,'force':0,'grapple':0}  #put other abilities/weapons here
         self.powers = {}  #put other abilities/weapons here		
-        self.talents = {}  #put other abilities/weapons here				
+        
+        self.talents = {}  #put other abilities/weapons here			
+        martial_arts = {"A":0,"B":0,"C":0,"D":0,"E":0}	
+        self.talents['martial_arts'] = martial_arts
+		
         self.contacts = {}  #put other abilities/weapons here				
         self.alignment = 'undeclared'
         self.concentrating = 0
