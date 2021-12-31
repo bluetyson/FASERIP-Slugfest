@@ -130,50 +130,57 @@ class CreatureAction(CreatureAdvBase):
         print("multiattacking") #attack all at once - 6 at once? if more than 2 worth it maybe
         extra_attacks = 0
         fighting_rank = self.frank
-		
+        fighting_cs = 0
+        try:
+            opponent = self.arena.find(self.arena.target, self)[0]
+            possible_opponents = self.arena.find(self.arena.target, self)
+            print("POSS OPPONENTS", len(possible_opponents), possible_opponents)
+        except IndexError:
+            raise Victory()
         if assess:
             return 0  # the default
-        ##multi attack check here? add to range self.attacks #boost for Martial arts B to F rank
-        if dict_faserip[self.frank] < 30:
-            #no point doing multiattack except in a game karma type situation
-            fighting_cs = 0
-        elif dict_faserip[self.frank] < 50:
-            #Rm or In fighting no point trying for 3 as Amazing intensity, try for two
-            fighting_roll = random.randint(1,100)
-            fighting_cs = -3  #going to need to change below to have an effective fighting rank from fighting_cs type things
-            if self.frank < 40:
-            #Rm
+        if self.mook == 0 and len(possible_opponents) > 2:  #no extra attacks
+            fighting_cs = -4
+        else:
+            ##multi attack check here? add to range self.attacks #boost for Martial arts B to F rank
+            if dict_faserip[self.frank] < 30:
+                #no point doing multiattack except in a game karma type situation
+                pass
+            elif dict_faserip[self.frank] < 50:
+                #Rm or In fighting no point trying for 3 as Amazing intensity, try for two
+                fighting_roll = random.randint(1,100)
+                fighting_cs = -3  #going to need to change below to have an effective fighting rank from fighting_cs type things
+                if self.frank < 40:
+                #Rm
+                    fighting_color = universal_color(self.frank, fighting_roll)
+                    if fighting_color == "Y" or fighting_color == "R":
+                        extra_attacks = 1
+                        fighting_cs = -1
+                else:
+                #In
+                    fighting_color = universal_color(self.frank, fighting_roll)
+                    if fighting_color != "W":
+                        extra_attacks = 1
+                        fighting_cs = -1
+    
+            else:
+                #Amazing fighting or better Amazing intensity, try for three
+                fighting_roll = random.randint(1,100)
+                fighting_cs = -3  #going to need to change below to have an effective fighting rank from fighting_cs type things
                 fighting_color = universal_color(self.frank, fighting_roll)
                 if fighting_color == "Y" or fighting_color == "R":
-                    extra_attacks = 1
+                    extra_attacks = 2
                     fighting_cs = -1
-            else:
-            #In
-                fighting_color = universal_color(self.frank, fighting_roll)
-                if fighting_color != "W":
-                    extra_attacks = 1
-                    fighting_cs = -1
-
-        else:
-            #Amazing fighting or better Amazing intensity, try for three
-            fighting_roll = random.randint(1,100)
-            fighting_cs = -3  #going to need to change below to have an effective fighting rank from fighting_cs type things
-            fighting_color = universal_color(self.frank, fighting_roll)
-            if fighting_color == "Y" or fighting_color == "R":
-                extra_attacks = 2
-                fighting_cs = -1
-        ##check martial arts adjustment - put other weapon skill type adjustments etc in a place similarly
+            ##check martial arts adjustment - put other weapon skill type adjustments etc in a place similarly
         if self.talents['martial_arts']['B'] == 1:
             fighting_cs = fighting_cs + 1
         if fighting_cs != 0:
             fighting_rank = column_shift(self.frank, fighting_cs)
 		## loop for extra attacks
-        for ea in range(extra_attacks + 1):
+        for ea in range(extra_attacks + 1): #if no extra attacks and not a mook make a -4CS
             for i in range(len(self.attacks)):  ##multi attack check here? #boost for Martial arts B to F rank
                 try:
                     opponent = self.arena.find(self.arena.target, self)[0]
-                    possible_opponents = self.arena.find(self.arena.target, self)
-                    print("POSS OPPONENTS", len(possible_opponents), possible_opponents)					
                 except IndexError:
                     raise Victory()
                 self.log.debug(f"{self.name} attacks {opponent.name} with {self.attacks[i].name}")
@@ -188,9 +195,17 @@ class CreatureAction(CreatureAdvBase):
                 #damage = 2
                 if damage > 0:
                     #opponent.take_damage(damage, verbose)
-                    opponent.take_damageFASERIP(damage, effect_type, effect, verbose)
-                    self.tally['damage'] += damage
-                    self.tally['hits'] += 1
+                    if self.mook == 0 and len(possible_opponents) > 2:
+                        pass
+                        for mook in possible_opponents:
+                            mook.take_damageFASERIP(damage, effect_type, effect, verbose)
+                            self.tally['damage'] += damage
+                            self.tally['hits'] += 1
+                    else:
+                     
+                        opponent.take_damageFASERIP(damage, effect_type, effect, verbose)
+                        self.tally['damage'] += damage
+                        self.tally['hits'] += 1
                 else:
                     self.tally['misses'] += 1
     

@@ -49,8 +49,8 @@ print("AddMob Martial Artist v Boxer")
 billbybob4 = Creature.load('Boxer')
 #level1 = Creature.load('Amazing Martial Artist')
 #level1 = Creature.load('Psyched Amazing Martial Artist')
-#level1 = Creature.load('GHOTMU Amazing Martial Artist')
-level1 = Creature.load('GHOTMU Psyched Amazing Martial Artist')
+level1 = Creature.load('GHOTMU Amazing Martial Artist')
+#level1 = Creature.load('GHOTMU Psyched Amazing Martial Artist')
 
 arena2 = Encounter(level1, billbybob4)
 print("Encounter Martial Artist v Boxer")
@@ -119,8 +119,8 @@ arena215 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, bil
 #print(arena213.go_to_war(1000))
 #print(arena214.go_to_war(1000))
 #print(arena215.go_to_war(100))
-print(arena215.battle())
-#print(arena215.go_to_war(1000))
+#print(arena215.battle())
+print(arena215.go_to_war(1000))
 #print(level1.hp)
 
 
