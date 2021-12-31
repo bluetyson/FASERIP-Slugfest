@@ -161,7 +161,10 @@ class CreatureAction(CreatureAdvBase):
             if fighting_color == "Y" or fighting_color == "R":
                 extra_attacks = 2
                 fighting_cs = -1
-        ## loop for extra attacks
+        
+        if fighting_cs != 0:
+            fighting_rank = column_shift(self.frank, fighting_cs)
+		## loop for extra attacks
         for ea in range(extra_attacks + 1):
             for i in range(len(self.attacks)):  ##multi attack check here? #boost for Martial arts B to F rank
                 try:
@@ -173,8 +176,9 @@ class CreatureAction(CreatureAdvBase):
                 # THE IMPORTANT PART TO WRITE, UNIVERSAL TABLE TIME!
                 print("ATTACKS", self.attacks[i], "FIGHTING", self.frank, "STRENGTH", self.srank, "OPPEND", opponent.erank, "BA", opponent.ac, opponent.armor.ac)
                 #damage = self.attacks[i].attack(opponent.armor.ac, advantage=self.check_advantage(opponent))
-                damage, effect_type, effect = self.attacks[i].attackFASERIP(opponent.armor.ac, advantage=self.check_advantage(opponent), attack_rank=self.frank, damage_rank=self.srank, endurance_rank=opponent.erank, other_attacks=self.alt_attack)  #put attack rank in
-                
+                #damage, effect_type, effect = self.attacks[i].attackFASERIP(opponent.armor.ac, advantage=self.check_advantage(opponent), attack_rank=self.frank, damage_rank=self.srank, endurance_rank=opponent.erank, #other_attacks=self.alt_attack)  #put attack rank in
+                damage, effect_type, effect = self.attacks[i].attackFASERIP(opponent.armor.ac, advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=self.srank, endurance_rank=opponent.erank, other_attacks=self.alt_attack)  #put attack rank in
+                 
                 print("DAMAGE", damage, "OPPONENTAC:", opponent.armor.ac)
                 #damage = 2
                 if damage > 0:
