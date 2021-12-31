@@ -1,5 +1,6 @@
 from ..victory import Victory
 from ._adv_base import CreatureAdvBase
+from ..dice.ranks import dict_faserip
 
 class CreatureAction(CreatureAdvBase):
 
@@ -128,6 +129,17 @@ class CreatureAction(CreatureAdvBase):
         print("multiattacking")
         if assess:
             return 0  # the default
+        ##multi attack check here? add to range self.attacks #boost for Martial arts B to F rank
+        if dict_faserip[self.frank] < 30:
+            #no point doing multiattack except in a game karma type situation
+            pass
+        elif dict_faserip[self.frank] < 50:
+            #Rm or In fighting no point trying for 3 as Amazing intensity, try for two
+            pass
+        else:
+            #Amazing fighting or better Amazing intensity, try for three
+            pass
+            
         for i in range(len(self.attacks)):  ##multi attack check here? #boost for Martial arts B to F rank
             try:
                 opponent = self.arena.find(self.arena.target, self)[0]
