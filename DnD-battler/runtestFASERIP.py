@@ -118,7 +118,8 @@ arena215 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, bil
 #print(arena212.go_to_war(1000))
 #print(arena213.go_to_war(1000))
 #print(arena214.go_to_war(1000))
-print(arena215.go_to_war(100))
+#print(arena215.go_to_war(100))
+print(arena215.battle())
 #print(arena215.go_to_war(1000))
 #print(level1.hp)
 
@@ -151,5 +152,6 @@ print(arena215.go_to_war(100))
 #simulate maximum opponents slugfest at a time - one roll to hit and damage everyone left have to work this out - have to be in waves, or it is just roll, then maybe take out a bunch of mooks in two hits? Whether
 #6 or 60 - half a dozen at once, six hex facing? how to 'damage all at once'?
 
-
+#find > 2 opponents
+# do attack - apply results to all?
 

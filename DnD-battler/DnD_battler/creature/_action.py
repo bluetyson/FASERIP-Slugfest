@@ -50,7 +50,7 @@ class CreatureAction(CreatureAdvBase):
 		
             
         if verbose:
-            print(self.name + ' took ' + str(points) + ' of damage. Now on ' + str(self.hp) + ' hp.')
+            print(self.name + ' took ' + str(points) + ' damage. Now ' + str(self.hp) + ' Health.')
 
     def reset(self, hard=False):
         """
@@ -127,7 +127,7 @@ class CreatureAction(CreatureAdvBase):
 
     #def multiattack(self, verbose=0, assess=0):
     def multiattack(self, verbose=1, assess=0):	
-        print("multiattacking")
+        print("multiattacking") #attack all at once - 6 at once? if more than 2 worth it maybe
         extra_attacks = 0
         fighting_rank = self.frank
 		
@@ -172,6 +172,8 @@ class CreatureAction(CreatureAdvBase):
             for i in range(len(self.attacks)):  ##multi attack check here? #boost for Martial arts B to F rank
                 try:
                     opponent = self.arena.find(self.arena.target, self)[0]
+                    possible_opponents = self.arena.find(self.arena.target, self)
+                    print("POSS OPPONENTS", len(possible_opponents), possible_opponents)					
                 except IndexError:
                     raise Victory()
                 self.log.debug(f"{self.name} attacks {opponent.name} with {self.attacks[i].name}")
@@ -222,7 +224,7 @@ class CreatureAction(CreatureAdvBase):
         if not self.arena.find('alive enemy'):
             raise Victory()
 			
-        #print("ALIVE", self.arena.find('alive enemy'))
+        print("ALIVE opponents", len(self.arena.find('alive enemy')), self.arena.find('alive enemy'))
         # BONUS ACTION
         # heal  -healing word, a bonus action.
         if self.healing_spells > 0:

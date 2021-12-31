@@ -11,9 +11,9 @@ billbybob2 = Creature.load('Cat')
 
 level1 = Creature.load('Amazing Martial Artist')
 
-#billbybob2 = Creature.load('Lawyer')
+billbybob2 = Creature.load('Lawyer')
 #billbybob3 = Creature.load('Lawyer')
-#billbybob4 = Creature.load('Boxer')
+billbybob4 = Creature.load('Boxer')
 #billbybob5 = Creature.load('Boxer')
 #billbybob6 = Creature.load('Boxer')
 #billbybob7 = Creature.load('Boxer')

@@ -76,6 +76,11 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
             for ma in settings['martial_arts']:
                 self.talents['martial_arts'][ma] = 1
             print(self.talents['martial_arts'])
+			
+        if 'mook' in settings:
+            self.mook = settings['mook']
+            print("MOOKL", self.mook)
+
         self.set_ability_dice(**settings)
         # arena
         if 'arena' in settings:
