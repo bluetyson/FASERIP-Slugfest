@@ -1,101 +1,101 @@
-,roll,form,powers_min,power_category,talents_min,talents_max,talent_category,contacts_min,contacts_max,Roll,Type,Column,1,2,3,4,5,AMT,F,A,S,E,R,I,P,Res,Pop
-0,1,Normal human,16,17000,6,8,18000,6,6,1,Normal human,2,Fb,Fb,Fb,Fb,Fb,-1,0,0,0,0,0,0,0,1,0
-1,2,Normal human,3,1000,0,3,1000,0,2,2,Normal human,2,Fb,Fb,Fb,Fb,Fb,-1,0,0,0,0,0,0,0,1,0
-2,3,Normal human,3,1000,0,3,1000,0,2,3,Normal human,2,Fb,Fb,Fb,Fb,Fb,-1,0,0,0,0,0,0,0,1,0
-3,4,Normal human,3,1000,0,3,1000,0,2,4,Normal human,2,Fb,Fb,Fb,Fb,Fb,-1,0,0,0,0,0,0,0,1,0
-4,5,Normal human,3,1000,0,3,1000,0,2,5,Normal human,2,Fb,Fb,Fb,Fb,Fb,-1,0,0,0,0,0,0,0,1,0
-5,6,Normal human,3,1000,0,3,1000,0,2,6,Normal human,2,Pr,Pr,Pr,Pr,Fb,-1,0,0,0,0,0,0,0,1,0
-6,7,Normal human,3,2000,0,3,1000,0,2,7,Normal human,2,Pr,Pr,Pr,Pr,Fb,-1,0,0,0,0,0,0,0,1,0
-7,8,Normal human,3,2000,0,3,2000,0,2,8,Normal human,2,Pr,Pr,Pr,Pr,Fb,-1,0,0,0,0,0,0,0,1,0
-8,9,Normal human,3,2000,0,3,2000,0,2,9,Normal human,2,Pr,Pr,Pr,Pr,Fb,-1,0,0,0,0,0,0,0,1,0
-9,10,Normal human,3,2000,0,3,2000,0,2,10,Normal human,2,Pr,Pr,Pr,Pr,Fb,-1,0,0,0,0,0,0,0,1,0
-10,11,Normal human,3,2000,0,3,2000,0,2,11,Normal human,2,Ty,Pr,Ty,Ty,Pr,-1,0,0,0,0,0,0,0,1,0
-11,12,Normal human,3,2000,0,3,2000,0,2,12,Normal human,2,Ty,Pr,Ty,Ty,Pr,-1,0,0,0,0,0,0,0,1,0
-12,13,Normal human,3,3000,0,3,3000,0,2,13,Normal human,2,Ty,Pr,Ty,Ty,Pr,-1,0,0,0,0,0,0,0,1,0
-13,14,Normal human,4,3000,1,4,3000,0,4,14,Normal human,2,Ty,Pr,Ty,Ty,Pr,-1,0,0,0,0,0,0,0,1,0
-14,15,Normal human,4,3000,1,4,3000,0,4,15,Normal human,2,Ty,Pr,Ty,Ty,Pr,-1,0,0,0,0,0,0,0,1,0
-15,16,Normal human,4,3000,1,4,3000,0,4,16,Normal human,2,Ty,Pr,Ty,Gd,Pr,0,0,0,0,0,0,0,0,1,0
-16,17,Normal human,4,3000,1,4,3000,0,4,17,Normal human,2,Ty,Pr,Ty,Gd,Pr,0,0,0,0,0,0,0,0,1,0
-17,18,Normal human,4,4000,1,4,4000,0,4,18,Normal human,2,Ty,Pr,Ty,Gd,Pr,0,0,0,0,0,0,0,0,1,0
-18,19,Normal human,4,4000,1,4,4000,0,4,19,Normal human,2,Ty,Pr,Ty,Gd,Pr,0,0,0,0,0,0,0,0,1,0
-19,20,Normal human,4,4000,1,4,4000,0,4,20,Normal human,2,Ty,Pr,Ty,Gd,Pr,0,0,0,0,0,0,0,0,1,0
-20,21,Normal human,4,4000,1,4,4000,0,4,21,Normal human,2,Gd,Pr,Ty,Gd,Ty,0,0,0,0,0,0,0,0,1,0
-21,22,Normal human,4,4000,1,4,4000,0,4,22,Normal human,2,Gd,Pr,Ty,Gd,Ty,0,0,0,0,0,0,0,0,1,0
-22,23,Normal human,4,4000,1,4,4000,0,4,23,Normal human,2,Gd,Pr,Ty,Gd,Ty,0,0,0,0,0,0,0,0,1,0
-23,24,Normal human,4,4000,1,4,5000,0,4,24,Normal human,2,Gd,Pr,Ty,Gd,Ty,0,0,0,0,0,0,0,0,1,0
-24,25,Normal human,4,4000,1,4,5000,0,4,25,Normal human,2,Gd,Pr,Ty,Gd,Ty,0,0,0,0,0,0,0,0,1,0
-25,26,Normal human,4,5000,1,4,5000,0,4,26,Normal human,2,Gd,Ty,Ty,Gd,Ty,0,0,0,0,0,0,0,0,1,0
-26,27,Mutant - Induced,4,5000,1,4,5000,0,4,27,Mutant - Induced,1,Gd,Ty,Ty,Gd,Ty,0,0,0,0,0,0,0,0,0,0
-27,28,Mutant - Induced,5,5000,1,6,5000,1,4,28,Mutant - Induced,1,Gd,Ty,Ty,Gd,Ty,0,0,0,0,0,0,0,0,0,0
-28,29,Mutant - Induced,5,5000,1,6,6000,1,4,29,Mutant - Induced,1,Gd,Ty,Ty,Gd,Ty,0,0,0,0,0,0,0,0,0,0
-29,30,Mutant - Induced,5,6000,1,6,6000,1,4,30,Mutant - Induced,1,Gd,Ty,Ty,Gd,Ty,0,0,0,0,0,0,0,0,0,0
-30,31,Mutant - Random,5,6000,1,6,6000,1,4,31,Mutant - Random,1,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0,0
-31,32,Mutant - Random,5,7000,1,6,6000,1,4,32,Mutant - Random,1,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0,0
-32,33,Mutant - Random,5,7000,1,6,6000,1,4,33,Mutant - Random,1,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0,0
-33,34,Mutant - Breed,5,7000,1,6,7000,1,4,34,Mutant - Breed,1,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0,0
-34,35,Mutant - Breed,5,7000,1,6,7000,1,4,35,Mutant - Breed,1,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0,0
-35,36,Android,5,8000,1,6,7000,1,4,36,Android,4,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0,0
-36,37,Android,5,8000,1,6,7000,1,4,37,Android,4,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0,0
-37,38,Android,5,8000,1,6,7000,1,4,38,Android,4,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0,0
-38,39,Humanoid Race,5,8000,1,6,7000,1,4,39,Humanoid Race,5,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0,0
-39,40,Humanoid Race,5,9000,1,6,8000,1,4,40,Humanoid Race,5,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0,0
-40,41,Humanoid Race,5,9000,1,6,8000,1,4,41,Humanoid Race,5,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0,0
-41,42,Humanoid Race,5,9000,1,6,8000,1,4,42,Humanoid Race,5,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0,0
-42,43,Humanoid Race,6,9000,2,4,8000,2,4,43,Humanoid Race,5,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0,0
-43,44,Humanoid Race,6,9000,2,4,8000,2,4,44,Humanoid Race,5,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0,0
-44,45,Humanoid Race,6,9000,2,4,8000,2,4,45,Humanoid Race,5,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0,0
-45,46,Humanoid Race,6,9000,2,4,9000,2,4,46,Humanoid Race,5,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0,0
-46,47,Surgical Composite,6,10000,2,4,9000,2,4,47,Surgical Composite,2,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0,0
-47,48,Modified Human - Organic,6,10000,2,4,9000,2,4,48,Modified Human - Organic,1,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0,0
-48,49,Modified Human - Organic,6,10000,2,4,9000,2,4,49,Modified Human - Organic,1,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0,0
-49,50,Modified Human - Muscular,6,10000,2,4,9000,2,4,50,Modified Human - Muscular,1,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0,0
-50,51,Modified Human - Muscular,6,10000,2,4,10000,2,4,51,Modified Human - Muscular,1,Ex,Ty,Gd,Rm,Ex,1,0,0,0,0,0,0,0,0,0
-51,52,Modified Human - Skeletal,6,10000,2,4,10000,2,4,52,Modified Human - Skeletal,1,Ex,Ty,Gd,Rm,Ex,1,0,0,0,0,0,0,0,0,0
-52,53,Modified Human - Skeletal,6,11000,2,4,10000,2,4,53,Modified Human - Skeletal,1,Ex,Ty,Gd,Rm,Ex,1,0,0,0,0,0,0,0,0,0
-53,54,Modified Human - Extra Parts,6,11000,2,4,10000,2,4,54,Modified Human - Extra Parts,1,Ex,Ty,Gd,Rm,Ex,1,0,0,0,0,0,0,0,0,0
-54,55,Modified Human - Extra Parts,6,11000,2,4,10000,2,4,55,Modified Human - Extra Parts,1,Ex,Ty,Gd,Rm,Ex,1,0,0,0,0,0,0,0,0,0
-55,56,Modified Human - Extra Parts,6,11000,2,4,11000,2,4,56,Modified Human - Extra Parts,1,Ex,Ty,Gd,Rm,Ex,1,0,0,0,0,0,0,0,0,0
-56,57,Modified Human - Extra Parts,7,12000,2,6,11000,2,6,57,Modified Human - Extra Parts,1,Ex,Ty,Gd,Rm,Ex,1,0,0,0,0,0,0,0,0,0
-57,58,Demihuman - Centaur,7,12000,2,6,11000,2,6,58,Demihuman - Centaur,5,Ex,Ty,Gd,Rm,Ex,1,0,0,0,0,0,0,0,0,0
-58,59,Demihuman - Equiman,7,12000,2,6,11000,2,6,59,Demihuman - Equiman,3,Ex,Ty,Gd,Rm,Ex,1,0,0,0,0,0,0,0,0,0
-59,60,Demihuman - Faun,7,12000,2,6,11000,2,6,60,Demihuman - Faun,2,Ex,Ty,Gd,Rm,Ex,1,0,0,0,0,0,0,0,0,0
-60,61,Demihuman - Felinoid,7,12000,2,6,11000,2,6,61,Demihuman - Felinoid,1,Rm,Ty,Gd,Rm,Rm,1,0,0,0,0,0,0,0,0,0
-61,62,Demihuman - Felinoid,7,12000,2,6,12000,2,6,62,Demihuman - Felinoid,1,Rm,Ty,Gd,Rm,Rm,1,0,0,0,0,0,0,0,0,0
-62,63,Demihuman - Lupinoid,7,12000,2,6,12000,2,6,63,Demihuman - Lupinoid,4,Rm,Ty,Gd,Rm,Rm,1,0,0,0,0,0,0,0,0,0
-63,64,Demihuman - Lupinoid,7,12000,2,6,12000,2,6,64,Demihuman - Lupinoid,4,Rm,Ty,Gd,Rm,Rm,1,0,0,0,0,0,0,0,0,0
-64,65,Demihuman - Avian,7,12000,2,6,12000,2,6,65,Demihuman - Avian,3,Rm,Ty,Gd,Rm,Rm,1,0,0,0,0,0,0,0,0,0
-65,66,Demihuman - Avian,7,12000,2,6,12000,2,6,66,Demihuman - Avian,3,Rm,Ty,Gd,Rm,Rm,1,0,0,0,0,0,0,0,0,0
-66,67,Demihuman - Chiropteran,7,12000,2,6,12000,2,6,67,Demihuman - Chiropteran,2,Rm,Ty,Gd,Rm,Rm,1,0,0,0,0,0,0,0,0,0
-67,68,Demihuman - Lamian,8,12000,2,8,13000,3,3,68,Demihuman - Lamian,3,Rm,Ty,Gd,Rm,Rm,1,0,0,0,0,0,0,0,0,0
-68,69,Demihuman - Merhuman,8,13000,2,8,13000,3,3,69,Demihuman - Merhuman,2,Rm,Ty,Gd,Rm,Rm,1,0,0,0,0,0,0,0,0,0
-69,70,Demihuman - Harpy,8,13000,2,8,13000,3,3,70,Demihuman - Harpy,2,Rm,Ty,Gd,Rm,Rm,1,0,0,0,0,0,0,0,0,0
-70,71,Cyborg - Artificial limbs/organs,8,13000,2,8,13000,3,3,71,Cyborg - Artificial limbs/organs,4,Rm,Ty,Gd,In,In,2,0,0,0,0,0,0,0,0,0
-71,72,Cyborg - Artificial limbs/organs,8,13000,2,8,13000,3,3,72,Cyborg - Artificial limbs/organs,4,Rm,Ty,Gd,In,In,2,0,0,0,0,0,0,0,0,0
-72,73,Cyborg - Exoskeletons,8,13000,2,8,13000,3,3,73,Cyborg - Exoskeletons,4,Rm,Ty,Gd,In,In,2,0,0,0,0,0,0,0,0,0
-73,74,Cyborg - Exoskeletons,8,13000,2,8,14000,3,3,74,Cyborg - Exoskeletons,4,Rm,Ty,Gd,In,In,2,0,0,0,0,0,0,0,0,0
-74,75,Cyborg - Mechanical Body,8,13000,2,8,14000,3,3,75,Cyborg - Mechanical Body,4,Rm,Ty,Gd,In,In,2,0,0,0,0,0,0,0,0,0
-75,76,Cyborg - Mechanical Body,8,13000,2,8,14000,3,3,76,Cyborg - Mechanical Body,4,Rm,Gd,Gd,In,In,2,0,0,0,0,0,0,0,0,0
-76,77,Cyborg - Mechanically Augmented,9,13000,3,4,14000,3,4,77,Cyborg - Mechanically Augmented,3,Rm,Gd,Gd,In,In,2,0,0,0,0,0,0,0,0,0
-77,78,Cyborg - Mechanically Augmented,9,13000,3,4,14000,3,4,78,Cyborg - Mechanically Augmented,3,Rm,Gd,Gd,In,In,2,0,0,0,0,0,0,0,0,0
-78,79,Cyborg - Mechanically Augmented,9,13000,3,4,15000,3,4,79,Cyborg - Mechanically Augmented,3,Rm,Gd,Gd,In,In,2,0,0,0,0,0,0,0,0,0
-79,80,Robot - Human Shape,9,13000,3,4,15000,3,4,80,Robot - Human Shape,4,Rm,Gd,Gd,In,In,2,0,0,0,0,0,0,0,0,0
-80,81,Robot - Human Shape,9,13000,3,4,15000,3,4,81,Robot - Human Shape,4,In,Gd,Ex,In,Am,2,0,0,0,0,0,0,0,0,0
-81,82,Robot - Human Shape,9,13000,3,4,15000,3,4,82,Robot - Human Shape,4,In,Gd,Ex,In,Am,2,0,0,0,0,0,0,0,0,0
-82,83,Robot - Usuform,9,13000,3,4,15000,3,4,83,Robot - Usuform,4,In,Gd,Ex,In,Am,2,0,0,0,0,0,0,0,0,0
-83,84,Robot - Usuform,9,14000,3,4,16000,3,4,84,Robot - Usuform,4,In,Gd,Ex,In,Am,2,0,0,0,0,0,0,0,0,0
-84,85,Robot - Metamorphic,10,14000,3,6,16000,3,6,85,Robot - Metamorphic,4,In,Gd,Ex,In,Am,2,0,0,0,0,0,0,0,0,0
-85,86,Robot - Metamorphic,10,14000,3,6,16000,3,6,86,Robot - Metamorphic,4,In,Gd,Ex,In,Am,3,0,0,0,0,0,0,0,0,0
-86,87,Robot - Computer,10,15000,3,6,16000,3,6,87,Robot - Computer,4,In,Gd,Ex,In,Am,3,0,0,0,0,0,0,0,0,0
-87,88,Angel/Demon,10,15000,3,6,16000,3,6,88,Angel/Demon,5,In,Gd,Ex,In,Am,3,0,0,0,0,0,0,0,0,0
-88,89,Deity,10,15000,3,6,17000,3,6,89,Deity,5,In,Gd,Ex,In,Am,3,0,0,0,0,0,0,0,0,0
-89,90,Animal,10,16000,3,6,17000,3,6,90,Animal,1,In,Gd,Ex,In,Am,3,0,0,0,0,0,0,0,0,0
-90,91,Vegetable,11,16000,4,6,17000,4,4,91,Vegetable,1,In,Gd,Ex,Am,Am,3,0,0,0,0,0,0,0,0,0
-91,92,Abnormal Chemistry,11,16000,4,6,17000,4,4,92,Abnormal Chemistry,2,In,Gd,Ex,Am,Am,3,0,0,0,0,0,0,0,0,0
-92,93,Mineral,11,16000,4,6,17000,4,4,93,Mineral,2,In,Gd,Ex,Am,Am,3,0,0,0,0,0,0,0,0,0
-93,94,Gaseous,11,17000,4,6,17000,4,4,94,Gaseous,5,In,Gd,Ex,Am,Am,3,0,0,0,0,0,0,0,0,0
-94,95,Liquid,11,17000,4,6,18000,4,4,95,Liquid,5,In,Gd,Ex,Am,Am,3,0,0,0,0,0,0,0,0,0
-95,96,Energy,12,17000,4,8,18000,4,5,96,Energy,5,In,Ex,Rm,Am,Mn,4,0,0,0,0,0,0,0,0,0
-96,97,Ethereal,12,17000,4,8,18000,4,5,97,Ethereal,1,Am,Ex,Rm,Am,Mn,4,0,0,0,0,0,0,0,0,0
-97,98,Undead,12,17000,4,8,18000,4,5,98,Undead,1,Am,Ex,Rm,Am,Mn,4,0,0,0,0,0,0,0,0,0
-98,99,Mutant - Breed,14,17000,5,6,18000,5,5,99,Mutant - Breed,1,Am,Ex,Rm,Mn,Mn,4,0,0,0,0,0,0,0,0,0
-99,0,Mutant - Breed,14,17000,5,6,18000,5,5,0,Mutant - Breed,1,Am,Ex,Rm,Mn,Mn,4,0,0,0,0,0,0,0,0,0
+roll,form,powers_min,power_category,talents_min,talents_max,talent_category,contacts_min,contacts_max,Roll,Type,Column,1,2,3,4,5,AMT,F,A,S,E,R,I,P,Res,Pop
+1,Normal human,16,17000,6,8,18000,6,6,1,Normal human,2,Fb,Fb,Fb,Fb,Fb,-1,0,0,0,0,0,0,0,1,0
+2,Normal human,3,1000,0,3,1000,0,2,2,Normal human,2,Fb,Fb,Fb,Fb,Fb,-1,0,0,0,0,0,0,0,1,0
+3,Normal human,3,1000,0,3,1000,0,2,3,Normal human,2,Fb,Fb,Fb,Fb,Fb,-1,0,0,0,0,0,0,0,1,0
+4,Normal human,3,1000,0,3,1000,0,2,4,Normal human,2,Fb,Fb,Fb,Fb,Fb,-1,0,0,0,0,0,0,0,1,0
+5,Normal human,3,1000,0,3,1000,0,2,5,Normal human,2,Fb,Fb,Fb,Fb,Fb,-1,0,0,0,0,0,0,0,1,0
+6,Normal human,3,1000,0,3,1000,0,2,6,Normal human,2,Pr,Pr,Pr,Pr,Fb,-1,0,0,0,0,0,0,0,1,0
+7,Normal human,3,2000,0,3,1000,0,2,7,Normal human,2,Pr,Pr,Pr,Pr,Fb,-1,0,0,0,0,0,0,0,1,0
+8,Normal human,3,2000,0,3,2000,0,2,8,Normal human,2,Pr,Pr,Pr,Pr,Fb,-1,0,0,0,0,0,0,0,1,0
+9,Normal human,3,2000,0,3,2000,0,2,9,Normal human,2,Pr,Pr,Pr,Pr,Fb,-1,0,0,0,0,0,0,0,1,0
+10,Normal human,3,2000,0,3,2000,0,2,10,Normal human,2,Pr,Pr,Pr,Pr,Fb,-1,0,0,0,0,0,0,0,1,0
+11,Normal human,3,2000,0,3,2000,0,2,11,Normal human,2,Ty,Pr,Ty,Ty,Pr,-1,0,0,0,0,0,0,0,1,0
+12,Normal human,3,2000,0,3,2000,0,2,12,Normal human,2,Ty,Pr,Ty,Ty,Pr,-1,0,0,0,0,0,0,0,1,0
+13,Normal human,3,3000,0,3,3000,0,2,13,Normal human,2,Ty,Pr,Ty,Ty,Pr,-1,0,0,0,0,0,0,0,1,0
+14,Normal human,4,3000,1,4,3000,0,4,14,Normal human,2,Ty,Pr,Ty,Ty,Pr,-1,0,0,0,0,0,0,0,1,0
+15,Normal human,4,3000,1,4,3000,0,4,15,Normal human,2,Ty,Pr,Ty,Ty,Pr,-1,0,0,0,0,0,0,0,1,0
+16,Normal human,4,3000,1,4,3000,0,4,16,Normal human,2,Ty,Pr,Ty,Gd,Pr,0,0,0,0,0,0,0,0,1,0
+17,Normal human,4,3000,1,4,3000,0,4,17,Normal human,2,Ty,Pr,Ty,Gd,Pr,0,0,0,0,0,0,0,0,1,0
+18,Normal human,4,4000,1,4,4000,0,4,18,Normal human,2,Ty,Pr,Ty,Gd,Pr,0,0,0,0,0,0,0,0,1,0
+19,Normal human,4,4000,1,4,4000,0,4,19,Normal human,2,Ty,Pr,Ty,Gd,Pr,0,0,0,0,0,0,0,0,1,0
+20,Normal human,4,4000,1,4,4000,0,4,20,Normal human,2,Ty,Pr,Ty,Gd,Pr,0,0,0,0,0,0,0,0,1,0
+21,Normal human,4,4000,1,4,4000,0,4,21,Normal human,2,Gd,Pr,Ty,Gd,Ty,0,0,0,0,0,0,0,0,1,0
+22,Normal human,4,4000,1,4,4000,0,4,22,Normal human,2,Gd,Pr,Ty,Gd,Ty,0,0,0,0,0,0,0,0,1,0
+23,Normal human,4,4000,1,4,4000,0,4,23,Normal human,2,Gd,Pr,Ty,Gd,Ty,0,0,0,0,0,0,0,0,1,0
+24,Normal human,4,4000,1,4,5000,0,4,24,Normal human,2,Gd,Pr,Ty,Gd,Ty,0,0,0,0,0,0,0,0,1,0
+25,Normal human,4,4000,1,4,5000,0,4,25,Normal human,2,Gd,Pr,Ty,Gd,Ty,0,0,0,0,0,0,0,0,1,0
+26,Normal human,4,5000,1,4,5000,0,4,26,Normal human,2,Gd,Ty,Ty,Gd,Ty,0,0,0,0,0,0,0,0,1,0
+27,Mutant - Induced,4,5000,1,4,5000,0,4,27,Mutant - Induced,1,Gd,Ty,Ty,Gd,Ty,0,0,0,0,0,0,0,0,0,0
+28,Mutant - Induced,5,5000,1,6,5000,1,4,28,Mutant - Induced,1,Gd,Ty,Ty,Gd,Ty,0,0,0,0,0,0,0,0,0,0
+29,Mutant - Induced,5,5000,1,6,6000,1,4,29,Mutant - Induced,1,Gd,Ty,Ty,Gd,Ty,0,0,0,0,0,0,0,0,0,0
+30,Mutant - Induced,5,6000,1,6,6000,1,4,30,Mutant - Induced,1,Gd,Ty,Ty,Gd,Ty,0,0,0,0,0,0,0,0,0,0
+31,Mutant - Random,5,6000,1,6,6000,1,4,31,Mutant - Random,1,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0,0
+32,Mutant - Random,5,7000,1,6,6000,1,4,32,Mutant - Random,1,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0,0
+33,Mutant - Random,5,7000,1,6,6000,1,4,33,Mutant - Random,1,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0,0
+34,Mutant - Breed,5,7000,1,6,7000,1,4,34,Mutant - Breed,1,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0,0
+35,Mutant - Breed,5,7000,1,6,7000,1,4,35,Mutant - Breed,1,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0,0
+36,Android,5,8000,1,6,7000,1,4,36,Android,4,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0,0
+37,Android,5,8000,1,6,7000,1,4,37,Android,4,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0,0
+38,Android,5,8000,1,6,7000,1,4,38,Android,4,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0,0
+39,Humanoid Race,5,8000,1,6,7000,1,4,39,Humanoid Race,5,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0,0
+40,Humanoid Race,5,9000,1,6,8000,1,4,40,Humanoid Race,5,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0,0
+41,Humanoid Race,5,9000,1,6,8000,1,4,41,Humanoid Race,5,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0,0
+42,Humanoid Race,5,9000,1,6,8000,1,4,42,Humanoid Race,5,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0,0
+43,Humanoid Race,6,9000,2,4,8000,2,4,43,Humanoid Race,5,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0,0
+44,Humanoid Race,6,9000,2,4,8000,2,4,44,Humanoid Race,5,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0,0
+45,Humanoid Race,6,9000,2,4,8000,2,4,45,Humanoid Race,5,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0,0
+46,Humanoid Race,6,9000,2,4,9000,2,4,46,Humanoid Race,5,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0,0
+47,Surgical Composite,6,10000,2,4,9000,2,4,47,Surgical Composite,2,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0,0
+48,Modified Human - Organic,6,10000,2,4,9000,2,4,48,Modified Human - Organic,1,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0,0
+49,Modified Human - Organic,6,10000,2,4,9000,2,4,49,Modified Human - Organic,1,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0,0
+50,Modified Human - Muscular,6,10000,2,4,9000,2,4,50,Modified Human - Muscular,1,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0,0
+51,Modified Human - Muscular,6,10000,2,4,10000,2,4,51,Modified Human - Muscular,1,Ex,Ty,Gd,Rm,Ex,1,0,0,0,0,0,0,0,0,0
+52,Modified Human - Skeletal,6,10000,2,4,10000,2,4,52,Modified Human - Skeletal,1,Ex,Ty,Gd,Rm,Ex,1,0,0,0,0,0,0,0,0,0
+53,Modified Human - Skeletal,6,11000,2,4,10000,2,4,53,Modified Human - Skeletal,1,Ex,Ty,Gd,Rm,Ex,1,0,0,0,0,0,0,0,0,0
+54,Modified Human - Extra Parts,6,11000,2,4,10000,2,4,54,Modified Human - Extra Parts,1,Ex,Ty,Gd,Rm,Ex,1,0,0,0,0,0,0,0,0,0
+55,Modified Human - Extra Parts,6,11000,2,4,10000,2,4,55,Modified Human - Extra Parts,1,Ex,Ty,Gd,Rm,Ex,1,0,0,0,0,0,0,0,0,0
+56,Modified Human - Extra Parts,6,11000,2,4,11000,2,4,56,Modified Human - Extra Parts,1,Ex,Ty,Gd,Rm,Ex,1,0,0,0,0,0,0,0,0,0
+57,Modified Human - Extra Parts,7,12000,2,6,11000,2,6,57,Modified Human - Extra Parts,1,Ex,Ty,Gd,Rm,Ex,1,0,0,0,0,0,0,0,0,0
+58,Demihuman - Centaur,7,12000,2,6,11000,2,6,58,Demihuman - Centaur,5,Ex,Ty,Gd,Rm,Ex,1,0,0,0,0,0,0,0,0,0
+59,Demihuman - Equiman,7,12000,2,6,11000,2,6,59,Demihuman - Equiman,3,Ex,Ty,Gd,Rm,Ex,1,0,0,0,0,0,0,0,0,0
+60,Demihuman - Faun,7,12000,2,6,11000,2,6,60,Demihuman - Faun,2,Ex,Ty,Gd,Rm,Ex,1,0,0,0,0,0,0,0,0,0
+61,Demihuman - Felinoid,7,12000,2,6,11000,2,6,61,Demihuman - Felinoid,1,Rm,Ty,Gd,Rm,Rm,1,0,0,0,0,0,0,0,0,0
+62,Demihuman - Felinoid,7,12000,2,6,12000,2,6,62,Demihuman - Felinoid,1,Rm,Ty,Gd,Rm,Rm,1,0,0,0,0,0,0,0,0,0
+63,Demihuman - Lupinoid,7,12000,2,6,12000,2,6,63,Demihuman - Lupinoid,4,Rm,Ty,Gd,Rm,Rm,1,0,0,0,0,0,0,0,0,0
+64,Demihuman - Lupinoid,7,12000,2,6,12000,2,6,64,Demihuman - Lupinoid,4,Rm,Ty,Gd,Rm,Rm,1,0,0,0,0,0,0,0,0,0
+65,Demihuman - Avian,7,12000,2,6,12000,2,6,65,Demihuman - Avian,3,Rm,Ty,Gd,Rm,Rm,1,0,0,0,0,0,0,0,0,0
+66,Demihuman - Avian,7,12000,2,6,12000,2,6,66,Demihuman - Avian,3,Rm,Ty,Gd,Rm,Rm,1,0,0,0,0,0,0,0,0,0
+67,Demihuman - Chiropteran,7,12000,2,6,12000,2,6,67,Demihuman - Chiropteran,2,Rm,Ty,Gd,Rm,Rm,1,0,0,0,0,0,0,0,0,0
+68,Demihuman - Lamian,8,12000,2,8,13000,3,3,68,Demihuman - Lamian,3,Rm,Ty,Gd,Rm,Rm,1,0,0,0,0,0,0,0,0,0
+69,Demihuman - Merhuman,8,13000,2,8,13000,3,3,69,Demihuman - Merhuman,2,Rm,Ty,Gd,Rm,Rm,1,0,0,0,0,0,0,0,0,0
+70,Demihuman - Harpy,8,13000,2,8,13000,3,3,70,Demihuman - Harpy,2,Rm,Ty,Gd,Rm,Rm,1,0,0,0,0,0,0,0,0,0
+71,Cyborg - Artificial limbs/organs,8,13000,2,8,13000,3,3,71,Cyborg - Artificial limbs/organs,4,Rm,Ty,Gd,In,In,2,0,0,0,0,0,0,0,0,0
+72,Cyborg - Artificial limbs/organs,8,13000,2,8,13000,3,3,72,Cyborg - Artificial limbs/organs,4,Rm,Ty,Gd,In,In,2,0,0,0,0,0,0,0,0,0
+73,Cyborg - Exoskeletons,8,13000,2,8,13000,3,3,73,Cyborg - Exoskeletons,4,Rm,Ty,Gd,In,In,2,0,0,0,0,0,0,0,0,0
+74,Cyborg - Exoskeletons,8,13000,2,8,14000,3,3,74,Cyborg - Exoskeletons,4,Rm,Ty,Gd,In,In,2,0,0,0,0,0,0,0,0,0
+75,Cyborg - Mechanical Body,8,13000,2,8,14000,3,3,75,Cyborg - Mechanical Body,4,Rm,Ty,Gd,In,In,2,0,0,0,0,0,0,0,0,0
+76,Cyborg - Mechanical Body,8,13000,2,8,14000,3,3,76,Cyborg - Mechanical Body,4,Rm,Gd,Gd,In,In,2,0,0,0,0,0,0,0,0,0
+77,Cyborg - Mechanically Augmented,9,13000,3,4,14000,3,4,77,Cyborg - Mechanically Augmented,3,Rm,Gd,Gd,In,In,2,0,0,0,0,0,0,0,0,0
+78,Cyborg - Mechanically Augmented,9,13000,3,4,14000,3,4,78,Cyborg - Mechanically Augmented,3,Rm,Gd,Gd,In,In,2,0,0,0,0,0,0,0,0,0
+79,Cyborg - Mechanically Augmented,9,13000,3,4,15000,3,4,79,Cyborg - Mechanically Augmented,3,Rm,Gd,Gd,In,In,2,0,0,0,0,0,0,0,0,0
+80,Robot - Human Shape,9,13000,3,4,15000,3,4,80,Robot - Human Shape,4,Rm,Gd,Gd,In,In,2,0,0,0,0,0,0,0,0,0
+81,Robot - Human Shape,9,13000,3,4,15000,3,4,81,Robot - Human Shape,4,In,Gd,Ex,In,Am,2,0,0,0,0,0,0,0,0,0
+82,Robot - Human Shape,9,13000,3,4,15000,3,4,82,Robot - Human Shape,4,In,Gd,Ex,In,Am,2,0,0,0,0,0,0,0,0,0
+83,Robot - Usuform,9,13000,3,4,15000,3,4,83,Robot - Usuform,4,In,Gd,Ex,In,Am,2,0,0,0,0,0,0,0,0,0
+84,Robot - Usuform,9,14000,3,4,16000,3,4,84,Robot - Usuform,4,In,Gd,Ex,In,Am,2,0,0,0,0,0,0,0,0,0
+85,Robot - Metamorphic,10,14000,3,6,16000,3,6,85,Robot - Metamorphic,4,In,Gd,Ex,In,Am,2,0,0,0,0,0,0,0,0,0
+86,Robot - Metamorphic,10,14000,3,6,16000,3,6,86,Robot - Metamorphic,4,In,Gd,Ex,In,Am,3,0,0,0,0,0,0,0,0,0
+87,Robot - Computer,10,15000,3,6,16000,3,6,87,Robot - Computer,4,In,Gd,Ex,In,Am,3,0,0,0,0,0,0,0,0,0
+88,Angel/Demon,10,15000,3,6,16000,3,6,88,Angel/Demon,5,In,Gd,Ex,In,Am,3,0,0,0,0,0,0,0,0,0
+89,Deity,10,15000,3,6,17000,3,6,89,Deity,5,In,Gd,Ex,In,Am,3,0,0,0,0,0,0,0,0,0
+90,Animal,10,16000,3,6,17000,3,6,90,Animal,1,In,Gd,Ex,In,Am,3,0,0,0,0,0,0,0,0,0
+91,Vegetable,11,16000,4,6,17000,4,4,91,Vegetable,1,In,Gd,Ex,Am,Am,3,0,0,0,0,0,0,0,0,0
+92,Abnormal Chemistry,11,16000,4,6,17000,4,4,92,Abnormal Chemistry,2,In,Gd,Ex,Am,Am,3,0,0,0,0,0,0,0,0,0
+93,Mineral,11,16000,4,6,17000,4,4,93,Mineral,2,In,Gd,Ex,Am,Am,3,0,0,0,0,0,0,0,0,0
+94,Gaseous,11,17000,4,6,17000,4,4,94,Gaseous,5,In,Gd,Ex,Am,Am,3,0,0,0,0,0,0,0,0,0
+95,Liquid,11,17000,4,6,18000,4,4,95,Liquid,5,In,Gd,Ex,Am,Am,3,0,0,0,0,0,0,0,0,0
+96,Energy,12,17000,4,8,18000,4,5,96,Energy,5,In,Ex,Rm,Am,Mn,4,0,0,0,0,0,0,0,0,0
+97,Ethereal,12,17000,4,8,18000,4,5,97,Ethereal,1,Am,Ex,Rm,Am,Mn,4,0,0,0,0,0,0,0,0,0
+98,Undead,12,17000,4,8,18000,4,5,98,Undead,1,Am,Ex,Rm,Am,Mn,4,0,0,0,0,0,0,0,0,0
+99,Mutant - Breed,14,17000,5,6,18000,5,5,99,Mutant - Breed,1,Am,Ex,Rm,Mn,Mn,4,0,0,0,0,0,0,0,0,0
+0,Mutant - Breed,14,17000,5,6,18000,5,5,0,Mutant - Breed,1,Am,Ex,Rm,Mn,Mn,4,0,0,0,0,0,0,0,0,0
