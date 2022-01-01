@@ -17,7 +17,7 @@ class EncounterBase:
         self.name = 'Encounter'
         self.masterlog = []
         self.note = ''
-        self.combattants = []
+        self.combattants : List[Creature] = []
         #self.combattants.extend(lineup)
         for chap in lineup:
             self.append(chap)
