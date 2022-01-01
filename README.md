@@ -12,5 +12,6 @@ Work in progress on an Ultimate Powers Book version -
 - There are two types - Composite and Compound Form - which basically involve making up multiple character forms - possibly implemented later, for now I will replace them with Mutants [because X-Men].  For the purposes of tying into a simulation that would be difficult - in programming terms, sub-Creature character objects switching out stats.  Even just for a character generator.
 
 ## Other versions
-You can find a java GUI FASERIP Character Generator at http://sourceforge.net/projects/javamcc/files/JMCC%28betav4.5%29.jar/download
+Java - You can find a java GUI FASERIP Character Generator at http://sourceforge.net/projects/javamcc/files/JMCC%28betav4.5%29.jar/download
+Javascript - https://github.com/jinniaflyer450/Jins-FASERIP-Char-Creator
 
