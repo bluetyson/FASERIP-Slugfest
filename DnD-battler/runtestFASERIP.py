@@ -122,7 +122,7 @@ arenaHerbert = Encounter(Lawyer, RatPack)
 #print(arena215.go_to_war(100))
 #print(arena215.battle())
 #print(arena215.go_to_war(1000))
-print(arenaHerbert.go_to_war(1000))
+print(arenaHerbert.go_to_war(10))
 #print(level1.hp)
 
 
