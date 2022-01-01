@@ -1,0 +1,712 @@
+711
+1001 1 Guns
+1002 1 Guns
+1003 1 Guns
+1004 1 Guns
+1005 1 Guns
+1006 1 Guns
+1007 1 Guns
+1008 1 Guns
+1009 1 Guns
+1010 1 Guns
+1011 1 Guns
+1012 1 Guns
+1013 1 Guns
+1014 1 Guns
+1015 1 Guns
+1016 1 Guns
+1017 1 Guns
+1018 1 Guns
+1019 1 Guns
+1020 1 Guns
+1021 1 Thrown Weapons
+1022 1 Thrown Weapons
+1023 1 Thrown Weapons
+1024 1 Thrown Weapons
+1025 1 Thrown Weapons
+1026 1 Thrown Weapons
+1027 1 Thrown Weapons
+1028 1 Thrown Weapons
+1029 1 Thrown Weapons
+1030 1 Thrown Weapons
+1031 1 Thrown Weapons
+1032 1 Thrown Weapons
+1033 1 Thrown Weapons
+1034 1 Thrown Weapons
+1035 1 Thrown Weapons
+1036 1 Thrown Weapons
+1037 1 Thrown Weapons
+1038 1 Thrown Weapons
+1039 1 Thrown Weapons
+1040 1 Thrown Weapons
+1041 1 Thrown Weapons
+1042 1 Thrown Weapons
+1043 1 Thrown Weapons
+1044 1 Thrown Weapons
+1045 1 Thrown Weapons
+1046 1 Thrown Weapons
+1047 1 Thrown Weapons
+1048 1 Thrown Weapons
+1049 1 Thrown Weapons
+1050 1 Thrown Weapons
+1051 1 Bows
+1052 1 Bows
+1053 1 Bows
+1054 1 Bows
+1055 1 Bows
+1056 1 Bows
+1057 1 Bows
+1058 1 Bows
+1059 1 Bows
+1060 1 Bows
+1061 1 Blunt Weapons
+1062 1 Blunt Weapons
+1063 1 Blunt Weapons
+1064 1 Blunt Weapons
+1065 1 Blunt Weapons
+1066 1 Blunt Weapons
+1067 1 Blunt Weapons
+1068 1 Blunt Weapons
+1069 1 Blunt Weapons
+1070 1 Blunt Weapons
+1071 1 Blunt Weapons
+1072 1 Blunt Weapons
+1073 1 Blunt Weapons
+1074 1 Blunt Weapons
+1075 1 Blunt Weapons
+1076 1 Blunt Weapons
+1077 1 Blunt Weapons
+1078 1 Blunt Weapons
+1079 1 Blunt Weapons
+1080 1 Blunt Weapons
+1081 1 Sharp Weapons
+1082 1 Sharp Weapons
+1083 1 Sharp Weapons
+1084 1 Sharp Weapons
+1085 1 Sharp Weapons
+1086 1 Sharp Weapons
+1087 1 Sharp Weapons
+1088 1 Sharp Weapons
+1089 1 Sharp Weapons
+1090 1 Sharp Weapons
+1091 1 Oriental Weapons
+1092 1 Oriental Weapons
+1093 1 Oriental Weapons
+1094 1 Oriental Weapons
+1095 1 Oriental Weapons
+1096 1 Oriental Weapons
+1097 1 Oriental Weapons
+1098 1 Oriental Weapons
+1099 1 Oriental Weapons
+1000 1 Oriental Weapons
+1101 2 Marksman*
+1102 2 Weapons Master*
+1103 2 Weapons Specialist*
+2001 1 Martial Arts A
+2002 1 Martial Arts A
+2003 1 Martial Arts A
+2004 1 Martial Arts A
+2005 1 Martial Arts A
+2006 1 Martial Arts A
+2007 1 Martial Arts A
+2008 1 Martial Arts A
+2009 1 Martial Arts A
+2010 1 Martial Arts A
+2011 1 Martial Arts B
+2012 1 Martial Arts B
+2013 1 Martial Arts B
+2014 1 Martial Arts B
+2015 1 Martial Arts B
+2016 1 Martial Arts B
+2017 1 Martial Arts B
+2018 1 Martial Arts B
+2019 1 Martial Arts B
+2020 1 Martial Arts B
+2021 1 Martial Arts C
+2022 1 Martial Arts C
+2023 1 Martial Arts C
+2024 1 Martial Arts C
+2025 1 Martial Arts C
+2026 1 Martial Arts C
+2027 1 Martial Arts C
+2028 1 Martial Arts C
+2029 1 Martial Arts C
+2030 1 Martial Arts C
+2031 1 Martial Arts D
+2032 1 Martial Arts D
+2033 1 Martial Arts D
+2034 1 Martial Arts D
+2035 1 Martial Arts D
+2036 1 Martial Arts D
+2037 1 Martial Arts D
+2038 1 Martial Arts D
+2039 1 Martial Arts D
+2040 1 Martial Arts D
+2041 1 Martial Arts E
+2042 1 Martial Arts E
+2043 1 Martial Arts E
+2044 1 Martial Arts E
+2045 1 Martial Arts E
+2046 1 Martial Arts E
+2047 1 Martial Arts E
+2048 1 Martial Arts E
+2049 1 Martial Arts E
+2050 1 Martial Arts E
+2051 1 Wrestling
+2052 1 Wrestling
+2053 1 Wrestling
+2054 1 Wrestling
+2055 1 Wrestling
+2056 1 Wrestling
+2057 1 Wrestling
+2058 1 Wrestling
+2059 1 Wrestling
+2060 1 Wrestling
+2061 1 Thrown Objects
+2062 1 Thrown Objects
+2063 1 Thrown Objects
+2064 1 Thrown Objects
+2065 1 Thrown Objects
+2066 1 Thrown Objects
+2067 1 Thrown Objects
+2068 1 Thrown Objects
+2069 1 Thrown Objects
+2070 1 Thrown Objects
+2071 1 Tumbling
+2072 1 Tumbling
+2073 1 Tumbling
+2074 1 Tumbling
+2075 1 Tumbling
+2076 1 Tumbling
+2077 1 Tumbling
+2078 1 Tumbling
+2079 1 Tumbling
+2080 1 Tumbling
+2081 1 Acrobatics
+2082 1 Acrobatics
+2083 1 Acrobatics
+2084 1 Acrobatics
+2085 1 Acrobatics
+2086 1 Acrobatics
+2087 1 Acrobatics
+2088 1 Acrobatics
+2089 1 Acrobatics
+2090 1 Acrobatics
+2091 1 Acrobatics
+2092 1 Acrobatics
+2093 1 Acrobatics
+2094 1 Acrobatics
+2095 1 Acrobatics
+2096 1 Acrobatics
+2097 1 Acrobatics
+2098 1 Acrobatics
+2099 1 Acrobatics
+2000 1 Acrobatics
+3001 2 Medicine*
+3002 2 Medicine*
+3003 2 Medicine*
+3004 2 Medicine*
+3005 2 Medicine*
+3006 2 Medicine*
+3007 2 Medicine*
+3008 2 Medicine*
+3009 2 Medicine*
+3010 2 Medicine*
+3011 1 Law
+3012 1 Law
+3013 1 Law
+3014 1 Law
+3015 1 Law
+3016 1 Law
+3017 1 Law
+3018 1 Law
+3019 1 Law
+3020 1 Law
+3021 1 Pilot
+3022 1 Pilot
+3023 1 Pilot
+3024 1 Pilot
+3025 1 Pilot
+3026 1 Pilot
+3027 1 Pilot
+3028 1 Pilot
+3029 1 Pilot
+3030 1 Pilot
+3031 1 Military
+3032 1 Military
+3033 1 Military
+3034 1 Military
+3035 1 Military
+3036 1 Military
+3037 1 Military
+3038 1 Military
+3039 1 Military
+3040 1 Military
+3041 1 Business/Finance
+3042 1 Business/Finance
+3043 1 Business/Finance
+3044 1 Business/Finance
+3045 1 Business/Finance
+3046 1 Business/Finance
+3047 1 Business/Finance
+3048 1 Business/Finance
+3049 1 Business/Finance
+3050 1 Business/Finance
+3051 1 Journalism
+3052 1 Journalism
+3053 1 Journalism
+3054 1 Journalism
+3055 1 Journalism
+3056 1 Journalism
+3057 1 Journalism
+3058 1 Journalism
+3059 1 Journalism
+3060 1 Journalism
+3061 1 Engineering
+3062 1 Engineering
+3063 1 Engineering
+3064 1 Engineering
+3065 1 Engineering
+3066 1 Engineering
+3067 1 Engineering
+3068 1 Engineering
+3069 1 Engineering
+3070 1 Engineering
+3071 1 Crime
+3072 1 Crime
+3073 1 Crime
+3074 1 Crime
+3075 1 Crime
+3076 1 Crime
+3077 1 Crime
+3078 1 Crime
+3079 1 Crime
+3080 1 Crime
+3081 1 Psychiatry
+3082 1 Psychiatry
+3083 1 Psychiatry
+3084 1 Psychiatry
+3085 1 Psychiatry
+3086 1 Psychiatry
+3087 1 Psychiatry
+3088 1 Psychiatry
+3089 1 Psychiatry
+3090 1 Psychiatry
+3091 1 Detective/Espionage
+3092 1 Detective/Espionage
+3093 1 Detective/Espionage
+3094 1 Detective/Espionage
+3095 1 Detective/Espionage
+3096 1 Detective/Espionage
+3097 1 Detective/Espionage
+3098 1 Detective/Espionage
+3099 1 Detective/Espionage
+3000 1 Detective/Espionage
+3101 1 Law-Enforcement
+4001 1 Chemistry
+4002 1 Chemistry
+4003 1 Chemistry
+4004 1 Chemistry
+4005 1 Chemistry
+4006 1 Chemistry
+4007 1 Chemistry
+4008 1 Chemistry
+4009 1 Chemistry
+4010 1 Chemistry
+4011 1 Chemistry
+4012 1 Chemistry
+4013 1 Chemistry
+4014 1 Chemistry
+4015 1 Chemistry
+4016 1 Chemistry
+4017 1 Chemistry
+4018 1 Chemistry
+4019 1 Chemistry
+4020 1 Chemistry
+4021 1 Biology
+4022 1 Biology
+4023 1 Biology
+4024 1 Biology
+4025 1 Biology
+4026 1 Biology
+4027 1 Biology
+4028 1 Biology
+4029 1 Biology
+4030 1 Biology
+4031 1 Biology
+4032 1 Biology
+4033 1 Biology
+4034 1 Biology
+4035 1 Biology
+4036 1 Biology
+4037 1 Biology
+4038 1 Biology
+4039 1 Biology
+4040 1 Biology
+4041 1 Geology
+4042 1 Geology
+4043 1 Geology
+4044 1 Geology
+4045 1 Geology
+4046 1 Geology
+4047 1 Geology
+4048 1 Geology
+4049 1 Geology
+4050 1 Geology
+4051 1 Geology
+4052 1 Geology
+4053 1 Geology
+4054 1 Geology
+4055 1 Geology
+4056 1 Geology
+4057 1 Geology
+4058 1 Geology
+4059 1 Geology
+4060 1 Geology
+4061 1 Genetics
+4062 1 Genetics
+4063 1 Genetics
+4064 1 Genetics
+4065 1 Genetics
+4066 1 Genetics
+4067 1 Genetics
+4068 1 Genetics
+4069 1 Genetics
+4070 1 Genetics
+4071 1 Archeology
+4072 1 Archeology
+4073 1 Archeology
+4074 1 Archeology
+4075 1 Archeology
+4076 1 Archeology
+4077 1 Archeology
+4078 1 Archeology
+4079 1 Archeology
+4080 1 Archeology
+4081 1 Physics
+4082 1 Physics
+4083 1 Physics
+4084 1 Physics
+4085 1 Physics
+4086 1 Physics
+4087 1 Physics
+4088 1 Physics
+4089 1 Physics
+4090 1 Physics
+4091 1 Electronics
+4092 1 Electronics
+4093 1 Electronics
+4094 1 Electronics
+4095 1 Electronics
+4096 1 Electronics
+4097 1 Electronics
+4098 1 Electronics
+4099 1 Electronics
+4000 1 Electronics
+4101 1 Computers
+5001 1 Trance
+5002 1 Trance
+5003 1 Trance
+5004 1 Trance
+5005 1 Trance
+5006 1 Trance
+5007 1 Trance
+5008 1 Trance
+5009 1 Trance
+5010 1 Trance
+5011 1 Trance
+5012 1 Trance
+5013 1 Trance
+5014 1 Trance
+5015 1 Trance
+5016 1 Trance
+5017 1 Trance
+5018 1 Trance
+5019 1 Trance
+5020 1 Trance
+5021 1 Mesmerism and Hypnosis
+5022 1 Mesmerism and Hypnosis
+5023 1 Mesmerism and Hypnosis
+5024 1 Mesmerism and Hypnosis
+5025 1 Mesmerism and Hypnosis
+5026 1 Mesmerism and Hypnosis
+5027 1 Mesmerism and Hypnosis
+5028 1 Mesmerism and Hypnosis
+5029 1 Mesmerism and Hypnosis
+5030 1 Mesmerism and Hypnosis
+5031 1 Mesmerism and Hypnosis
+5032 1 Mesmerism and Hypnosis
+5033 1 Mesmerism and Hypnosis
+5034 1 Mesmerism and Hypnosis
+5035 1 Mesmerism and Hypnosis
+5036 1 Mesmerism and Hypnosis
+5037 1 Mesmerism and Hypnosis
+5038 1 Mesmerism and Hypnosis
+5039 1 Mesmerism and Hypnosis
+5040 1 Mesmerism and Hypnosis
+5041 1 Mesmerism and Hypnosis
+5042 1 Mesmerism and Hypnosis
+5043 1 Mesmerism and Hypnosis
+5044 1 Mesmerism and Hypnosis
+5045 1 Mesmerism and Hypnosis
+5046 1 Mesmerism and Hypnosis
+5047 1 Mesmerism and Hypnosis
+5048 1 Mesmerism and Hypnosis
+5049 1 Mesmerism and Hypnosis
+5050 1 Mesmerism and Hypnosis
+5051 1 Sleight of Hand
+5052 1 Sleight of Hand
+5053 1 Sleight of Hand
+5054 1 Sleight of Hand
+5055 1 Sleight of Hand
+5056 1 Sleight of Hand
+5057 1 Sleight of Hand
+5058 1 Sleight of Hand
+5059 1 Sleight of Hand
+5060 1 Sleight of Hand
+5061 1 Sleight of Hand
+5062 1 Sleight of Hand
+5063 1 Sleight of Hand
+5064 1 Sleight of Hand
+5065 1 Sleight of Hand
+5066 1 Sleight of Hand
+5067 1 Sleight of Hand
+5068 1 Sleight of Hand
+5069 1 Sleight of Hand
+5070 1 Sleight of Hand
+5071 1 Resist Domination
+5072 1 Resist Domination
+5073 1 Resist Domination
+5074 1 Resist Domination
+5075 1 Resist Domination
+5076 1 Resist Domination
+5077 1 Resist Domination
+5078 1 Resist Domination
+5079 1 Resist Domination
+5080 1 Resist Domination
+5081 1 Resist Domination
+5082 1 Resist Domination
+5083 1 Resist Domination
+5084 1 Resist Domination
+5085 1 Resist Domination
+5086 1 Resist Domination
+5087 1 Resist Domination
+5088 1 Resist Domination
+5089 1 Resist Domination
+5090 1 Resist Domination
+5091 1 Occult Lore
+5092 1 Occult Lore
+5093 1 Occult Lore
+5094 1 Occult Lore
+5095 1 Occult Lore
+5096 1 Occult Lore
+5097 1 Occult Lore
+5098 1 Occult Lore
+5099 1 Occult Lore
+5000 1 Occult Lore
+5101 2 Mystic Origin*
+6001 1 Artist
+6002 1 Artist
+6003 1 Artist
+6004 1 Artist
+6005 1 Artist
+6006 1 Artist
+6007 1 Artist
+6008 1 Artist
+6009 1 Artist
+6010 1 Artist
+6011 1 Artist
+6012 1 Artist
+6013 1 Artist
+6014 1 Artist
+6015 1 Artist
+6016 1 Artist
+6017 1 Artist
+6018 1 Artist
+6019 1 Artist
+6020 1 Artist
+6021 1 Languages
+6022 1 Languages
+6023 1 Languages
+6024 1 Languages
+6025 1 Languages
+6026 1 Languages
+6027 1 Languages
+6028 1 Languages
+6029 1 Languages
+6030 1 Languages
+6031 1 Languages
+6032 1 Languages
+6033 1 Languages
+6034 1 Languages
+6035 1 Languages
+6036 1 Languages
+6037 1 Languages
+6038 1 Languages
+6039 1 Languages
+6040 1 Languages
+6041 1 First Aid
+6042 1 First Aid
+6043 1 First Aid
+6044 1 First Aid
+6045 1 First Aid
+6046 1 First Aid
+6047 1 First Aid
+6048 1 First Aid
+6049 1 First Aid
+6050 1 First Aid
+6051 1 First Aid
+6052 1 First Aid
+6053 1 First Aid
+6054 1 First Aid
+6055 1 First Aid
+6056 1 First Aid
+6057 1 First Aid
+6058 1 First Aid
+6059 1 First Aid
+6060 1 First Aid
+6061 1 Repair/Tinkering
+6062 1 Repair/Tinkering
+6063 1 Repair/Tinkering
+6064 1 Repair/Tinkering
+6065 1 Repair/Tinkering
+6066 1 Repair/Tinkering
+6067 1 Repair/Tinkering
+6068 1 Repair/Tinkering
+6069 1 Repair/Tinkering
+6070 1 Repair/Tinkering
+6071 1 Repair/Tinkering
+6072 1 Repair/Tinkering
+6073 1 Repair/Tinkering
+6074 1 Repair/Tinkering
+6075 1 Repair/Tinkering
+6076 1 Repair/Tinkering
+6077 1 Repair/Tinkering
+6078 1 Repair/Tinkering
+6079 1 Repair/Tinkering
+6080 1 Repair/Tinkering
+6081 1 Trivia
+6082 1 Trivia
+6083 1 Trivia
+6084 1 Trivia
+6085 1 Trivia
+6086 1 Trivia
+6087 1 Trivia
+6088 1 Trivia
+6089 1 Trivia
+6090 1 Trivia
+6091 1 Trivia
+6092 1 Trivia
+6093 1 Trivia
+6094 1 Trivia
+6095 1 Trivia
+6096 1 Trivia
+6097 1 Trivia
+6098 1 Trivia
+6099 1 Trivia
+6000 1 Trivia
+6101 1 Performer
+6102 2 Animal Training*
+6103 2 Heir to Fortune*
+6104 2 Student*
+6105 2 Leadership*
+7001 1 Weapon Skills
+7002 1 Weapon Skills
+7003 1 Weapon Skills
+7004 1 Weapon Skills
+7005 1 Weapon Skills
+7006 1 Weapon Skills
+7007 1 Weapon Skills
+7008 1 Weapon Skills
+7009 1 Weapon Skills
+7010 1 Weapon Skills
+7011 1 Weapon Skills
+7012 1 Weapon Skills
+7013 1 Weapon Skills
+7014 1 Weapon Skills
+7015 1 Weapon Skills
+7016 1 Weapon Skills
+7017 1 Weapon Skills
+7018 1 Weapon Skills
+7019 1 Weapon Skills
+7020 1 Weapon Skills
+7021 1 Fighting Skills
+7022 1 Fighting Skills
+7023 1 Fighting Skills
+7024 1 Fighting Skills
+7025 1 Fighting Skills
+7026 1 Fighting Skills
+7027 1 Fighting Skills
+7028 1 Fighting Skills
+7029 1 Fighting Skills
+7030 1 Fighting Skills
+7031 1 Fighting Skills
+7032 1 Fighting Skills
+7033 1 Fighting Skills
+7034 1 Fighting Skills
+7035 1 Fighting Skills
+7036 1 Fighting Skills
+7037 1 Fighting Skills
+7038 1 Fighting Skills
+7039 1 Fighting Skills
+7040 1 Fighting Skills
+7041 1 Fighting Skills
+7042 1 Fighting Skills
+7043 1 Fighting Skills
+7044 1 Fighting Skills
+7045 1 Fighting Skills
+7046 1 Professional Skills
+7047 1 Professional Skills
+7048 1 Professional Skills
+7049 1 Professional Skills
+7050 1 Professional Skills
+7051 1 Professional Skills
+7052 1 Professional Skills
+7053 1 Professional Skills
+7054 1 Professional Skills
+7055 1 Professional Skills
+7056 1 Professional Skills
+7057 1 Professional Skills
+7058 1 Professional Skills
+7059 1 Professional Skills
+7060 1 Professional Skills
+7061 1 Professional Skills
+7062 1 Professional Skills
+7063 1 Professional Skills
+7064 1 Professional Skills
+7065 1 Professional Skills
+7066 1 Scientific Skills
+7067 1 Scientific Skills
+7068 1 Scientific Skills
+7069 1 Scientific Skills
+7070 1 Scientific Skills
+7071 1 Scientific Skills
+7072 1 Scientific Skills
+7073 1 Scientific Skills
+7074 1 Scientific Skills
+7075 1 Scientific Skills
+7076 1 Scientific Skills
+7077 1 Scientific Skills
+7078 1 Scientific Skills
+7079 1 Scientific Skills
+7080 1 Scientific Skills
+7081 1 Scientific Skills
+7082 1 Scientific Skills
+7083 1 Scientific Skills
+7084 1 Scientific Skills
+7085 1 Scientific Skills
+7086 1 Mystic and Mental Skills
+7087 1 Mystic and Mental Skills
+7088 1 Mystic and Mental Skills
+7089 1 Mystic and Mental Skills
+7090 1 Mystic and Mental Skills
+7091 1 Other Skills
+7092 1 Other Skills
+7093 1 Other Skills
+7094 1 Other Skills
+7095 1 Other Skills
+7096 1 Other Skills
+7097 1 Other Skills
+7098 1 Other Skills
+7099 1 Other Skills
+7000 1 Other Skills

@@ -1,0 +1,194 @@
+192
+
+Accounting
+Acoustics
+Acrobatics
+Acupuncture
+Agriculture
+Airplane Pilot
+Alchemy
+Alien Studies
+Anatomy
+Animal Behavior
+Animal Training*
+Anthropology
+Any (choose)
+Archaeology
+Archery*
+Architecture
+Artificial Intelligence
+Artist
+Astronautic Engineering
+Astronautics
+Astrophotography
+Astrophysics
+Atomic Physics
+Attractive
+Automobile Specialist
+Automotive Engineering
+Aviation and Aeronautics Engineering
+Ballistics
+Bibliophile
+Biophysics
+Biotechnology
+Blending
+Blunt Weapons
+Boat Pilot
+Botany
+Boxing
+Brawling
+Business/Finance
+Cardiology
+Cartography
+Catastrophism
+Chemical and Biological Weapons
+Chemical Engineering
+Chiropractic
+Chronicler of Magic
+Civil Engineering
+Computer Engineering
+Criminology
+Cryogenics
+Cryonics
+Cybernetics
+Demolitions
+Demonologist
+Dentistry
+Detective/Espionage
+Disguise
+Driver
+Ecology
+Electrical Engineering
+Electrochemistry
+Emergency Medicine
+Energy and Particle Physics
+Escape Artist
+Exhibition
+First Aid
+Forensics
+Genetics
+Geography
+Geology
+Geriatrics
+Graphics
+Guns
+Heir to a Fortune*
+Helicopter
+History
+Hydrology
+Immunology
+Intelligence
+Intimidation/Interrogation
+Journalism
+Languages
+Law
+Law Enforcement*
+Leadership*
+Locksmith
+Marine Biology
+Marine Engineering
+Marksman*
+Martial Arts A
+Martial Arts B
+Martial Arts C
+Martial Arts D
+Martial Arts E
+Martial Arts F
+Martial Arts G
+Martial Arts H
+Martial Arts I
+Martial Arts J
+Mathematics
+Mechanical Engineering
+Mesmerism and Hypnosis
+Metallurgy
+Meteorology
+Microbiology
+Military Engineering
+Military Vehicle Specialist
+Motorcycle
+Music Cognition
+Mutant Studies
+Mystic Background*
+Negotiations
+Neurosciences
+New Talent
+Nuclear Engineering
+Obstetrics and Gynecology
+Occultist
+Oceanography
+Oncology
+Oratory
+Organic Chemistry
+Oriental Weapons
+Paired Weapons
+Paranormal Phenomena
+Parapsychology
+Parasitology
+Pathology
+Pediatrics
+Performer
+Pharmacology
+Phenology
+Philology
+Philosophy
+Physical Therapy
+Pick Pocket
+Plastic Surgery
+Politics
+Polymers
+Psychiatry
+Psychobiology
+Psychology
+Quantum Physics*
+Quick Striking
+Radio Astronomy
+Radiobiology
+Radiology
+Repair/Tinkering
+Resist Domination
+Ricochet
+Robotics
+Runesmith
+Scholar of Antiquities
+Security
+Security and Encryption
+Seduction
+Seismology
+Sewing and Tailoring
+Sharp Weapons
+Sleight of Hand
+Software Engineering and Programming
+Sonochemistry
+Spacecraft
+Spectroscopy
+Sports Medicine
+Stamina
+Stealth
+Stellar Cartography
+Street Smarts
+Structural Engineering
+Student (no other talents!)
+Submersible Vehicle
+Surgery
+Survival
+Television Junkie
+Theoginist
+Thievery
+Thrown Weapons
+Tracking
+Trance
+Trivia
+Tumbling
+Veterinary Medicine
+Video Games
+Virtual Reality
+Weapons Engineering
+Weapons Master*
+Weapons Specialist*
+Weapons Tinkering
+Wrestling
+Xenobiology
+Zoologist of Magic
+Zoology
+

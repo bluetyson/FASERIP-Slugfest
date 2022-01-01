@@ -1,0 +1,62 @@
+61
+
+Guns
+Thrown Weapons
+Bows
+Blunt Weapons
+Sharp Weapons
+Oriental Weapons
+Marksman*
+Weapons Master*
+Weapons Speacialist*
+Martial Arts A
+Martial Arts B
+Martial Arts C
+Martial Arts D
+Martial Arts E
+Wrestling
+Thrown Objects
+Tumbling
+Acrobatics
+Medicine*
+Law
+Law-Enforcement
+Pilot
+Military
+Business/Finance
+Journalism
+Engineering
+Crime
+Psychiatry
+Detective/Espionage
+Chemistry
+Biology
+Geology
+Genetics
+Archeology
+Physics
+Computers
+Electronics
+Trance
+Mesmerism and Hypnosis
+Sleight of Hand
+Resist Domination
+Mystic Origin*
+Occult Lore
+Artist
+Languages
+First Aid
+Repair/Tinkering
+Trivia
+Performer
+Animal Training*
+Heir to Fortune*
+Student*
+Leadership*
+
+Weapon Skills
+Fighting Skills
+Professional Skills
+Scientific Skills
+Mystic and Mental Skills
+Other Skills

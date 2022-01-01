@@ -1,0 +1,101 @@
+100
+1	Normal human
+2	Normal human
+3	Normal human
+4	Normal human
+5	Normal human
+6	Normal human
+7	Normal human
+8	Normal human
+9	Normal human
+10	Normal human
+11	Normal human
+12	Normal human
+13	Normal human
+14	Normal human
+15	Normal human
+16	Normal human
+17	Normal human
+18	Normal human
+19	Normal human
+20	Normal human
+21	Normal human
+22	Normal human
+23	Normal human
+24	Normal human
+25	Normal human
+26	Normal human
+27	Mutant - Induced
+28	Mutant - Induced
+29	Mutant - Induced
+30	Mutant - Induced
+31	Mutant - Random
+32	Mutant - Random
+33	Mutant - Random
+34	Mutant - Breed
+35	Mutant - Breed
+36	Android
+37	Android
+38	Android
+39	Humanoid Race
+40	Humanoid Race
+41	Humanoid Race
+42	Humanoid Race
+43	Humanoid Race
+44	Humanoid Race
+45	Humanoid Race
+46	Humanoid Race
+47	Surgical Composite
+48	Modified Human - Organic
+49	Modified Human - Organic
+50	Modified Human - Muscular
+51	Modified Human - Muscular
+52	Modified Human - Skeletal
+53	Modified Human - Skeletal
+54	Modified Human - Extra Parts
+55	Modified Human - Extra Parts
+56	Modified Human - Extra Parts
+57	Modified Human - Extra Parts
+58	Demihuman - Centaur
+59	Demihuman - Equiman
+60	Demihuman - Faun
+61	Demihuman - Felinoid
+62	Demihuman - Felinoid
+63	Demihuman - Lupinoid
+64	Demihuman - Lupinoid
+65	Demihuman - Avian
+66	Demihuman - Avian
+67	Demihuman - Chiropteran
+68	Demihuman - Lamian
+69	Demihuman - Merhuman
+70	Demihuman - Harpy
+71	Cyborg - Artificial limbs/organs
+72	Cyborg - Artificial limbs/organs
+73	Cyborg - Exoskeletons
+74	Cyborg - Exoskeletons
+75	Cyborg - Mechanical Body
+76	Cyborg - Mechanical Body
+77	Cyborg - Mechanically Augmented
+78	Cyborg - Mechanically Augmented
+79	Cyborg - Mechanically Augmented
+80	Robot - Human Shape
+81	Robot - Human Shape
+82	Robot - Human Shape
+83	Robot - Usuform
+84	Robot - Usuform
+85	Robot - Metamorphic
+86	Robot - Metamorphic
+87	Robot - Computer
+88	Angel/Demon
+89	Deity
+90	Animal
+91	Vegetable
+92	Abnormal Chemistry
+93	Mineral
+94	Gaseous
+95	Liquid
+96	Energy
+97	Ethereal
+98	Undead
+99	Mutant - Breed
+00	Mutant - Breed

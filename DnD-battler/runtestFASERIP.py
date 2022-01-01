@@ -1,11 +1,11 @@
 from DnD_battler import Creature, Encounter
 
 #level1 = Creature.load('Cat')
-billbybob2 = Creature.load('Rat')
+Rat = Creature.load('Rat')
 #level1 = Creature.load('Scientist')
 #billbybob2 = Creature.load('Lawyer')
-#level1 = Creature.load('Lawyer')
-billbybob2 = Creature.load('Rat Pack')
+Lawyer = Creature.load('Lawyer')
+RatPack = Creature.load('Rat Pack')
 #level1 = Creature.load('Guard Dog')
 billbybob2 = Creature.load('Cat')
 
@@ -102,6 +102,7 @@ print(arena2)
 #arena213 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, billbybob8, billbybob9, billbybob15, billbybob16, billbybob17, billbybob18, billbybob19, billbybob20, billbybob21)
 #arena214 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, billbybob8, billbybob9, billbybob15, billbybob16, billbybob17, billbybob18, billbybob19, billbybob20, billbybob21, billbybob22)
 arena215 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, billbybob8, billbybob9, billbybob15, billbybob16, billbybob17, billbybob18, billbybob19, billbybob20, billbybob21, billbybob22, billbybob23)
+arenaHerbert = Encounter(Lawyer, RatPack)
 #print(arena2.go_to_war(1000))
 #print(arena2.go_to_war(10000))
 #print(arena21.go_to_war(100))
@@ -120,7 +121,8 @@ arena215 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, bil
 #print(arena214.go_to_war(1000))
 #print(arena215.go_to_war(100))
 #print(arena215.battle())
-print(arena215.go_to_war(1000))
+#print(arena215.go_to_war(1000))
+print(arenaHerbert.go_to_war(1000))
 #print(level1.hp)
 
 

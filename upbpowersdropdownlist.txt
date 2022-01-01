@@ -1,0 +1,285 @@
+284
+
+Body Armor
+Force Field
+Force Field vs. Emotion
+Force Field vs. Energy
+Force Field vs. Magic
+Force Field vs. Mental
+Force Field vs. Physical
+Force Field vs. Power Manipulation
+Force Field vs. Vampirism
+Reflection
+Resist: Emotion
+Resist: Energy
+Resist: Magic
+Resist: Mental
+Resist: Physical
+Resist: Power Manipulation
+Resist: Vampirism
+Abnormal Sensitivity
+Circular Vision
+Energy Detection
+Environmental Awareness
+Extra-Dimensional
+Hyper-Hearing
+Hyper-Olfactory
+Hyper-Touch
+Life Detection
+Magic Detection
+Microscopic Vision
+Penetration Vision
+Power Detection
+Psionic Detection
+Radar Sense
+Sonar
+Telescopic Vision
+Thermal Vision
+Tracking
+True Sight
+UV Vision
+Weakness Detection
+Absorption Power
+Catalytic Control
+Cold Shaping
+Dark Force Manipulation
+Electrical Control
+Energy Conversion
+Energy Solidification
+Energy Sponge
+Energy Vampirism*
+Fire Control
+Gravity Manipulation
+Hard Radiation Control
+Kinetic Control
+Light Control
+Magnetic Manipulation
+Plasma Control
+Radio Wave Control
+Shadow Shaping
+Sound Manipulation
+Thermal Control
+Vibration Control
+Cold Generation
+Electrical Generation
+Energy Doppelganger
+Fire Generation
+Hard Radiation
+Heat
+Kinetic Bolt
+Light Emission
+Magnetism
+Plasma Generation
+Radio Wave Generation
+Shadow Casting
+Sonic Generation
+Vibration
+Berserker
+Martial Supremacy
+Natural Weaponry
+Unique Weapon
+Weapons Creation*
+Weapons Tinkering
+Animate Image
+Illusion-Casting*
+Illusory Invisibility
+Illusory Duplication
+Biophysical Control*
+Bio-Vampirism *
+Body Transformation-Others
+Emotion Control
+Exorcism
+Force Field vs. Hostiles
+Forced Reincarnation
+Grafting*
+Hypnotic Control
+Mind Control*
+Mind Transferal*
+Neural Manipulation
+Plague Carrier
+Plant Control
+Plant Growth
+Sense Alteration
+Shape Change-Others*
+Sleep-Induced
+Spirit Storage
+Summoning
+Undead Control
+Enchantment*
+Energy Source
+Internal Limbo
+Magic Control*
+Magic Creation*
+Magic Domination
+Magic Transferal
+Magic Vampirism
+Power Simulation
+Probability Control
+Reality Alteration*
+Spirit Vampirism*
+Sympathetic Magic
+Warding
+Bonding
+Collection
+Crystallization
+Diminution
+Disruption
+Enlargement
+Geo-Force
+Matter Animation*
+Machine Animation*
+Micro-Environment
+Molding
+Weather
+Zombie Animation*
+Coloration
+Combustion
+Disintegration*
+Elemental Conversion*
+Ionization
+Molecular Conversion*
+Artifact Creation*
+Elemental Creation
+Life form Creation*
+Mechanical Creation*
+Missile Creation
+Molecular Creation
+Spray
+Webcasting
+Clairaudience
+Clairvoyance
+Communicate with Animals
+Communicate with Cybernetics
+Communicate with Non-Living
+Communicate with Plants
+Cosmic Awareness*
+Danger Sense
+Dream Travel
+Empathy
+Free Spirit*
+Hallucinations*
+Hyper-Intelligence
+Hyper-Invention
+Hyper-Psyche
+Incarnation Awareness
+Iron Will
+Linguistics
+Mental Duplication
+Mental Invisibility
+Mental Probe
+Mind Blast
+Mind Drain
+Omni-Knowledge
+Postcognition
+Precognition*
+Psionic Vampirism*
+Remote Sensing
+Sensory Link
+Serial Immortality*
+Speech Throwing
+Telekinesis
+Telelocation*
+Telepathy
+Total Memory
+Ultimate Skill
+Armor Skin
+Body Resistance
+Chemical Touch
+Digestive Adaptation
+Hyper-Agility
+Hyper-Endurance
+Hyper-Intake/ expulsion
+Hyper-Speed
+Hyper-Strength
+Hypnotic Voice
+Lung Adaptability
+Pheromones
+Regeneration*
+Self-Revival*
+Self-Sustenance
+Stealth
+Suspended Animation
+True Invulnerability*
+Vocal Control
+Water Breathing
+Water Freedom
+Immortality*
+Longevity
+Control*
+Creation
+Domination*
+Duplication
+Energy Source Creation*
+Focus
+Gestalt
+Nemesis
+Power Transferal
+Power Vampirism*
+Residual Absorption
+Selection
+Weakness Creation*
+Attribute Change*
+Attribute Pool*
+Attrbibute Rearrangement*
+Award Change*
+Award Pool*
+Award Rearrangement*
+Initiative Change*
+Power Combination
+Age-Shift
+Alter Ego
+Anatomical Separation
+Animal Transformation
+Animal Mimicry
+Blending
+Body Adaptation*
+Body Transformation-Self*
+Body Coating
+Bouncing Ball
+Chemical Mimicry
+Collective Mass
+Elongation
+Energy Body*
+Energy Sheath
+Evolution
+Growth
+Imitation-Face Changer
+Imitation-Human Changeling
+Invisibility
+Mass Decrease
+Mass Increase
+Phasing
+Physical Gestalt
+Plant Mimicry
+Plasticity
+Prehensile Hair
+Self-Duplication*
+Self-Vegetation
+Shape Shifting
+Shrinking
+Spirit Gestalt
+Two-dimensionality
+Astral Body
+Carrier Wave
+Dimension Travel
+Energy Path
+Floating Disc
+Gateway*
+Gliding
+Hyper-Digging
+Hyper-Leaping
+Hyper-Running
+Hyper-Swimming
+Levitation
+Rocket
+Skywalk
+Spider Climb
+Spinner
+Teleport Self*
+Teleport Others*
+Tele-Reformation
+Time Travel*
+Trouble Seeker
+True Flight
+Water Walking
+Whirlwind

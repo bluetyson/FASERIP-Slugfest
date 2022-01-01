@@ -1,0 +1,1142 @@
+1140
+1001 1 0 Resistance to Fire and Heat
+1002 1 0 Resistance to Fire and Heat
+1003 1 0 Resistance to Fire and Heat
+1004 1 0 Resistance to Fire and Heat
+1005 1 0 Resistance to Fire and Heat
+1006 1 0 Resistance to Fire and Heat
+1007 1 0 Resistance to Fire and Heat
+1008 1 0 Resistance to Fire and Heat
+1009 1 0 Resistance to Fire and Heat
+1010 1 0 Resistance to Fire and Heat
+1011 1 0 Resistance to Cold
+1012 1 0 Resistance to Cold
+1013 1 0 Resistance to Cold
+1014 1 0 Resistance to Cold
+1015 1 0 Resistance to Cold
+1016 1 0 Resistance to Cold
+1017 1 0 Resistance to Cold
+1018 1 0 Resistance to Cold
+1019 1 0 Resistance to Cold
+1020 1 0 Resistance to Cold
+1021 1 0 Resistance to Electricity
+1022 1 0 Resistance to Electricity
+1023 1 0 Resistance to Electricity
+1024 1 0 Resistance to Electricity
+1025 1 0 Resistance to Electricity
+1026 1 0 Resistance to Electricity
+1027 1 0 Resistance to Electricity
+1028 1 0 Resistance to Electricity
+1029 1 0 Resistance to Electricity
+1030 1 0 Resistance to Electricity
+1031 1 0 Resistance to Radiation
+1032 1 0 Resistance to Radiation
+1033 1 0 Resistance to Radiation
+1034 1 0 Resistance to Radiation
+1035 1 0 Resistance to Radiation
+1036 1 0 Resistance to Radiation
+1037 1 0 Resistance to Radiation
+1038 1 0 Resistance to Radiation
+1039 1 0 Resistance to Radiation
+1040 1 0 Resistance to Radiation
+1041 1 0 Resistance to Toxins
+1042 1 0 Resistance to Toxins
+1043 1 0 Resistance to Toxins
+1044 1 0 Resistance to Toxins
+1045 1 0 Resistance to Toxins
+1046 1 0 Resistance to Toxins
+1047 1 0 Resistance to Toxins
+1048 1 0 Resistance to Toxins
+1049 1 0 Resistance to Toxins
+1050 1 0 Resistance to Toxins
+1051 1 0 Resistance to Corrosives
+1052 1 0 Resistance to Corrosives
+1053 1 0 Resistance to Corrosives
+1054 1 0 Resistance to Corrosives
+1055 1 0 Resistance to Corrosives
+1056 1 0 Resistance to Corrosives
+1057 1 0 Resistance to Corrosives
+1058 1 0 Resistance to Corrosives
+1059 1 0 Resistance to Corrosives
+1060 1 0 Resistance to Corrosives
+1061 1 0 Resistance to Emotion Attacks
+1062 1 0 Resistance to Emotion Attacks
+1063 1 0 Resistance to Emotion Attacks
+1064 1 0 Resistance to Emotion Attacks
+1065 1 0 Resistance to Emotion Attacks
+1066 1 0 Resistance to Emotion Attacks
+1067 1 0 Resistance to Emotion Attacks
+1068 1 0 Resistance to Emotion Attacks
+1069 1 0 Resistance to Emotion Attacks
+1070 1 0 Resistance to Emotion Attacks
+1071 1 0 Resistance to Mental Attacks
+1072 1 0 Resistance to Mental Attacks
+1073 1 0 Resistance to Mental Attacks
+1074 1 0 Resistance to Mental Attacks
+1075 1 0 Resistance to Mental Attacks
+1076 1 0 Resistance to Mental Attacks
+1077 1 0 Resistance to Mental Attacks
+1078 1 0 Resistance to Mental Attacks
+1079 1 0 Resistance to Mental Attacks
+1080 1 0 Resistance to Mental Attacks
+1081 1 0 Resistance to Magical Attacks
+1082 1 0 Resistance to Magical Attacks
+1083 1 0 Resistance to Magical Attacks
+1084 1 0 Resistance to Magical Attacks
+1085 1 0 Resistance to Magical Attacks
+1086 1 0 Resistance to Magical Attacks
+1087 1 0 Resistance to Magical Attacks
+1088 1 0 Resistance to Magical Attacks
+1089 1 0 Resistance to Magical Attacks
+1090 1 0 Resistance to Magical Attacks
+1091 1 0 Resistance to Disease
+1092 1 0 Resistance to Disease
+1093 1 0 Resistance to Disease
+1094 1 0 Resistance to Disease
+1095 1 0 Resistance to Disease
+1096 1 0 Resistance to Disease
+1097 1 0 Resistance to Disease
+1098 1 0 Resistance to Disease
+1099 1 0 Resistance to Disease
+1000 1 0 Resistance to Disease
+1101 2 1 Invulnerability*
+2001 1 0 Protected Senses
+2002 1 0 Protected Senses
+2003 1 0 Protected Senses
+2004 1 0 Protected Senses
+2005 1 0 Protected Senses
+2006 1 0 Protected Senses
+2007 1 0 Protected Senses
+2008 1 0 Protected Senses
+2009 1 0 Protected Senses
+2010 1 0 Protected Senses
+2011 1 0 Enhanced Senses
+2012 1 0 Enhanced Senses
+2013 1 0 Enhanced Senses
+2014 1 0 Enhanced Senses
+2015 1 0 Enhanced Senses
+2016 1 0 Enhanced Senses
+2017 1 0 Enhanced Senses
+2018 1 0 Enhanced Senses
+2019 1 0 Enhanced Senses
+2020 1 0 Enhanced Senses
+2021 1 0 Infravision
+2022 1 0 Infravision
+2023 1 0 Infravision
+2024 1 0 Infravision
+2025 1 0 Infravision
+2026 1 0 Infravision
+2027 1 0 Infravision
+2028 1 0 Infravision
+2029 1 0 Infravision
+2030 1 0 Infravision
+2031 1 0 Computer Links
+2032 1 0 Computer Links
+2033 1 0 Computer Links
+2034 1 0 Computer Links
+2035 1 0 Computer Links
+2036 1 0 Computer Links
+2037 1 0 Computer Links
+2038 1 0 Computer Links
+2039 1 0 Computer Links
+2040 1 0 Computer Links
+2041 1 0 Emotion Detection
+2042 1 0 Emotion Detection
+2043 1 0 Emotion Detection
+2044 1 0 Emotion Detection
+2045 1 0 Emotion Detection
+2046 1 0 Emotion Detection
+2047 1 0 Emotion Detection
+2048 1 0 Emotion Detection
+2049 1 0 Emotion Detection
+2050 1 0 Emotion Detection
+2051 1 0 Energy Detection
+2052 1 0 Energy Detection
+2053 1 0 Energy Detection
+2054 1 0 Energy Detection
+2055 1 0 Energy Detection
+2056 1 0 Energy Detection
+2057 1 0 Energy Detection
+2058 1 0 Energy Detection
+2059 1 0 Energy Detection
+2060 1 0 Energy Detection
+2061 1 0 Magnetic Detection
+2062 1 0 Magnetic Detection
+2063 1 0 Magnetic Detection
+2064 1 0 Magnetic Detection
+2065 1 0 Magnetic Detection
+2066 1 0 Magnetic Detection
+2067 1 0 Magnetic Detection
+2068 1 0 Magnetic Detection
+2069 1 0 Magnetic Detection
+2070 1 0 Magnetic Detection
+2071 1 0 Psionic Detection
+2072 1 0 Psionic Detection
+2073 1 0 Psionic Detection
+2074 1 0 Psionic Detection
+2075 1 0 Psionic Detection
+2076 1 0 Psionic Detection
+2077 1 0 Psionic Detection
+2078 1 0 Psionic Detection
+2079 1 0 Psionic Detection
+2080 1 0 Psionic Detection
+2081 1 0 Astral Detection
+2082 1 0 Astral Detection
+2083 1 0 Astral Detection
+2084 1 0 Astral Detection
+2085 1 0 Astral Detection
+2086 1 0 Astral Detection
+2087 1 0 Astral Detection
+2088 1 0 Astral Detection
+2089 1 0 Astral Detection
+2090 1 0 Astral Detection
+2091 1 0 Tracking Ability
+2092 1 0 Tracking Ability
+2093 1 0 Tracking Ability
+2094 1 0 Tracking Ability
+2095 1 0 Tracking Ability
+2096 1 0 Tracking Ability
+2097 1 0 Tracking Ability
+2098 1 0 Tracking Ability
+2099 1 0 Tracking Ability
+2000 1 0 Tracking Ability
+2101 2 0 Cosmic Awareness*
+2102 2 0 Combat Sense*
+2103 1 0 Magic Detection
+2104 1 0 Mutant Detection
+3001 1 0 Flight
+3002 1 0 Flight
+3003 1 0 Flight
+3004 1 0 Flight
+3005 1 0 Flight
+3006 1 0 Flight
+3007 1 0 Flight
+3008 1 0 Flight
+3009 1 0 Flight
+3010 1 0 Flight
+3011 1 0 Flight
+3012 1 0 Flight
+3013 1 0 Flight
+3014 1 0 Flight
+3015 1 0 Flight
+3016 1 0 Flight
+3017 1 0 Flight
+3018 1 0 Flight
+3019 1 0 Flight
+3020 1 0 Flight
+3021 1 0 Gliding
+3022 1 0 Gliding
+3023 1 0 Gliding
+3024 1 0 Gliding
+3025 1 0 Gliding
+3026 1 0 Gliding
+3027 1 0 Gliding
+3028 1 0 Gliding
+3029 1 0 Gliding
+3030 1 0 Gliding
+3031 1 0 Leaping
+3032 1 0 Leaping
+3033 1 0 Leaping
+3034 1 0 Leaping
+3035 1 0 Leaping
+3036 1 0 Leaping
+3037 1 0 Leaping
+3038 1 0 Leaping
+3039 1 0 Leaping
+3040 1 0 Leaping
+3041 1 0 Wall-Crawling
+3042 1 0 Wall-Crawling
+3043 1 0 Wall-Crawling
+3044 1 0 Wall-Crawling
+3045 1 0 Wall-Crawling
+3046 1 0 Wall-Crawling
+3047 1 0 Wall-Crawling
+3048 1 0 Wall-Crawling
+3049 1 0 Wall-Crawling
+3050 1 0 Wall-Crawling
+3051 1 0 Wall-Crawling
+3052 1 0 Wall-Crawling
+3053 1 0 Wall-Crawling
+3054 1 0 Wall-Crawling
+3055 1 0 Wall-Crawling
+3056 1 0 Wall-Crawling
+3057 1 0 Wall-Crawling
+3058 1 0 Wall-Crawling
+3059 1 0 Wall-Crawling
+3060 1 0 Wall-Crawling
+3061 1 0 Lightning Speed
+3062 1 0 Lightning Speed
+3063 1 0 Lightning Speed
+3064 1 0 Lightning Speed
+3065 1 0 Lightning Speed
+3066 1 0 Lightning Speed
+3067 1 0 Lightning Speed
+3068 1 0 Lightning Speed
+3069 1 0 Lightning Speed
+3070 1 0 Lightning Speed
+3071 1 0 Levitation
+3072 1 0 Levitation
+3073 1 0 Levitation
+3074 1 0 Levitation
+3075 1 0 Levitation
+3076 1 0 Levitation
+3077 1 0 Levitation
+3078 1 0 Levitation
+3079 1 0 Levitation
+3080 1 0 Levitation
+3081 1 0 Swimming
+3082 1 0 Swimming
+3083 1 0 Swimming
+3084 1 0 Swimming
+3085 1 0 Swimming
+3086 1 0 Swimming
+3087 1 0 Swimming
+3088 1 0 Swimming
+3089 1 0 Swimming
+3090 1 0 Swimming
+3091 1 0 Climbing
+3092 1 0 Climbing
+3093 1 0 Climbing
+3094 1 0 Climbing
+3095 1 0 Climbing
+3096 1 0 Climbing
+3097 1 0 Climbing
+3098 1 0 Climbing
+3099 1 0 Climbing
+3000 1 0 Climbing
+3101 2 0 Teleportation*
+3102 1 0 Digging
+3103 2 0 Dimension Travel*
+4001 1 0 Earth Control
+4002 1 0 Earth Control
+4003 1 0 Earth Control
+4004 1 0 Earth Control
+4005 1 0 Earth Control
+4006 1 0 Earth Control
+4007 1 0 Earth Control
+4008 1 0 Earth Control
+4009 1 0 Earth Control
+4010 1 0 Earth Control
+4011 1 0 Earth Control
+4012 1 0 Earth Control
+4013 1 0 Earth Control
+4014 1 0 Earth Control
+4015 1 0 Earth Control
+4016 1 0 Earth Control
+4017 1 0 Earth Control
+4018 1 0 Earth Control
+4019 1 0 Earth Control
+4020 1 0 Earth Control
+4021 1 0 Air Control
+4022 1 0 Air Control
+4023 1 0 Air Control
+4024 1 0 Air Control
+4025 1 0 Air Control
+4026 1 0 Air Control
+4027 1 0 Air Control
+4028 1 0 Air Control
+4029 1 0 Air Control
+4030 1 0 Air Control
+4031 1 0 Air Control
+4032 1 0 Air Control
+4033 1 0 Air Control
+4034 1 0 Air Control
+4035 1 0 Air Control
+4036 1 0 Air Control
+4037 1 0 Air Control
+4038 1 0 Air Control
+4039 1 0 Air Control
+4040 1 0 Air Control
+4041 1 0 Fire Control
+4042 1 0 Fire Control
+4043 1 0 Fire Control
+4044 1 0 Fire Control
+4045 1 0 Fire Control
+4046 1 0 Fire Control
+4047 1 0 Fire Control
+4048 1 0 Fire Control
+4049 1 0 Fire Control
+4050 1 0 Fire Control
+4051 1 0 Fire Control
+4052 1 0 Fire Control
+4053 1 0 Fire Control
+4054 1 0 Fire Control
+4055 1 0 Fire Control
+4056 1 0 Fire Control
+4057 1 0 Fire Control
+4058 1 0 Fire Control
+4059 1 0 Fire Control
+4060 1 0 Fire Control
+4061 1 0 Water Control
+4062 1 0 Water Control
+4063 1 0 Water Control
+4064 1 0 Water Control
+4065 1 0 Water Control
+4066 1 0 Water Control
+4067 1 0 Water Control
+4068 1 0 Water Control
+4069 1 0 Water Control
+4070 1 0 Water Control
+4071 1 0 Water Control
+4072 1 0 Water Control
+4073 1 0 Water Control
+4074 1 0 Water Control
+4075 1 0 Water Control
+4076 1 0 Water Control
+4077 1 0 Water Control
+4078 1 0 Water Control
+4079 1 0 Water Control
+4080 1 0 Water Control
+4081 1 0 Weather Control
+4082 1 0 Weather Control
+4083 1 0 Weather Control
+4084 1 0 Weather Control
+4085 1 0 Weather Control
+4086 1 0 Weather Control
+4087 1 0 Weather Control
+4088 1 0 Weather Control
+4089 1 0 Weather Control
+4090 1 0 Weather Control
+4091 1 0 Weather Control
+4092 1 0 Weather Control
+4093 1 0 Weather Control
+4094 1 0 Weather Control
+4095 1 0 Weather Control
+4096 1 0 Weather Control
+4097 1 0 Weather Control
+4098 1 0 Weather Control
+4099 1 0 Weather Control
+4000 1 0 Weather Control
+4101 1 0 Density Manipulation - Others
+4102 1 0 Body Transformation - Others
+4103 1 0 Animal Transformation - Others
+5001 1 0 Magnetic Manipulation
+5002 1 0 Magnetic Manipulation
+5003 1 0 Magnetic Manipulation
+5004 1 0 Magnetic Manipulation
+5005 1 0 Magnetic Manipulation
+5006 1 0 Magnetic Manipulation
+5007 1 0 Magnetic Manipulation
+5008 1 0 Magnetic Manipulation
+5009 1 0 Magnetic Manipulation
+5010 1 0 Magnetic Manipulation
+5011 1 0 Magnetic Manipulation
+5012 1 0 Magnetic Manipulation
+5013 1 0 Magnetic Manipulation
+5014 1 0 Magnetic Manipulation
+5015 1 0 Magnetic Manipulation
+5016 1 0 Magnetic Manipulation
+5017 1 0 Magnetic Manipulation
+5018 1 0 Magnetic Manipulation
+5019 1 0 Magnetic Manipulation
+5020 1 0 Magnetic Manipulation
+5021 1 0 Electrical Manipulation
+5022 1 0 Electrical Manipulation
+5023 1 0 Electrical Manipulation
+5024 1 0 Electrical Manipulation
+5025 1 0 Electrical Manipulation
+5026 1 0 Electrical Manipulation
+5027 1 0 Electrical Manipulation
+5028 1 0 Electrical Manipulation
+5029 1 0 Electrical Manipulation
+5030 1 0 Electrical Manipulation
+5031 1 0 Electrical Manipulation
+5032 1 0 Electrical Manipulation
+5033 1 0 Electrical Manipulation
+5034 1 0 Electrical Manipulation
+5035 1 0 Electrical Manipulation
+5036 1 0 Electrical Manipulation
+5037 1 0 Electrical Manipulation
+5038 1 0 Electrical Manipulation
+5039 1 0 Electrical Manipulation
+5040 1 0 Electrical Manipulation
+5041 1 0 Light Manipulation
+5042 1 0 Light Manipulation
+5043 1 0 Light Manipulation
+5044 1 0 Light Manipulation
+5045 1 0 Light Manipulation
+5046 1 0 Light Manipulation
+5047 1 0 Light Manipulation
+5048 1 0 Light Manipulation
+5049 1 0 Light Manipulation
+5050 1 0 Light Manipulation
+5051 1 0 Light Manipulation
+5052 1 0 Light Manipulation
+5053 1 0 Light Manipulation
+5054 1 0 Light Manipulation
+5055 1 0 Light Manipulation
+5056 1 0 Light Manipulation
+5057 1 0 Light Manipulation
+5058 1 0 Light Manipulation
+5059 1 0 Light Manipulation
+5060 1 0 Light Manipulation
+5061 1 0 Sound Manipulation
+5062 1 0 Sound Manipulation
+5063 1 0 Sound Manipulation
+5064 1 0 Sound Manipulation
+5065 1 0 Sound Manipulation
+5066 1 0 Sound Manipulation
+5067 1 0 Sound Manipulation
+5068 1 0 Sound Manipulation
+5069 1 0 Sound Manipulation
+5070 1 0 Sound Manipulation
+5071 1 0 Sound Manipulation
+5072 1 0 Sound Manipulation
+5073 1 0 Sound Manipulation
+5074 1 0 Sound Manipulation
+5075 1 0 Sound Manipulation
+5076 1 0 Sound Manipulation
+5077 1 0 Sound Manipulation
+5078 1 0 Sound Manipulation
+5079 1 0 Sound Manipulation
+5080 1 0 Sound Manipulation
+5081 1 0 Darkforce Manipulation
+5082 1 0 Darkforce Manipulation
+5083 1 0 Darkforce Manipulation
+5084 1 0 Darkforce Manipulation
+5085 1 0 Darkforce Manipulation
+5086 1 0 Darkforce Manipulation
+5087 1 0 Darkforce Manipulation
+5088 1 0 Darkforce Manipulation
+5089 1 0 Darkforce Manipulation
+5090 1 0 Darkforce Manipulation
+5091 1 0 Gravity Manipulation
+5092 1 0 Gravity Manipulation
+5093 1 0 Gravity Manipulation
+5094 1 0 Gravity Manipulation
+5095 1 0 Gravity Manipulation
+5096 1 0 Gravity Manipulation
+5097 1 0 Gravity Manipulation
+5098 1 0 Gravity Manipulation
+5099 1 0 Gravity Manipulation
+5000 1 0 Gravity Manipulation
+5101 2 0 Probability Manipulation*
+5102 2 0 Nullifying Power*
+5103 1 0 Energy Reflection
+5104 2 0 Time Control*
+6001 1 0 Growth
+6002 1 0 Growth
+6003 1 0 Growth
+6004 1 0 Growth
+6005 1 0 Growth
+6006 1 0 Growth
+6007 1 0 Growth
+6008 1 0 Growth
+6009 1 0 Growth
+6010 1 0 Growth
+6011 1 0 Shrinking
+6012 1 0 Shrinking
+6013 1 0 Shrinking
+6014 1 0 Shrinking
+6015 1 0 Shrinking
+6016 1 0 Shrinking
+6017 1 0 Shrinking
+6018 1 0 Shrinking
+6019 1 0 Shrinking
+6020 1 0 Shrinking
+6021 1 0 Invisibility
+6022 1 0 Invisibility
+6023 1 0 Invisibility
+6024 1 0 Invisibility
+6025 1 0 Invisibility
+6026 1 0 Invisibility
+6027 1 0 Invisibility
+6028 1 0 Invisibility
+6029 1 0 Invisibility
+6030 1 0 Invisibility
+6031 1 0 Plasticity
+6032 1 0 Plasticity
+6033 1 0 Plasticity
+6034 1 0 Plasticity
+6035 1 0 Plasticity
+6036 1 0 Plasticity
+6037 1 0 Plasticity
+6038 1 0 Plasticity
+6039 1 0 Plasticity
+6040 1 0 Plasticity
+6041 1 0 Shape-Shifting
+6042 1 0 Shape-Shifting
+6043 1 0 Shape-Shifting
+6044 1 0 Shape-Shifting
+6045 1 0 Shape-Shifting
+6046 1 0 Shape-Shifting
+6047 1 0 Shape-Shifting
+6048 1 0 Shape-Shifting
+6049 1 0 Shape-Shifting
+6050 1 0 Shape-Shifting
+6051 2 0 Body Transformation - Self*
+6052 2 0 Body Transformation - Self*
+6053 2 0 Body Transformation - Self*
+6054 2 0 Body Transformation - Self*
+6055 2 0 Body Transformation - Self*
+6056 2 0 Body Transformation - Self*
+6057 2 0 Body Transformation - Self*
+6058 2 0 Body Transformation - Self*
+6059 2 0 Body Transformation - Self*
+6060 2 0 Body Transformation - Self*
+6061 1 0 Animal Transformation - Self
+6062 1 0 Animal Transformation - Self
+6063 1 0 Animal Transformation - Self
+6064 1 0 Animal Transformation - Self
+6065 1 0 Animal Transformation - Self
+6066 1 0 Animal Transformation - Self
+6067 1 0 Animal Transformation - Self
+6068 1 0 Animal Transformation - Self
+6069 1 0 Animal Transformation - Self
+6070 1 0 Animal Transformation - Self
+6071 1 1 Raise Lowest Ability
+6072 1 1 Raise Lowest Ability
+6073 1 1 Raise Lowest Ability
+6074 1 1 Raise Lowest Ability
+6075 1 1 Raise Lowest Ability
+6076 1 1 Raise Lowest Ability
+6077 1 1 Raise Lowest Ability
+6078 1 1 Raise Lowest Ability
+6079 1 1 Raise Lowest Ability
+6080 1 1 Raise Lowest Ability
+6081 1 0 Blending
+6082 1 0 Blending
+6083 1 0 Blending
+6084 1 0 Blending
+6085 1 0 Blending
+6086 1 0 Blending
+6087 1 0 Blending
+6088 1 0 Blending
+6089 1 0 Blending
+6090 1 0 Blending
+6091 1 0 Alter Ego
+6092 1 0 Alter Ego
+6093 1 0 Alter Ego
+6094 1 0 Alter Ego
+6095 1 0 Alter Ego
+6096 1 0 Alter Ego
+6097 1 0 Alter Ego
+6098 1 0 Alter Ego
+6099 1 0 Alter Ego
+6000 1 0 Alter Ego
+6101 1 0 Density Manipulation - Self
+6102 1 0 Phasing
+6103 1 0 Elongation
+6104 1 0 Imitation
+6105 1 0 Power Absorption
+7001 1 0 Projectile Missile
+7002 1 0 Projectile Missile
+7003 1 0 Projectile Missile
+7004 1 0 Projectile Missile
+7005 1 0 Projectile Missile
+7006 1 0 Projectile Missile
+7007 1 0 Projectile Missile
+7008 1 0 Projectile Missile
+7009 1 0 Projectile Missile
+7010 1 0 Projectile Missile
+7011 1 0 Ensnaring Missile
+7012 1 0 Ensnaring Missile
+7013 1 0 Ensnaring Missile
+7014 1 0 Ensnaring Missile
+7015 1 0 Ensnaring Missile
+7016 1 0 Ensnaring Missile
+7017 1 0 Ensnaring Missile
+7018 1 0 Ensnaring Missile
+7019 1 0 Ensnaring Missile
+7020 1 0 Ensnaring Missile
+7021 1 0 Ice Generation
+7022 1 0 Ice Generation
+7023 1 0 Ice Generation
+7024 1 0 Ice Generation
+7025 1 0 Ice Generation
+7026 1 0 Ice Generation
+7027 1 0 Ice Generation
+7028 1 0 Ice Generation
+7029 1 0 Ice Generation
+7030 1 0 Ice Generation
+7031 1 0 Fire Generation
+7032 1 0 Fire Generation
+7033 1 0 Fire Generation
+7034 1 0 Fire Generation
+7035 1 0 Fire Generation
+7036 1 0 Fire Generation
+7037 1 0 Fire Generation
+7038 1 0 Fire Generation
+7039 1 0 Fire Generation
+7040 1 0 Fire Generation
+7041 1 0 Energy Generation
+7042 1 0 Energy Generation
+7043 1 0 Energy Generation
+7044 1 0 Energy Generation
+7045 1 0 Energy Generation
+7046 1 0 Energy Generation
+7047 1 0 Energy Generation
+7048 1 0 Energy Generation
+7049 1 0 Energy Generation
+7050 1 0 Energy Generation
+7051 1 0 Sound Generation
+7052 1 0 Sound Generation
+7053 1 0 Sound Generation
+7054 1 0 Sound Generation
+7055 1 0 Sound Generation
+7056 1 0 Sound Generation
+7057 1 0 Sound Generation
+7058 1 0 Sound Generation
+7059 1 0 Sound Generation
+7060 1 0 Sound Generation
+7061 1 0 Stunning Missile
+7062 1 0 Stunning Missile
+7063 1 0 Stunning Missile
+7064 1 0 Stunning Missile
+7065 1 0 Stunning Missile
+7066 1 0 Stunning Missile
+7067 1 0 Stunning Missile
+7068 1 0 Stunning Missile
+7069 1 0 Stunning Missile
+7070 1 0 Stunning Missile
+7071 1 0 Corrosive Missile
+7072 1 0 Corrosive Missile
+7073 1 0 Corrosive Missile
+7074 1 0 Corrosive Missile
+7075 1 0 Corrosive Missile
+7076 1 0 Corrosive Missile
+7077 1 0 Corrosive Missile
+7078 1 0 Corrosive Missile
+7079 1 0 Corrosive Missile
+7080 1 0 Corrosive Missile
+7081 1 0 Slashing Missile
+7082 1 0 Slashing Missile
+7083 1 0 Slashing Missile
+7084 1 0 Slashing Missile
+7085 1 0 Slashing Missile
+7086 1 0 Slashing Missile
+7087 1 0 Slashing Missile
+7088 1 0 Slashing Missile
+7089 1 0 Slashing Missile
+7090 1 0 Slashing Missile
+7091 1 0 Darkforce Generation
+7092 1 0 Darkforce Generation
+7093 1 0 Darkforce Generation
+7094 1 0 Darkforce Generation
+7095 1 0 Darkforce Generation
+7096 1 0 Darkforce Generation
+7097 1 0 Darkforce Generation
+7098 1 0 Darkforce Generation
+7099 1 0 Darkforce Generation
+7000 1 0 Darkforce Generation
+7101 1 0 Nullifier Missile
+8001 1 0 Telepathy
+8002 1 0 Telepathy
+8003 1 0 Telepathy
+8004 1 0 Telepathy
+8005 1 0 Telepathy
+8006 1 0 Telepathy
+8007 1 0 Telepathy
+8008 1 0 Telepathy
+8009 1 0 Telepathy
+8010 1 0 Telepathy
+8011 2 0 Image Generation*
+8012 2 0 Image Generation*
+8013 2 0 Image Generation*
+8014 2 0 Image Generation*
+8015 2 0 Image Generation*
+8016 2 0 Image Generation*
+8017 2 0 Image Generation*
+8018 2 0 Image Generation*
+8019 2 0 Image Generation*
+8020 2 0 Image Generation*
+8021 1 0 Telekinsesis
+8022 1 0 Telekinsesis
+8023 1 0 Telekinsesis
+8024 1 0 Telekinsesis
+8025 1 0 Telekinsesis
+8026 1 0 Telekinsesis
+8027 1 0 Telekinsesis
+8028 1 0 Telekinsesis
+8029 1 0 Telekinsesis
+8030 1 0 Telekinsesis
+8031 1 0 Force Field Generation
+8032 1 0 Force Field Generation
+8033 1 0 Force Field Generation
+8034 1 0 Force Field Generation
+8035 1 0 Force Field Generation
+8036 1 0 Force Field Generation
+8037 1 0 Force Field Generation
+8038 1 0 Force Field Generation
+8039 1 0 Force Field Generation
+8040 1 0 Force Field Generation
+8041 1 0 Animal Communication and Control
+8042 1 0 Animal Communication and Control
+8043 1 0 Animal Communication and Control
+8044 1 0 Animal Communication and Control
+8045 1 0 Animal Communication and Control
+8046 1 0 Animal Communication and Control
+8047 1 0 Animal Communication and Control
+8048 1 0 Animal Communication and Control
+8049 1 0 Animal Communication and Control
+8050 1 0 Animal Communication and Control
+8051 1 0 Empathy
+8052 1 0 Empathy
+8053 1 0 Empathy
+8054 1 0 Empathy
+8055 1 0 Empathy
+8056 1 0 Empathy
+8057 1 0 Empathy
+8058 1 0 Empathy
+8059 1 0 Empathy
+8060 1 0 Empathy
+8061 1 0 Psi-Screen
+8062 1 0 Psi-Screen
+8063 1 0 Psi-Screen
+8064 1 0 Psi-Screen
+8065 1 0 Psi-Screen
+8066 1 0 Psi-Screen
+8067 1 0 Psi-Screen
+8068 1 0 Psi-Screen
+8069 1 0 Psi-Screen
+8070 1 0 Psi-Screen
+8071 1 0 Mental Probe
+8072 1 0 Mental Probe
+8073 1 0 Mental Probe
+8074 1 0 Mental Probe
+8075 1 0 Mental Probe
+8076 1 0 Mental Probe
+8077 1 0 Mental Probe
+8078 1 0 Mental Probe
+8079 1 0 Mental Probe
+8080 1 0 Mental Probe
+8081 1 0 Astral Projection
+8082 1 0 Astral Projection
+8083 1 0 Astral Projection
+8084 1 0 Astral Projection
+8085 1 0 Astral Projection
+8086 1 0 Astral Projection
+8087 1 0 Astral Projection
+8088 1 0 Astral Projection
+8089 1 0 Astral Projection
+8090 1 0 Astral Projection
+8091 1 0 Psionic Attack
+8092 1 0 Psionic Attack
+8093 1 0 Psionic Attack
+8094 1 0 Psionic Attack
+8095 1 0 Psionic Attack
+8096 1 0 Psionic Attack
+8097 1 0 Psionic Attack
+8098 1 0 Psionic Attack
+8099 1 0 Psionic Attack
+8000 1 0 Psionic Attack
+8101 2 0 Mind Control*
+8102 2 0 Emotion Control*
+8102 1 0 Mechanical Intuition
+8103 1 0 Animal Empathy
+8104 1 0 Animate Drawings
+8105 2 0 Possession*
+8106 2 0 Transferral*
+8107 2 0 Precognition*
+8108 1 0 Postcognition
+8109 1 0 Plant Control
+8110 1 1 Ultimate Skill
+9001 1 0 Extra Body Parts
+9002 1 0 Extra Body Parts
+9003 1 0 Extra Body Parts
+9004 1 0 Extra Body Parts
+9005 1 0 Extra Body Parts
+9006 1 0 Extra Body Parts
+9007 1 0 Extra Body Parts
+9008 1 0 Extra Body Parts
+9009 1 0 Extra Body Parts
+9010 1 0 Extra Body Parts
+9011 1 0 Extra Body Parts
+9012 1 0 Extra Body Parts
+9013 1 0 Extra Body Parts
+9014 1 0 Extra Body Parts
+9015 1 0 Extra Body Parts
+9016 1 0 Extra Body Parts
+9017 1 0 Extra Body Parts
+9018 1 0 Extra Body Parts
+9019 1 0 Extra Body Parts
+9020 1 0 Extra Body Parts
+9021 1 0 Extra Body Parts
+9022 1 0 Extra Body Parts
+9023 1 0 Extra Body Parts
+9024 1 0 Extra Body Parts
+9025 1 0 Extra Body Parts
+9026 1 0 Extra Body Parts
+9027 1 0 Extra Body Parts
+9028 1 0 Extra Body Parts
+9029 1 0 Extra Body Parts
+9030 1 0 Extra Body Parts
+9031 1 0 Extra Attacks
+9032 1 0 Extra Attacks
+9033 1 0 Extra Attacks
+9034 1 0 Extra Attacks
+9035 1 0 Extra Attacks
+9036 1 0 Extra Attacks
+9037 1 0 Extra Attacks
+9038 1 0 Extra Attacks
+9039 1 0 Extra Attacks
+9040 1 0 Extra Attacks
+9041 1 0 Energy Touch
+9042 1 0 Energy Touch
+9043 1 0 Energy Touch
+9044 1 0 Energy Touch
+9045 1 0 Energy Touch
+9046 1 0 Energy Touch
+9047 1 0 Energy Touch
+9048 1 0 Energy Touch
+9049 1 0 Energy Touch
+9050 1 0 Energy Touch
+9051 1 0 Paralyzing Touch
+9052 1 0 Paralyzing Touch
+9053 1 0 Paralyzing Touch
+9054 1 0 Paralyzing Touch
+9055 1 0 Paralyzing Touch
+9056 1 0 Paralyzing Touch
+9057 1 0 Paralyzing Touch
+9058 1 0 Paralyzing Touch
+9059 1 0 Paralyzing Touch
+9060 1 0 Paralyzing Touch
+9061 1 0 Claws
+9062 1 0 Claws
+9063 1 0 Claws
+9064 1 0 Claws
+9065 1 0 Claws
+9066 1 0 Claws
+9067 1 0 Claws
+9068 1 0 Claws
+9069 1 0 Claws
+9070 1 0 Claws
+9071 1 0 Claws
+9072 1 0 Claws
+9073 1 0 Claws
+9074 1 0 Claws
+9075 1 0 Claws
+9076 1 0 Claws
+9077 1 0 Claws
+9078 1 0 Claws
+9079 1 0 Claws
+9080 1 0 Claws
+9081 1 0 Rotting Touch
+9082 1 0 Rotting Touch
+9083 1 0 Rotting Touch
+9084 1 0 Rotting Touch
+9085 1 0 Rotting Touch
+9086 1 0 Rotting Touch
+9087 1 0 Rotting Touch
+9088 1 0 Rotting Touch
+9089 1 0 Rotting Touch
+9090 1 0 Rotting Touch
+9091 1 0 Corrosive Touch
+9092 1 0 Corrosive Touch
+9093 1 0 Corrosive Touch
+9094 1 0 Corrosive Touch
+9095 1 0 Corrosive Touch
+9096 1 0 Corrosive Touch
+9097 1 0 Corrosive Touch
+9098 1 0 Corrosive Touch
+9099 1 0 Corrosive Touch
+9000 1 0 Corrosive Touch
+9101 2 0 Health-Drain Touch*
+9102 1 0 Blinding Touch
+10001 1 0 Body Armor
+10002 1 0 Body Armor
+10003 1 0 Body Armor
+10004 1 0 Body Armor
+10005 1 0 Body Armor
+10006 1 0 Body Armor
+10007 1 0 Body Armor
+10008 1 0 Body Armor
+10009 1 0 Body Armor
+10010 1 0 Body Armor
+10011 1 0 Body Armor
+10012 1 0 Body Armor
+10013 1 0 Body Armor
+10014 1 0 Body Armor
+10015 1 0 Body Armor
+10016 1 0 Body Armor
+10017 1 0 Body Armor
+10018 1 0 Body Armor
+10019 1 0 Body Armor
+10020 1 0 Body Armor
+10021 1 0 Body Armor
+10022 1 0 Body Armor
+10023 1 0 Body Armor
+10024 1 0 Body Armor
+10025 1 0 Body Armor
+10026 1 0 Body Armor
+10027 1 0 Body Armor
+10028 1 0 Body Armor
+10029 1 0 Body Armor
+10030 1 0 Body Armor
+10031 1 0 Water Breathing
+10032 1 0 Water Breathing
+10033 1 0 Water Breathing
+10034 1 0 Water Breathing
+10035 1 0 Water Breathing
+10036 1 0 Water Breathing
+10037 1 0 Water Breathing
+10038 1 0 Water Breathing
+10039 1 0 Water Breathing
+10040 1 0 Water Breathing
+10041 1 1 Absorption
+10042 1 1 Absorption
+10043 1 1 Absorption
+10044 1 1 Absorption
+10045 1 1 Absorption
+10046 1 1 Absorption
+10047 1 1 Absorption
+10048 1 1 Absorption
+10049 1 1 Absorption
+10050 1 1 Absorption
+10051 1 0 Regeneration
+10052 1 0 Regeneration
+10053 1 0 Regeneration
+10054 1 0 Regeneration
+10055 1 0 Regeneration
+10056 1 0 Regeneration
+10057 1 0 Regeneration
+10058 1 0 Regeneration
+10059 1 0 Regeneration
+10060 1 0 Regeneration
+10061 1 0 Solar Regeneration
+10062 1 0 Solar Regeneration
+10063 1 0 Solar Regeneration
+10064 1 0 Solar Regeneration
+10065 1 0 Solar Regeneration
+10066 1 0 Solar Regeneration
+10067 1 0 Solar Regeneration
+10068 1 0 Solar Regeneration
+10069 1 0 Solar Regeneration
+10070 1 0 Solar Regeneration
+10071 1 0 Recovery
+10072 1 0 Recovery
+10073 1 0 Recovery
+10074 1 0 Recovery
+10075 1 0 Recovery
+10076 1 0 Recovery
+10077 1 0 Recovery
+10078 1 0 Recovery
+10079 1 0 Recovery
+10080 1 0 Recovery
+10081 1 0 Recovery
+10082 1 0 Recovery
+10083 1 0 Recovery
+10084 1 0 Recovery
+10085 1 0 Recovery
+10086 1 0 Recovery
+10087 1 0 Recovery
+10088 1 0 Recovery
+10089 1 0 Recovery
+10090 1 0 Recovery
+10091 1 0 Life Support
+10092 1 0 Life Support
+10093 1 0 Life Support
+10094 1 0 Life Support
+10095 1 0 Life Support
+10096 1 0 Life Support
+10097 1 0 Life Support
+10098 1 0 Life Support
+10099 1 0 Life Support
+10000 1 0 Life Support
+10101 1 0 Pheromones
+10102 1 0 Damage Transfer
+10103 1 0 Healing
+10104 2 0 Immortality*
+11001 1 1 Resistances
+11002 1 1 Resistances
+11003 1 1 Resistances
+11004 1 1 Resistances
+11005 1 1 Resistances
+11006 1 1 Senses
+11007 1 1 Senses
+11008 1 1 Senses
+11009 1 1 Senses
+11010 1 1 Senses
+11011 1 1 Movement
+11012 1 1 Movement
+11013 1 1 Movement
+11014 1 1 Movement
+11015 1 1 Movement
+11016 1 1 Matter Control
+11017 1 1 Matter Control
+11018 1 1 Matter Control
+11019 1 1 Matter Control
+11020 1 1 Matter Control
+11021 1 1 Matter Control
+11022 1 1 Matter Control
+11023 1 1 Matter Control
+11024 1 1 Matter Control
+11025 1 1 Matter Control
+11026 1 1 Energy Control
+11027 1 1 Energy Control
+11028 1 1 Energy Control
+11029 1 1 Energy Control
+11030 1 1 Energy Control
+11031 1 1 Energy Control
+11032 1 1 Energy Control
+11033 1 1 Energy Control
+11034 1 1 Energy Control
+11035 1 1 Energy Control
+11036 1 1 Energy Control
+11037 1 1 Energy Control
+11038 1 1 Energy Control
+11039 1 1 Energy Control
+11040 1 1 Energy Control
+11041 1 1 Body Control
+11042 1 1 Body Control
+11043 1 1 Body Control
+11044 1 1 Body Control
+11045 1 1 Body Control
+11046 1 1 Body Control
+11047 1 1 Body Control
+11048 1 1 Body Control
+11049 1 1 Body Control
+11050 1 1 Body Control
+11051 1 1 Body Control
+11052 1 1 Body Control
+11053 1 1 Body Control
+11054 1 1 Body Control
+11055 1 1 Body Control
+11056 1 1 Distance Attacks
+11057 1 1 Distance Attacks
+11058 1 1 Distance Attacks
+11059 1 1 Distance Attacks
+11060 1 1 Distance Attacks
+11061 1 1 Distance Attacks
+11062 1 1 Distance Attacks
+11063 1 1 Distance Attacks
+11064 1 1 Distance Attacks
+11065 1 1 Distance Attacks
+11066 1 1 Distance Attacks
+11067 1 1 Distance Attacks
+11068 1 1 Distance Attacks
+11069 1 1 Distance Attacks
+11070 1 1 Distance Attacks
+11071 1 1 Mental Powers
+11072 1 1 Mental Powers
+11073 1 1 Mental Powers
+11074 1 1 Mental Powers
+11075 1 1 Mental Powers
+11076 1 1 Body Alterations/Offensive
+11077 1 1 Body Alterations/Offensive
+11078 1 1 Body Alterations/Offensive
+11079 1 1 Body Alterations/Offensive
+11080 1 1 Body Alterations/Offensive
+11081 1 1 Body Alterations/Offensive
+11082 1 1 Body Alterations/Offensive
+11083 1 1 Body Alterations/Offensive
+11084 1 1 Body Alterations/Offensive
+11085 1 1 Body Alterations/Offensive
+11086 1 1 Body Alterations/Offensive
+11087 1 1 Body Alterations/Offensive
+11088 1 1 Body Alterations/Offensive
+11089 1 1 Body Alterations/Offensive
+11090 1 1 Body Alterations/Offensive
+11091 1 1 Body Alterations/Defensive
+11092 1 1 Body Alterations/Defensive
+11093 1 1 Body Alterations/Defensive
+11094 1 1 Body Alterations/Defensive
+11095 1 1 Body Alterations/Defensive
+11096 1 1 Body Alterations/Defensive
+11097 1 1 Body Alterations/Defensive
+11098 1 1 Body Alterations/Defensive
+11099 1 1 Body Alterations/Defensive
+11000 1 1 Body Alterations/Defensive
+11101 1 0 Eldritch Blast
+11102 1 0 Eldritch Shield
+

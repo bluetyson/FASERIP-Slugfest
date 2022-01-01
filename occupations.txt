@@ -1,0 +1,101 @@
+100
+0 Writer
+1 Actor
+2 Administration
+3 Advertising
+4 Agriculture
+5 Alternative Medicine
+6 Analysis
+7 Animal Husbandry
+8 Antiques
+9 Artist
+10 Astronaut
+11 Audio
+12 Blue Collar
+13 Business
+14 Ceramics
+15 Circus
+16 Clergy
+17 Communications
+18 Computers
+19 Construction
+20 Consulting
+21 Crime - Violent
+22 Crime - White Collar
+23 Criminal Justice
+24 Critic
+25 Culinary
+26 Cult Member
+27 Diagnostics
+28 Disabled
+29 Electrician
+30 Engineer
+31 Entertainment
+32 Espionage / Intelligence
+33 Exploration
+34 Finance
+35 Fireman
+36 Food Service
+37 Freelancer
+38 Gaming
+39 Gang
+40 Glass
+41 Homeless
+42 Home-Maker
+43 Hospitality
+44 Independently Wealthy
+45 Infrastructure
+46 Inspector
+47 Investment
+48 Journalism
+49 Landscaping
+50 Law
+51 Logistics
+52 Management
+53 Mechanic
+54 Medical
+55 Mental Health
+56 Mercenary
+57 Metals
+58 Military
+59 Mining
+60 Multi-Media
+61 Music
+62 Occult
+63 Office Worker / Temp
+64 Paid Expert
+65 Petroleum
+66 Pilot
+67 Plastics
+68 Policeman
+69 Politics
+70 Post-Graduate Professional
+71 Printing
+72 Private Investigation
+73 Professional Hero
+74 Professional Vigilante
+75 Radio
+76 Recycling
+77 Repair
+78 Research and Development
+79 Retail
+80 Retired
+81 Sailor
+82 Sales
+83 Salvage
+84 Sanitation
+85 Science
+86 Security 
+87 Social Work
+88 Sports
+89 Student
+90 Teacher
+91 Technician
+92 Television
+93 Tester
+94 Theory
+95 Translation
+96 Transportation
+97 TV Personality
+98 Unemployed
+99 Wholesale

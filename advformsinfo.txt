@@ -1,0 +1,16 @@
+5
+1	0	0	0	0	0	0	0	0	0	0	Altered Human
++1CS to one Primary Ability
+Altered Humans are everyday people who have been accidentally or purposefully exposed to weird radiation, secret formulas, or chose to be instructed in strange and powerful talents. The Fantastic Four, Hulk, Nick Fury, and Doctor Strange are examples of altered humans.
+1	-1	0	0	0	1	0	0	0	1	10	Mutant
++1 Power, +1CS Endurance, -1CS Resources, Starting Popularity 0
+Mutants are members of the race of Home Superior, a new race of man born from the race of Homo Sapiens. Mutant powers often (though not always) first manifest themselves in the teen-age years. Mutants are generally feared and disliked by the populace at large. Examples of mutants include the XMen, X-Factor, and New Mutants.
+3	1	0	0	0	0	2	0	0	0	0	High Technology
++2CS to Reason, Starting Resources Gd or rolled, at least 1 Contact, at least 1 Talent must be Scientific or Professional
+Also called Hi-Tech Wonders, these heroes derive their abilities solely through equipment, whether that equipment is mystical or technological in nature, such as Iron Man or Captain Britain. High technology heroes start with lower primary ability scores and in addition may not use their powers without their equipment; however, they receive many other benefits.
+4	0	0	0	0	0	0	0	0	0	0	Robot
+Starting Popularity SH0
+Robots are artificially-created sentient beings, including organic constructs, clones, life-model decoys, mystically-powered golems, synthezoids, androids. and robots. Examples of such beings include Machine Man, Vision, Jocasta, the evil Ultron, and the robotic form of Deathlok (the original cyborg Deathlok is an altered human).
+5	12	0	0	0	0	0	0	0	-1	0	Alien
+-1 Power, Pr Resources, Starts with no more than one Contact (race)
+"Alien" is a blanket term representing those individuals from other civilizations. planets. dimensions or races of man. These may include Home Mermanus (but not Home Superior), Asgardians, Denizens of the Dark Dimension,	Atlanteans, Olympians, Eternals, Kree, Skrulls, and Shi'ar, as well as races that have yet to be discovered in the Marvel Universe. Aliens have the potential of being incredibly powerful, but have limited secondary abilities. The following generation system is for super-powered aliens whose races have not been encountered before.

@@ -1,0 +1,101 @@
+100
+0	Alien
+1	Altered Human
+2	Altered Human
+3	Altered Human
+4	Altered Human
+5	Altered Human
+6	Altered Human
+7	Altered Human
+8	Altered Human
+9	Altered Human
+10	Altered Human
+11	Altered Human
+12	Altered Human
+13	Altered Human
+14	Altered Human
+15	Altered Human
+16	Altered Human
+17	Altered Human
+18	Altered Human
+19	Altered Human
+20	Altered Human
+21	Altered Human
+22	Altered Human
+23	Altered Human
+24	Altered Human
+25	Altered Human
+26	Altered Human
+27	Altered Human
+28	Altered Human
+29	Altered Human
+30	Altered Human
+31	Mutant
+32	Mutant
+33	Mutant
+34	Mutant
+35	Mutant
+36	Mutant
+37	Mutant
+38	Mutant
+39	Mutant
+40	Mutant
+41	Mutant
+42	Mutant
+43	Mutant
+44	Mutant
+45	Mutant
+46	Mutant
+47	Mutant
+48	Mutant
+49	Mutant
+50	Mutant
+51	Mutant
+52	Mutant
+53	Mutant
+54	Mutant
+55	Mutant
+56	Mutant
+57	Mutant
+58	Mutant
+59	Mutant
+60	Mutant
+61	High Technology
+62	High Technology
+63	High Technology
+64	High Technology
+65	High Technology
+66	High Technology
+67	High Technology
+68	High Technology
+69	High Technology
+70	High Technology
+71	High Technology
+72	High Technology
+73	High Technology
+74	High Technology
+75	High Technology
+76	High Technology
+77	High Technology
+78	High Technology
+79	High Technology
+80	High Technology
+81	High Technology
+82	High Technology
+83	High Technology
+84	High Technology
+85	High Technology
+86	High Technology
+87	High Technology
+88	High Technology
+89	High Technology
+90	High Technology
+91	Robot
+92	Robot
+93	Robot
+94	Robot
+95	Robot
+96	Alien
+97	Alien
+98	Alien
+99	Alien

@@ -1,101 +1,101 @@
-﻿Roll,Type,Column
-0,Changeling,0
-1,Normal human,2
-2,Normal human,2
-3,Normal human,2
-4,Normal human,2
-5,Normal human,2
-6,Normal human,2
-7,Normal human,2
-8,Normal human,2
-9,Normal human,2
-10,Normal human,2
-11,Normal human,2
-12,Normal human,2
-13,Normal human,2
-14,Normal human,2
-15,Normal human,2
-16,Normal human,2
-17,Normal human,2
-18,Normal human,2
-19,Normal human,2
-20,Normal human,2
-21,Normal human,2
-22,Normal human,2
-23,Normal human,2
-24,Normal human,2
-25,Normal human,2
-26,Normal human,2
-27,Mutant - Induced,1
-28,Mutant - Induced,1
-29,Mutant - Induced,1
-30,Mutant - Induced,1
-31,Mutant - Random,1
-32,Mutant - Random,1
-33,Mutant - Random,1
-34,Mutant - Breed,1
-35,Mutant - Breed,1
-36,Android,4
-37,Android,4
-38,Android,4
-39,Humanoid Race,5
-40,Humanoid Race,5
-41,Humanoid Race,5
-42,Humanoid Race,5
-43,Humanoid Race,5
-44,Humanoid Race,5
-45,Humanoid Race,5
-46,Humanoid Race,5
-47,Surgical Composite,2
-48,Modified Human - Organic,1
-49,Modified Human - Organic,1
-50,Modified Human - Muscular,1
-51,Modified Human - Muscular,1
-52,Modified Human - Skeletal,1
-53,Modified Human - Skeletal,1
-54,Modified Human - Extra Parts,1
-55,Modified Human - Extra Parts,1
-56,Modified Human - Extra Parts,1
-57,Modified Human - Extra Parts,1
-58,Demihuman - Centaur,5
-59,Demihuman - Equiman,3
-60,Demihuman - Faun,2
-61,Demihuman - Felinoid,1
-62,Demihuman - Felinoid,1
-63,Demihuman - Lupinoid,4
-64,Demihuman - Lupinoid,4
-65,Demihuman - Avian,3
-66,Demihuman - Avian,3
-67,Demihuman - Chiropteran,2
-68,Demihuman - Lamian,3
-69,Demihuman - Merhuman,2
-70,Demihuman - Harpy,2
-71,Cyborg - Artificial limbs/organs,4
-72,Cyborg - Artificial limbs/organs,4
-73,Cyborg - Exoskeletons,4
-74,Cyborg - Exoskeletons,4
-75,Cyborg - Mechanical Body,4
-76,Cyborg - Mechanical Body,4
-77,Cyborg - Mechanically Augmented,3
-78,Cyborg - Mechanically Augmented,3
-79,Cyborg - Mechanically Augmented,3
-80,Robot - Human Shape,4
-81,Robot - Human Shape,4
-82,Robot - Human Shape,4
-83,Robot - Usuform,4
-84,Robot - Usuform,4
-85,Robot - Metamorphic,4
-86,Robot - Metamorphic,4
-87,Robot - Computer,4
-88,Angel/Demon,5
-89,Deity,5
-90,Animal,1
-91,Vegetable,1
-92,Abnormal Chemistry,2
-93,Mineral,2
-94,Gaseous,5
-95,Liquid,5
-96,Energy,5
-97,Ethereal,1
-98,Undead,1
-99,Compund,0
+﻿Roll,Type,Column,1,2,3,4,5,F,A,S,E,R,I,P,Res,Pop
+1,Normal human,2,Fb,Fb,Fb,Fb,Fb,0,0,0,0,0,0,0,1,0
+2,Normal human,2,Fb,Fb,Fb,Fb,Fb,0,0,0,0,0,0,0,1,0
+3,Normal human,2,Fb,Fb,Fb,Fb,Fb,0,0,0,0,0,0,0,1,0
+4,Normal human,2,Fb,Fb,Fb,Fb,Fb,0,0,0,0,0,0,0,1,0
+5,Normal human,2,Fb,Fb,Fb,Fb,Fb,0,0,0,0,0,0,0,1,0
+6,Normal human,2,Pr,Pr,Pr,Pr,Fb,0,0,0,0,0,0,0,1,0
+7,Normal human,2,Pr,Pr,Pr,Pr,Fb,0,0,0,0,0,0,0,1,0
+8,Normal human,2,Pr,Pr,Pr,Pr,Fb,0,0,0,0,0,0,0,1,0
+9,Normal human,2,Pr,Pr,Pr,Pr,Fb,0,0,0,0,0,0,0,1,0
+10,Normal human,2,Pr,Pr,Pr,Pr,Fb,0,0,0,0,0,0,0,1,0
+11,Normal human,2,Ty,Pr,Ty,Ty,Pr,0,0,0,0,0,0,0,1,0
+12,Normal human,2,Ty,Pr,Ty,Ty,Pr,0,0,0,0,0,0,0,1,0
+13,Normal human,2,Ty,Pr,Ty,Ty,Pr,0,0,0,0,0,0,0,1,0
+14,Normal human,2,Ty,Pr,Ty,Ty,Pr,0,0,0,0,0,0,0,1,0
+15,Normal human,2,Ty,Pr,Ty,Ty,Pr,0,0,0,0,0,0,0,1,0
+16,Normal human,2,Ty,Pr,Ty,Gd,Pr,0,0,0,0,0,0,0,1,0
+17,Normal human,2,Ty,Pr,Ty,Gd,Pr,0,0,0,0,0,0,0,1,0
+18,Normal human,2,Ty,Pr,Ty,Gd,Pr,0,0,0,0,0,0,0,1,0
+19,Normal human,2,Ty,Pr,Ty,Gd,Pr,0,0,0,0,0,0,0,1,0
+20,Normal human,2,Ty,Pr,Ty,Gd,Pr,0,0,0,0,0,0,0,1,0
+21,Normal human,2,Gd,Pr,Ty,Gd,Ty,0,0,0,0,0,0,0,1,0
+22,Normal human,2,Gd,Pr,Ty,Gd,Ty,0,0,0,0,0,0,0,1,0
+23,Normal human,2,Gd,Pr,Ty,Gd,Ty,0,0,0,0,0,0,0,1,0
+24,Normal human,2,Gd,Pr,Ty,Gd,Ty,0,0,0,0,0,0,0,1,0
+25,Normal human,2,Gd,Pr,Ty,Gd,Ty,0,0,0,0,0,0,0,1,0
+26,Normal human,2,Gd,Ty,Ty,Gd,Ty,0,0,0,0,0,0,0,1,0
+27,Mutant - Induced,1,Gd,Ty,Ty,Gd,Ty,0,0,0,0,0,0,0,0,0
+28,Mutant - Induced,1,Gd,Ty,Ty,Gd,Ty,0,0,0,0,0,0,0,0,0
+29,Mutant - Induced,1,Gd,Ty,Ty,Gd,Ty,0,0,0,0,0,0,0,0,0
+30,Mutant - Induced,1,Gd,Ty,Ty,Gd,Ty,0,0,0,0,0,0,0,0,0
+31,Mutant - Random,1,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0
+32,Mutant - Random,1,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0
+33,Mutant - Random,1,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0
+34,Mutant - Breed,1,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0
+35,Mutant - Breed,1,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0
+36,Android,4,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0
+37,Android,4,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0
+38,Android,4,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0
+39,Humanoid Race,5,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0
+40,Humanoid Race,5,Gd,Ty,Ty,Gd,Gd,0,0,0,0,0,0,0,0,0
+41,Humanoid Race,5,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0
+42,Humanoid Race,5,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0
+43,Humanoid Race,5,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0
+44,Humanoid Race,5,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0
+45,Humanoid Race,5,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0
+46,Humanoid Race,5,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0
+47,Surgical Composite,2,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0
+48,Modified Human - Organic,1,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0
+49,Modified Human - Organic,1,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0
+50,Modified Human - Muscular,1,Ex,Ty,Gd,Ex,Ex,0,0,0,0,0,0,0,0,0
+51,Modified Human - Muscular,1,Ex,Ty,Gd,Rm,Ex,0,0,0,0,0,0,0,0,0
+52,Modified Human - Skeletal,1,Ex,Ty,Gd,Rm,Ex,0,0,0,0,0,0,0,0,0
+53,Modified Human - Skeletal,1,Ex,Ty,Gd,Rm,Ex,0,0,0,0,0,0,0,0,0
+54,Modified Human - Extra Parts,1,Ex,Ty,Gd,Rm,Ex,0,0,0,0,0,0,0,0,0
+55,Modified Human - Extra Parts,1,Ex,Ty,Gd,Rm,Ex,0,0,0,0,0,0,0,0,0
+56,Modified Human - Extra Parts,1,Ex,Ty,Gd,Rm,Ex,0,0,0,0,0,0,0,0,0
+57,Modified Human - Extra Parts,1,Ex,Ty,Gd,Rm,Ex,0,0,0,0,0,0,0,0,0
+58,Demihuman - Centaur,5,Ex,Ty,Gd,Rm,Ex,0,0,0,0,0,0,0,0,0
+59,Demihuman - Equiman,3,Ex,Ty,Gd,Rm,Ex,0,0,0,0,0,0,0,0,0
+60,Demihuman - Faun,2,Ex,Ty,Gd,Rm,Ex,0,0,0,0,0,0,0,0,0
+61,Demihuman - Felinoid,1,Rm,Ty,Gd,Rm,Rm,0,0,0,0,0,0,0,0,0
+62,Demihuman - Felinoid,1,Rm,Ty,Gd,Rm,Rm,0,0,0,0,0,0,0,0,0
+63,Demihuman - Lupinoid,4,Rm,Ty,Gd,Rm,Rm,0,0,0,0,0,0,0,0,0
+64,Demihuman - Lupinoid,4,Rm,Ty,Gd,Rm,Rm,0,0,0,0,0,0,0,0,0
+65,Demihuman - Avian,3,Rm,Ty,Gd,Rm,Rm,0,0,0,0,0,0,0,0,0
+66,Demihuman - Avian,3,Rm,Ty,Gd,Rm,Rm,0,0,0,0,0,0,0,0,0
+67,Demihuman - Chiropteran,2,Rm,Ty,Gd,Rm,Rm,0,0,0,0,0,0,0,0,0
+68,Demihuman - Lamian,3,Rm,Ty,Gd,Rm,Rm,0,0,0,0,0,0,0,0,0
+69,Demihuman - Merhuman,2,Rm,Ty,Gd,Rm,Rm,0,0,0,0,0,0,0,0,0
+70,Demihuman - Harpy,2,Rm,Ty,Gd,Rm,Rm,0,0,0,0,0,0,0,0,0
+71,Cyborg - Artificial limbs/organs,4,Rm,Ty,Gd,In,In,0,0,0,0,0,0,0,0,0
+72,Cyborg - Artificial limbs/organs,4,Rm,Ty,Gd,In,In,0,0,0,0,0,0,0,0,0
+73,Cyborg - Exoskeletons,4,Rm,Ty,Gd,In,In,0,0,0,0,0,0,0,0,0
+74,Cyborg - Exoskeletons,4,Rm,Ty,Gd,In,In,0,0,0,0,0,0,0,0,0
+75,Cyborg - Mechanical Body,4,Rm,Ty,Gd,In,In,0,0,0,0,0,0,0,0,0
+76,Cyborg - Mechanical Body,4,Rm,Gd,Gd,In,In,0,0,0,0,0,0,0,0,0
+77,Cyborg - Mechanically Augmented,3,Rm,Gd,Gd,In,In,0,0,0,0,0,0,0,0,0
+78,Cyborg - Mechanically Augmented,3,Rm,Gd,Gd,In,In,0,0,0,0,0,0,0,0,0
+79,Cyborg - Mechanically Augmented,3,Rm,Gd,Gd,In,In,0,0,0,0,0,0,0,0,0
+80,Robot - Human Shape,4,Rm,Gd,Gd,In,In,0,0,0,0,0,0,0,0,0
+81,Robot - Human Shape,4,In,Gd,Ex,In,Am,0,0,0,0,0,0,0,0,0
+82,Robot - Human Shape,4,In,Gd,Ex,In,Am,0,0,0,0,0,0,0,0,0
+83,Robot - Usuform,4,In,Gd,Ex,In,Am,0,0,0,0,0,0,0,0,0
+84,Robot - Usuform,4,In,Gd,Ex,In,Am,0,0,0,0,0,0,0,0,0
+85,Robot - Metamorphic,4,In,Gd,Ex,In,Am,0,0,0,0,0,0,0,0,0
+86,Robot - Metamorphic,4,In,Gd,Ex,In,Am,0,0,0,0,0,0,0,0,0
+87,Robot - Computer,4,In,Gd,Ex,In,Am,0,0,0,0,0,0,0,0,0
+88,Angel/Demon,5,In,Gd,Ex,In,Am,0,0,0,0,0,0,0,0,0
+89,Deity,5,In,Gd,Ex,In,Am,0,0,0,0,0,0,0,0,0
+90,Animal,1,In,Gd,Ex,In,Am,0,0,0,0,0,0,0,0,0
+91,Vegetable,1,In,Gd,Ex,Am,Am,0,0,0,0,0,0,0,0,0
+92,Abnormal Chemistry,2,In,Gd,Ex,Am,Am,0,0,0,0,0,0,0,0,0
+93,Mineral,2,In,Gd,Ex,Am,Am,0,0,0,0,0,0,0,0,0
+94,Gaseous,5,In,Gd,Ex,Am,Am,0,0,0,0,0,0,0,0,0
+95,Liquid,5,In,Gd,Ex,Am,Am,0,0,0,0,0,0,0,0,0
+96,Energy,5,In,Ex,Rm,Am,Mn,0,0,0,0,0,0,0,0,0
+97,Ethereal,1,Am,Ex,Rm,Am,Mn,0,0,0,0,0,0,0,0,0
+98,Undead,1,Am,Ex,Rm,Am,Mn,0,0,0,0,0,0,0,0,0
+99,Mutant - Breed,1,Am,Ex,Rm,Mn,Mn,0,0,0,0,0,0,0,0,0
+0,Mutant - Breed,1,Am,Ex,Rm,Mn,Mn,0,0,0,0,0,0,0,0,0
