@@ -8,4 +8,8 @@ The base module folder is there.
 Some here:- http://cosmicheroes.space/blog/index.php/tag/faserip-slugfest/
 
 # Character Generator
-Work in progress on an Ultimate Powers Book version - you can find a java GUI FASERIP Character Generator which I will link shortly.
+Work in progress on an Ultimate Powers Book version - 
+
+## Other versions
+You can find a java GUI FASERIP Character Generator at http://sourceforge.net/projects/javamcc/files/JMCC%28betav4.5%29.jar/download
+
