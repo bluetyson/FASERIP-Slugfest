@@ -29,8 +29,12 @@ class SkillRoll:
 		
     def roll_initiative(self, advantage:Optional[int]=None) -> int:
         initiative_roll = random.randint(1,10)
-        print("INIT ROLL", initiative_roll)
-        return initiative_roll
+        print("INIT ROLL", initiative_roll, advantage)
+        if initiative_roll == 1:
+            return initiative_roll  #on a 1, no modifiers
+        else:
+            return initiative_roll + advantage
+		
 
     @property
     def bonuses(self):

@@ -128,7 +128,7 @@ class CreatureAction(CreatureAdvBase):
 
     #def multiattack(self, verbose=0, assess=0):
     def multiattack(self, verbose=1, assess=0):	
-        print("multiattacking") #attack all at once - 6 at once? if more than 2 worth it maybe
+        print(self.name, "is multiattacking") #attack all at once - 6 at once? if more than 2 worth it maybe
         extra_attacks = 0
         fighting_rank = self.frank
         fighting_cs = 0
@@ -143,8 +143,10 @@ class CreatureAction(CreatureAdvBase):
         
         if int(self.mook) == 0 and len(possible_opponents) > 2:  #no extra attacks
             fighting_cs = -4
+            print('Mook Rule can be Used')
         else:
             ##multi attack check here? add to range self.attacks #boost for Martial arts B to F rank
+            print('checking Fighting Feat')
             if dict_faserip[self.frank] < 30:
                 #no point doing multiattack except in a game karma type situation
                 pass
@@ -178,7 +180,8 @@ class CreatureAction(CreatureAdvBase):
             fighting_cs = fighting_cs + 1
         if fighting_cs != 0:
             fighting_rank = column_shift(self.frank, fighting_cs)
-		## loop for extra attacks
+        ## loop for extra attacks
+        print("extra attacks", extra_attacks)
         for ea in range(extra_attacks + 1): #if no extra attacks and not a mook make a -4CS
             for i in range(len(self.attacks)):  ##multi attack check here? #boost for Martial arts B to F rank
                 try:
@@ -211,7 +214,7 @@ class CreatureAction(CreatureAdvBase):
                             self.tally['damage'] += damage
                             self.tally['hits'] += 1
                     else:
-                        print("not finding mook")
+                        #print("not finding mook")
                         opponent.take_damageFASERIP(damage, effect_type, effect, verbose)
                         self.tally['damage'] += damage
                         self.tally['hits'] += 1
@@ -257,8 +260,8 @@ class CreatureAction(CreatureAdvBase):
                 self.cast_healing(weakling, verbose)
         # Main action!
         economy = len(self.arena.find('allies')) > len(self.arena.find('opponents')) > 0
-        print("ECONOMY", economy)
-        print("condition", self.condition)
+        #print("ECONOMY", economy)
+        #print("condition", self.condition)
         # Buff?
         if self.condition == 'netted':
             # NOT-RAW: DC10 strength check or something equally easy for monsters

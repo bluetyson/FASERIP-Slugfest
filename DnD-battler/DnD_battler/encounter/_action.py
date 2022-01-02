@@ -4,6 +4,7 @@ from ..victory import Victory
 from ..dice.ranks import dict_faserip, universal_table
 #print("BATTLE:", dict_faserip)
 import math, random, logging
+#from tqdm import tqdm
 
 N = "\n"
 
@@ -63,7 +64,15 @@ class EncounterAction(EncounterBase):
 
     def roll_for_initiative(self, verbose=0):
         #self.combattants = sorted(self.combattants, key=lambda fighter: fighter.initiative.roll(), reverse=True)  #need a d10 initiative roll below
-        self.combattants = sorted(self.combattants, key=lambda fighter: fighter.initiative.roll_initiative()+fighter.initiative.modifier, reverse=True)  #need a d10 initiative roll
+		#init_list = []
+		#for x in self.combatants:
+		    #init_roll = fighter.initiative.roll_initiative()
+			#if init_roll > 1:
+				
+        #self.combattants = sorted(self.combattants, key=lambda fighter: fighter.initiative.roll_initiative()+fighter.initiative.modifier, reverse=True)  #need a d10 initiative roll
+        self.combattants = sorted(self.combattants, key=lambda fighter: fighter.initiative.roll_initiative(fighter.initiative.modifier), reverse=True)  #need a d10 initiative roll        #for x in self.combattants:
+        for x in self.combattants:
+            print(x.name, x.initiative.modifier)
 		
         #print(self.combattants)
         self.log.debug(f"Turn order: {[x.name for x in self]}")
@@ -168,6 +177,7 @@ class EncounterAction(EncounterBase):
 
     #TQDM the war?
     def go_to_war(self, rounds=1000):
+        #for i in tqdm(range(rounds), total=rounds):
         for i in range(rounds):
             self.battle(1, 0)
         x = {y: self.tally['victories'][y] for y in self.sides}
