@@ -125,12 +125,11 @@ arenaHerbert = Encounter(Lawyer, RatPack)
 print(arenaHerbert.go_to_war(10))
 #print(level1.hp)
 
-
-## notes on running
+## Notes On Running
 #load_beastiary from csv
-
 #loads into settings and checks json
 
+## To Do - make issues?
 #make abilities and ability dice d100 - DONE
 
 #make universal table combat system - DONE
@@ -138,6 +137,7 @@ print(arenaHerbert.go_to_war(10))
 #make slams and stuns - DONE
 
 #make other weapons - assume short range?
+#possible ranges Adjacent - Stagger - One Area, Grand Slam Areas?
 
 #add in armour to slow things down - possible infinite loops though if no-one can get through each other's armour  #need to check for armour stopping damage on slams
 #standard reduction if type is Energy/Force?  Forcefield reductions?
@@ -147,15 +147,19 @@ print(arenaHerbert.go_to_war(10))
 #add edged
 #then add shooting - but for simulation purposes about the same - could assume high tech energy weapons similarly
 #add martial arts in - DONE
+#add movement - speed penalties to hit
+#size penalties (or bonuses, Fin Fang Foom)
+
 #power fun
 #then random character gen? - java things - to this and get powers list - then need to somehow add them to a simulator - much more work than a random generator
 #could we get GPT or clone to name characters sensibly(ish)?
 
-#add group initiative
+#add group initiative - would have to work out a new way to do.  Apply roll from highest Intuition character to all in the team, set order to that?
 
 #simulate maximum opponents slugfest at a time - one roll to hit and damage everyone left have to work this out - have to be in waves, or it is just roll, then maybe take out a bunch of mooks in two hits? Whether
-#6 or 60 - half a dozen at once, six hex facing? how to 'damage all at once'?
+#6 or 60 - half a dozen at once, six hex facing? 
 
 #find > 2 opponents - DONE
+#how to 'damage all at once'? - DONE
 # do attack - apply results to all? - DONE
 

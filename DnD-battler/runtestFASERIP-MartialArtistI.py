@@ -8,15 +8,24 @@ arenaKunLun = Encounter()
 
 MHMA = pd.read_csv(r'J:\CLONE\WORK2\FASERIP-Slugfest\AmazingMartialArtistI.csv')
 #print(MHMA)
+count = 0
 for index, row in MHMA.iterrows():
 	#if 'Shang' in 
+	count = count + 1
 	#print(row['Name'])
+	if count < 10:
+		continue
 	arenaKunLun.append(Creature.load(row["Name"]))
 
 
 #print(arenaKunLun.set_deathmatch())
 #print(arenaKunLun.go_to_war(1))
-print(arenaKunLun.go_to_war(1))
+#print(arenaKunLun.go_to_war(100))
+#print(arenaKunLun.go_to_war(500))
+#print(arenaKunLun.go_to_war(1000))
+#print(arenaKunLun.go_to_war(2000))
+#print(arenaKunLun.go_to_war(5000))
 #print(arenaKunLun.go_to_war(10000))
+print(arenaKunLun.go_to_war(100000))
 #print(level1.hp)
 
