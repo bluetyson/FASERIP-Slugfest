@@ -29,6 +29,6 @@ billbybob4 = Creature.load('Boxer')
 #billbybob21 = Creature.load('Boxer')
 #billbybob22 = Creature.load('Boxer')
 
-arena2 = Encounter(level1).addmobFASERIP(12).go_to_war(1)
+arena2 = Encounter(level1).addmobFASERIP(24).go_to_war(1)
 #print(arena2.battle())
 print(arena2.go_to_war(100))

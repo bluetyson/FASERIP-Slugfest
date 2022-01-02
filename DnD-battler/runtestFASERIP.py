@@ -139,7 +139,8 @@ print(arenaHerbert.go_to_war(10))
 
 #make other weapons - assume short range?
 
-#add in armour to slow things down - possible infinite loops though if no-one can get through each other's armour
+#add in armour to slow things down - possible infinite loops though if no-one can get through each other's armour  #need to check for armour stopping damage on slams
+#standard reduction if type is Energy/Force?  Forcefield reductions?
 
 #set actions for stun and check if conscious - DONE
 
