@@ -14,6 +14,6 @@ for index, row in MHMA.iterrows():
 
 
 #print(arenaKunLun.set_deathmatch())
-print(arenaKunLun.go_to_war(100))
+print(arenaKunLun.go_to_war(10000))
 #print(level1.hp)
 

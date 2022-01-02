@@ -166,6 +166,7 @@ class EncounterAction(EncounterBase):
         # return self or side?
         return self
 
+    #TQDM the war?
     def go_to_war(self, rounds=1000):
         for i in range(rounds):
             self.battle(1, 0)

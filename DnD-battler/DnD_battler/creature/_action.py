@@ -135,7 +135,7 @@ class CreatureAction(CreatureAdvBase):
         try:
             opponent = self.arena.find(self.arena.target, self)[0]
             possible_opponents = self.arena.find(self.arena.target, self)
-            print("POSS OPPONENTS", len(possible_opponents), possible_opponents)
+            #print("POSS OPPONENTS", len(possible_opponents), possible_opponents)
         except IndexError:
             raise Victory()
         if assess:
@@ -204,7 +204,7 @@ class CreatureAction(CreatureAdvBase):
                         #time.sleep(6)	
 						
                     if int(self.mook) == 0 and len(possible_opponents) > 2:
-                        print("beating on Mooks")
+                        #print("beating on Mooks")
                         #time.sleep(10)	
                         for mook in possible_opponents:
                             mook.take_damageFASERIP(damage, effect_type, effect, verbose)
@@ -248,7 +248,7 @@ class CreatureAction(CreatureAdvBase):
         if not self.arena.find('alive enemy'):
             raise Victory()
 			
-        print("ALIVE opponents", len(self.arena.find('alive enemy')), self.arena.find('alive enemy'))
+        #print("ALIVE opponents", len(self.arena.find('alive enemy')), self.arena.find('alive enemy'))
         # BONUS ACTION
         # heal  -healing word, a bonus action.
         if self.healing_spells > 0:
