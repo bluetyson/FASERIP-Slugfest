@@ -10,7 +10,8 @@ Some here:- http://cosmicheroes.space/blog/index.php/tag/faserip-slugfest/
 # Character Generator
 Work in progress on an Ultimate Powers Book version - 
 - Notebook here that can do a loop of characters, output to json and make a dataframe and csv that will eventually be customised to bestiaryFASERIP.csv type format for FASERIP-Slugfests.
-- Training-Data parses Ben Riely's character website.
+- Training-Data parses Ben Riely's character website and creates a csv in beastiaryFASERIP.csv format
+- Martial-Artists provides some martial artist analysis similarly.
 
 ## Notes
 - There are two Forms - Composite and Compound Form - which basically involve making up multiple characters - may possibly be implemented later, but unlikely. For now I will replace them with Mutants [because X-Men].  For the purposes of tying into a simulation that would be difficult - in programming terms, sub-Creature character objects switching out stats.  Even just for a character generator, annoying.
