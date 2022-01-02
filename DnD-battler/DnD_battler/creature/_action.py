@@ -152,7 +152,7 @@ class CreatureAction(CreatureAdvBase):
                 #Rm or In fighting no point trying for 3 as Amazing intensity, try for two
                 fighting_roll = random.randint(1,100)
                 fighting_cs = -3  #going to need to change below to have an effective fighting rank from fighting_cs type things
-                if self.frank < 40:
+                if dict_faserip[self.frank] < 40:
                 #Rm
                     fighting_color = universal_color(self.frank, fighting_roll)
                     if fighting_color == "Y" or fighting_color == "R":

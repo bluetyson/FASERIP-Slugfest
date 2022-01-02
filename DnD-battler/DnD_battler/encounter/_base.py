@@ -2,10 +2,14 @@ from ..creature import Creature
 from typing import *
 from ..log import log
 N = "\n"
+import random
 
 class EncounterBase:
     log = log
-    target = 'enemy alive weakest'
+    #target = 'enemy alive bloodiest'
+    #target = 'enemy alive fiersomest'
+    #target = 'enemy alive weakest'
+    target = 'enemy alive random'
     # target='enemy alive weakest', target='enemy alive random', target='enemy alive fiersomest'
 
     def __init__(self, *lineup):

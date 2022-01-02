@@ -3,7 +3,8 @@ from ..creature import Creature
 from ..victory import Victory
 from ..dice.ranks import dict_faserip, universal_table
 #print("BATTLE:", dict_faserip)
-import math
+import math, random, logging
+
 N = "\n"
 
 class EncounterAction(EncounterBase):
@@ -54,9 +55,10 @@ class EncounterAction(EncounterBase):
                      'fuchsia',
                      'purple',
                      'cream'
-                     'grey']
+                     'grey','a','aa','aaa','b','bb','bbb','c','cc','ccc','d','dd','ddd','dddd']
         for schmuck in self:
-            schmuck.alignment = colours.pop(0) + " team"
+            #schmuck.alignment = colours.pop(0) + " team"
+            schmuck.alignment = colours.pop(0) + schmuck.alignment
         return self
 
     def roll_for_initiative(self, verbose=0):
