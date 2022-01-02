@@ -2,6 +2,7 @@ from ..victory import Victory
 from ._adv_base import CreatureAdvBase
 from ..dice.ranks import dict_faserip, universal_table, universal_color, column_shift
 import random
+import time
 
 class CreatureAction(CreatureAdvBase):
 
@@ -139,7 +140,8 @@ class CreatureAction(CreatureAdvBase):
             raise Victory()
         if assess:
             return 0  # the default
-        if self.mook == 0 and len(possible_opponents) > 2:  #no extra attacks
+        
+        if int(self.mook) == 0 and len(possible_opponents) > 2:  #no extra attacks
             fighting_cs = -4
         else:
             ##multi attack check here? add to range self.attacks #boost for Martial arts B to F rank
@@ -195,14 +197,21 @@ class CreatureAction(CreatureAdvBase):
                 #damage = 2
                 if damage > 0:
                     #opponent.take_damage(damage, verbose)
-                    if self.mook == 0 and len(possible_opponents) > 2:
-                        pass
+                    #if damage > 6:
+                        #print("damage - checking mook", self.mook, type(self.mook), len(possible_opponents), fighting_cs)
+                        #assert self.mook == 0
+                        #assert len(possible_opponents) > 2
+                        #time.sleep(6)	
+						
+                    if int(self.mook) == 0 and len(possible_opponents) > 2:
+                        print("beating on Mooks")
+                        #time.sleep(10)	
                         for mook in possible_opponents:
                             mook.take_damageFASERIP(damage, effect_type, effect, verbose)
                             self.tally['damage'] += damage
                             self.tally['hits'] += 1
                     else:
-                     
+                        print("not finding mook")
                         opponent.take_damageFASERIP(damage, effect_type, effect, verbose)
                         self.tally['damage'] += damage
                         self.tally['hits'] += 1
