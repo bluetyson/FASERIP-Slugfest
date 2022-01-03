@@ -131,10 +131,10 @@ print(arenaHerbert.go_to_war(10))
 
 ## To Do - make issues?
 #make abilities and ability dice d100 - DONE
-
 #make universal table combat system - DONE
-
 #make slams and stuns - DONE
+
+#add Karma!
 
 #make other weapons - assume short range?
 #possible ranges Adjacent - Stagger - One Area, Grand Slam Areas?

@@ -3,7 +3,7 @@ from ..creature_properties.proficiency import Proficiency
 from typing import *
 # from ..creature_properties.size import Size # Size no longer plays a role in AC or abilities.
 from .ranks import dict_faserip
-print("SABDF:",dict_faserip)
+#print("SABDF:",dict_faserip)
 
 class AbilityDie(Dice):
     def __init__(self, bonus: int = 0, proficiency: Proficiency=None):

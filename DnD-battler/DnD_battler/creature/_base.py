@@ -15,16 +15,15 @@ class CreatureBase:
         self.name = 'unnamed'
         self.base = 'none'    # human bandit
         self.type = 'unknown' # aberation, humanoid
-        self.size = Size('medium')
+        self.size = Size('medium')  #size bonus and penalty column shifts - could utilise for this when change size?
         self.arena = None
         self.level = 1
         self.xp = 0
         # proficiency
         # self.proficiency.bonus is dynamic based on proficiency.level + proficiency.modifier
-        self.proficiency = Proficiency(0, 0)
+        self.proficiency = Proficiency(0, 0)  #Not used
         # hits
-        #self.hp = 4  # commoner.1
-        self.hp = 24  # commoner.1
+        self.hp = 24  # All Typical Human HEALTH
         self.starting_hp = 24
         self.hit_die = Dice(8, 0)
         ## new
@@ -49,7 +48,7 @@ class CreatureBase:
         self.i = AbilityDie(bonus=0, proficiency=self.proficiency)
         self.p = AbilityDie(bonus=0, proficiency=self.proficiency)
 
-        print(self.f, self.a)
+        #print(self.f, self.a) #dice associated with ranks, not really used currently
 		
         # AC
         self.armor = Armor(ability_dice=[self.a], bonus=0)
@@ -72,7 +71,7 @@ class CreatureBase:
         self.healing = None  # Normally dice object
         # internal stuff
         self.tally = {'damage': 0, 'hits': 0, 'dead': 0, 'misses': 0, 'battles': 0, 'rounds': 0, 'hp': 0,
-                      'healing_spells': 0, 'stun':0, 'slam':0}
+                      'healing_spells': 0, 'stun':0, 'slam':0, 'stunned':0, 'slammed':0}
         self.copy_index = 1
         self.condition = 'normal'
         self.dodge = 0

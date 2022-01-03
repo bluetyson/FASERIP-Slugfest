@@ -5,7 +5,7 @@ from ..dice.ability_die import AbilityDie
 from ..dice import Dice, AttackRoll, SkillRoll
 from typing import *
 from ..dice.ranks import dict_faserip
-print(dict_faserip)
+#print(dict_faserip)
 
 class CreatueInitAble(CreatureBase):
 
@@ -39,17 +39,21 @@ class CreatueInitAble(CreatureBase):
         if self.talents['martial_arts']['E'] == 1:
             self.initiative.modifier +=1
 			
-        print ("INITI MOD:", self.initiative.modifier)
+        #print ("INITI MOD:", self.initiative.modifier) TEST FOR THIS
+		
         #add slugfest attack
         #print ("STR CHECK:", dict_faserip[self.srank])
         #self.attacks = [AttackRoll(name='slugfest', ability_die=self.f, damage_dice=Dice(1,dict_faserip[self.srank],avg=True), modifier=0)]
         #sself.attacks = [AttackRoll(name='slugfest', ability_die=self.f, damage_dice=Dice(1,dict_faserip[self.srank],avg=True), modifier=0)]
-        self.attacks = [AttackRoll(name='slugfest', ability_die=self.f, damage_dice=Dice(1,dict_faserip[self.srank]), modifier=0)]
+        self.attacks = [AttackRoll(name='slugfest', ability_die=self.f, damage_dice=Dice(1,dict_faserip[self.srank]), modifier=0)]  #just used to activate attacks
         #self.initiative = SkillRoll(Dice(10,0), modifier=self.initiative.modifier, success_on_crit=False)
 		#add slugfest attack
 		#add ranged attack
+		#add energy attack [getting fancier, needs effect - heat, cold, etc] could start simple that ANY are energy
+		#add force attack
+		#add grappling attack
 		
-        print("HEALTH",self.stated_hp, self.hp, "KARMA:", self.karma, "INIT:", self.initiative.modifier, "SLUGFESTD:",dict_faserip[self.srank], "BA:",self.armour_name)
+        #print("HEALTH",self.stated_hp, self.hp, "KARMA:", self.karma, "INIT:", self.initiative.modifier, "SLUGFESTD:",dict_faserip[self.srank], "BA:",self.armour_name)
 			
 
     def set_ability_die(self, ability_name: str, score: Optional[int] = None, bonus: Optional[int] = None):
@@ -114,7 +118,7 @@ class CreatueInitAble(CreatureBase):
                 abilities[ability_name] = score.score
             else:
                 #abilities[ability_name] = int(score)
-                print("SANITISE:",ability_name, abilities[ability_name], score, dict_faserip[score])
+                #print("SANITISE:",ability_name, abilities[ability_name], score, dict_faserip[score])
                 #abilities[ability_name] = int(score)
                 if ability_name == "f":
                     self.frank = abilities[ability_name]
@@ -130,7 +134,7 @@ class CreatueInitAble(CreatureBase):
                     self.irank = abilities[ability_name]
                 if ability_name == "p":
                     self.prank = abilities[ability_name]
-                    print("rankcheck",self.prank)
+                    #print("rankcheck",self.prank)
 					
                 abilities[ability_name] = dict_faserip[score]
 				

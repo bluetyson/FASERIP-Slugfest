@@ -44,15 +44,15 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
                 self[key] = settings[key]				
         # -------------- set complex values ----------------------------------------------------------------------------
         # abilities
-        if 'stated_ac' in settings:
-            self.armour_name = settings['stated_ac']
+        if 'stated_ac' in settings: #everyone has Armour here in code, just Sh0 for default, so no effect
+            self.armour_name = settings['stated_ac'] 
         else:
             self.armour_name = "Sh0"
         self.armor.ac = dict_faserip[self.armour_name]
         
         #T = Type of Damage: E = Edged, B= Blunt, S = Shooting, H = Advanced Technology, 2 = Blunt and Edged, W = S and 2
 		
-        if 'att' in settings:
+        if 'att' in settings: #change this for powers etc. too
             print("OTHER ATTACKS:", settings['att'])
             if settings['att'] == 'B':
                 self.alt_attack['blunt'] = 1
@@ -71,18 +71,18 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
                 self.alt_attack['edged'] = 1
                 self.alt_attack['shooting'] = 1
             print(self.alt_attack)
-        if 'martial_arts' in settings:
-            print("MARTIAL ARTS:", settings['martial_arts'])
+        if 'martial_arts' in settings:  #adds a 1 for each of Martial Arts A to E found in beastiaryFASERIP - string ABCDE, ABCD etc.
+            #print("MARTIAL ARTS:", settings['martial_arts'])
             for ma in settings['martial_arts']:
                 self.talents['martial_arts'][ma] = 1
             print(self.talents['martial_arts'])
 			
-        if 'mook' in settings:
+        if 'mook' in settings:  #mook rules if a 0 then character will attack everything at -4CS by default.  For testing heroes versus mobs, thugs etc.
             self.mook = settings['mook']
-            print("MOOKL", self.mook)
+            #print("MOOKL", self.mook)
 
         self.set_ability_dice(**settings)
-        # arena
+        # arena - battle the caracter is in
         if 'arena' in settings:
             self.arena = settings['arena']
         # size
@@ -95,12 +95,12 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
         if 'proficiency' in settings:
             self.proficiency.bonus = int(settings['proficiency'])
         # hit dice
-        if 'hd' in settings:
+        if 'hd' in settings:  #cound use to store Endurance Ranks?
             self.hit_die.num_faces = [int(settings['hd'])]
             if 'hp' not in settings:
                 self.recalculate_hp()
         # other
-        if 'sc_ability' in settings:
+        if 'sc_ability' in settings:  #could adapt this setting for magic using characters and differences there
             sc_a = settings['sc_ability'].lower()
             assert sc_a in self.ability_names, f'{sc_a} is not a valid ability name {self.ability_names}'
             self.spellcasting_ability_name = sc_a
@@ -109,7 +109,7 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
         if 'initiative_bonus' in settings:
             self.initiative.modifier = int(settings['initiative_bonus'])
         # attacks
-        if 'attack_parameters' in settings or 'attacks' in settings:
+        if 'attack_parameters' in settings or 'attacks' in settings:  #not used currently, likely break things
             self.attacks = self.parse_attacks(**settings)
 			
 			
