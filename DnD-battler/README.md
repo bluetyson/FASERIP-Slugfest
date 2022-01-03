@@ -21,20 +21,22 @@ This is basically taken from my FATERIP hack table https://docs.google.com/docum
 - If you want to simulate a -4 CS multiattack on everyone at once - set mook = 1 for one side and leave zero on the other.  To turn off, have everyone be mooks.
     - still need a mode where can attack, say in groups of 6 at any given time.
 
-#Documentation
+# Documentation
 This module allows the simulation of a FASERIP encounter.
-It has three main classes:  Dice (and its derivatives), Character, Encounter.
+It has three main classes:  Dice (and its derivatives), Character, Encounter. 
 
 **Teams.** Multiple creatures of the same alignment will team up to fight creatures of different alignments in a simulation (`Encounter().battle()` for a single iteration or `Encounter().go_to_war()` for multiple).
 **Gridless.** The game assumes everyone is in contact with everyone and not on a grid. The reason being is tactics.
 **Tactics.** Tactics are highly problematic both in targetting and actions to take. Players do not play as strategically as they should due to heroism and kill tallies, while the GM might play enemies really dumbly to avoid a TPD.
-**Targetting.** The simulator is set up as a munchkin combat where everyone targets the weakest opponent (The global variable `TARGET="enemy alive weakest"` makes the `find_weakest_target` method of the `Encounter` be used, but could be changed (unwisely) to a permutation of enemy/ally alive/dead weakest/random/fiercest.
+**Targettng.** The simulator is set up as a munchkin combat where everyone targets the weakest opponent (The global variable `TARGET="enemy alive weakest"` makes the `find_weakest_target` method of the `Encounter` be used, but could be changed (unwisely) to a permutation of enemy/ally alive/dead weakest/random/fiercest.
 The muchkinishness has a deleterious side-effect when the method deathmatch of the Encounter class is invoked —this allocates each Creature object in the Encounter object in a different team.
-**Actions.** Action choice is dictated by turn economy. A character of a team with the greater turn economy will dodge (if it knows itself a target) or throw a net (if it has one), and so forth while a creature on the opposed side will opt for a slugfest.
+- e.g. have a 25 Martial Artist contest and 'enemy alive weakest' means that the characters will basically be eliminated in general reverse order of Health, so those with the highest will win all the time, even if just slightly more.   Use 'enemy alive random' for this setting.
+- 
+**Actions.** Action choice is dictated by turn economy. A character of a team with the greater turn economy will dodge (if it knows itself a target) or throw a net (if it has one), and so forth while a creature on the opposed side will opt for a slugfest.  This needs to be updated and implemented for FASERIP, no grappling yet.
 
 ```
 >>> from DnD_battler import Creature, Encounter
->>> Creature.load('aboleth') # get from beastiary
+>>> Creature.load('Amazing Martial Artist') # get from beastiary
 >>> level1 = Creature(name="Cat")
 >>> billybob = Creature("Rat")
 >>> billybob.alignment = "rodent"
@@ -43,7 +45,8 @@ The muchkinishness has a deleterious side-effect when the method deathmatch of t
 >>> print(arena.go_to_war(10000)) #simulate 10,000 times
 >>> print(arena.battle()) # simulate one encounter and tell what happens.
 >>> print(Creature.load('Cat').generate_character_sheet())  #md character sheet.
->>> print(Encounter.load("ancient blue dragon").addmob(85).go_to_war(10))  #An ancient blue dragon is nearly a match for 85 commoners (who crit evenutally)... #not looked at this yet, so probably won't work  #.addmob not working, so will have to do the hard way.
+>>> print(Encounter.load("GHOTMU Amazing Martial Artist").addmob(12).go_to_war(10))  .Shang-Chi vs a dozen Plumbers.
+
 ```
 
 ## Creature: parameters and attributes
@@ -185,7 +188,7 @@ In round one Donald attacks his ally Rex, thus proving the behavior is altered.
 Dice accepts bonus plus an int —8 is a d8— or a list of dice —[6,6] is a 2d6— or nothing —d20.
     roll() distinguishes between a d20 and not. d20 crits have to be passed manually.
 ## Character
-Character has a boatload of attributes. It can be initialised with a dictionary or an unpacked one... or a single name matching a preset.
+Character has a boatload of attributes. It can be initialised with a dictionary or an unpacked one... or a single name matching a preset.  The boatload will get bigger for FASERIP to eventually deal with powers, different types of attacks, etc.
 ## Encounter
 Encounter includes the following method:
     battle(reset=1) does a single battle (after a reset of values if asked). it calls a few other fuctions such as roll_for_initiative()
@@ -217,8 +220,11 @@ __init__(self, wildcard, **kwargs)
     :return: a creature.
     
     The arguments are many.
-    >>> print(Creature(Creature('aboleth'), ac=20).__dict__)
-    `{'abilities': None, 'dex': 10, 'con_bonus': 10, 'cr': 17, 'xp': 5900, 'ac': 20, 'starting_healing_spells': 0, 'starting_hp': 135, 'condition': 'normal', 'initiative': <__main__.Dice object at 0x1022542e8>, 'str': 10, 'wis': 10, 'ability_bonuses': {'int': 0, 'cha': 0, 'dex': 0, 'con': 0, 'str': 0, 'wis': 0}, 'custom': [], 'hd': <__main__.Dice object at 0x102242c88>, 'hurtful': 36.0, 'tally': {'rounds': 0, 'hp': 0, 'battles': 0, 'hits': 0, 'damage': 0, 'healing_spells': 0, 'dead': 0, 'misses': 0}, 'hp': 135, 'proficiency': 5, 'cha_bonus': 10, 'able': 1, 'healing_spells': 0, 'copy_index': 1, 'int': 10, 'concentrating': 0, 'wis_bonus': 10, 'con': 10, 'int_bonus': 10, 'sc_ab': 'con', 'str_bonus': 10, 'level': 18, 'settings': {}, 'arena': None, 'dex_bonus': 10, 'log': '', 'cha': 10, 'dodge': 0, 'alt_attack': {'attack': None, 'name': None}, 'alignment': 'lawful evil ', 'attacks': [{'attack': <__main__.Dice object at 0x1022545f8>, 'damage': <__main__.Dice object at 0x1022545c0>, 'name': 'tentacle'}, {'attack': <__main__.Dice object at 0x102254668>, 'damage': <__main__.Dice object at 0x102254630>, 'name': 'tentacle'}, {'attack': <__main__.Dice object at 0x1022546d8>, 'damage': <__main__.Dice object at 0x1022546a0>, 'name': 'tentacle'}], 'attack_parameters': [['tentacle', 9, 5, 6, 6], ['tentacle', 9, 5, 6, 6], ['tentacle', 9, 5, 6, 6]], 'buff_spells': 0, 'temp': 0, 'name': 'aboleth'}`
+    >>> print(Creature.load('Amazing Martial Artist').__dict__)
+    `{'name': 'Amazing Martial Artist', 'alignment': 'martialarts', 'type': 'superhero', 'f': 'Am', 'a': 'Rm', 's': 'Ex', 'e': 'Ex', 'r': 'Gd', 'i': 'Rm', 'p': 'In', 'martial_arts': 'ABCDE', 'mook': '0'}
+{'A': 1, 'B': 1, 'C': 1, 'D': 1, 'E': 1}
+{}
+{'name': 'Amazing Martial Artist', 'base': 'Amazing Martial Artist', 'type': 'superhero', 'size': <DnD_battler.creature_properties.size.Size object at 0x0000023752CF8880>, 'arena': None, 'level': 1, 'xp': 0, 'proficiency': <DnD_battler.creature_properties.proficiency.Proficiency object at 0x0000023752CD9400>, 'hp': 120, 'starting_hp': 120, 'hit_die': <DnD_battler.dice.dice.Dice object at 0x0000023752D335B0>, 'karma': 80, 'pop': 0, 'res': 'Ty', 'frank': 'Am', 'arank': 'Rm', 'srank': 'Ex', 'erank': 'Ex', 'rrank': 'Gd', 'irank': 'Rm', 'prank': 'In', 'able': 1, 'f': <DnD_battler.dice.ability_die.AbilityDie object at 0x0000023752D33340>, 'a': <DnD_battler.dice.ability_die.AbilityDie object at 0x0000023752D332B0>, 's': <DnD_battler.dice.ability_die.AbilityDie object at 0x0000023752D33610>, 'e': <DnD_battler.dice.ability_die.AbilityDie object at 0x0000023752D33640>, 'r': <DnD_battler.dice.ability_die.AbilityDie object at 0x0000023752D339D0>, 'i': <DnD_battler.dice.ability_die.AbilityDie object at 0x0000023752D33A60>, 'p': <DnD_battler.dice.ability_die.AbilityDie object at 0x0000023752D33940>, 'armor': <DnD_battler.creature_properties.armor.Armor object at 0x0000023752D336A0>, 'initiative': <DnD_battler.dice.skill_roll.SkillRoll object at 0x00000237530D5B20>, 'attacks': [<DnD_battler.dice.attack_roll.AttackRoll object at 0x00000237530E9520>], 'alt_attack': {'throwing-blunt': 0, 'throwing-edged': 0, 'blunt': 0, 'edged': 0, 'shooting': 0, 'energy': 0, 'force': 0, 'grapple': 0}, 'powers': {}, 'talents': {'martial_arts': {'A': 1, 'B': 1, 'C': 1, 'D': 1, 'E': 1}}, 'contacts': {}, 'alignment': 'martialarts', 'concentrating': 0, 'spellcasting_ability_name': None, 'starting_healing_spells': 0, 'healing_spells': 0, 'healing': None, 'tally': {'damage': 0, 'hits': 0, 'dead': 0, 'misses': 0, 'battles': 0, 'rounds': 0, 'hp': 0, 'healing_spells': 0, 'stun': 0, 'slam': 0, 'stunned': 0, 'slammed': 0}, 'copy_index': 1, 'condition': 'normal', 'dodge': 0, 'temp': 0, 'buff_spells': 0, 'conc_fx': None, 'cr': 0, 'custom': [], 'slam': 0, 'stun': 0, 'kill': 0, 'mook': '0', 'armour_name': 'Sh0', 'stated_hp': 120}`
 
 __str__(self)
     Return str(self).
