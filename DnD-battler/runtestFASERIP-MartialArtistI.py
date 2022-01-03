@@ -30,7 +30,8 @@ arenaKunLun2 = Encounter(Creature.load("Shang-Chi"), Creature.load("Ogun"))
 #print(arenaKunLun.go_to_war(10000))
 #print(arenaKunLun.go_to_war(100000))
 
+print(arenaKunLun2.go_to_war(1))
 #print(arenaKunLun2.go_to_war(100))
-print(arenaKunLun2.go_to_war(100000))
+#print(arenaKunLun2.go_to_war(100000))
 #print(level1.hp)
 
