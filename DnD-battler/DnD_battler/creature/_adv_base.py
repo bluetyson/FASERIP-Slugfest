@@ -46,6 +46,13 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
         # abilities
         if 'stated_ac' in settings: #everyone has Armour here in code, just Sh0 for default, so no effect
             self.armour_name = settings['stated_ac'] 
+            if ";" in self.armour_name:
+                ranklist = self.armour_name.split(';')
+                del ranklist[-1]
+                self.armour_name = ranklist[0]
+                if len(ranklist) > 1:  #if 3, good question
+                ###need to make an Energy AC as well
+                    pass
         else:
             self.armour_name = "Sh0"
         self.armor.ac = dict_faserip[self.armour_name]

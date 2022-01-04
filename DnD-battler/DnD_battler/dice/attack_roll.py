@@ -106,10 +106,14 @@ class AttackRoll(SkillRoll):
                   if kill_flag == 0:
                       slam_result = slam_check(endurance_rank)
                       print("SLAM?", attack_roll, damage_rank, slam_result)
-                      if slam_result == "Slam":
-                          damage_roll = damage_roll + dict_faserip[endurance_rank] + 2
+                      if slam_result == "Slam": #assume 30 rank wall smash into for now
+                          #damage_roll = damage_roll + max(dict_faserip[endurance_rank],30) + 2 
+                          damage_roll = damage_armour + max(0, max(dict_faserip[endurance_rank] + 2, 30) - enemy_ac) 				
+                          
                       elif slam_result == "Grand Slam":
-                          damage_roll = damage_roll + dict_faserip[endurance_rank] + faserip_index[damage_rank]*2 #many areas simulation hack
+                          #damage_roll = damage_roll + max(dict_faserip[endurance_rank]) + faserip_index[damage_rank]*2 #many areas simulation hack #assuming no body armour
+                          #damage_roll = damage_armour + max(dict_faserip[endurance_rank],30) + faserip_index[damage_rank]*2 #many areas simulation hack #assuming no body armour
+                          damage_roll = damage_armour + max(0, max(dict_faserip[endurance_rank] + faserip_index[damage_rank]*2, 30) - enemy_ac) 				
                       else:
                           pass					  
                       effect = slam_result
