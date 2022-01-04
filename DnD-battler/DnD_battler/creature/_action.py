@@ -136,6 +136,7 @@ class CreatureAction(CreatureAdvBase):
             opponent = self.arena.find(self.arena.target, self)[0]
             possible_opponents = self.arena.find(self.arena.target, self)
             #print("POSS OPPONENTS", len(possible_opponents), possible_opponents)
+            print("checking opponent armour",opponent.stated_ac)
         except IndexError:
             raise Victory()
         if assess:
@@ -186,17 +187,33 @@ class CreatureAction(CreatureAdvBase):
             for i in range(len(self.attacks)):  ##multi attack check here? #boost for Martial arts B to F rank
                 try:
                     opponent = self.arena.find(self.arena.target, self)[0]
+                    #print(opponent)
                 except IndexError:
                     raise Victory()
                 self.log.debug(f"{self.name} attacks {opponent.name} with {self.attacks[i].name}")
                 # This was the hit method. put here for now.
                 # THE IMPORTANT PART TO WRITE, UNIVERSAL TABLE TIME!
-                print("ATTACKS", self.attacks[i], "FIGHTING", self.frank, "STRENGTH", self.srank, "OPPEND", opponent.erank, "BA", opponent.ac, opponent.armor.ac)
+                print(self.stated_ac,self.armor.ac,opponent.armour_name)
+                print("ATTACKS", self.attacks[i], "FIGHTING", self.frank, "STRENGTH", self.srank, "OPPEND", opponent.erank, "BA", dict_faserip[opponent.armour_name])
+                print("ATTACKS", self.attacks[i], "FIGHTING", self.frank, "STRENGTH", self.srank, "OPPEND", opponent.erank, "BA", dict_faserip[opponent.stated_ac])
+                #if ";" in opponent.armour_name:
+                    #ranklist = opponent.armour_name.split(';')
+                    #del ranklist[-1]
+                    #opponent.armour_name = ranklist[0]
+                    #print("STATED AC CHECK AFTER!",opponent.armour_name)
+                    #print("ranklist0",ranklist[0])
+                    #if len(ranklist) > 1:  #if 3, good question
+                    ##need to make an Energy AC as well
+                       #pass
+				
                 #damage = self.attacks[i].attack(opponent.armor.ac, advantage=self.check_advantage(opponent))
                 #damage, effect_type, effect = self.attacks[i].attackFASERIP(opponent.armor.ac, advantage=self.check_advantage(opponent), attack_rank=self.frank, damage_rank=self.srank, endurance_rank=opponent.erank, #other_attacks=self.alt_attack)  #put attack rank in
-                damage, effect_type, effect = self.attacks[i].attackFASERIP(opponent.armor.ac, advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=self.srank, endurance_rank=opponent.erank, other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
+                #damage, effect_type, effect = self.attacks[i].attackFASERIP(opponent.armor.ac, advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=self.srank, endurance_rank=opponent.erank,
+				#other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
+                #damage, effect_type, effect = self.attacks[i].attackFASERIP(dict_faserip[opponent.armour_name], advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=self.srank, endurance_rank=opponent.erank,other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
+                damage, effect_type, effect = self.attacks[i].attackFASERIP(dict_faserip[opponent.stated_ac], advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=self.srank, endurance_rank=opponent.erank,other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
                  
-                print("DAMAGE", damage, "OPPONENTAC:", opponent.armor.ac)
+                print("DAMAGE", damage, "OPPONENTAC:", opponent.stated_ac)
                 #damage = 2
                 if damage > 0:
                     #opponent.take_damage(damage, verbose)

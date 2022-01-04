@@ -84,6 +84,7 @@ class AttackRoll(SkillRoll):
         if attack_roll >= universal_table[attack_rank]['G']:  #basic green roll - other possibilities below
             damage_roll = dict_faserip[damage_rank]
             damage_armour = damage_roll - enemy_ac
+            damage_roll = damage_armour
             print("HIT!:", attack_roll, damage_rank, damage_roll, damage_armour)
             ##need other attack matrix here:
             #if dict_faserip[damage_rank] >= dict_faserip[endurance_rank] and damage_armour >= 0:
@@ -108,12 +109,13 @@ class AttackRoll(SkillRoll):
                       print("SLAM?", attack_roll, damage_rank, slam_result)
                       if slam_result == "Slam": #assume 30 rank wall smash into for now
                           #damage_roll = damage_roll + max(dict_faserip[endurance_rank],30) + 2 
-                          damage_roll = damage_armour + max(0, max(dict_faserip[endurance_rank] + 2, 30) - enemy_ac) 				
+                          damage_roll = damage_armour + max(0, 30 - enemy_ac) 				
                           
                       elif slam_result == "Grand Slam":
                           #damage_roll = damage_roll + max(dict_faserip[endurance_rank]) + faserip_index[damage_rank]*2 #many areas simulation hack #assuming no body armour
                           #damage_roll = damage_armour + max(dict_faserip[endurance_rank],30) + faserip_index[damage_rank]*2 #many areas simulation hack #assuming no body armour
-                          damage_roll = damage_armour + max(0, max(dict_faserip[endurance_rank] + faserip_index[damage_rank]*2, 30) - enemy_ac) 				
+                          #damage_roll = damage_armour + max(0, max(dict_faserip[endurance_rank] + faserip_index[damage_rank]*2, 30) - enemy_ac) 				
+                          damage_roll = damage_armour + max(0, 30 - enemy_ac) 				
                       else:
                           pass					  
                       effect = slam_result

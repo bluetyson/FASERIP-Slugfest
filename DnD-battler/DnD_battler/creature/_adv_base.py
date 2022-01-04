@@ -33,9 +33,10 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
 
     def apply_settings(self, **settings):
         settings = {k.lower(): v for k, v in settings.items()}
-        print(settings)		
+        print("CHECK_SETTINGS", settings)		
         # -------------- assign fluff values ---------------------------------------------------------------------------
-        for key in ('name', 'base', 'type', 'alignment'):
+        #print(settings['stated_ac'])
+        for key in ('name', 'base', 'type', 'alignment','stated_ac'):
             if key in settings:
                 self[key] = settings[key]
         for key in ('xp', 'hp'):
@@ -45,17 +46,25 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
         # -------------- set complex values ----------------------------------------------------------------------------
         # abilities
         if 'stated_ac' in settings: #everyone has Armour here in code, just Sh0 for default, so no effect
+            #print("STATED AC CHECK",self.armor.ac)
             self.armour_name = settings['stated_ac'] 
+            print("WE HAVE STATED AC CHECK",self.armour_name)
             if ";" in self.armour_name:
                 ranklist = self.armour_name.split(';')
                 del ranklist[-1]
                 self.armour_name = ranklist[0]
+                print("STATED AC CHECK AFTER!",self.armour_name)
+                print("ranklist0",ranklist[0])
+                self.stated_ac = self.armour_name
                 if len(ranklist) > 1:  #if 3, good question
                 ###need to make an Energy AC as well
                     pass
         else:
             self.armour_name = "Sh0"
         self.armor.ac = dict_faserip[self.armour_name]
+        
+		
+        print("FINAL AC CHECK",self.armor.ac)
         
         #T = Type of Damage: E = Edged, B= Blunt, S = Shooting, H = Advanced Technology, 2 = Blunt and Edged, W = S and 2
 		

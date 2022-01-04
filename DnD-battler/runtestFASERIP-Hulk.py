@@ -20,6 +20,9 @@ for index, row in MHMA.iterrows():
 
 arenaKunLun2 = Encounter(Creature.load("The Hulk"), Creature.load("The Thing"))
 
+#print(Creature.load("The Hulk"))
+#print(Creature.load("The Thing"))
+
 #print(arenaKunLun.set_deathmatch())
 #print(arenaKunLun.go_to_war(1))
 #print(arenaKunLun.go_to_war(100))

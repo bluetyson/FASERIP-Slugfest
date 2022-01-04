@@ -84,6 +84,7 @@ class CreatureBase:
         self.stun = 0
         self.kill = 0
         self.mook = 0
+        self.stated_ac = "Ty"
 
     @property
     def abilities(self):
