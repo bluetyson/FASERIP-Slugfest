@@ -340,7 +340,7 @@ Chemical Secretion Powderkeg secretes a chemical similar to nitroglycerin from t
 Detach Head Elsie-Dee is able to detach her head and control her body remotely with In ability	Body Transformation-Self
 "Detachable Arms If his arms are detached (which often happens) and he is Stunned by an attack, they can act independently (though they are still under his control. Since they only crawl around on the ground.at the rate of 1 area every 2 rounds. Half-Life usually instructs them to rejoin with his main body"	Body Transformation-Self
 "Granite Form In, gives Onyxx the following power stunts"	Body Transformation-Self
-Life Support When parts of his body are severed he can reattach them by holding them in place when he return to normal.	Body Transformation-Self
+Life Support When parts of his body are severed he can reattach them by holding them in place when he return to normal.	Life Support
 "Limited Shape-Shifting Death's Head II's right arm is made from fluid ductile molybdenum which can be change in to for objects. All objects below are made of molybdenum, Sh-X material"	Body Transformation-Self
 Mimick Human Forms Am	Body Transformation-Self
 Mineral Body Dust can transform her body into sand-like particles under her direct control.	Body Transformation-Self
