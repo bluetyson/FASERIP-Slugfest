@@ -132,6 +132,11 @@ class CreatureAction(CreatureAdvBase):
         extra_attacks = 0
         fighting_rank = self.frank
         fighting_cs = 0
+        ##check martial arts adjustment - put other weapon skill type adjustments etc in a place similarly
+        if self.talents['martial_arts']['B'] == 1:
+            fighting_cs = fighting_cs + 1
+        if fighting_cs != 0:
+            fighting_rank = column_shift(self.frank, fighting_cs)
         try:
             opponent = self.arena.find(self.arena.target, self)[0]
             possible_opponents = self.arena.find(self.arena.target, self)
@@ -148,14 +153,17 @@ class CreatureAction(CreatureAdvBase):
         else:
             ##multi attack check here? add to range self.attacks #boost for Martial arts B to F rank
             print('checking Fighting Feat')
-            if dict_faserip[self.frank] < 30:
+            #if dict_faserip[self.frank] < 30:
+            if dict_faserip[fighting_rank] < 30:
                 #no point doing multiattack except in a game karma type situation
                 pass
-            elif dict_faserip[self.frank] < 50:
+            #elif dict_faserip[self.frank] < 50:
+            elif dict_faserip[fighting_rank] < 50:
                 #Rm or In fighting no point trying for 3 as Amazing intensity, try for two
                 fighting_roll = random.randint(1,100)
                 fighting_cs = -3  #going to need to change below to have an effective fighting rank from fighting_cs type things
-                if dict_faserip[self.frank] < 40:
+                #if dict_faserip[self.frank] < 40:
+                if dict_faserip[fighting_rank] < 40:
                 #Rm
                     fighting_color = universal_color(self.frank, fighting_roll)
                     if fighting_color == "Y" or fighting_color == "R":
@@ -176,9 +184,15 @@ class CreatureAction(CreatureAdvBase):
                 if fighting_color == "Y" or fighting_color == "R":
                     extra_attacks = 2
                     fighting_cs = -1
+                
+                if fighting_rank != "Am" and fighting_color == "G":
+                #put adjustment for green and Monstrous or better
+                    extra_attacks = 2
+                    fighting_cs = -1
+
             ##check martial arts adjustment - put other weapon skill type adjustments etc in a place similarly
-        if self.talents['martial_arts']['B'] == 1:
-            fighting_cs = fighting_cs + 1
+        #if self.talents['martial_arts']['B'] == 1:
+            #fighting_cs = fighting_cs + 1
         if fighting_cs != 0:
             fighting_rank = column_shift(self.frank, fighting_cs)
         ## loop for extra attacks
