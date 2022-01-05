@@ -1759,12 +1759,12 @@ Ionization Un	Ionization
 "Uncanny Luck While a zombie, Sitwell still has some inkling of consciousness in him. Although he has no reason to have any Karma, he has demonstrated an uncanny ability to fire his gun or otherwise successfully complete some action with uncanny result. This includes what might normally be considered an impossible FEAT. At the beginning of each mission, he receives 80 Karma points to be spent (the player must announce he is spending Karma prior to rolling). However, if the result of the original roll is a critical failure (a roll of 01-10), then something spectacularly awful happens (suc as blowing himself up with a rocket propelled grenade launcher). What specifically happens is up to the Judge"	Karma Bonus
 "Karmic Tap This power allows Thor to tap into his reservoir of willpower (Karma) and increase his Power Conversion by 1 point for every 2 Karma spent. There is no known limit on his karmic tap abilities. This is limited to the same round in which he spent/converted his karma. Rolling an Red Psyche FEAT roll will permit another round of benefit from the Karma spent. This power is considered a free action, may be done in addition to other actions in the round."	KarmicTap
 Leadership Any group under his tactical leadership gains +1cs to their Intuition when following his orders	Leadership
-Hyper Leaping Un	Leaping
-Hyper-Leaping Gd	Leaping
-Jumping Gd	Leaping
-"Leaping CL5000, covering 2 miles in a single bound."	Leaping
-"Web Slingshot Able to launch himself over great distances. 1 round to make the slingshot and “prep himself for launch”, launch himself up to 10 areas the next round."	Leaping
-Spring Upto 1 area away	Leaping:Fb
+Hyper Leaping Un	Hyper-Leaping
+Hyper-Leaping Gd	Hyper-Leaping
+Jumping Gd	Hyper-Leaping
+"Leaping CL5000, covering 2 miles in a single bound."	Hyper-Leaping
+"Web Slingshot Able to launch himself over great distances. 1 round to make the slingshot and “prep himself for launch”, launch himself up to 10 areas the next round."	Hyper-Leaping
+Spring Upto 1 area away	Hyper-Leaping;Fb
 Levitate Ty	Levitation
 Levitate Rock In	Levitation
 Levitation Rm	Levitation
@@ -2633,9 +2633,9 @@ Tracking by Scent Gd	Tracking
 Tracking Sense Rm	Tracking
 Tracking System Track an electronic tracer up to 5 miles away	Tracking
 Psychic Sense Un ability to track Thanos	Tracking:Thanos
-Tunnel Armadillo can burrow through Ex material at 1 area/round (Fe speed)	Tunneling
-"Tunneling Using his powerful claws, Litterbug can burrow through Rm material. He moves at the rate of 1 area/round"	Tunneling
-Tunneling Device In digging	Tunneling
+Tunnel Armadillo can burrow through Ex material at 1 area/round (Fe speed)	Hyper-Digging
+"Tunneling Using his powerful claws, Litterbug can burrow through Rm material. He moves at the rate of 1 area/round"	Hyper-Digging
+Tunneling Device In digging	Hyper-Digging
 Ultimate Skill (Martial Arts) Un	Ultimate Skill:Martial Arts
 Animal Transformation A vampire may change its shape into either a bat or wolf with Ex ability.	Undead
 Undead Jasper Sitwell is now a zombie. The nature of his return has yet to be determined. This gives him the following abilities:	Undead
