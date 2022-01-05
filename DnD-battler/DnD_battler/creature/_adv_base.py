@@ -59,8 +59,9 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
                 print("ranklist",ranklist)
                 print("ranklist0",ranklist[0])
                 #self.stated_ac = self.armour_name
-                self.body_armour["Physical"] = ranklist[0]
-                self.body_armour["Energy"] = ranklist[0]
+                if len(ranklist) == 1:  #if 3, good question
+                    self.body_armour["Physical"] = ranklist[0]
+                    self.body_armour["Energy"] = column_shift(ranklist[0], -2)
                 if len(ranklist) > 1:  #if 3, good question
                 ###need to make an Energy AC as well
                     self.body_armour["Physical"] = ranklist[0]
