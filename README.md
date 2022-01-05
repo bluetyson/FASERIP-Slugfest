@@ -19,6 +19,6 @@ Work in progress on an Ultimate Powers Book version -
 - Some types like animal, vegetable, mineral of course would pick something on creation - another could make a customised list for each, same with Extra Parts, others like that.
 
 ## Other versions
-Java - You can find a java GUI FASERIP Character Generator at http://sourceforge.net/projects/javamcc/files/JMCC%28betav4.5%29.jar/download
-Javascript - https://github.com/jinniaflyer450/Jins-FASERIP-Char-Creator
+- Java - You can find a java GUI FASERIP Character Generator at http://sourceforge.net/projects/javamcc/files/JMCC%28betav4.5%29.jar/download
+- Javascript - https://github.com/jinniaflyer450/Jins-FASERIP-Char-Creator
 
