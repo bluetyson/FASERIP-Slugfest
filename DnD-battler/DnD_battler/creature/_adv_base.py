@@ -4,7 +4,7 @@ from ._init_abilities import CreatueInitAble
 from ._safe_property import CreatureSafeProp
 from ._level import CreatureLevel
 from ..dice import AbilityDie, AttackRoll
-from ..dice.ranks import dict_faserip
+from ..dice.ranks import dict_faserip, column_shift
 
 class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, CreatureLevel):
     def __init__(self, **settings):
@@ -36,7 +36,8 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
         print("CHECK_SETTINGS", settings)		
         # -------------- assign fluff values ---------------------------------------------------------------------------
         #print(settings['stated_ac'])
-        for key in ('name', 'base', 'type', 'alignment','stated_ac'):
+        for key in ('name', 'base', 'type', 'alignment','stated_ac','body_armour'):
+            #print("key",key)
             if key in settings:
                 self[key] = settings[key]
         for key in ('xp', 'hp'):
@@ -46,25 +47,35 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
         # -------------- set complex values ----------------------------------------------------------------------------
         # abilities
         if 'stated_ac' in settings: #everyone has Armour here in code, just Sh0 for default, so no effect
-            #print("STATED AC CHECK",self.armor.ac)
+            print("STATED AC CHECK",self.armor.ac)
             self.armour_name = settings['stated_ac'] 
             print("WE HAVE STATED AC CHECK",self.armour_name)
             if ";" in self.armour_name:
                 ranklist = self.armour_name.split(';')
                 del ranklist[-1]
+                self.stated_ac = self.armour_name
                 self.armour_name = ranklist[0]
                 print("STATED AC CHECK AFTER!",self.armour_name)
+                print("ranklist",ranklist)
                 print("ranklist0",ranklist[0])
-                self.stated_ac = self.armour_name
+                #self.stated_ac = self.armour_name
+                self.body_armour["Physical"] = ranklist[0]
+                self.body_armour["Energy"] = ranklist[0]
                 if len(ranklist) > 1:  #if 3, good question
                 ###need to make an Energy AC as well
-                    pass
-        else:
-            self.armour_name = "Sh0"
+                    self.body_armour["Physical"] = ranklist[0]
+                    self.body_armour["Energy"] = ranklist[1]
+                    
+        else: #need a length
+            print("STATED AC CHECK AFTER!",self.armour_name)
+            self.body_armour["Physical"] = self.armour_name
+            self.body_armour["Energy"] = column_shift(self.armour_name, -2)
+                
+            #self.armour_name = "Sh0"
         self.armor.ac = dict_faserip[self.armour_name]
         
 		
-        print("FINAL AC CHECK",self.armor.ac)
+        print("FINAL AC CHECK",self.armor.ac, self.body_armour)
         
         #T = Type of Damage: E = Edged, B= Blunt, S = Shooting, H = Advanced Technology, 2 = Blunt and Edged, W = S and 2
 		
