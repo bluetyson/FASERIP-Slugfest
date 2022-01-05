@@ -12,12 +12,19 @@ It was written to determine victory probabilities and to test some hypotheses.
 ## Opponents list
 The simulator relies on creature information present in the `beastiaryFASERIP.csv` file. 
 This is basically taken from my FATERIP hack table https://docs.google.com/document/d/1Rmk-3fX2JG3tJPJrtTnhWatT8gcQfGf4e_nqK-4lNz0/edit
+There are also characters added for the various sample ```runtestFASERIP.py``` type scripts.
+These now have Powers, Equipment, Talents, Contacts columns with _Adj_ and _Rank_ additional columns to attempt some standardisation and simplication for purposes of combat simulation, never going to be perfect unless go back and edit all the characters - which won't happen, but anyone could do, especially for those they are interested in,
+- stated_ac = a Body Armour string from the data.
+- body_armour - attempt at approximate parsing of vs Physical and Energy versions - applied a - 2CS not a -20 points for now for Physical to Energy where not stated.  These need to be checked when you use them, as just an algorithmic guess at counting which one is where in the description.
 - Sp = speed rank in usual terrain, relative to humans.
 - BA = Body Armour rank
 - T = Type of Damage: E = Edged, B= Blunt, S = Shooting, H = Advanced Technology, 2 = Blunt and Edged, W = S and 2
     - It will currently check to see if a Killing type is possible - but doesn't do anything about ranged anything or movement.
 - martial_arts - add one letter to a string for each type, eg ABCDE, AE etc.
     - other Talents can be handled similarly and put them in self.talents in the Creature class
+- H, K, Res, Pop should be self-explanatory from the character data - the first two are calculated in code anyway 
+- Climbing, Escaping [other standard type actions will likely get columns at some stage]
+   
 - If you want to simulate a -4 CS multiattack on everyone at once - set mook = 1 for one side and leave zero on the other.  To turn off, have everyone be mooks.
     - still need a mode where can attack, say in groups of 6 at any given time.
 
@@ -219,7 +226,7 @@ __init__(self, wildcard, **kwargs)
     :param kwargs: a lot of arguments...
     :return: a creature.
     
-    The arguments are many.
+    The arguments are many. The below is not up to date, as of 20220105, but will give you an idea.
     >>> print(Creature.load('Amazing Martial Artist').__dict__)
     `{'name': 'Amazing Martial Artist', 'alignment': 'martialarts', 'type': 'superhero', 'f': 'Am', 'a': 'Rm', 's': 'Ex', 'e': 'Ex', 'r': 'Gd', 'i': 'Rm', 'p': 'In', 'martial_arts': 'ABCDE', 'mook': '0'}
 {'A': 1, 'B': 1, 'C': 1, 'D': 1, 'E': 1}
