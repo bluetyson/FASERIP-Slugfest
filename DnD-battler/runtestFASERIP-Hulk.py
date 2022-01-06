@@ -1,7 +1,7 @@
 from DnD_battler import Creature, Encounter
 import pandas as pd
 
-arenaEarly = Encounter(Creature.load("Early Hulk"), Creature.load("Early Thing"))
+#arenaEarly = Encounter(Creature.load("Early Hulk"), Creature.load("Early Thing"))
 arenaClobbering = Encounter(Creature.load("The Hulk"), Creature.load("The Thing"))
 
 #print(Creature.load("The Hulk"))

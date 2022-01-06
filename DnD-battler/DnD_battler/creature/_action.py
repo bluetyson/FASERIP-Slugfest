@@ -296,8 +296,9 @@ class CreatureAction(CreatureAdvBase):
             print(self.powers_adj_rank['Regeneration'])
             #print(dict_faserip[self.powers_adj_rank['Regeneration']] )
             regen_points = dict_faserip[self.powers_adj_rank['Regeneration'].split(';')[0]]/10
-            print("Regenerating:", regen_points)
-            #self.hp = min(self.stated_hp, self.hp + regen_points)
+            print("Regenerating:", regen_points, "Current Health", self.hp)
+            self.hp = min(self.stated_hp, self.hp + regen_points)
+            print("Regenerating:", regen_points, "New Health", self.hp)
 
         if self.healing_spells > 0:
             weakling = self.assess_wounded(verbose)

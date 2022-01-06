@@ -36,8 +36,11 @@ class CreatueInitAble(CreatureBase):
         if dict_faserip[self.irank] > 75:
             self.initiative.modifier = 6
 		
-        if self.talents['martial_arts']['E'] == 1:
+        if self.talents['martial_arts']['E'] == 1: 
             self.initiative.modifier +=1
+        if 'Weapon Specialist' in self.talents_adj or 'Weapon Specialist: (Claws)' in self.talents_adj:			
+            self.initiative.modifier +=1
+            print("Weapon Specialist Initiative", self.initiative.modifier)		            
 			
         #print ("INITI MOD:", self.initiative.modifier) TEST FOR THIS
 		
