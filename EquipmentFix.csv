@@ -176,8 +176,8 @@ Headbutt Benefit of +1cs Blunt Strength damage for Headbutts,Blunt:1
 "Pounders (x2) In material, +1cs to Slugfest",Blunt:1:In
 "Cybernetic Tail In material, Am Blunt damage, the tail is capable of performing the following abilities",Blunt:Am-In
 "Scepter Mn material, Am Blunt",Blunt:Am-Mn
-"Ivory Boomerang Ex Thrown Blunt, 3 areas when thrown. It is capable of returning to the thrower.",Blunt:Boomerang
-"Remote-Controlled Boomerang Ex Thrown Blunt, can be remote-controlled by device (+3cs to Accuracy FEATs)",Blunt:Boomerang-3
+"Ivory Boomerang Ex Thrown Blunt, 3 areas when thrown. It is capable of returning to the thrower.",Blunt Missile:Boomerang
+"Remote-Controlled Boomerang Ex Thrown Blunt, can be remote-controlled by device (+3cs to Accuracy FEATs)",Blunt Missile:Boomerang-3
 "Bat or Club Gd material, +1cs Strength up to Ex damage, Gd Thrown Stun",Blunt:Ex-Gd;Stunning
 "Great Key Mn material, Ex blunt, ignoring Body Armor. The Great Key is an intricate, golden, five foot long staff that can open the nexus between the Earth dimension and the Realm of the Beasts. The nexus is found in the northern Canadian crater called the Eye of the World. By means of this staff, Shaman may also battle beings in the astral, spirit, or other planes, including out-of-phase and intangible beings. Little else is known of the key, possibly it acts as a Dimensional Aperture spell into other dimensions. It is usually kept in the Void dimension, which can be accessed through Shaman’s medicine pouch.",Blunt:Ex-Mn-IgnoresBody Armour
 "Battle Staves Rm material, Ex Blunt. They also have the following combat options",Blunt:Ex-Rm
@@ -512,8 +512,8 @@ Knives Gd Thrown Edge,Edged Missile:In-Un
 "Shoulder Cogs While holding a target, the suit's shoulder cogs can whirl and deal In Edge, ignoring body armor and material",Edged:Armour Piercing
 "Tomahawk Rm material, Gd Edge or Ex Blunt",Edged:Blunt
 Circling This arrow can turn up to 360 degrees to hit targets around corners or behind Trick-Shot; it inflicts Ex damage.,Edged:Boomerang
-Boomerang (may be added to other arrows),Edged:Boomerang
-"Boomerangs Myers carries seven boomerangs prominently on his costume, each with special properties. Unless otherwise noted, they are of Ex material strength. Myers can throw these so they will return to him with no risk of damaging himself. Boomerang has the following types of boomerangs:",Edged:Boomerang
+Boomerang (may be added to other arrows),Edged Missile:Boomerang
+"Boomerangs Myers carries seven boomerangs prominently on his costume, each with special properties. Unless otherwise noted, they are of Ex material strength. Myers can throw these so they will return to him with no risk of damaging himself. Boomerang has the following types of boomerangs:",Edged Missile:Boomerang
 Cutting Laser Blade In Edge,Edged:Energy
 "Energy Blade Mn Edged, capable of cutting through up to Mn body armor or material with no damage reduction.",Edged:Energy
 "Plasma Sword In Edge, the Energy from the blade is able to slice through In material with ease.",Edged:Energy

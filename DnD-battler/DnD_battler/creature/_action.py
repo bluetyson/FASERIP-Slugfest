@@ -143,9 +143,11 @@ class CreatureAction(CreatureAdvBase):
         #print("alt attacks", self.alt_attack)
         if self.alt_attack['edged'] == 1 or self.alt_attack['blunt'] == 1 or self.alt_attack['shooting'] == 1 or self.alt_attack['energy'] == 1 or self.alt_attack['force'] == 1:
             slugfest = 0
+        if self.alt_attack['throwing-blunt'] == 1 or self.alt_attack['throwing-edged'] == 1 or self.alt_attack['shooting'] == 1 or self.alt_attack['energy'] == 1 or self.alt_attack['force'] == 1:
+            print ("Agility Based Combat")
+            fighting_rank = self.arank
+            slugfest = 0
         
-        if fighting_cs != 0:
-            fighting_rank = column_shift(self.frank, fighting_cs)
         try:
             opponent = self.arena.find(self.arena.target, self)[0]
             possible_opponents = self.arena.find(self.arena.target, self)
@@ -162,30 +164,53 @@ class CreatureAction(CreatureAdvBase):
         if slugfest == 1:
             if self.talents['martial_arts']['B'] == 1:
                 fighting_cs = fighting_cs + 1
-        else: #when have more - take max that applies, don't stack
-            if 'Weapon Specialist' in self.talents_adj or 'Weapon Specialist: (Claws)' in self.talents_adj:
+        else: #when have more - take max that applies, don't stack  #only good for Edged currently
+            if 'Weapon Specialist' in self.talents or 'Weapon Specialist: (Claws)' in self.talents:
                 fighting_cs = fighting_cs + 2
+                print("Weapon Specialist Fighter:", self.name)
+            elif 'Weapon Master' in self.talents or 'Sharp Weapons' in self.talents or 'Oriental Weapons' in self.talents or 'Thrown Weapons' in self.talents:
+                fighting_cs = fighting_cs + 1
+            else:
+                pass #no masteries
+								
                 print("Weapon Specialist Fighter:", self.name)
             if self.alt_attack['edged'] == 1:  #compare to body armour
                 print("Edged Fighting")
                 damage_list = self.attack['Edged']['S'].split(';')
-                print("Damage List", damage_list)
+            elif self.alt_attack['blunt'] == 1:  #compare to body armour
+                print("Blunt Fighting")
+                damage_list = self.attack['Blunt']['S'].split(';')
+            elif self.alt_attack['throwing-blunt'] == 1:  #compare to body armour
+                print("Throwing Blunt Fighting")
+                damage_list = self.attack['Throwing Blunt']['R'].split(';')
+            elif self.alt_attack['throwing-edged'] == 1:  #compare to body armour
+                print("Throwing Edged Fighting")
+                damage_list = self.attack['Throwing Edged']['R'].split(';')
+            elif self.alt_attack['shooting'] == 1:  #compare to body armour
+                print("Shooting Fighting")
+                damage_list = self.attack['Shooting']['R'].split(';')
+            else:
+                pass ###powers or something else
+            print("Damage List", damage_list)
 
-                if len(damage_list) > 1:
-                    damage_rank = damage_list[0]
-                    material_strength = damage_list[1]
-                else:
-                    damage_rank = damage_list[0]
-                    material_strength = damage_list[0]
-                #print(opponent.equipment_adj_rank)
-                if "Body Armour" in opponent.equipment_adj_rank:# and "Body Armour" not in opponent.power_adj_rank:
-                    #weapon could penetrate and ignore
-                    print("Body Armour is Equipment")
-                    damage_index = faserip_index[damage_rank]
-                    armour_index = faserip_index[body_armour_rank]
-                    if damage_index >= armour_index:
-                        print("Body Armour Penetrated")					                    
-                        body_armour_rank = "Sh0"
+            if len(damage_list) > 1:
+                damage_rank = damage_list[0]
+                material_strength = damage_list[1]
+            else:
+                damage_rank = damage_list[0]
+                material_strength = damage_list[0]
+            #print(opponent.equipment_adj_rank)
+            if "Body Armour" in opponent.equipment_adj_rank:# and "Body Armour" not in opponent.power_adj_rank:  #make this for edged things only eventually
+                #weapon could penetrate and ignore
+                print("Body Armour is Equipment")
+                damage_index = faserip_index[damage_rank]
+                armour_index = faserip_index[body_armour_rank]
+                if damage_index >= armour_index:
+                    print("Body Armour Penetrated")					                    
+                    body_armour_rank = "Sh0"
+
+        if fighting_cs != 0:
+            fighting_rank = column_shift(fighting_rank, fighting_cs)
 				
         
         if int(self.mook) == 0 and len(possible_opponents) > 2:  #no extra attacks
