@@ -143,9 +143,10 @@ class CreatureAction(CreatureAdvBase):
         #print("alt attacks", self.alt_attack)
         if self.alt_attack['edged'] == 1 or self.alt_attack['blunt'] == 1 or self.alt_attack['shooting'] == 1 or self.alt_attack['energy'] == 1 or self.alt_attack['force'] == 1:
             slugfest = 0
+            #fighting_rank = self.arank
         if self.alt_attack['throwing-blunt'] == 1 or self.alt_attack['throwing-edged'] == 1 or self.alt_attack['shooting'] == 1 or self.alt_attack['energy'] == 1 or self.alt_attack['force'] == 1:
-            print ("Agility Based Combat")
             fighting_rank = self.arank
+            print ("Agility Based Combat: Agility Rank", self.arank)
             slugfest = 0
         
         try:
@@ -211,7 +212,7 @@ class CreatureAction(CreatureAdvBase):
 
         if fighting_cs != 0:
             fighting_rank = column_shift(fighting_rank, fighting_cs)
-				
+            print("fighting cs rank 1", fighting_rank)
         
         if int(self.mook) == 0 and len(possible_opponents) > 2:  #no extra attacks
             fighting_cs = -4
@@ -262,6 +263,7 @@ class CreatureAction(CreatureAdvBase):
             #fighting_cs = fighting_cs + 1
         if fighting_cs != 0:
             fighting_rank = column_shift(fighting_rank, fighting_cs)
+            print("fighting cs rank 2 for Combat Rolls", fighting_rank)
         ## loop for extra attacks
         print("extra attacks", extra_attacks)
         for ea in range(extra_attacks + 1): #if no extra attacks and not a mook make a -4CS
