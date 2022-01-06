@@ -37,14 +37,15 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
         print("CHECK_SETTINGS", settings)		
         # -------------- assign fluff values ---------------------------------------------------------------------------
         #print(settings['stated_ac'])
-        for key in ('name', 'base', 'type', 'alignment','stated_ac','body_armour'):
+        for key in ('name', 'base', 'type', 'alignment','stated_ac'):
             #print("key",key)
             if key in settings:
                 self[key] = settings[key]
         for key in ('xp', 'hp'):
             if key in settings:
                 self[key] = settings[key]
-        for key in ('powers_adj_rank','talents_adj','attack','defense'				):
+        for key in ('powers_adj_rank','talents_adj','attack','defense','body_armour'):
+            print(key)		
             if key in settings:
                 json_acceptable_string = settings[key].replace("'", "\"")
                 self[key] = json.loads(json_acceptable_string)
@@ -54,8 +55,8 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
         if 'stated_ac' in settings: #everyone has Armour here in code, just Sh0 for default, so no effect
             print("STATED AC CHECK",self.armor.ac)
             self.armour_name = settings['stated_ac'] 
-            print("WE HAVE STATED AC CHECK",self.armour_name)
-            if ";" in self.armour_name:
+            print("WE HAVE STATED AC CHECK",self.armour_name, self.name)
+            if ";" in self.armour_name and 'Physical' not in self.body_armour:  ##have body armour now for characters not default list
                 ranklist = self.armour_name.split(';')
                 del ranklist[-1]
                 self.stated_ac = self.armour_name
@@ -64,6 +65,7 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
                 print("ranklist",ranklist)
                 print("ranklist0",ranklist[0])
                 #self.stated_ac = self.armour_name
+                print(type(self.body_armour))
                 if len(ranklist) == 1:  #if 3, good question
                     self.body_armour["Physical"] = ranklist[0]
                     self.body_armour["Energy"] = column_shift(ranklist[0], -2)
@@ -73,12 +75,14 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
                     self.body_armour["Energy"] = ranklist[1]
                     
         else: #need a length
-            print("STATED AC CHECK AFTER!",self.armour_name)
-            self.body_armour["Physical"] = self.armour_name
-            self.body_armour["Energy"] = column_shift(self.armour_name, -2)
+            #print("STATED AC CHECK AFTER!",self.armour_name)
+            #default is good
+            pass
+            #self.body_armour["Physical"] = self.armour_name
+            #self.body_armour["Energy"] = column_shift(self.armour_name, -2)
                 
             #self.armour_name = "Sh0"
-        self.armor.ac = dict_faserip[self.armour_name]
+        self.armor.ac = dict_faserip[self.body_armour["Physical"]]
         
 		
         print("FINAL AC CHECK",self.armor.ac, self.body_armour)

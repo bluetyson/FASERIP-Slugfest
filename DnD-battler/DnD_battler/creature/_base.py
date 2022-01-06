@@ -96,7 +96,8 @@ class CreatureBase:
         self.distance_areas = 0
         self.stated_ac = "Ty"
         self.body_armour = {"Physical":"Sh0","Energy":"Sh0"}
-	
+        self.attack = {}
+        self.defense = {}
 
     @property
     def abilities(self):

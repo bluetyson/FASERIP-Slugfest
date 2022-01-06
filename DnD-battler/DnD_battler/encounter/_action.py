@@ -101,7 +101,7 @@ class EncounterAction(EncounterBase):
         for character in self:
             #t_ac[character.alignment].append(character.armor.ac)
             #t_ac[character.alignment].append(0)
-            print("CHECKING ARMOUR NAME", character.armour_name)
+            print("CHECKING ARMOUR NAME", character.body_armour)
             t_ac[character.alignment].append(dict_faserip[character.body_armour["Physical"]])  #put in dict faserip value of armour here to get a number? to use for later
 			
             #print["AC:", character.armor.ac]
