@@ -68,6 +68,7 @@ class AttackRoll(SkillRoll):
         #need start with edged just relying on strength as claws or bite for test
         #max rank or max prob attack somehow from list 
         
+		##have to set these or update how now done from powers
         if other_attacks['edged'] == 1 or other_attacks['shooting'] == 1 or other_attacks['throwing-edged'] == 1 or other_attacks['energy'] == 1:
             kill_flag = 1
         else:

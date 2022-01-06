@@ -130,9 +130,14 @@ class CreatureAction(CreatureAdvBase):
     def multiattack(self, verbose=1, assess=0):	
         print(self.name, "is multiattacking") #attack all at once - 6 at once? if more than 2 worth it maybe
         extra_attacks = 0
+		### need to check for attack type using
+		### eg Edged for Wolverine and Sabretooth
+		
+		### if Agility attack - e.g. Hawkeye, make fighting rank agility rank
         fighting_rank = self.frank
         fighting_cs = 0
         ##check martial arts adjustment - put other weapon skill type adjustments etc in a place similarly
+		# only on slugfest
         if self.talents['martial_arts']['B'] == 1:
             fighting_cs = fighting_cs + 1
         if fighting_cs != 0:
@@ -156,7 +161,8 @@ class CreatureAction(CreatureAdvBase):
             #if dict_faserip[self.frank] < 30:
             if dict_faserip[fighting_rank] < 30:
                 #no point doing multiattack except in a game karma type situation
-                pass
+                fighting_cs = 0  ## reset for the multattack shift
+                #pass
             #elif dict_faserip[self.frank] < 50:
             elif dict_faserip[fighting_rank] < 50:
                 #Rm or In fighting no point trying for 3 as Amazing intensity, try for two
@@ -165,13 +171,13 @@ class CreatureAction(CreatureAdvBase):
                 #if dict_faserip[self.frank] < 40:
                 if dict_faserip[fighting_rank] < 40:
                 #Rm
-                    fighting_color = universal_color(self.frank, fighting_roll)
+                    fighting_color = universal_color(fighting_rank, fighting_roll)
                     if fighting_color == "Y" or fighting_color == "R":
                         extra_attacks = 1
                         fighting_cs = -1
                 else:
                 #In
-                    fighting_color = universal_color(self.frank, fighting_roll)
+                    fighting_color = universal_color(fighting_rank, fighting_roll)
                     if fighting_color != "W":
                         extra_attacks = 1
                         fighting_cs = -1
@@ -180,7 +186,7 @@ class CreatureAction(CreatureAdvBase):
                 #Amazing fighting or better Amazing intensity, try for three
                 fighting_roll = random.randint(1,100)
                 fighting_cs = -3  #going to need to change below to have an effective fighting rank from fighting_cs type things
-                fighting_color = universal_color(self.frank, fighting_roll)
+                fighting_color = universal_color(fighting_rank, fighting_roll)
                 if fighting_color == "Y" or fighting_color == "R":
                     extra_attacks = 2
                     fighting_cs = -1
@@ -194,7 +200,7 @@ class CreatureAction(CreatureAdvBase):
         #if self.talents['martial_arts']['B'] == 1:
             #fighting_cs = fighting_cs + 1
         if fighting_cs != 0:
-            fighting_rank = column_shift(self.frank, fighting_cs)
+            fighting_rank = column_shift(fighting_rank, fighting_cs)
         ## loop for extra attacks
         print("extra attacks", extra_attacks)
         for ea in range(extra_attacks + 1): #if no extra attacks and not a mook make a -4CS
@@ -210,7 +216,7 @@ class CreatureAction(CreatureAdvBase):
                 print(self.stated_ac,self.armor.ac,opponent.body_armour["Physical"])
                 #print("ATTACKS", self.attacks[i], "FIGHTING", self.frank, "STRENGTH", self.srank, "OPPEND", opponent.erank, "BA", dict_faserip[opponent.armour_name])
                 #print("ATTACKS", self.attacks[i], "FIGHTING", self.frank, "STRENGTH", self.srank, "OPPEND", opponent.erank, "BA", dict_faserip[opponent.stated_ac])
-                print("ATTACKS", self.attacks[i], "FIGHTING", self.frank, "STRENGTH", self.srank, "OPPEND", opponent.erank, "BA", dict_faserip[opponent.body_armour["Physical"]])
+                print("ATTACKS", self.attacks[i], "FIGHTING", fighting_rank, "STRENGTH", self.srank, "OPPEND", opponent.erank, "BA", dict_faserip[opponent.body_armour["Physical"]])
                 #if ";" in opponent.armour_name:
                     #ranklist = opponent.armour_name.split(';')
                     #del ranklist[-1]
@@ -286,6 +292,13 @@ class CreatureAction(CreatureAdvBase):
         #print("ALIVE opponents", len(self.arena.find('alive enemy')), self.arena.find('alive enemy'))
         # BONUS ACTION
         # heal  -healing word, a bonus action.
+        if "Regeneration" in self.powers_adj_rank:
+            print(self.powers_adj_rank['Regeneration'])
+            #print(dict_faserip[self.powers_adj_rank['Regeneration']] )
+            regen_points = dict_faserip[self.powers_adj_rank['Regeneration'].split(';')[0]]/10
+            print("Regenerating:", regen_points)
+            #self.hp = min(self.stated_hp, self.hp + regen_points)
+
         if self.healing_spells > 0:
             weakling = self.assess_wounded(verbose)
             if weakling != 0:

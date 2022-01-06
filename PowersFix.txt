@@ -2271,7 +2271,7 @@ Resistance to Toxins and Disease Un resistance to Disease and Toxins	Resist:Dise
 "Immune to Toxins, Disease, Gas and Psionics CL1000"	Resist:Disease;Resist:Poison;Resist:Mental
 Enhanced Metabolism In resistance to drugs or alcohol.	Resist:Drugs
 Enhanced metabolism In resistance to drugs or alcohol.	Resist:Drugs
-Resistance to Electricity and Energy CL1000	Resist:Electrica;Resist:Energy
+Resistance to Electricity and Energy CL1000	Resist:Electrical;Resist:Energy
 Resistance to Electrical Mn	Resist:Electrical
 "Resistance to Electricity Mn protection from electricity, regardless of his current material strength."	Resist:Electrical
 Invulnerability to Electricity CL1000 protection vs. Electricity	Resist:Electrical

@@ -5,6 +5,7 @@ from ._safe_property import CreatureSafeProp
 from ._level import CreatureLevel
 from ..dice import AbilityDie, AttackRoll
 from ..dice.ranks import dict_faserip, column_shift
+import json
 
 class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, CreatureLevel):
     def __init__(self, **settings):
@@ -43,7 +44,11 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
         for key in ('xp', 'hp'):
             if key in settings:
                 self[key] = settings[key]
-                self[key] = settings[key]				
+        for key in ('powers_adj_rank','talents_adj','attack','defense'				):
+            if key in settings:
+                json_acceptable_string = settings[key].replace("'", "\"")
+                self[key] = json.loads(json_acceptable_string)
+
         # -------------- set complex values ----------------------------------------------------------------------------
         # abilities
         if 'stated_ac' in settings: #everyone has Armour here in code, just Sh0 for default, so no effect
