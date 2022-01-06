@@ -159,19 +159,19 @@ Tack-Hammer Rm Blunt,Blunt
 "Truncheon Am material, Rm Blunt. It is capable of the following:",Blunt
 "Truncheon Sticks In material, Ex Blunt",Blunt
 "Vibro-Smashers With the Vibro-Smashers, the Shocker can punch with Rm Strength. He is also capable of performing the following power stunts:",Blunt
-Concussion Rm Blunt,Blunt Blast
-"Ionic Particle Gauntlet Am material, Grasp is suited with an Ionic Particle Gauntlet that is capable of firing large armored fists up to 10 areas away. He is able to perform the following power stunts:",Blunt Blast
-"Polymer Juggling Balls Gd Blunt, opponent must make an Endurance check to avoid unconsciousness",Blunt Blast
-"Projectiles Ex Blunt Damage, 3 areas, fired from forearms. She can catch the staves on the rebound with a Green Agility FEAT Roll.",Blunt Blast
-Reflexerangs Solid-weighted boomerang. Bullseye result on Blunt Throwing column indicates target must check for Stun or be knocked over.,Blunt Blast
-Rubber Bullets Pr Shooting,Blunt Blast
-Solid Rubber Balls Gd Blunt,Blunt Blast
-"Spring-Loaded Boxing Glove Reaches up to 1 area, Gd damage",Blunt Blast
-Throwing Scarf Gd Blunt,Blunt Blast
-Web Missile Ex blunt attack at 3 areas,Blunt Blast
-"Web Missiles Ex Blunt, 3 areas",Blunt Blast
-"Billy Club Ex material, Gd Blunt",Blunt Blast:Gd-Ex
-"As nunchaku for 2 separate attacks with Ex damage each. If wound around an opponent, the whip may detach from its handle and explode for In damage to its target (Ex to all within one area). The concussion explosion may be timed for up to 3 rounds.",Blunt Blast;Energy Area
+Concussion Rm Blunt,Blunt Missile
+"Ionic Particle Gauntlet Am material, Grasp is suited with an Ionic Particle Gauntlet that is capable of firing large armored fists up to 10 areas away. He is able to perform the following power stunts:",Blunt Missile
+"Polymer Juggling Balls Gd Blunt, opponent must make an Endurance check to avoid unconsciousness",Blunt Missile
+"Projectiles Ex Blunt Damage, 3 areas, fired from forearms. She can catch the staves on the rebound with a Green Agility FEAT Roll.",Blunt Missile
+Reflexerangs Solid-weighted boomerang. Bullseye result on Blunt Throwing column indicates target must check for Stun or be knocked over.,Blunt Missile
+Rubber Bullets Pr Shooting,Blunt Missile
+Solid Rubber Balls Gd Blunt,Blunt Missile
+"Spring-Loaded Boxing Glove Reaches up to 1 area, Gd damage",Blunt Missile
+Throwing Scarf Gd Blunt,Blunt Missile
+Web Missile Ex blunt attack at 3 areas,Blunt Missile
+"Web Missiles Ex Blunt, 3 areas",Blunt Missile
+"Billy Club Ex material, Gd Blunt",Blunt Missile:Gd-Ex
+"As nunchaku for 2 separate attacks with Ex damage each. If wound around an opponent, the whip may detach from its handle and explode for In damage to its target (Ex to all within one area). The concussion explosion may be timed for up to 3 rounds.",Blunt Missile;Energy Area
 Headbutt Benefit of +1cs Blunt Strength damage for Headbutts,Blunt:1
 "Pounders (x2) In material, +1cs to Slugfest",Blunt:1:In
 "Cybernetic Tail In material, Am Blunt damage, the tail is capable of performing the following abilities",Blunt:Am-In
@@ -194,8 +194,8 @@ Unfettered Might Sh-Y damage (Sh-Z with belt of Might). Unless he is wearing his
 "Bo Staff Ex material, Rm damage",Blunt:Rm-Ex
 "Convincer Rm material, Rm Blunt. It is also able to create a strong energy field capable of melting steel (In Energy)",Blunt:Rm-Rm;Energy Blast
 "Power Lance Un material, Rm Blunt damage. It also has the following abilities",Blunt:Rm-Un
-"Asgardian Hammer CL1000 material, Red Norvell's fighting is Sh-Y and he inflicts Un damage. The hammer can be thrown up to 10 areas.",Blunt:Un;Blunt Blast:Un
-"Coup-Stick Rm material, Gd Blunt, can be thrown up to 3 areas",Blunt;Blunt Blast
+"Asgardian Hammer CL1000 material, Red Norvell's fighting is Sh-Y and he inflicts Un damage. The hammer can be thrown up to 10 areas.",Blunt:Un;Blunt Missile:Un
+"Coup-Stick Rm material, Gd Blunt, can be thrown up to 3 areas",Blunt;Blunt Missile
 Club/Flail Un Blunt or Edge,Blunt;Edged
 "Retractable Cestus It can be retracted and can retrofitted with silver for battling werewolves, his damage increases by +1cs and goes from Blunt to Edge",Blunt;Edged
 "Yo-Yo Ex Blunt, the steel string can be used like a garrote",Blunt;Edged
@@ -468,35 +468,35 @@ Fragmentation Grenade In damage to an entire area,Edged Area
 Grenade In Edge to 1 area,Edged Area
 Razor Shards In Edge in 1 area,Edged Area
 Remote Explosives Up to Am Edge to an entire area. Massacre carries a remote detonator with him to set off the explosions,Edged Area
-"Armband Blades Gd Edge, up to 1 area away",Edged Blast
-Axes Gd Thrown Edge,Edged Blast
-"Buzz Saw Blades Rm material, Rm Edge, Gladiator is able to fire these buzz saws up to 2 areas away",Edged Blast
-"Crescent-Darts Gd Edge, 3 areas",Edged Blast
-"Diamond Darts Rm material, Can be thrown up to 3 areas, can use the following tips on the dart.",Edged Blast
-"Hat Ex material, Americop's eight-point police cap is actually a thrown weapon capable of hitting a target up to 3 areas away, doing Ex Edge",Edged Blast
-"Hatchets Ex material, Gd Edge with a 2 area throwing range should he choose to attack that way.",Edged Blast
-"Longbow and Arrows identical to Hawkeye's arrows, maximum effect is In.",Edged Blast
-Razor Trickshot uses this arrow for assassinations. It inflicts Rm Edge on the Shooting column with a Bullseye result being treated as a kill result.,Edged Blast
-"Razor Bats Gd Edge, throwing damage. Multiple blades can be thrown, but at a -1cs for each additional blade thrown that round.",Edged Blast
-"Razor-Disk Guns Am Edge, tracking at +1cs",Edged Blast
-"Razorangs In material, Rm Thrown Edge",Edged Blast
-"Scarab Darts Gd Thrown Edge, 3 areas, As a 'Called Shot' they can be used to pin targets to walls.",Edged Blast
-"Spikes Spikes are thrown from Hodge's underside, causing Gd Thrown Edge",Edged Blast
-Throwing Bats Gd Edge,Edged Blast
-Throwing Blade Ex Throwing Edge,Edged Blast
-Throwing Blades Gd Thrown Edge,Edged Blast
-"Throwing Darts up to 8 tipped with the same poison. They can be thrown up to 2 areas, causing Fb edged damage.",Edged Blast
-"Throwing Irons Gd Thrown Blunt, 5 areas",Edged Blast
-Throwing Needles (x2) Rm Thrown Edge,Edged Blast
-"Wrist Crossbow Ty material, 7 areas range, can be fired once every 2 rounds",Edged Blast
-"Wrist Launcher Night Flyer wears a wrist device that launches cylinders up to 10 areas that expand into javelins in mid-flight, dealing In Edge",Edged Blast
-"Shurikens In material, Ex Thrown Edge",Edged Blast:Ex-In
-"Throwing Knives Rm material, Ex Thrown Edge, she can throw more than one a round, but in doing so she suffers a -1cs for every extra blade thrown.",Edged Blast:Ex-Rm
-"Flechettes Gd Thrown Edge, fired from Prowler's gauntlet, the flechettes can puncture upto Ex material. The Prowler can fire 2 flechettes per turn with a successful Agility FEAT roll. The Prowler will not use the flechettes directly against living opponents.",Edged Blast:Gd-Ex
-"Throwing Spikes Rm material, Gd Thrown Edge, 3 areas",Edged Blast:Gd-Rm
-"Titanium Arrows Mn material, In Edge",Edged Blast:In-Mn
-Knives Gd Thrown Edge,Edged Blast:In-Un
-"Bladerangs In Thrown Edge, no affect on Body Armor of Gd and higher material.",Edged Blast:Limitation-Gd
+"Armband Blades Gd Edge, up to 1 area away",Edged Missile
+Axes Gd Thrown Edge,Edged Missile
+"Buzz Saw Blades Rm material, Rm Edge, Gladiator is able to fire these buzz saws up to 2 areas away",Edged Missile
+"Crescent-Darts Gd Edge, 3 areas",Edged Missile
+"Diamond Darts Rm material, Can be thrown up to 3 areas, can use the following tips on the dart.",Edged Missile
+"Hat Ex material, Americop's eight-point police cap is actually a thrown weapon capable of hitting a target up to 3 areas away, doing Ex Edge",Edged Missile
+"Hatchets Ex material, Gd Edge with a 2 area throwing range should he choose to attack that way.",Edged Missile
+"Longbow and Arrows identical to Hawkeye's arrows, maximum effect is In.",Edged Missile
+Razor Trickshot uses this arrow for assassinations. It inflicts Rm Edge on the Shooting column with a Bullseye result being treated as a kill result.,Edged Missile
+"Razor Bats Gd Edge, throwing damage. Multiple blades can be thrown, but at a -1cs for each additional blade thrown that round.",Edged Missile
+"Razor-Disk Guns Am Edge, tracking at +1cs",Edged Missile
+"Razorangs In material, Rm Thrown Edge",Edged Missile
+"Scarab Darts Gd Thrown Edge, 3 areas, As a 'Called Shot' they can be used to pin targets to walls.",Edged Missile
+"Spikes Spikes are thrown from Hodge's underside, causing Gd Thrown Edge",Edged Missile
+Throwing Bats Gd Edge,Edged Missile
+Throwing Blade Ex Throwing Edge,Edged Missile
+Throwing Blades Gd Thrown Edge,Edged Missile
+"Throwing Darts up to 8 tipped with the same poison. They can be thrown up to 2 areas, causing Fb edged damage.",Edged Missile
+"Throwing Irons Gd Thrown Blunt, 5 areas",Edged Missile
+Throwing Needles (x2) Rm Thrown Edge,Edged Missile
+"Wrist Crossbow Ty material, 7 areas range, can be fired once every 2 rounds",Edged Missile
+"Wrist Launcher Night Flyer wears a wrist device that launches cylinders up to 10 areas that expand into javelins in mid-flight, dealing In Edge",Edged Missile
+"Shurikens In material, Ex Thrown Edge",Edged Missile:Ex-In
+"Throwing Knives Rm material, Ex Thrown Edge, she can throw more than one a round, but in doing so she suffers a -1cs for every extra blade thrown.",Edged Missile:Ex-Rm
+"Flechettes Gd Thrown Edge, fired from Prowler's gauntlet, the flechettes can puncture upto Ex material. The Prowler can fire 2 flechettes per turn with a successful Agility FEAT roll. The Prowler will not use the flechettes directly against living opponents.",Edged Missile:Gd-Ex
+"Throwing Spikes Rm material, Gd Thrown Edge, 3 areas",Edged Missile:Gd-Rm
+"Titanium Arrows Mn material, In Edge",Edged Missile:In-Mn
+Knives Gd Thrown Edge,Edged Missile:In-Un
+"Bladerangs In Thrown Edge, no affect on Body Armor of Gd and higher material.",Edged Missile:Limitation-Gd
 "Anti-Tank -2CS to Body and Protection, Am Edge",Edged:-2
 "Power Sword Am material, Am Edge, capable of delivering an Am Energy Blast",Edged:Am-Am;Energy Blast
 "Xiphos the Sword of the Stars CL1000 material, Am Edge",Edged:Am-CL1000
@@ -505,7 +505,7 @@ Knives Gd Thrown Edge,Edged Blast:In-Un
 "Quantum Sword Mn material, Am Edge",Edged:Am-Mn
 "Retractable Blade Mn material, Up to Am Edge, it retracts from the bottom point of the shield.",Edged:Am-Mn
 "Vibranium Knives Mn material, up to Am Edge",Edged:Am-Mn
-"Battle Axe Mn material, Am Edge or Am Thrown Edge (14 areas), This enchanted battle axe, capable of following its targets for enormous distances and slashing through 'the fabric of infinity itself' to hit its target. If a successful to hit roll is made when the axe is thrown, it will pass through any and all barriers to strike the target.",Edged:Am-Mn;Edged Blast:Am-Mn
+"Battle Axe Mn material, Am Edge or Am Thrown Edge (14 areas), This enchanted battle axe, capable of following its targets for enormous distances and slashing through 'the fabric of infinity itself' to hit its target. If a successful to hit roll is made when the axe is thrown, it will pass through any and all barriers to strike the target.",Edged:Am-Mn;Edged Missile:Am-Mn
 "Antarctic Vibranium Knife Am material, able to cut through metal with Sh-X ability",Edged:Am-ShX
 "Shadowforge Sword Un material, Am Edge",Edged:Am-Un
 "Split into two swords Un material, Am Edge",Edged:Am-Un
@@ -534,7 +534,7 @@ CLAWS Rm edge,Edged:Ex-Rm
 "Cable Claw Am material, Gd Edge, Ex climbing speed. It has a 2 area range",Edged:Gd-Am;Climbing
 "Bows and Arrows Ex material, Gd Edge, 7 areas",Edged:Gd-Ex
 "Compact Combat Knife Ex material, Gd Edge",Edged:Gd-Ex
-"Knife-Blade Missiles Un material, fires up to 10 areas and causes In Edge",Edged:Gd-Ex;Edged Blast:Gd-Ex
+"Knife-Blade Missiles Un material, fires up to 10 areas and causes In Edge",Edged:Gd-Ex;Edged Missile:Gd-Ex
 "Light of Galador In material, Gd Edge. While on the Arak Maw, Cable found the Light of Galador embedded in the foot of an Arakkoan monster. It had previously belonged to Morn, the first of the Space Knights. It can sheath itself in an energy field which increases the Edge damage to Am",Edged:Gd-In;Energy:Am
 "Swords Rm material, Gd Edge",Edged:Gd-Rm
 "Ebony Dagger Un matterial, Gd Edge, Un energy reflection.",Edged:Gd-Un;Reflection
@@ -591,7 +591,7 @@ Scickle Inflict up to Am Blunt or Edge,Edged;Blunt
 "Spear Ex material, Ex Edge or Blunt",Edged;Blunt
 Spiked Mace Rm Edge or Blunt,Edged;Blunt
 Standard Attack Am Edge or Blunt,Edged;Blunt
-"Combat Knives Gd Edge, thrown or melee",Edged;Edged Blast
+"Combat Knives Gd Edge, thrown or melee",Edged;Edged Missile
 "Light Sabers (x2) In material, Rm Edge or Energy",Edged;Energy
 "Chain and Hook CL3000 material, Dirty Wolff’s trustworthy hook an’ chain. The weapon he often carries with him on his right arm. Un Edge or used for Un Grappling",Edged;Grappling
 "Whip Un material, Am Edge. 5 area range. It can be used to grab or grapple targets at Un ability.",Edged;Grappling
@@ -601,7 +601,7 @@ Standard Attack Am Edge or Blunt,Edged;Blunt
 "Darts 2 areas, Ty Throwing, darts may be lined with Knock-Out Potions.",Edged;Stunning
 "Syringe Claws Ty Edge, delivers an In intensity knock-out sedative. The victim must make a Red Endurance FEAT. vs. unconsciousness.",Edged;Stunning
 "Boot Blades Rm Edge, allows him to wall crawl with Ex ability Electromagnetic Harness",Edged;Wall-Crawling
-"Tridents In material, Rm Edge, can be thrown",EdgedlEdged Blast
+"Tridents In material, Rm Edge, can be thrown",EdgedlEdged Missile
 "Element Gun Mn material, fires up to 5 areas. Peter can change the element of his gun between any attacks. Each element uses a different column from which he makes his Agility FEAT to hit. The damage type is appropriate to the element. It has the following settings:",Element Control
 "Nature Control Potion In, This rare potion, that gives Diablo this Universal magical ability, can only control one of the basic elements and no more than one potion can be used at a time.",Element Control:Magic
 Elongation Ex,Elongation
@@ -1343,7 +1343,7 @@ Concussion Bombs Fires 3 per turn with Rm Agility at a range of 3 area. In Force
 "Shock and Awe Barrage A combined repulsor and ultra-sonic attack causing Sh-X vibrational damage bypassing most body armor and material (treat as if protection or material is at -1cs of actual ranks), 3 areas",Force Blast:Sh-X-Armour Piercing
 "Ultra-Sonics Focused high-frequency tight-beam sonics causing Am vibrational damage bypassing most body armor and material (treat as if protection or material is at -2cs of actual ranks), 3 areas",Force Blast:Sonics-ArmourPiercing
 "Ultra-Sonics (“Sonic Ramshot”) Focused high frequency tight-beam sonics cause In vibrational damage bypassing most body armor and material strength (treat as if protection or material is at -2cs of actual ranks), 2 areas",Force Blast:Sonics-ArmourPiercing
-Force Beam The armor is also equipped with gauntlet mounted particle beam projectors which can cause upto Am Force or Blunt at a range of 7 areas.,Force Blast;Blunt Blast
+Force Beam The armor is also equipped with gauntlet mounted particle beam projectors which can cause upto Am Force or Blunt at a range of 7 areas.,Force Blast;Blunt Missile
 "Attilan Pistols In Energy or Force, 3 areas. They can be amplified by +2cs and have a range of 5 areas through the use of his sunglasses",Force Blast;Energy Blast
 "Force or Energy Weapons Ex, 2 areas",Force Blast;Energy Blast
 Force or Heat Ray Rm,Force Blast;Energy Blast
