@@ -1,6 +1,6 @@
 from ..victory import Victory
 from ._adv_base import CreatureAdvBase
-from ..dice.ranks import dict_faserip, universal_table, universal_color, column_shift
+from ..dice.ranks import dict_faserip, universal_table, universal_color, column_shift, faserip_index
 import random
 import time
 
@@ -130,6 +130,8 @@ class CreatureAction(CreatureAdvBase):
     def multiattack(self, verbose=1, assess=0):	
         print(self.name, "is multiattacking") #attack all at once - 6 at once? if more than 2 worth it maybe
         extra_attacks = 0
+        slugfest = 1		
+        damage_rank = self.srank
 		### need to check for attack type using
 		### eg Edged for Wolverine and Sabretooth
 		
@@ -138,8 +140,10 @@ class CreatureAction(CreatureAdvBase):
         fighting_cs = 0
         ##check martial arts adjustment - put other weapon skill type adjustments etc in a place similarly
 		# only on slugfest
-        if self.talents['martial_arts']['B'] == 1:
-            fighting_cs = fighting_cs + 1
+        #print("alt attacks", self.alt_attack)
+        if self.alt_attack['edged'] == 1 or self.alt_attack['blunt'] == 1 or self.alt_attack['shooting'] == 1 or self.alt_attack['energy'] == 1 or self.alt_attack['force'] == 1:
+            slugfest = 0
+        
         if fighting_cs != 0:
             fighting_rank = column_shift(self.frank, fighting_cs)
         try:
@@ -151,6 +155,38 @@ class CreatureAction(CreatureAdvBase):
             raise Victory()
         if assess:
             return 0  # the default
+
+        #want to find damage rank
+        body_armour_rank = opponent.body_armour["Physical"]
+		
+        if slugfest == 1:
+            if self.talents['martial_arts']['B'] == 1:
+                fighting_cs = fighting_cs + 1
+        else: #when have more - take max that applies, don't stack
+            if 'Weapon Specialist' in self.talents_adj or 'Weapon Specialist: (Claws)' in self.talents_adj:
+                fighting_cs = fighting_cs + 2
+                print("Weapon Specialist Fighter:", self.name)
+            if self.alt_attack['edged'] == 1:  #compare to body armour
+                print("Edged Fighting")
+                damage_list = self.attack['Edged']['S'].split(';')
+                print("Damage List", damage_list)
+
+                if len(damage_list) > 1:
+                    damage_rank = damage_list[0]
+                    material_strength = damage_list[1]
+                else:
+                    damage_rank = damage_list[0]
+                    material_strength = damage_list[0]
+                #print(opponent.equipment_adj_rank)
+                if "Body Armour" in opponent.equipment_adj_rank:# and "Body Armour" not in opponent.power_adj_rank:
+                    #weapon could penetrate and ignore
+                    print("Body Armour is Equipment")
+                    damage_index = faserip_index[damage_rank]
+                    armour_index = faserip_index[body_armour_rank]
+                    if damage_index >= armour_index:
+                        print("Body Armour Penetrated")					                    
+                        body_armour_rank = "Sh0"
+				
         
         if int(self.mook) == 0 and len(possible_opponents) > 2:  #no extra attacks
             fighting_cs = -4
@@ -213,10 +249,13 @@ class CreatureAction(CreatureAdvBase):
                 self.log.debug(f"{self.name} attacks {opponent.name} with {self.attacks[i].name}")
                 # This was the hit method. put here for now.
                 # THE IMPORTANT PART TO WRITE, UNIVERSAL TABLE TIME!
-                print(self.stated_ac,self.armor.ac,opponent.body_armour["Physical"])
+                #print(self.stated_ac,self.armor.ac,opponent.body_armour["Physical"])
                 #print("ATTACKS", self.attacks[i], "FIGHTING", self.frank, "STRENGTH", self.srank, "OPPEND", opponent.erank, "BA", dict_faserip[opponent.armour_name])
                 #print("ATTACKS", self.attacks[i], "FIGHTING", self.frank, "STRENGTH", self.srank, "OPPEND", opponent.erank, "BA", dict_faserip[opponent.stated_ac])
-                print("ATTACKS", self.attacks[i], "FIGHTING", fighting_rank, "STRENGTH", self.srank, "OPPEND", opponent.erank, "BA", dict_faserip[opponent.body_armour["Physical"]])
+                #print("ATTACKS", self.attacks[i], "FIGHTING", fighting_rank, "STRENGTH", self.srank, "OPPEND", opponent.erank, "BA", dict_faserip[opponent.body_armour["Physical"]])
+                #print("ATTACKS", self.attacks[i], "FIGHTING", fighting_rank, "DAMAGE RANK", damage_rank, "OPPEND", opponent.erank, "BA", dict_faserip[opponent.body_armour["Physical"]])
+                print("ATTACKS", self.attacks[i], "FIGHTING", fighting_rank, "DAMAGE RANK", damage_rank, "OPPEND", opponent.erank, "BA", dict_faserip[opponent.body_armour["Physical"]], "BA-Used", dict_faserip[body_armour_rank])
+
                 #if ";" in opponent.armour_name:
                     #ranklist = opponent.armour_name.split(';')
                     #del ranklist[-1]
@@ -233,7 +272,9 @@ class CreatureAction(CreatureAdvBase):
 				#other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
                 #damage, effect_type, effect = self.attacks[i].attackFASERIP(dict_faserip[opponent.armour_name], advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=self.srank, endurance_rank=opponent.erank,other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
                 #damage, effect_type, effect = self.attacks[i].attackFASERIP(dict_faserip[opponent.stated_ac], advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=self.srank, #endurance_rank=opponent.erank,other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
-                damage, effect_type, effect = self.attacks[i].attackFASERIP(dict_faserip[opponent.body_armour["Physical"]], advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=self.srank, endurance_rank=opponent.erank,other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
+                #damage, effect_type, effect = self.attacks[i].attackFASERIP(dict_faserip[opponent.body_armour["Physical"]], advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=self.srank, #endurance_rank=opponent.erank,other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
+				
+                damage, effect_type, effect = self.attacks[i].attackFASERIP(dict_faserip[opponent.body_armour["Physical"]], advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=damage_rank, endurance_rank=opponent.erank,other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
                 print("DAMAGE", damage, "OPPONENTAC:", opponent.body_armour["Physical"])
                 #damage = 2
                 if damage > 0:

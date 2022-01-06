@@ -44,7 +44,7 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
         for key in ('xp', 'hp'):
             if key in settings:
                 self[key] = settings[key]
-        for key in ('powers_adj_rank','talents_adj','attack','defense','body_armour'):
+        for key in ('powers_adj_rank','equipment_adj_rank','talents_adj','attack','defense','body_armour'):
             print(key)		
             if key in settings:
                 json_acceptable_string = settings[key].replace("'", "\"")
@@ -108,6 +108,11 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
                 self.alt_attack['edged'] = 1
                 self.alt_attack['shooting'] = 1
             print(self.alt_attack)
+            
+        if self.attack['Edged']['S'] != '':
+            self.alt_attack['edged'] = 1
+		
+		
         if 'martial_arts' in settings:  #adds a 1 for each of Martial Arts A to E found in beastiaryFASERIP - string ABCDE, ABCD etc.
             #print("MARTIAL ARTS:", settings['martial_arts'])
             for ma in settings['martial_arts']:
