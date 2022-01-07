@@ -89,6 +89,7 @@ class CreatureBase:
         self.conc_fx = None
         self.cr = 0
         self.custom = []
+        self.level = 0  #extra CS for Hawkeye or other characters that are different to RAW
         self.slam = 0
         self.stun = 0
         self.kill = 0

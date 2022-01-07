@@ -138,6 +138,8 @@ class CreatureAction(CreatureAdvBase):
 		### if Agility attack - e.g. Hawkeye, make fighting rank agility rank
         fighting_rank = self.frank
         fighting_cs = 0
+        level = self.level
+        fighting_cs = fighting_cs + level  #ad hoc bonus for extra skils like Hawkeye
         ##check martial arts adjustment - put other weapon skill type adjustments etc in a place similarly
 		# only on slugfest
         #print("alt attacks", self.alt_attack)
@@ -169,10 +171,10 @@ class CreatureAction(CreatureAdvBase):
             if 'Weapon Specialist' in self.talents or 'Weapon Specialist: (Claws)' in self.talents:
                 fighting_cs = fighting_cs + 2
                 print("Weapon Specialist Fighter:", self.name)
-            elif 'Weapon Master' in self.talents or 'Sharp Weapons' in self.talents or 'Oriental Weapons' in self.talents or 'Thrown Weapons' in self.talents:
+            elif 'Weapon Master' in self.talents or 'Sharp Weapons' in self.talents or 'Oriental Weapons' in self.talents or 'Thrown Weapons' in self.talents or 'Marksman' in self.talents or 'Guns' in self.talents or 'Bows' in self.talents:
                 fighting_cs = fighting_cs + 1
             else:
-                pass #no masteries
+                pass #no weapon skills
 								
                 print("Weapon Specialist Fighter:", self.name)
             if self.alt_attack['edged'] == 1:  #compare to body armour
@@ -257,7 +259,9 @@ class CreatureAction(CreatureAdvBase):
                 #put adjustment for green and Monstrous or better
                     extra_attacks = 2
                     fighting_cs = -1
-
+                #if self.level > 0: #code to simulate set extra attacks  comment out and write a function - another attribute?
+                #    extra_attacks = 2
+                #    fighting_cs = -1
             ##check martial arts adjustment - put other weapon skill type adjustments etc in a place similarly
         #if self.talents['martial_arts']['B'] == 1:
             #fighting_cs = fighting_cs + 1
