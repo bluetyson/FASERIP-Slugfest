@@ -4,7 +4,7 @@ from ._init_abilities import CreatueInitAble
 from ._safe_property import CreatureSafeProp
 from ._level import CreatureLevel
 from ..dice import AbilityDie, AttackRoll
-from ..dice.ranks import dict_faserip, column_shift
+from ..dice.ranks import dict_faserip, column_shift, faserip_index
 import json
 
 class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, CreatureLevel):
@@ -45,7 +45,7 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
             if key in settings:
                 self[key] = settings[key]
         for key in ('powers_adj_rank','equipment_adj_rank','talents','talents_adj','attack','defense','body_armour'):
-            print(key)		
+            #print(key)		
             if key in settings:
                 json_acceptable_string = settings[key].replace("'", "\"")
                 self[key] = json.loads(json_acceptable_string)
@@ -132,26 +132,28 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
         if self.attack['Energy']['A'] != '':
             self.alt_attack['energy'] = 1
 			
-        best_attack = {'Slugfest'}
-        best_attack_rank = "Sh0"
+        best_attack_type = {'Slugfest'}
+        best_attack_rank = self.srank
         best_attack_rank_index = 0
+        best_attack = {}
+        #print(self.attack)
         for key in self.attack.keys():
             for subkey in self.attack[key].keys():
-                print(subkey)
+                #print(subkey)
                 if self.attack[key][subkey] != '':
                     #find rank check highest
-                    #print(self.attack[key][subkey])
-                                        
+                    print(self.attack[key][subkey])
                     ranklist = self.attack[key][subkey].split(';')
                     del ranklist[-1]
                     rank = ranklist[0]
-                    rankindex = faserip_index(rank)
+                    rankindex = faserip_index[rank]
                     if rankindex > best_attack_rank_index:
                         best_attack_rank_index = rankindex
                         best_attack_rank = rank
-                        best_attack = self.attack[key][subkey]
+                        best_attack = self.attack[key]
+                        best_attack = {key : self.attack[key]}
         self.attack_preferred = best_attack
-        print(best_attack)
+        print("BEST ATTACK:", best_attack)
 				
 
 			
