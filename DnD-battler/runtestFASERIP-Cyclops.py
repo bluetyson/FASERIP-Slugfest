@@ -2,6 +2,8 @@ from DnD_battler import Creature, Encounter
 import pandas as pd
 
 arenaDangerRoom = Encounter(Creature.load("Cyclops"), Creature.load("Corsair"))
+arenaDangerRoomNA = Encounter(Creature.load("Cyclops NA"), Creature.load("Corsair NA"))
+arenaDangerRoomEarly = Encounter(Creature.load("Cyclops Early"), Creature.load("Corsair NA"))
 
 #print(arenaDangerRoom.go_to_war(1))
 #print(arenaDangerRoom.go_to_war(10))
@@ -10,8 +12,10 @@ arenaDangerRoom = Encounter(Creature.load("Cyclops"), Creature.load("Corsair"))
 #print(arenaDangerRoom.go_to_war(1000))
 #print(arenaDangerRoom.go_to_war(2000))
 #print(arenaDangerRoom.go_to_war(5000))
-print(arenaDangerRoom.go_to_war(10000))
+#print(arenaDangerRoom.go_to_war(10000))
 #print(arenaDangerRoom.go_to_war(5000))
 
-#print(arenaEarly.go_to_war(1))
-
+print(arenaDangerRoomNA.go_to_war(10000))
+#print(arenaDangerRoomNA.go_to_war(10000))
+#print(arenaDangerRoomEarly.go_to_war(1000))
+#print(arenaDangerRoomEarly.go_to_war(10000))
