@@ -66,6 +66,16 @@ Creature()
 Creature.load('Scientist')
 ```
 Both accept several arguments. 
+
+An ongoing work in progress, see the bestiaryFASERIP.csv an benriely.csv for the general idea.
+
+- level - using for assorted CS bonuses, e.g. when it says 'Cyclops has Incredible Agility with Optic Blasts' and he has Excellent, put 2 in there.  Descriptive Weapon Specialist bonus.
+- Attack - dictionary to approximate different types of attacks
+- Defense - dictionary to approximate different types of attacks
+- a basic heuristic attack_preferred best attack calculation is done
+
+- to use characters in Simulations may require a bit of editing of the csv or the character parsing routines if many instances that can be handled, the csvs are designed so most of the handcoding is done.
+
 ## SOME OF THE BELOW WILL NOT CURRENTLY BE RELEVANT
 
 ```python
