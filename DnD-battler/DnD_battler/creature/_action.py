@@ -45,8 +45,10 @@ class CreatureAction(CreatureAdvBase):
         self.hp -= points
         if effect_type == "STUN":
             self.stun = effect
+            print(self.name, " Stunned for: ", self.stun, " rounds")
         if effect_type == "KILL":
             if effect == "En Loss" or effect == "E S":
+                print(self.name, " Killed!")
                 self.kill = 1
 		
             

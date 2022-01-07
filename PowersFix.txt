@@ -1109,7 +1109,7 @@ Bio-Blast Chamber generates Bio-energy from his chest and can fire a blast for U
 "Variable Energy Beams In Energy or Force, 2 area range. These were mounted in both the hands and eyes."	Energy Blast;Force Blast
 "Variable Repulsors Located in each gauntlet, up to Mn Force, 15 areas. A stun setting of Am intensity could now target one full area. Also, repulsors could now function underwater at -1cs intensity and half their maximum range in air. Full form repulsors inflict Am Force damage in one area radius hitting automatically anyone within range."	Energy Blast;Force Blast
 "Energy Constructs In ability to create psionic energy constructs. Thus far he has only created a projection of his father, which usually looks like an orange hologram"	Energy Constructions
-Transform energy into Optic Blast a Red Psyche FEAT. must be made or he takes normal damage	Energy Contro:On Red
+Transform energy into Optic Blast a Red Psyche FEAT. must be made or he takes normal damage	Energy Control:On Red
 Control Rm	Energy Control
 Control Energy Am	Energy Control
 Cosmic Energy Control Un	Energy Control

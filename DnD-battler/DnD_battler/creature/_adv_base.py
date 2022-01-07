@@ -117,6 +117,43 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
             self.alt_attack['throwing-edged'] = 1
         if self.attack['Shooting']['R'] != '':
             self.alt_attack['shooting'] = 1
+        #powers section
+        #differential ranged and not eventually for powers when have ranges
+        if self.attack['Force']['S'] != '':
+            self.alt_attack['force'] = 1
+        if self.attack['Force']['R'] != '':
+            self.alt_attack['force'] = 1
+        if self.attack['Force']['A'] != '':
+            self.alt_attack['force'] = 1
+        if self.attack['Energy']['S'] != '':
+            self.alt_attack['energy'] = 1
+        if self.attack['Energy']['R'] != '':
+            self.alt_attack['energy'] = 1
+        if self.attack['Energy']['A'] != '':
+            self.alt_attack['energy'] = 1
+			
+        best_attack = {'Slugfest'}
+        best_attack_rank = "Sh0"
+        best_attack_rank_index = 0
+        for key in self.attack.keys():
+            for subkey in self.attack[key].keys():
+                print(subkey)
+                if self.attack[key][subkey] != '':
+                    #find rank check highest
+                    #print(self.attack[key][subkey])
+                                        
+                    ranklist = self.attack[key][subkey].split(';')
+                    del ranklist[-1]
+                    rank = ranklist[0]
+                    rankindex = faserip_index(rank)
+                    if rankindex > best_attack_rank_index:
+                        best_attack_rank_index = rankindex
+                        best_attack_rank = rank
+                        best_attack = self.attack[key][subkey]
+        self.attack_preferred = best_attack
+        print(best_attack)
+				
+
 			
         martial_arts = {"A":0,"B":0,"C":0,"D":0,"E":0}	
         self.talents['martial_arts'] = martial_arts
