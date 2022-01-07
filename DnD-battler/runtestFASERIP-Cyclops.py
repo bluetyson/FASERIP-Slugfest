@@ -5,7 +5,7 @@ arenaDangerRoom = Encounter(Creature.load("Cyclops"), Creature.load("Corsair"))
 
 
 #print(arenaKunLun.set_deathmatch())
-#print(arenaClobbering.go_to_war(1))
+print(arenaDangerRoom.go_to_war(1))
 #print(arenaClobbering.go_to_war(10))
 #print(arenaClobbering.go_to_war(100))
 #print(arenaClobbering.go_to_war(500))

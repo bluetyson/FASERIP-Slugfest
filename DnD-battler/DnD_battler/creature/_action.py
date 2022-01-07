@@ -141,7 +141,7 @@ class CreatureAction(CreatureAdvBase):
         fighting_rank = self.frank
         fighting_cs = 0
         level = self.level
-        fighting_cs = fighting_cs + level  #ad hoc bonus for extra skils like Hawkeye
+        fighting_cs = fighting_cs + level  #ad hoc bonus for extra skils like Hawkeye, Cyclops Spatial Geometry
         ##check martial arts adjustment - put other weapon skill type adjustments etc in a place similarly
 		# only on slugfest
         #print("alt attacks", self.alt_attack)
@@ -177,17 +177,18 @@ class CreatureAction(CreatureAdvBase):
                 fighting_cs = fighting_cs + 1
             else:
                 pass #no weapon skills
-								
-                print("Weapon Specialist Fighter:", self.name)
+            bypass_flag = 1					
             if self.alt_attack['edged'] == 1:  #compare to body armour
                 print("Edged Fighting")
                 damage_list = self.attack['Edged']['S'].split(';')
             elif self.alt_attack['blunt'] == 1:  #compare to body armour
                 print("Blunt Fighting")
                 damage_list = self.attack['Blunt']['S'].split(';')
+                bypass_flag = 0
             elif self.alt_attack['throwing-blunt'] == 1:  #compare to body armour
                 print("Throwing Blunt Fighting")
                 damage_list = self.attack['Throwing Blunt']['R'].split(';')
+                bypass_flag = 0
             elif self.alt_attack['throwing-edged'] == 1:  #compare to body armour
                 print("Throwing Edged Fighting")
                 damage_list = self.attack['Throwing Edged']['R'].split(';')
@@ -196,7 +197,18 @@ class CreatureAction(CreatureAdvBase):
                 damage_list = self.attack['Shooting']['R'].split(';')
             else:
                 pass ###powers or something else
+            ## Attacks that can't bypass armour
+            print("sussing out :", self.alt_attack)
+            if self.alt_attack['energy'] == 1:  #compare to body armour
+                print("Energy Fighting")
+                bypass_flag = 0
+                damage_list = self.attack['Energy']['R'].split(';') 
+            elif self.alt_attack['force'] == 1:  #compare to body armour
+                print("Force Fighting")
+                damage_list = self.attack['Force']['R'].split(';')
+                bypass_flag = 0
             print("Damage List", damage_list)
+				
 
             if len(damage_list) > 1:
                 damage_rank = damage_list[0]
@@ -204,15 +216,17 @@ class CreatureAction(CreatureAdvBase):
             else:
                 damage_rank = damage_list[0]
                 material_strength = damage_list[0]
-            #print(opponent.equipment_adj_rank)
-            if "Body Armour" in opponent.equipment_adj_rank:# and "Body Armour" not in opponent.power_adj_rank:  #make this for edged things only eventually
-                #weapon could penetrate and ignore
-                print("Body Armour is Equipment")
-                damage_index = faserip_index[damage_rank]
-                armour_index = faserip_index[body_armour_rank]
-                if damage_index >= armour_index:
-                    print("Body Armour Penetrated")					                    
-                    body_armour_rank = "Sh0"
+                #print(opponent.equipment_adj_rank)
+            if bypass_flag == 1:
+                if "Body Armour" in opponent.equipment_adj_rank:# and "Body Armour" not in opponent.power_adj_rank:  #make this for edged things only eventually
+                    #weapon could penetrate and ignore
+                    print("Body Armour is Equipment")
+                    damage_index = faserip_index[damage_rank]
+                    armour_index = faserip_index[body_armour_rank]
+                    if damage_index >= armour_index:
+                        print("Body Armour Penetrated")					                    
+                        body_armour_rank = "Sh0"
+            
 
         if fighting_cs != 0:
             fighting_rank = column_shift(fighting_rank, fighting_cs)
