@@ -86,52 +86,8 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
         
 		
         print("FINAL AC CHECK",self.armor.ac, self.body_armour)
-        
-        #T = Type of Damage: E = Edged, B= Blunt, S = Shooting, H = Advanced Technology, 2 = Blunt and Edged, W = S and 2
-		
-        if 'att' in settings: #change this for powers etc. too
-            print("OTHER ATTACKS:", settings['att'])
-            if settings['att'] == 'B':
-                self.alt_attack['blunt'] = 1
-            if settings['att'] == 'E':
-                self.alt_attack['edged'] = 1
-            if settings['att'] == 'S':
-                self.alt_attack['shooting'] = 1
-            if settings['att'] == 'H':
-                self.alt_attack['energy'] = 1
-                self.alt_attack['force'] = 1
-            if settings['att'] == '2':
-                self.alt_attack['blunt'] = 1
-                self.alt_attack['edged'] = 1
-            if settings['att'] == 'W':
-                self.alt_attack['blunt'] = 1
-                self.alt_attack['edged'] = 1
-                self.alt_attack['shooting'] = 1
-            print(self.alt_attack)
-            
-        if self.attack['Edged']['S'] != '':
-            self.alt_attack['edged'] = 1
-        if self.attack['Edged']['R'] != '':
-            self.alt_attack['throwing-edged'] = 1
-        if self.attack['Throwing Edged']['R'] != '':
-            self.alt_attack['throwing-edged'] = 1
-        if self.attack['Shooting']['R'] != '':
-            self.alt_attack['shooting'] = 1
-        #powers section
-        #differential ranged and not eventually for powers when have ranges
-        if self.attack['Force']['S'] != '':
-            self.alt_attack['force'] = 1
-        if self.attack['Force']['R'] != '':
-            self.alt_attack['force'] = 1
-        if self.attack['Force']['A'] != '':
-            self.alt_attack['force'] = 1
-        if self.attack['Energy']['S'] != '':
-            self.alt_attack['energy'] = 1
-        if self.attack['Energy']['R'] != '':
-            self.alt_attack['energy'] = 1
-        if self.attack['Energy']['A'] != '':
-            self.alt_attack['energy'] = 1
-			
+
+        #checking for best attack purely based on damage, not hit rate - perhaps work that out too - Fighting or Agility with specialist skills 
         best_attack_type = {'Slugfest'}
         best_attack_rank = self.srank
         best_attack_rank_index = 0
@@ -153,10 +109,78 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
                         best_attack = self.attack[key]
                         best_attack = {key : self.attack[key]}
         self.attack_preferred = best_attack
-        print("BEST ATTACK:", best_attack)
+        print("BEST ATTACK:", best_attack, type(best_attack))
 				
+        
+        #T = Type of Damage: E = Edged, B= Blunt, S = Shooting, H = Advanced Technology, 2 = Blunt and Edged, W = S and 2
+		
+        if 'att' in settings: #this is for default character list, but could put them in for
+            print("OTHER ATTACKS:", settings['att'])
+            if settings['att'] == 'B':
+                self.alt_attack['blunt'] = 1
+            if settings['att'] == 'E':
+                self.alt_attack['edged'] = 1
+            if settings['att'] == 'S':
+                self.alt_attack['shooting'] = 1
+            if settings['att'] == 'H':
+                self.alt_attack['energy'] = 1
+                self.alt_attack['force'] = 1
+            if settings['att'] == '2':
+                self.alt_attack['blunt'] = 1
+                self.alt_attack['edged'] = 1
+            if settings['att'] == 'W':
+                self.alt_attack['blunt'] = 1
+                self.alt_attack['edged'] = 1
+                self.alt_attack['shooting'] = 1
+            print(self.alt_attack)
+        
+        if self.attack['Edged']['S'] != '':
+            self.alt_attack['edged'] = 1
+        if self.attack['Edged']['R'] != '':
+            self.alt_attack['edged'] = 1
+        if self.attack['Throwing Edged']['R'] != '':
+            self.alt_attack['throwing-edged'] = 1
+        if self.attack['Shooting']['R'] != '':
+            self.alt_attack['shooting'] = 1
+        #powers section
+        #differential ranged and not eventually for powers when have ranges
+        if self.attack['Force']['S'] != '':
+            self.alt_attack['force'] = 1
+        if self.attack['Force']['R'] != '':
+            self.alt_attack['force'] = 1
+        if self.attack['Force']['A'] != '':
+            self.alt_attack['force'] = 1
+        if self.attack['Energy']['S'] != '':
+            self.alt_attack['energy'] = 1
+        if self.attack['Energy']['R'] != '':
+            self.alt_attack['energy'] = 1
+        if self.attack['Energy']['A'] != '':
+            self.alt_attack['energy'] = 1
 
+        #reset for best attack
+        for key in self.alt_attack:
+            self.alt_attack[key] = 0
+        #print(self.attack_preferred.keys()[0])
+        #print(list(self.attack_preferred.keys())
+        if list(self.attack_preferred.keys()) == 'Blunt':
+            self.alt_attack['blunt'] = 1
+        if list(self.attack_preferred.keys())[0] == 'Edged':
+            self.alt_attack['edged'] = 1
+        if list(self.attack_preferred.keys())[0] == 'Throwing Blunt':
+            self.alt_attack['throwing-blunt'] = 1
+        if list(self.attack_preferred.keys())[0] == 'Throwing Edged':
+            self.alt_attack['throwing-edged'] = 1
+        if list(self.attack_preferred.keys())[0] == 'Shooting':
+            self.alt_attack['shooting'] = 1
+        if list(self.attack_preferred.keys())[0] == 'Force':
+            self.alt_attack['force'] = 1
+        if list(self.attack_preferred.keys())[0] == 'Energy':
+            self.alt_attack['energy'] = 1
+        if list(self.attack_preferred.keys())[0] == 'Grappling':
+            self.alt_attack['grappling'] = 1
 			
+        print("best alt attack", self.alt_attack)
+        
         martial_arts = {"A":0,"B":0,"C":0,"D":0,"E":0}	
         self.talents['martial_arts'] = martial_arts
         if 'martial_arts' in settings:  #adds a 1 for each of Martial Arts A to E found in beastiaryFASERIP - string ABCDE, ABCD etc.
