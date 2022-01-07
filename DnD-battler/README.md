@@ -66,6 +66,16 @@ Creature()
 Creature.load('Scientist')
 ```
 Both accept several arguments. 
+
+An ongoing work in progress, see the bestiaryFASERIP.csv an benriely.csv for the general idea.
+
+- level - using for assorted CS bonuses, e.g. when it says 'Cyclops has Incredible Agility with Optic Blasts' and he has Excellent, put 2 in there.  Descriptive Weapon Specialist bonus.
+- Attack - dictionary to approximate different types of attacks
+- Defense - dictionary to approximate different types of attacks
+- a basic heuristic attack_preferred best attack calculation is done
+
+- to use characters in Simulations may require a bit of editing of the csv or the character parsing routines if many instances that can be handled, the csvs are designed so most of the handcoding is done.
+
 ## SOME OF THE BELOW WILL NOT CURRENTLY BE RELEVANT
 
 ```python
@@ -228,10 +238,23 @@ __init__(self, wildcard, **kwargs)
     
     The arguments are many. The below is not up to date, as of 20220105, but will give you an idea.
     >>> print(Creature.load('Amazing Martial Artist').__dict__)
-    `{'name': 'Amazing Martial Artist', 'alignment': 'martialarts', 'type': 'superhero', 'f': 'Am', 'a': 'Rm', 's': 'Ex', 'e': 'Ex', 'r': 'Gd', 'i': 'Rm', 'p': 'In', 'martial_arts': 'ABCDE', 'mook': '0'}
-{'A': 1, 'B': 1, 'C': 1, 'D': 1, 'E': 1}
-{}
-{'name': 'Amazing Martial Artist', 'base': 'Amazing Martial Artist', 'type': 'superhero', 'size': <DnD_battler.creature_properties.size.Size object at 0x0000023752CF8880>, 'arena': None, 'level': 1, 'xp': 0, 'proficiency': <DnD_battler.creature_properties.proficiency.Proficiency object at 0x0000023752CD9400>, 'hp': 120, 'starting_hp': 120, 'hit_die': <DnD_battler.dice.dice.Dice object at 0x0000023752D335B0>, 'karma': 80, 'pop': 0, 'res': 'Ty', 'frank': 'Am', 'arank': 'Rm', 'srank': 'Ex', 'erank': 'Ex', 'rrank': 'Gd', 'irank': 'Rm', 'prank': 'In', 'able': 1, 'f': <DnD_battler.dice.ability_die.AbilityDie object at 0x0000023752D33340>, 'a': <DnD_battler.dice.ability_die.AbilityDie object at 0x0000023752D332B0>, 's': <DnD_battler.dice.ability_die.AbilityDie object at 0x0000023752D33610>, 'e': <DnD_battler.dice.ability_die.AbilityDie object at 0x0000023752D33640>, 'r': <DnD_battler.dice.ability_die.AbilityDie object at 0x0000023752D339D0>, 'i': <DnD_battler.dice.ability_die.AbilityDie object at 0x0000023752D33A60>, 'p': <DnD_battler.dice.ability_die.AbilityDie object at 0x0000023752D33940>, 'armor': <DnD_battler.creature_properties.armor.Armor object at 0x0000023752D336A0>, 'initiative': <DnD_battler.dice.skill_roll.SkillRoll object at 0x00000237530D5B20>, 'attacks': [<DnD_battler.dice.attack_roll.AttackRoll object at 0x00000237530E9520>], 'alt_attack': {'throwing-blunt': 0, 'throwing-edged': 0, 'blunt': 0, 'edged': 0, 'shooting': 0, 'energy': 0, 'force': 0, 'grapple': 0}, 'powers': {}, 'talents': {'martial_arts': {'A': 1, 'B': 1, 'C': 1, 'D': 1, 'E': 1}}, 'contacts': {}, 'alignment': 'martialarts', 'concentrating': 0, 'spellcasting_ability_name': None, 'starting_healing_spells': 0, 'healing_spells': 0, 'healing': None, 'tally': {'damage': 0, 'hits': 0, 'dead': 0, 'misses': 0, 'battles': 0, 'rounds': 0, 'hp': 0, 'healing_spells': 0, 'stun': 0, 'slam': 0, 'stunned': 0, 'slammed': 0}, 'copy_index': 1, 'condition': 'normal', 'dodge': 0, 'temp': 0, 'buff_spells': 0, 'conc_fx': None, 'cr': 0, 'custom': [], 'slam': 0, 'stun': 0, 'kill': 0, 'mook': '0', 'armour_name': 'Sh0', 'stated_hp': 120}`
+    `CHECK_SETTINGS {'name': 'Cyclops', 'identity': 'Scott Summers', 'alignment': 'Cyclops', 'stated_ac': 'Ex;', 'body_armour': "{'Physical': 'Ex', 'Energy': 'Ex'}", 'level': '2', 'f': 'Ex', 'a': 'Ex', 's': 'Gd', 'e': 'Rm', 'r': 'Gd', 'i': 'Rm', 'p': 'Ex', 'h': '80', 'k': '60', 'res': 'Gd', 'powers': '{\'Optic Blast\': \'up to Mn Force at 3 areas. Each area beyond that is decreased by 1 rank\', \'Break Fall\': \'to slow fall w/ Ty damage to target\', \'Wide Angle Beam\': \'In to 2 areas\', \'Transform energy into Optic Blast\': \'a Red Psyche FEAT. must be made or he takes normal damage\', \'Partial Immunity\': "Cyclops is immune to Havok\'s powers"}', 'powers_rank': "{'Optic Blast': 'Mn;', 'Break Fall': 'Ty;', 'Wide Angle Beam': 'In;', 'Transform energy into Optic Blast': '', 'Partial Immunity': ''}", 'powers_adj': "{'Force Blast': 'Testing One Only', 'Flight': 'Testing One Only', 'Force Area': 'Testing One Only', 'Energy Control:On Red': 'Testing One Only', 'Resist:Havok': 'Testing One Only'}", 'powers_adj_rank': "{'Force Blast': 'Mn;', 'Flight': 'Ty;', 'Force Area': 'In;', 'Energy Control:On Red': '', 'Resist:Havok': ''}", 'equipment': '{\'Ruby Quartz Visor\': "Am material, Can\'t control blasts when he opens his eyes if damaged or taken off", \'X-Men Uniform\': \'Rm material, the Uniforms are constructed out of unstable molecule fabric. It provides him with the following:\', \'Body Armour\': \'Ex protection vs. Physical and Energy\', \'Insulated\': \'Gd protection vs. Heat and Cold\', \'Comlink\': \'250 mile range and a GPS tracking device built into it\', \'Detection Scrambler\': \'Am protection vs. Electronic Mutant Detection\', \'Jet Pack\': \'Rm Flight\'}', 'equipment_rank': "{'Ruby Quartz Visor': 'Am;', 'X-Men Uniform': 'Rm;Un;', 'Body Armour': 'Ex;', 'Insulated': 'Gd;', 'Comlink': '', 'Detection Scrambler': 'Am;', 'Jet Pack': 'Rm;'}", 'equipment_adj': '{\'Ruby Quartz Visor\': "Am material, Can\'t control blasts when he opens his eyes if damaged or taken off", \'X-Men Uniform\': \'Rm material, the Uniforms are constructed out of unstable molecule fabric. It provides him with the following:\', \'Body Armour\': \'Ex protection vs. Physical and Energy\', \'Insulated\': \'Gd protection vs. Heat and Cold\', \'Comlink\': \'250 mile range and a GPS tracking device built into it\', \'Detection Scrambler\': \'Am protection vs. Electronic Mutant Detection\', \'Jet Pack\': \'Rm Flight\'}', 'equipment_adj_rank': "{'Ruby Quartz Visor': 'Am;', 'X-Men Uniform': 'Rm;Un;', 'Body Armour': 'Ex;', 'Insulated': 'Gd;', 'Comlink': '', 'Detection Scrambler': 'Am;', 'Jet Pack': 'Rm;'}", 'vehicle': '{}', 'talents': "{'Leadership': 1, 'Pilot': 1, 'Geometry': 1, 'Martial Arts A': 1, 'Martial Arts B': 1, 'Linguist': 1, 'Russian': 1, 'Japanese': 1}", 'talents_adj': "{'Leadership': 1, 'Pilot': 1, 'Spatial Geometry': 1, 'Martial Arts A,B': 1, 'Multi-Lingual (English': 1, 'Russian': 1, 'Japanese)': 1}", 'contacts': "{'X-Men': 1, 'Xavier Institute for Higher Learning': 1}", 'contacts_adj': '{}', 'weaknesses': "['']", 'weaknesses_adj': '{}', 'powers_form': '{}', 'spd': '0', 'att': '0', 'attack': "{'Blunt': {'S': '', 'R': '', 'A': ''}, 'Edged': {'S': '', 'R': '', 'A': ''}, 'Throwing Blunt': {'S': '', 'R': '', 'A': ''}, 'Throwing Edged': {'S': '', 'R': '', 'A': ''}, 'Shooting': {'S': '', 'R': '', 'A': ''}, 'Energy': {'S': '', 'R': '', 'A': ''}, 'Force': {'S': '', 'R': 'Mn;', 'A': 'In;'}, 'Grappling': {'S': '', 'R': '', 'A': ''}, 'Grabbing': {}, 'Charging': {}}", 'defense': "{'Escaping': {}, 'Dodging': {}, 'Evading': {}, 'Blocking': {}, 'Catching': {}}", 'dam': '0', 'climbing': '0', 'escaping': '0', 'martial_arts': 'AB', 'mook': '0'}
+STATED AC CHECK 0
+WE HAVE STATED AC CHECK Ex; Cyclops
+FINAL AC CHECK 20 {'Physical': 'Ex', 'Energy': 'Ex'}
+Mn;
+In;
+BEST ATTACK: {'Force': {'S': '', 'R': 'Mn;', 'A': 'In;'}} <class 'dict'>
+OTHER ATTACKS: 0
+{'throwing-blunt': 0, 'throwing-edged': 0, 'blunt': 0, 'edged': 0, 'shooting': 0, 'energy': 0, 'force': 0, 'grappling': 0}
+best alt attack {'throwing-blunt': 0, 'throwing-edged': 0, 'blunt': 0, 'edged': 0, 'shooting': 0, 'energy': 0, 'force': 1, 'grappling': 0}
+{'A': 1, 'B': 1, 'C': 0, 'D': 0, 'E': 0}
+CHECK_SETTINGS {}
+FINAL AC CHECK 20 {'Physical': 'Ex', 'Energy': 'Ex'}
+Mn;
+In;
+BEST ATTACK: {'Force': {'S': '', 'R': 'Mn;', 'A': 'In;'}} <class 'dict'>
+best alt attack {'throwing-blunt': 0, 'throwing-edged': 0, 'blunt': 0, 'edged': 0, 'shooting': 0, 'energy': 0, 'force': 1, 'grappling': 0}`
 
 __str__(self)
     Return str(self).
