@@ -18,7 +18,7 @@ class CreatureAction(CreatureAdvBase):
             return True
 
     def isaliveFASERIP(self):
-        if self.hp > 0 and not self.kill:
+        if self.hp > 0 and not self.kill == 1:
             return True
 
     def isconscious(self):
@@ -44,8 +44,8 @@ class CreatureAction(CreatureAdvBase):
     def take_damageFASERIP(self, points, effect_type, effect, verbose=0):
         self.hp -= points
         if effect_type == "STUN":
-            self.stun = effect
-            print(self.name, " Stunned for: ", self.stun, " rounds")
+            self.stun = self.stun + effect
+            print(self.name, " Stunned for: ", effect, "total:", self.stun, " rounds")
         if effect_type == "KILL":
             if effect == "En Loss" or effect == "E S":
                 print(self.name, " Killed!")
@@ -130,7 +130,7 @@ class CreatureAction(CreatureAdvBase):
 
     #def multiattack(self, verbose=0, assess=0):
     def multiattack(self, verbose=1, assess=0):	
-        print(self.name, "is multiattacking") #attack all at once - 6 at once? if more than 2 worth it maybe
+        print(self.name, "is multiattacking", self.stun) #attack all at once - 6 at once? if more than 2 worth it maybe
         extra_attacks = 0
         slugfest = 1		
         damage_rank = self.srank
@@ -169,12 +169,12 @@ class CreatureAction(CreatureAdvBase):
         if 'Initiative' in opponent.defense['Ability']:
             initiative_condition = 1
             print('have an initiative condition')			            
-            self.initiativeFASERIP = 0
+            #self.initiativeFASERIP = 0 #to check below branch worked
             print(opponent.defense['Ability'])			            
         for key in faserip.keys():
-            print(key)			            
+            #print(key)			            
             if key in opponent.defense['Ability']:
-                print("has a defensive ability")			                
+                print("has a defensive ability", self.name, self.initiativeFASERIP, opponent.name, opponent.initiativeFASERIP)			                
                 if initiative_condition == 1 and self.initiativeFASERIP < opponent.initiativeFASERIP: #need to know the roll??
                     result_needed_index = faserip_index[opponent.defense['Ability'][key].split(';')[0]]
                     if key == "I":
@@ -198,7 +198,7 @@ class CreatureAction(CreatureAdvBase):
                         return
                 else:				
                     pass
-        #want to find damage rank
+        #want to find damage rank #more sophisticated version has resistances as well
         body_armour_rank = opponent.body_armour["Physical"]
         if self.alt_attack['energy'] == 1:
             body_armour_rank = opponent.body_armour["Energy"]		

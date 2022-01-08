@@ -5,9 +5,9 @@ arenaDangerRoom = Encounter(Creature.load("Cyclops"), Creature.load("Nightcrawle
 #arenaDangerRoomNA = Encounter(Creature.load("Cyclops NA"), Creature.load("Corsair NA"))
 #arenaDangerRoomEarly = Encounter(Creature.load("Cyclops Early"), Creature.load("Corsair NA"))
 
-print(arenaDangerRoom.go_to_war(1))
+#print(arenaDangerRoom.go_to_war(1))
 #print(arenaDangerRoom.go_to_war(10))
-#print(arenaDangerRoom.go_to_war(100))
+print(arenaDangerRoom.go_to_war(100))
 #print(arenaDangerRoom.go_to_war(500))
 #print(arenaDangerRoom.go_to_war(1000))
 #print(arenaDangerRoom.go_to_war(2000))
