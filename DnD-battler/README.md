@@ -28,6 +28,10 @@ These now have Powers, Equipment, Talents, Contacts columns with _Adj_ and _Rank
 - If you want to simulate a -4 CS multiattack on everyone at once - set mook = 1 for one side and leave zero on the other.  To turn off, have everyone be mooks.
     - still need a mode where can attack, say in groups of 6 at any given time.
 
+- Code is a work in progress, so breaking changes will happen to abilities in the CSV and old runtest* files.  Copy the latest version into the bestiaryFASERIP to run in that case.
+- If stuck, open an issue, or ask on the blog if you prefer.  Probably notice here more quickly
+
+
 # Documentation
 This module allows the simulation of a FASERIP encounter.
 It has three main classes:  Dice (and its derivatives), Character, Encounter. 
