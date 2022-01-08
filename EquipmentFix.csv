@@ -221,7 +221,7 @@ Protection None,Body Armour
 Skin Armor Ty protection vs. Blunt,Body Armour
 "Sound Carapace Am material, creates Solid Sound with the following stunts",Body Armour
 Ablative Armor Any damage that penetrates the regular body armor is reduced by -1cs by the Ablative Armor.,Body Armour:1
-"Armor In protection vs. Heat, Cold, Energy and Radiation. Am protection vs. Physical attacks. Raises Strength and Endurance to Mn and health to 210",Body Armour:Am;Resist:Heat;Resist:Cold;Resist:Energy;Resist:Radiation;Ability Boost:SMn
+"Armor In protection vs. Heat, Cold, Energy and Radiation. Am protection vs. Physical attacks. Raises Strength and Endurance to Mn and health to 210",Body Armour:Am;Resist:Fire;Resist:Cold;Resist:Energy;Resist:Radiation;Ability Boost:SMn
 "Battle Armor CL1000 material, Am protection vs. Physical and Energy",Body Armour:Am-Am
 "Battlesuit (Human-size) Am protection vs. Physical and Energy, When wearing it, he has these abilities",Body Armour:Am-Am
 Body Resistance Am protection vs. Physical and Energy. The armor is vulnerable to Corrosives and receives -1cs in resistance.,Body Armour:Am-Am
@@ -704,7 +704,7 @@ Incendiary Grenade Ty intensity,Energy Area:Fire
 "Napalm Gel Packs (x3) In Energy, 1 area, Gd fire burns until put out.",Energy Area:Fire
 Gamma Grenades Am damage to an entire area,Energy Area:Gamma
 "Gamma Blades Floating probes generate a stationary defensive field that does Mn Radiation, capable of penetrating M body armor or material with no damage reduction. Field is large enough to surround a single individual and will damage anyone passing into or striking the field.",Energy Area:Gamma Blades
-"Heat-Seeking Missiles Locks onto the highest heat source ahead of it. The missile turns with the heat sources, but may be side tracked by a more powerful source of heat. The missile deals In damage to all in target area.",Energy Area:Heat
+"Heat-Seeking Missiles Locks onto the highest heat source ahead of it. The missile turns with the heat sources, but may be side tracked by a more powerful source of heat. The missile deals In damage to all in target area.",Energy Area:Fire
 EM Field Generator Summons Mn intensity lightning from the atmosphere into any target within the same area as the generator. The process takes 1-10 rounds depending on atmospheric conditions. The effect also produces an electronics negating electromagnetic pulse that shuts down electrical devices in the target area with Mn intensity. Clings to the target with In strength.,Energy Area:Lighting
 "Explosive Disks (x6) Gd material, Rm damage to 1 area",Energy Area:Rm-Gd
 "Exploding Balls Gd Edge in 1 area, can be thrown up to 3 areas",Energy Area;Edged
@@ -846,11 +846,11 @@ Lightning Beam Am Electrical or stuns opponents with In ability at a range of 3 
 "Super-Acetylene Torch Mode Rm Flame, 2 areas",Energy Blast:Flame
 "Blaster Gauntlets In Force or Energy, 7 areas",Energy Blast:Force Blast
 "Electromagnetic Bolt Gun In Energy or Force, 10 areas",Energy Blast:Force Blast
-Heat Beam Am,Energy Blast:Heat
-"Heat Beams Mn Heat, 6 areas",Energy Blast:Heat
-"Heat Blasts In Energy, 10 areas",Energy Blast:Heat
-Heat Ray Am,Energy Blast:Heat
-"Setting Four (Flesh) Am intensity burns to living beings. Further, those victims who fail an Endurance FEAT each turn thereafter fall unconscious from the shock of their wounds.",Energy Blast:Heat
+Heat Beam Am,Energy Blast:Fire
+"Heat Beams Mn Heat, 6 areas",Energy Blast:Fire
+"Heat Blasts In Energy, 10 areas",Energy Blast:Fire
+Heat Ray Am,Energy Blast:Fire
+"Setting Four (Flesh) Am intensity burns to living beings. Further, those victims who fail an Endurance FEAT each turn thereafter fall unconscious from the shock of their wounds.",Energy Blast:Fire
 Mystical Energy Blasts Un Force or Energy. This power is capable of slaying true Immortals.,Energy Blast:Immortal Killer;Force Blast
 Light Beam Mn intensity,Energy Blast:Light
 Light Burst Mn Blinding,Energy Blast:Light
@@ -1485,8 +1485,8 @@ Emergency Medical system Provide In medical care healing up to 40 points of dama
 First-Aid Kit Rm,Healing
 Health 18,Health
 "Energy Leecher Gd material, Sonic can fire an Energy Leecher up to 5 areas that drains 10 points of Health from a victim that it has latched onto with Ex ability. The victim must make a Red Endurance FEAT vs. death.",Health Drain
-"Heat Generation After the first round that Scorcher has begun using his flame projectors, he can begin to heat up the surface of his suit. After one round, anyone grabbing the suit on a Partial Hold takes Gd Heat damage and Ex damage on a Full Hold result. After 2 rounds, these damage ranks increase +1cs and anyone punching the suit takes Gd damage. After 3 rounds, the heat inflicts Rm damage on a Partial Hold, In on a Full Hold and Ex damage to anyone punching him. When the suit becomes this hot, suddenly cooling the suit, including by extinguishing his flame with large amounts of water, will cause the suit to crack (Body Armor reduced -1cs) and shatter his helmet. Extinguishing his fire in this way leaves him unable to use his flame projectors for 1-10+2 rounds.",Heat Generation
-Heat of the Sun CL1000 Heat,Heat Generation
+"Heat Generation After the first round that Scorcher has begun using his flame projectors, he can begin to heat up the surface of his suit. After one round, anyone grabbing the suit on a Partial Hold takes Gd Heat damage and Ex damage on a Full Hold result. After 2 rounds, these damage ranks increase +1cs and anyone punching the suit takes Gd damage. After 3 rounds, the heat inflicts Rm damage on a Partial Hold, In on a Full Hold and Ex damage to anyone punching him. When the suit becomes this hot, suddenly cooling the suit, including by extinguishing his flame with large amounts of water, will cause the suit to crack (Body Armor reduced -1cs) and shatter his helmet. Extinguishing his fire in this way leaves him unable to use his flame projectors for 1-10+2 rounds.",Fire Generation
+Heat of the Sun CL1000 Heat,Fire Generation
 Hyper-Digging Gd landspeed through Gd material (soil and light rock),Hyper-Digging
 Tunneling device In digging,Hyper-Digging
 Hyper-Leaping Rm,Hyper-Leaping
@@ -1801,14 +1801,14 @@ Air Bag 1 time cushioning of impact if Slammed more than 5 Areas (or that Speed 
 "Fire Suppressant Am intensity, 1 area range, area effect",Resist:Fire
 "Resistance to Toxins Lang’s helmet has a retractable plexiglass facemask which, when sealed, provides Ex protection vs. Gases.",Resist:Gas
 Resistance Mn ability to counter adhesives.,Resist:Grappling
-Resistance to Heat Un,Resist:Heat
-Insulated Gd protection vs. Heat and Cold,Resist:Heat;Resist:Cold
-Invulnerability to Heat and Cold Un,Resist:Heat;Resist:Cold
-Resistance to Heat and Cold Am,Resist:Heat;Resist:Cold
-Self-Regulation In protection vs. Heat and Cold,Resist:Heat;Resist:Cold
-"Invulnerability The wielder does not age, and is invulnerable to Disease, Radiation, Heat and Cold.",Resist:Heat;Resist:Cold;Resist:Aging;Resist:Disease;Resist:Radiation
-"Invulnerablities Am to physical, heat, cold, radiation, toxins, aging & disease. Ty vs. energy",Resist:Heat;Resist:Cold;Resist:Aging;Resist:Disease;Resist:Radiation;Resist:Poison
-"Resistance to Heat, Cold, Fire, Radiation and airborn Toxins Mn",Resist:Heat;Resist:Cold;Resist:Radiation;Resist:Poison
+Resistance to Heat Un,Resist:Fire
+Insulated Gd protection vs. Heat and Cold,Resist:Fire;Resist:Cold
+Invulnerability to Heat and Cold Un,Resist:Fire;Resist:Cold
+Resistance to Heat and Cold Am,Resist:Fire;Resist:Cold
+Self-Regulation In protection vs. Heat and Cold,Resist:Fire;Resist:Cold
+"Invulnerability The wielder does not age, and is invulnerable to Disease, Radiation, Heat and Cold.",Resist:Fire;Resist:Cold;Resist:Aging;Resist:Disease;Resist:Radiation
+"Invulnerablities Am to physical, heat, cold, radiation, toxins, aging & disease. Ty vs. energy",Resist:Fire;Resist:Cold;Resist:Aging;Resist:Disease;Resist:Radiation;Resist:Poison
+"Resistance to Heat, Cold, Fire, Radiation and airborn Toxins Mn",Resist:Fire;Resist:Cold;Resist:Radiation;Resist:Poison
 "Aviator Shades Ty material, Gd protection vs. Blinding",Resist:Light
 "Blind Blindfold has no eyes and is unaffected by light-based attacks, illusions, and hypnosis.",Resist:Light
 "Blindness Milla is blind and is unaffected by light-based attacks, illusions, and hypnosis.",Resist:Light
@@ -1819,9 +1819,9 @@ Polarized Lenses In protection vs. Blinding attacks,Resist:Light
 "Protected Vision While wearing the goggles, Chance is immune to most sight-based attacks unless such attacks can be controlled by television.",Resist:Light
 Protection from Sunlight Rm,Resist:Light
 Magical Protection Mn protection vs. Eldritch Magic,Resist:Magic
-Anti-Psionic Helmet This device enables him to employ the following powers:,Resist:mental
+Anti-Psionic Helmet This device enables him to employ the following powers:,Resist:Mental
 Cybernetic Controls Gd protection vs. Psychic attacks,Resist:Mental
-Helmet Am protection vs. Psionic attacks,Resist:mental
+Helmet Am protection vs. Psionic attacks,Resist:Mental
 Psionic Scrambler Mn resistance vs. psionics,Resist:Mental
 Resistance to Mind Control In protection vs. Mind Control,Resist:Mental
 Resistance to Psionic attacks Ex,Resist:Mental

@@ -1,0 +1,138 @@
+                        power_rank = ""
+                        for key in dict_faserip.keys():  #check for Ranks in data
+                            if key in plist[1]:
+                                power_rank = power_rank + key + ";"
+                        newFASERIP['Equipment_Rank'][plist[0]] = power_rank
+                        
+            ### adding in the simplified powers for simulations
+                for power in newFASERIP['Equipment'].keys():
+                    #print(power)
+                        for key in power_dict.keys():
+                            #print(power, key)
+                            if key == power + " " + newFASERIP['Equipment'][power]:
+                                #print("found power")
+                                power2 = power_dict[key]
+                                if ';' in str(power2):
+                                    newpowers = power2.split(';')
+                                    if len(newpowers) > 1:
+                                        for npr in newpowers:
+                                            newFASERIP['Equipment_Adj'][npr] = "Testing Multi"
+                                    else:
+                                        newFASERIP['Equipment_Adj'][newpowers] = 1
+                                else:
+                                    newFASERIP['Equipment_Adj'][power2] = "Testing One Only"
+                                break
+                        else:  #non-unique, use this version as is
+                             newFASERIP['Equipment_Adj'][power] = newFASERIP['Equipment'][power]
+                                    
+            if 1 == 1:        
+
+                power_index = 0
+                power_rank_list = list(newFASERIP['Equipment_Rank'][k] for k in newFASERIP['Equipment_Rank'].keys())
+                #print(power_rank_list)
+                countmulti = 0
+
+                for index, key in enumerate(newFASERIP['Equipment_Adj'].keys()):
+                    #print(index, key, newFASERIP['Equipment_Adj'][key])
+                    #print("PI", power_index)
+                    #if none in rank - problem - assign "PROBLEM??"
+                    #if only one in rank - give to all
+                    #first power most likely the common string one
+                    if "Testing" not in newFASERIP['Equipment_Adj'][key]:
+                        #print("non unique", countmulti)
+                        if countmulti > 0:
+                            power_index = power_index + 1
+
+                        newFASERIP['Equipment_Adj_Rank'][key] = power_rank_list[power_index]
+
+                        power_index = power_index + 1
+                        countmulti = 0
+                    else:
+                        if 'Testing One Only' in newFASERIP['Equipment_Adj'][key]:
+                            #print("single unique", countmulti)
+                            if countmulti > 0:
+                                power_index = power_index + 1
+
+                            newFASERIP['Equipment_Adj_Rank'][key] = power_rank_list[power_index]
+                            power_index = power_index + 1
+                            countmulti = 0
+                        else:
+                            #loop through the consecutive multis in the list
+                            ranklist = power_rank_list[power_index].split(';')
+                            #print("ranklistcheck", ranklist)
+                            del ranklist[-1]
+                            #print("lenrank:", len(ranklist), "ranklist:", ranklist, countmulti)
+                            countmulti += 1
+                            if len(ranklist) > 0:
+                                if countmulti > len(ranklist):
+                                    userank = ranklist[len(ranklist)-1]
+                                else:
+                                    userank = ranklist[countmulti - 1]
+                                newFASERIP['Equipment_Adj_Rank'][key] = userank
+                            else:
+                                newFASERIP['Equipment_Adj_Rank'][key] = ''
+
+                            continue
+                        
+                    #if len(ranklist) > 0 #"found multiple ranks in data, assign first"
+                        
+
+
+                newFASERIP['Equipment']['Body Armour'] = newFASERIP['Equipment']['Body Armor']
+                newFASERIP['Equipment_Rank']['Body Armour'] = newFASERIP['Equipment_Rank']['Body Armor']
+                newFASERIP['Equipment_Adj']['Body Armour'] = newFASERIP['Equipment_Adj']['Body Armor']
+                newFASERIP['Equipment_Adj_Rank']['Body Armour'] = newFASERIP['Equipment_Adj_Rank']['Body Armor']
+
+
+            if "Blunt" in newFASERIP['Powers_Adj_Rank']
+                newFASERIP['Attack']['Blunt']['S'] = newFASERIP['Powers_Adj_Rank']['Blunt']
+            if "Blunt" in newFASERIP['Equipment_Adj_Rank']:
+                newFASERIP['Attack']['Blunt']['S'] = newFASERIP['Equipment_Adj_Rank']['Blunt']
+                
+            if "Blunt Missile" in newFASERIP['Powers_Adj_Rank']:
+                newFASERIP['Attack']['Blunt']['R'] = newFASERIP['Powers_Adj_Rank']['Blunt Missile']
+            if "Blunt Missile" in newFASERIP['Equipment_Adj_Rank']:
+                newFASERIP['Attack']['Blunt']['R'] = newFASERIP['Equipment_Adj_Rank']['Blunt Missile']
+                
+            if "Blunt Area" in newFASERIP['Powers_Adj_Rank'] or "Blunt Area" in newFASERIP['Equipment_Adj_Rank']:
+                newFASERIP['Attack']['Blunt']['A'] = newFASERIP['Powers_Adj_Rank']['Blunt Area']
+            if "Blunt Area" in newFASERIP['Equipment_Adj_Rank']:
+                newFASERIP['Attack']['Blunt']['A'] = newFASERIP['Equipment_Adj_Rank']['Blunt Area']
+
+
+            if "Shooting" in newFASERIP['Powers_Adj_Rank']:
+                newFASERIP['Attack']['Shooting']['R'] = newFASERIP['Powers_Adj_Rank']['Shooting']
+            if "Shooting" in newFASERIP['Equipment_Adj_Rank']:
+                newFASERIP['Attack']['Shooting']['R'] = newFASERIP['Equipment_Adj_Rank']['Shooting']
+            
+            if "Shooting Area" in newFASERIP['Powers_Adj_Rank']:
+                newFASERIP['Attack']['Shooting']['A'] = newFASERIP['Powers_Adj_Rank']['Shooting Area']
+            if "Shooting Area" in newFASERIP['Equipment_Adj_Rank']:
+                newFASERIP['Attack']['Shooting']['A'] = newFASERIP['Equipment_Adj_Rank']['Shooting Area']
+
+            if "Energy" in newFASERIP['Powers_Adj_Rank']:
+                newFASERIP['Attack']['Energy']['S'] = newFASERIP['Powers_Adj_Rank']['Energy']
+            if "Energy Blast" in newFASERIP['Powers_Adj_Rank']:
+                newFASERIP['Attack']['Energy']['R'] = newFASERIP['Powers_Adj_Rank']['Energy Blast']
+            if "Energy Area" in newFASERIP['Powers_Adj_Rank']:
+                newFASERIP['Attack']['Energy']['A'] = newFASERIP['Powers_Adj_Rank']['Energy Area']
+            if "Energy" in newFASERIP['Equipment_Adj_Rank']:
+                newFASERIP['Attack']['Energy']['S'] = newFASERIP['Equipment_Adj_Rank']['Energy']
+            if "Energy Blast" in newFASERIP['Equipment_Adj_Rank']:
+                newFASERIP['Attack']['Energy']['R'] = newFASERIP['Equipment_Adj_Rank']['Energy Blast']
+            if "Energy Area" in newFASERIP['Equipment_Adj_Rank']:
+                newFASERIP['Attack']['Energy']['A'] = newFASERIP['Equipment_Adj_Rank']['Energy Area']
+
+
+-F: Ty6 A: Pr4 S: Ty6 E: Gd10 R: Fe2 I: Fe2 P: Fe2 
+-Health: 26 Karma: 6
+
+Costume: Silk has had practice creating a costume from her webbing in a pinch
+
+Dimensional Spells: Ex
+Faralloh: Ex
+
+
+
+
+

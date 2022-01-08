@@ -294,17 +294,17 @@ Damage Resistance All damage is -3cs	Body Armour:All
 "Husking Husk can shed her skin to morph into almost anything, she does this with Rm ability. She has to make a power FEAT to get the desired result, established power stunts are"	Body Armour:Husking
 "Ignore Opponent's Body Armor He can negate the effectiveness of an opponent's Body Armor by making a Grappling attack and using his body as a portal. Though he can't attack through it, others can. When someone is attacked this way, they only have their base Health points as opposed to their altered Heath."	Body Armour:Ignore Other
 "Energy Sheath Am protection vs. Physical, Blunt, Shooting and Edge"	Body Armour:Physical
-"Teflon Skin Pr protection vs. Physical, Rm resistance vs. Heat and Fire"	Body Armour:Resist:Heat;Resist:Fire
+"Teflon Skin Pr protection vs. Physical, Rm resistance vs. Heat and Fire"	Body Armour:Resist:Fire;Resist:Fire
 "Exo-Skeleton Mn, Armor posses an exo-skeleton, which operates at Am strength. She gan use it for numerous stunts"	Body Armour:SAm
 "Debris Body This gives her In Body Armor. It raises her Strength to Mn, health does not change"	Body Armour:SMn
 "Huntsman Malekith can convert himself into the Huntsman, an eight foot-tall warrior with Am Body Armor which adds +1cs to Strength, Fighting, and Endurance"	Body Armour;Ability Boost:F1S1E1
 Aerial Adaptaions Rm body armor against falling; Mn eyesight; can breath normally at high altitudes.	Body Armour;Enhanced Senses
 "Aerial Adaptation Rm Body Armor against falling, Mn Eyesight, Angel can breathe normally at high altitudes."	Body Armour;Enhanced Senses
-"Organic Steel This gives the Skrull Am protection vs. Physical and Energtt, Mn resistance to Heat and Cold, Ex resistance vs. Corrosives, Rm resistance vs. Electrical."	Body Armour;Resist Heat;Resist Cold;Resist:Acid;Resist:Acd
-True Invulnerability In	Body Armour;Resist:Sustenance
-"Armor Sh-Z protection vs. Physical, Shooting, Fire, Disease and Corrosives, Mn protection vs. other natural energies such as Electricity, Sonics and Am protection vs. Unusual energies such as Dark force"	Body Armour;Resistance:Fire;Resistance:Corrosive
-"Body Suit Ty protection vs. Physical and Energy, Ex protection vs. Fire and Heat, In protection vs. Electricity"	Body Armour;Resistance:Fire;Resistance:Heat;Resistance:Electricity
-"Cyborg Exoskeleton Most of the High Evolutionary's powers are derived from his protective suit which also provides its wearer with Un protection against physical attacks and Shift-Z protection from energy, psionic, or magical attacks. The other powers include"	Body Armour;Resistance:Magic;Resistance:Mental
+"Organic Steel This gives the Skrull Am protection vs. Physical and Energtt, Mn resistance to Heat and Cold, Ex resistance vs. Corrosives, Rm resistance vs. Electrical."	Body Armour;Resist Fire;Resist Cold;Resist:Acid;Resist:Acd
+True Invulnerability In	Body Armour;Life Support
+"Armor Sh-Z protection vs. Physical, Shooting, Fire, Disease and Corrosives, Mn protection vs. other natural energies such as Electricity, Sonics and Am protection vs. Unusual energies such as Dark force"	Body Armour;Resist:Fire;Resist:Acid
+"Body Suit Ty protection vs. Physical and Energy, Ex protection vs. Fire and Heat, In protection vs. Electricity"	Body Armour;Resist:Fire;Resist:Fire;Resist:Electricity
+"Cyborg Exoskeleton Most of the High Evolutionary's powers are derived from his protective suit which also provides its wearer with Un protection against physical attacks and Shift-Z protection from energy, psionic, or magical attacks. The other powers include"	Body Armour;Resist:Magic;Resist:Mental
 "Biophysical Control The Celestials have the CL1000 rank ability to alter genetics and induce mutations, whether overt or latent."	Body Transformation-Others
 "Body Alteration Rm ability to shrink another character. Shrunken characters must make a Psyche FEAT of Gd rank vs. be disoriented for 1-5 rounds. Shruken characters resume their true size in 3-30 minutes, randomly determed by the Judge and outside of China Doll's control."	Body Transformation-Others
 "Body Alteration (Others) Rm ability to melt a victim's skeletal system, so that the victim's body flows like quicksilver. Causes no real damage, but prevents the victim from exercising any muscular control for 3-30 rounds, until the effects of Waxworks' powers wear off. Waxworks has no control over how long will last."	Body Transformation-Others
@@ -828,7 +828,7 @@ Repulsor-Whips Am Edged damage with the ability to cut through Mn body armor and
 "Solar Blade Mn Energy, it has no range however does extend out 3 areas."	Edged:Energy
 Energy Swords These new powers allows him to conjure a pair of energized blades with which he can apparently cleave through anything. The blades do In Edge against an enemy; they can slice through materials with strength up to Sh-Z.	Edged:Energy;Edged;Energy
 "Energized Claw By channeling energy to his claws, Midnight can increase his claw attack by +2cs"	Edged:Energy-2
-"Heated Claws Tied to his rage, Wolverine's claws will heat up, dealing Heat damage as well with Edge when activated."	Edged:Heat
+"Heated Claws Tied to his rage, Wolverine's claws will heat up, dealing Heat damage as well with Edge when activated."	Edged:Fire
 "Melee Weapons In Edge, all 'weapons' are capable of penetrating Am defenses such as resistance and force fields."	Edged:IgnoreCover
 "Muramasa Claws Un material, Daken's wrist claws now are capable of dampening a person's healing factor, making him capable of killing people with fast healing factors, such as Wolverine."	Edged:IgnoreRegeneration
 "Psychic Knives Being the summation of her psionic energy, they do Am Energy to a living target and the target is required to make a Psyche FEAT vs. Ex intensity when a hit is scored, vs. In intensity when a stun is scored, and vs. Mn intensity when a kill is scored."	Edged:Mental
@@ -960,7 +960,7 @@ Remote Controlled Ballistic Missiles In damage to an entire area	Energy Area
 Hyper Breath Am Cold within 1 area	Energy Area:Cold
 "Napalm Generation Vindaloo produces a &#64258;ammable gel from his pores that ignites upon contact with the atmosphere, which he can then direct as explosive releases of liquid napalm up to 5 areas away, doing Am Fire"	Energy Area:Fire
 "Wall of Flames Am intensity, encircling a single area up to 2 areas away"	Energy Area:Fire
-"Heat Burst Sh-X intensity burst, up to 10 areas."	Energy Area:Heat
+"Heat Burst Sh-X intensity burst, up to 10 areas."	Energy Area:Fire
 "Hell&#64257;re Bursts Ex, Azazel can unleash hell&#64257;re in destructive bursts."	Energy Area:Hellfire
 Mini-Missiles Hidden within the shoulder is a rotative high-tech weapon that the Rhino can fire off mini-missiles that can do Rm damage within an area	Energy Area:Missile
 "Missile Lauchers Rm explosion, fired up to 5 areas"	Energy Area:Missile
@@ -1029,7 +1029,7 @@ Acidic Sweat Ability to secrete an acid-like sweat from the pores of his body. W
 "Attack Portals can open up a special portal into a particularly harmful location. This portal is extremely short lived, remaining open for only about a millisecond or so, but this is enough to inflict power rank damage to the target. The type of damage inflicted depends entirely on the place the attack portal opens up into."	Energy Blast:Attack Portal
 "Black Hole Brain CL1000, Zorn's mind acts as a Black Hole. When his helmet is on, the effects of the Black Hole do not work. Has the following power stunts:"	Energy Blast:Black Hole;Gravity Control
 "Cold Beams Am intensity cold, mounted in the eyes, 2 area range."	Energy Blast:Cold
-"Corrosive Blasts He could metabolize this acid into bluish corrosive projectile beams and shoot them from his hands, vaporizing and breaking down everything in their path in seconds. He can project the blast as a destructive blast powerful enough to demolish a concrete wall or a small amount subtle enough to change the outcome of rolling dice by weighing it down. His corrosion ability operates at Ex rank with a maximum range of 6 areas."	Energy Blast:Corrosive
+"Corrosive Blasts He could metabolize this acid into bluish corrosive projectile beams and shoot them from his hands, vaporizing and breaking down everything in their path in seconds. He can project the blast as a destructive blast powerful enough to demolish a concrete wall or a small amount subtle enough to change the outcome of rolling dice by weighing it down. His corrosion ability operates at Ex rank with a maximum range of 6 areas."	Energy Blast:Acid
 "Darkforce Beam In damage, 2 areas"	Energy Blast:Darkforce
 Darkforce Blasts Mn	Energy Blast:Darkforce
 "Pan-Dimensional Blast Mn, Shaman can release energy from his pouch to negate any extradimensionally created spell or to send back any extradimensional creature to its home plane. He can teleport himself and others using magic powder from his pouch."	Energy Blast:Dimensional
@@ -1065,14 +1065,14 @@ Flame Generation In	Energy Blast:Fire
 Solar Lance Fire a lance made of Am intensity flames up to 5 areas.	Energy Blast:Fire
 Energy or Force Blast Sh-X Energy or Force	Energy Blast:Force Blast
 "Energy Projection Am Energy or Force, 10 areas"	Energy Blast:Force Blast
-Brimstone Breath Bamfy can breathe heat-based brimstone from his maw at the Am ability	Energy Blast:Heat
-Energy Emission (Heat) Jormungard has been known to emit Un Heat Rays from its eyes	Energy Blast:Heat
-Heat Blast Mn Heat or Light	Energy Blast:Heat
-Heat Blasts Rm Heat at Rm range.	Energy Blast:Heat
-Heat Emission Am	Energy Blast:Heat
-Heat Generation Ex	Energy Blast:Heat
-Heat Ray Am	Energy Blast:Heat
-"Cosmic Blasts Am Heat, Light or Force at Am range"	Energy Blast:Heat;Force Blast:Light
+Brimstone Breath Bamfy can breathe heat-based brimstone from his maw at the Am ability	Energy Blast:Fire
+Energy Emission (Heat) Jormungard has been known to emit Un Heat Rays from its eyes	Energy Blast:Fire
+Heat Blast Mn Heat or Light	Energy Blast:Fire
+Heat Blasts Rm Heat at Rm range.	Energy Blast:Fire
+Heat Emission Am	Energy Blast:Fire
+Heat Generation Ex	Energy Blast:Fire
+Heat Ray Am	Energy Blast:Fire
+"Cosmic Blasts Am Heat, Light or Force at Am range"	Energy Blast:Fire;Force Blast:Light
 "Hellfire Rm, Ghost Rider can perform the following power stunts with Hellfire:"	Energy Blast:Hellfire
 "Hellfire Blasts Mn Energy, 5 areas"	Energy Blast:Hellfire
 "Hex-Bolts Am Energy, 3 areas"	Energy Blast:Hex
@@ -1095,8 +1095,8 @@ Eldritch Bolts Am	Energy Blast:Magic
 Microwave Emitters Mn ability to superheat matter up to 3 areas away	Energy Blast:Microwave
 Microwave Generation and Projection Mn	Energy Blast:Microwave
 "Iron Fist Projection Iron Fist can project this power up to one area away, but the damage is -1cs. He cannot use this form of Iron Fist more than once per day. Alternately he can choose to infuse thrown weapons with this power doing Base Damage + Iron Fist intensity."	Energy Blast:Once
-Fireworks Jubilee is able to generate and control energy globules that can inflict up to Am Plasma damage and emit Rm Light and Heat within 3 areas. Has the following power stunts	Energy Blast:Plasma;Energy Blast:Heat
-"Radiation/Heat Bolts Un Energy, 10 areas"	Energy Blast:Radiation;Energy Blast:Heat
+Fireworks Jubilee is able to generate and control energy globules that can inflict up to Am Plasma damage and emit Rm Light and Heat within 3 areas. Has the following power stunts	Energy Blast:Plasma;Energy Blast:Fire
+"Radiation/Heat Bolts Un Energy, 10 areas"	Energy Blast:Radiation;Energy Blast:Fire
 Soulfire Rm intensity	Energy Blast:Soulfire
 Psionic Spear Famine can create spears made of In Energy and fire them up to 10 areas	Energy Blast:Spear
 "Power Blasts Un, Raise a single ability score (her or anothers) to Un for 1-10 rounds. If the ability is Un already, it may be raised to Sh-X on a Yellow FEAT"	Energy Blast;Ability Boost:Power-Un
@@ -1435,7 +1435,7 @@ Windblast Am Shockwave directed against a single target 1 area away	Force Blast:
 Spray Ex blast of ash	Force Blast:Ash
 Cold Projection In intensity	Force Blast:Cold
 Mystic Force Bolts Un	Force Blast:Eldritch
-"Energy Bolts In Force, Energy or Heat, 3 areas"	Force Blast:Heat
+"Energy Bolts In Force, Energy or Heat, 3 areas"	Force Blast:Fire
 Ice Blast Sh-X from his hands.	Force Blast:Ice
 Icicle Blast Rm Edge	Force Blast:Ice
 "Snowball or Iceballs In Blunt, up to 3 areas"	Force Blast:Ice
@@ -1641,10 +1641,10 @@ Mind Drain Ex	Health Drain
 Younger Self Decay can absorb enough Health from others to to reduce his apparent age and raise all his listed physical attributes by 1 rank along with the corresponding health increase.	Health Drain
 Health-Drain Aura Gd ability to absorb Health from opponents in the same area. Victim's can avoid losing Health by making a successful Endurance FEAT vs. Gd intensity	Health Drain Area
 "Bio-Vampirism Rm, He can derive life from the blood of others with Rm ability. His bite causes Gd Edged damage"	Health Drain;Edged
-Electric Heat Electro can generate heat from his electric energy at levels up to Mn intensity.	Heat Control
-Heat CL1000	Heat Control
-"Thermokinesis Am ability to alter temperatures around her. However, she cannot simply create heat and cold; she can only rechannel temperature. These temperature manipulation powers results in the following"	Heat Control;Cold Control
-Heating/Cooling Systems He can radiate Rm rank heat or cold from his hands at 3 areas range.	Heat Generation;Cold Generation
+Electric Heat Electro can generate heat from his electric energy at levels up to Mn intensity.	Fire Control
+Heat CL1000	Fire Control
+"Thermokinesis Am ability to alter temperatures around her. However, she cannot simply create heat and cold; she can only rechannel temperature. These temperature manipulation powers results in the following"	Fire Control;Cold Control
+Heating/Cooling Systems He can radiate Rm rank heat or cold from his hands at 3 areas range.	Fire Generation;Cold Generation
 "Hyper Endurance In, he can exert himself physically for up to 24 hours before the build up of fatigue toxins in his blood starts to impair him."	Hyper endurance
 "Hyper-Digging Pr, Fe landspeed through the earth by punching her way through solid rock of up to Mn material"	Hyper-Digging
 "Interstellar Fight CL1000 airspeeds, he had not as of yet shown faster than light or warp capabilities."	Hyper-Flight;Flight
@@ -1807,7 +1807,7 @@ Headlights Ex	Light Manipulation
 "Hunger Flash Rm flash that can be seen for 15 areas. The explosions of light work on the retina, affecting parts of the brain that controls appetite. His victims take Ex damage and must make a Psyche FEAT vs. Mn intensity to do anything against hunger pangs."	Light Manipulation
 Light Rm illumination and Energy damage.	Light Manipulation;Energy Blast:Light
 Light Emmision Cerise can generate light with Mn ability and fire laser blast of Mn intensity.	Light Manipulation;Energy Blast:Light
-"Flaming Form Ex intensity light, Gd intensity heat."	Light Manipulation;Heath Manipulation
+"Flaming Form Ex intensity light, Gd intensity heat."	Light Manipulation;Fireh Manipulation
 "Dehydration Orka is in constant danger of dehydration. If not immersed in water or kept in a damp environment, he suffers a -1CS to FEATs for each hour without such water. If totally deprived of moisture, he loses one point of Health per hour. Immersion in water restores such lost Health immediately."	Limitation
 Limitation 	Limitation
 "Vulnerability He loses -1cs Strength, Fighting and Endurance for every week spend away from his swamp. If his strength drops to Fe, he becomes comatose until returned to his normal environment."	Limitation
@@ -2013,10 +2013,10 @@ Control over the dead of Niffleheim and Hel CL3000 Mind Control.	Necromancy
 Undead Control Un control over the lower forms of the undead.	Necromancy
 "Zombie Creation Rm, She can also re-animate a corpse with the orignal abilities and personality."	Necromancy
 Communication with the Deceased In ability to communicate telepathically with dead spirits either using their physical remains or on the astral plane	Necromancy
-Raise Dead Special Ceremony magic that can only be attempted once on each corpse. A successful Psyche FEAT roll is needed for completion.	Necromancy:1
-Temporary Resurection Am ability to resurrect the recently deceased as zombies or ghosts	Necromancy:1
-"Necromancy Mn, The Black Talon can create zombies. To do so, Black Talon must perform a mystical ceremony in the presence of the corpse to be reanimated. As many as 20 zombies may be created at one time. A zombie created from a normal man has the following stats:"	Necromancy:20
-1	None
+Raise Dead Special Ceremony magic that can only be attempted once on each corpse. A successful Psyche FEAT roll is needed for completion.	Necromancy
+Temporary Resurection Am ability to resurrect the recently deceased as zombies or ghosts	Necromancy
+"Necromancy Mn, The Black Talon can create zombies. To do so, Black Talon must perform a mystical ceremony in the presence of the corpse to be reanimated. As many as 20 zombies may be created at one time. A zombie created from a normal man has the following stats:"	Necromancy
+1	NeedToFix
 Non-Ferrous Manipulation Mn	Non-Magnetic Manipulation
 Dilate Power Am ability to place “psychic inhibitors” in the minds of mutant adversaries to prevent them from using their powers.	Nullifying Power
 "Power Block Un, Kaidan has the ability to block the use of a target’s power through mental blocks. However, this does not alter one’s appearance"	Nullifying Power
@@ -2235,9 +2235,9 @@ Resist Cold Ex	Resist:Cold
 Resistance to Cold In	Resist:Cold
 Resistance to cold Ex	Resist:Cold
 Resistance To Cold Ex	Resist:Cold
-"Natural Invulnerability to space The Acanti (and their insides) are invulnerable to the cold and pressures of space. It is not known if they eat or what, but it is presumed that they somehow absorb cosmic or solar energy to sustain themselves."	Resist:Cold;Resist Pressure
-"Invulnerable to Cold, Heat, Fire and Disease CL1000"	Resist:Cold;Resist:Heat;Resist:Fire;Resist:Disease
-"Invulnerable to Cold, Heat, Fire, Radiation and Disease Un"	Resist:Cold;Resist:Heat;Resist:Fire;Resist:Disease;Resist:Radiation
+"Natural Invulnerability to space The Acanti (and their insides) are invulnerable to the cold and pressures of space. It is not known if they eat or what, but it is presumed that they somehow absorb cosmic or solar energy to sustain themselves."	Resist:Cold;Resist:Pressure
+"Invulnerable to Cold, Heat, Fire and Disease CL1000"	Resist:Cold;Resist:Fire;Resist:Fire;Resist:Disease
+"Invulnerable to Cold, Heat, Fire, Radiation and Disease Un"	Resist:Cold;Resist:Fire;Resist:Fire;Resist:Disease;Resist:Radiation
 "Immune to Spider-Sense Like all Spider-Clones, Spidercide is immune to Spider-Man's Spider-Sense. Therefore, Spidercide can blindside Spider-Man or the Scarlet Spider"	Resist:Combat Sense
 Resistance to Darkness In resistance to Darkness and related attacks.	Resist:Darkness
 "Disease Immunity Using his power to manipulate his muscle tissue, Electro can use high amounts of electricity to ""burn out"" forms of disease. This ability can burn out almost any disease from his body, up to and including cancer."	Resist:Disease
@@ -2254,7 +2254,7 @@ Resistance to Disease Un	Resist:Disease
 Resistance to Diseases Un	Resist:Disease
 "Cyborg Construction Much of Midnight’s original body has been replaced with bionic components. These parts are immune to disease and have Am material strength. As these components are often interlaced with human tissue and connected to his central nervous system, he can still feel pain. This half-robot construction affords Midnight a unique form of body armor. Against attacks of Rm or less, Midnight’s Body Armor is Ex. Against attacks in excess of Rm, his Body Armor is Rm. This reflects the fact that attacks of varying intensity will do about the same amount of damage to his human tissue. Throughout his existence as a cyborg, his components have been modified several times to allow him to produce the following effects:"	Resist:Disease
 Invulnerability to Disease and Cold Cl1000	Resist:Disease;Resist:Cold
-"Immune to Disease, Gas, Heat, Cold and Extreme Pressure Cl1000"	Resist:Disease;Resist:Gas;Resist:Heat;Resist:Cold;Resist:Pressure
+"Immune to Disease, Gas, Heat, Cold and Extreme Pressure Cl1000"	Resist:Disease;Resist:Gas;Resist:Fire;Resist:Cold;Resist:Pressure
 Immune to Disease and Toxin CL1000	Resist:Disease;Resist:Poison
 Immune to Disease and Toxins Un	Resist:Disease;Resist:Poison
 Immune to Toxins and Diseases Un	Resist:Disease;Resist:Poison
@@ -2276,7 +2276,7 @@ Resistance to Electrical Mn	Resist:Electrical
 "Resistance to Electricity Mn protection from electricity, regardless of his current material strength."	Resist:Electrical
 Invulnerability to Electricity CL1000 protection vs. Electricity	Resist:Electrical
 "Resistance to Energy, except magic attacks CL1000"	Resist:Energy
-"Resistance to Energy, Heat and Fire CL1000"	Resist:Energy;Resist:Heat;Resist:Fire
+"Resistance to Energy, Heat and Fire CL1000"	Resist:Energy;Resist:Fire;Resist:Fire
 "Metabolism Boost By bolstering his metabolism with cosmic energy, he does not tire from exertion."	Resist:Exertion
 "Inexhaustible If defeated, they will lay as dead for 3 rounds, then rise up and begin fighting again. Karma is granted as normal for defeating them"	Resist:Exertion
 Resistance to falling Up to 50 ft	Resist:Falling
@@ -2289,49 +2289,49 @@ Trance Immunity to Fire	Resist:Fire
 Trance - Immunity to Fire (Automatic)	Resist:Fire
 Dampen Flames In ability.	Resist:Fire
 "Flame/Ice Corona CL1000 resistance to Fire/Heat and Ice/Cold. He is not resistant to the physical effects of solid ice (such as loss of traction), but normal temperatures and hot and cold energy attacks have little effect on him. However, if attacked by Ex or greater intensity fire or ice simultaneously, Equinox’s thermodynamic energy erupts in a Rm Force explosion that affects everything in the area. The Flame Corona melts any material in contact with it of less than Ex material strength"	Resist:Fire;Resist:ColdCL1000
-Immune to Flame and Heat Ex	Resist:Fire;Resist:Heat
-Invulnerability to Fire CL1000	Resist:Fire;Resist:Heat
-"Invulnerability to Heat, Fire and Cold Mn"	Resist:Fire;Resist:Heat;Resist:Cold
+Immune to Flame and Heat Ex	Resist:Fire;Resist:Fire
+Invulnerability to Fire CL1000	Resist:Fire;Resist:Fire
+"Invulnerability to Heat, Fire and Cold Mn"	Resist:Fire;Resist:Fire;Resist:Cold
 Immune to Gases and Toxins The field is impervious to all harmful gases and toxins while allowing Blue Shield to breathe normally.	Resist:Gas;Resist:Poison
 Partial Immunity Cyclops is immune to Havok's powers	Resist:Havok
 "Partial Invulnerability Cyclops cannot be hurt by the reflection of his own Optic Blast or by the energy blasts of his brother, Havok. He can be Stunned or Slammed by these beams."	Resist:Havok
-Reistance to Heat Am	Resist:Heat
-Resistance to Heat Mn	Resist:Heat
-Resistance to Heat and Cold Am resistance	Resist:Heat;Resist Cold
-Insulated Gd protection vs. Heat and Cold	Resist:Heat;Resist:Cold
-Invulnerability to Heat and Cold Un	Resist:Heat;Resist:Cold
-Invulnerable to Cold and Heat Un	Resist:Heat;Resist:Cold
-Invulnerable to Heat and Cold CL1000	Resist:Heat;Resist:Cold
-"Invulnerable to Energy, Heat and Radiation Energy damage above Un will damage the suit, and he cannot survive for long without it."	Resist:Heat;Resist:Cold;Resist:Radiation
-"Invulnerable to Heat, Cold, Energy, Electricity, Radiation, Toxins, Disease and Aging Un"	Resist:Heat;Resist:Cold;Resist:Radiation;Resist:Energy;Resist:Poison:Resist:Disease;Resist:Aging
-Invulnerability to Heat and Fire Un	Resist:Heat;Resist:Fire
-Invulnerability to Heat and Flame CL1000	Resist:Heat;Resist:Fire
-"Invulnerability to Heat, Cold, Electricity, Radiation Toxins and Diseases CL1000"	Resist:Heat;Resist:Fire
-Invulnerable to Heat and Flame CL1000	Resist:Heat;Resist:Fire
-Invulneralbility CL1000 protection vs. Heat and Fire	Resist:Heat;Resist:Fire
-Resistance to Fire and Heat Mn	Resist:Heat;Resist:Fire
-Resistance to Flame and Heat Mn	Resist:Heat;Resist:Fire
-Resistance to Heat and Fire Mn	Resist:Heat;Resist:Fire
-Resistance to Heat and Flame Am	Resist:Heat;Resist:Fire
-"Resistance to Fire, Cold, Heat and Corrosives Rm"	Resist:Heat;Resist:Fire;Resist:Acid
-"Resistance to Fire, Toxins and Corrosives Un, Am outside of Asgard"	Resist:Heat;Resist:Fire;Resist:Acid
-"Resistance to Fire, Cold, Toxins, Corrosives and Disease Un, Am outside Asgard"	Resist:Heat;Resist:Fire;Resist:Acid;Resist:Disease
-"Invulnerability to Heat, Cold, Disease, Corrosives, Toxins and Radiation CL1000"	Resist:Heat;Resist:Fire;Resist:Acid;Resist:Poison;Resist:Radiation
-"Resistance to Cold, Heat, Fire and Disease In"	Resist:Heat;Resist:Fire;Resist:Cold;Resist:Disease
-"Resistance to Cold, Heat, Fire, and Disease Un"	Resist:Heat;Resist:Fire;Resist:Cold;Resist:Disease
-"Resistances Un resistance to Cold, Heat, Fire, and Disease. Extreme temperatures or lack of oxygen can force him to go into a coma-like hibernation state until more hospitable conditions return."	Resist:Heat;Resist:Fire;Resist:Cold;Resist:Disease
-"Resistance to Heat, Cold and Radiation Am"	Resist:Heat;Resist:Fire;Resist:Cold;Resist:Radation
-"Resistance to Heat, Cold, and Radiation Mn"	Resist:Heat;Resist:Fire;Resist:Cold;Resist:Radation
-"Resistance to Heat, Fire, Cold and Radiation In"	Resist:Heat;Resist:Fire;Resist:Cold;Resist:Radation
-"Resistance to Heat, Cold, Fire, Disease and Radiation CL1000"	Resist:Heat;Resist:Fire;Resist:Cold;Resist:Radation;Resist:Disease
-"Resistance to Fire, Cold and Toxins Un"	Resist:Heat;Resist:Fire;Resist:Poison
+Reistance to Heat Am	Resist:Fire
+Resistance to Heat Mn	Resist:Fire
+Resistance to Heat and Cold Am resistance	Resist:Fire;Resist Cold
+Insulated Gd protection vs. Heat and Cold	Resist:Fire;Resist:Cold
+Invulnerability to Heat and Cold Un	Resist:Fire;Resist:Cold
+Invulnerable to Cold and Heat Un	Resist:Fire;Resist:Cold
+Invulnerable to Heat and Cold CL1000	Resist:Fire;Resist:Cold
+"Invulnerable to Energy, Heat and Radiation Energy damage above Un will damage the suit, and he cannot survive for long without it."	Resist:Fire;Resist:Cold;Resist:Radiation
+"Invulnerable to Heat, Cold, Energy, Electricity, Radiation, Toxins, Disease and Aging Un"	Resist:Fire;Resist:Cold;Resist:Radiation;Resist:Energy;Resist:Poison:Resist:Disease;Resist:Aging
+Invulnerability to Heat and Fire Un	Resist:Fire;Resist:Fire
+Invulnerability to Heat and Flame CL1000	Resist:Fire;Resist:Fire
+"Invulnerability to Heat, Cold, Electricity, Radiation Toxins and Diseases CL1000"	Resist:Fire;Resist:Fire
+Invulnerable to Heat and Flame CL1000	Resist:Fire;Resist:Fire
+Invulneralbility CL1000 protection vs. Heat and Fire	Resist:Fire;Resist:Fire
+Resistance to Fire and Heat Mn	Resist:Fire;Resist:Fire
+Resistance to Flame and Heat Mn	Resist:Fire;Resist:Fire
+Resistance to Heat and Fire Mn	Resist:Fire;Resist:Fire
+Resistance to Heat and Flame Am	Resist:Fire;Resist:Fire
+"Resistance to Fire, Cold, Heat and Corrosives Rm"	Resist:Fire;Resist:Fire;Resist:Acid
+"Resistance to Fire, Toxins and Corrosives Un, Am outside of Asgard"	Resist:Fire;Resist:Fire;Resist:Acid
+"Resistance to Fire, Cold, Toxins, Corrosives and Disease Un, Am outside Asgard"	Resist:Fire;Resist:Fire;Resist:Acid;Resist:Disease
+"Invulnerability to Heat, Cold, Disease, Corrosives, Toxins and Radiation CL1000"	Resist:Fire;Resist:Fire;Resist:Acid;Resist:Poison;Resist:Radiation
+"Resistance to Cold, Heat, Fire and Disease In"	Resist:Fire;Resist:Fire;Resist:Cold;Resist:Disease
+"Resistance to Cold, Heat, Fire, and Disease Un"	Resist:Fire;Resist:Fire;Resist:Cold;Resist:Disease
+"Resistances Un resistance to Cold, Heat, Fire, and Disease. Extreme temperatures or lack of oxygen can force him to go into a coma-like hibernation state until more hospitable conditions return."	Resist:Fire;Resist:Fire;Resist:Cold;Resist:Disease
+"Resistance to Heat, Cold and Radiation Am"	Resist:Fire;Resist:Fire;Resist:Cold;Resist:Radation
+"Resistance to Heat, Cold, and Radiation Mn"	Resist:Fire;Resist:Fire;Resist:Cold;Resist:Radation
+"Resistance to Heat, Fire, Cold and Radiation In"	Resist:Fire;Resist:Fire;Resist:Cold;Resist:Radation
+"Resistance to Heat, Cold, Fire, Disease and Radiation CL1000"	Resist:Fire;Resist:Fire;Resist:Cold;Resist:Radation;Resist:Disease
+"Resistance to Fire, Cold and Toxins Un"	Resist:Fire;Resist:Fire;Resist:Poison
 "Ignore Resistance He may slam or stun opponents whose Endurance is greater than his strength. He may even totally ignore the effects of armor, resistance, or invulnerability of he makes a Psyche FEAT roll."	Resist:Ignore Other
 Heartless T-Ray's heart was somehow torn out by Deadpool years ago but apparently he cheated death. T-Ray is now unaffected by direct Kill results although loss of enough health may still kill him. He does however gets +3CS to Endurance regarding checks for survival.	Resist:Kill-3
 "Helmet Rm protection for vision and hearing, sealed with 3 hours air supply."	Resist:Light
 Resistance to Light Rm resistance to Light and related attacks.	Resist:Light
 Resistance to Magic Un	Resist:Magic
 Hypnotic Masking Acts as an Am Psi-Screen	Resist:Menal
-"Human Drug M When synthesized into pill form, this flower can heal diseases of the mind in humans at Am rank."	Resist:mental
+"Human Drug M When synthesized into pill form, this flower can heal diseases of the mind in humans at Am rank."	Resist:Mental
 Immune to Psionics Rm	Resist:Mental
 Immunity Am immunity to any form of memory alteration	Resist:Mental
 Immunity to Possesion and other forms of control CL1000	Resist:Mental
@@ -2373,8 +2373,8 @@ Invulnerability to Radiation CL1000	Resist:Radiation
 "Invulnerability to Physical, Energy, Heat, Cold, Radiation, Toxins, Aging and Disease Am"	Resist:Radiation;Resist:Disease;Resist:Poison;Resist:Fire;Resist:Fire;Resist:Cold;Resist:Energy
 "Invulnerablity CL1000 resistance to Fire, Heat Cold, Radiation, Toxins and Disease"	Resist:Radiation;Resist:Disease;Resist:Poison;Resist:Fire;Resist:Fire;Resist:Cold;Resist:Energy
 "Invulnerablities Ex resistance to Physical, Heat, Cold, Radiation, Toxins, Aging and Disease. Ty resistance vs. Energy"	Resist:Radiation;Resist:Disease;Resist:Poison;Resist:Fire;Resist:Fire;Resist:Cold;Resist:Energy;Resist:Aging
-"Invulnerability to Fire, Heat, Cold, Radiation, Toxins and Disease Un"	Resist:Radiation;Resist:Disease;Resist:Poison;Resist:Fire;Resist:Heat
-Immunity to Heat and Radiation Mn	Resist:Radiation;Resist:Heat
+"Invulnerability to Fire, Heat, Cold, Radiation, Toxins and Disease Un"	Resist:Radiation;Resist:Disease;Resist:Poison;Resist:Fire;Resist:Fire
+Immunity to Heat and Radiation Mn	Resist:Radiation;Resist:Fire
 "Immovability When concentrating, Stonewall is considered to be held to the ground by Rm Strength. While he is doing so, he cannot move or fight, although he can speak."	Resist:Slam
 "Unmovable Bruiser can shift his center of gravity to make it more difficult to move or throw him. His Endurance increases to Am rank (no Health change) against attempts to Slam (but not Stun), throw, flip or tackle him. This FEAT also makes it harder for opponents to find leverage and Bruiser gains a +1cs to any Wresting rolls. With a Power FEAT roll on In, he can accomplish this instantly, otherwise it counts as one action/attack for that round"	Resist:Slam;Resist:Stun;Escaping
 "Invulnerability to Sonics Un protection vs. Sonic, including those of his brother Banshee and niece Siryn."	Resist:Sonics
