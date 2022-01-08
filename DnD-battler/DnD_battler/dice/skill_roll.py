@@ -27,12 +27,14 @@ class SkillRoll:
     def roll(self, advantage:Optional[int]=None) -> int:
         return self.base_roll(advantage=advantage) + self.bonuses
 		
-    def roll_initiative(self, advantage:Optional[int]=None) -> int:
+    def roll_initiative(self, fighter, advantage:Optional[int]=None) -> int:
         initiative_roll = random.randint(1,10)
         print("INIT ROLL", initiative_roll, advantage)
         if initiative_roll == 1:
+            fighter.initiativeFASERIP = initiative_roll		
             return initiative_roll  #on a 1, no modifiers
         else:
+            fighter.initiativeFASERIP = initiative_roll + advantage
             return initiative_roll + advantage
 		
 

@@ -1,5 +1,7 @@
 import random
 
+faserip = {"F":'',"A":'',"S":'',"E":'',"R":'',"I":'',"P":'',}
+
 dict_faserip={"Sh0":0,"Fb":2,"Pr":4,"Ty":6,"Gd":10,"Ex":20,"Rm":30,"In":40,"Am":50,"Mn":75,"Un":100,"ShX":150,"ShY":200,"ShZ":500,"Cl1000":1000,"Cl3000":3000,"Cl5000":5000,"Beyond":1000000000}
 
 faserip_index={"Sh0":0,"Fb":1,"Pr":2,"Ty":3,"Gd":4,"Ex":5,"Rm":6,"In":7,"Am":8,"Mn":9,"Un":10,"ShX":11,"ShY":12,"ShZ":13,"Cl1000":14,"Cl3000":15,"Cl5000":16,"Beyond":17}

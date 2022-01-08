@@ -1,9 +1,9 @@
 from DnD_battler import Creature, Encounter
 import pandas as pd
 
-arenaDangerRoom = Encounter(Creature.load("Cyclops"), Creature.load("Corsair"))
-arenaDangerRoomNA = Encounter(Creature.load("Cyclops NA"), Creature.load("Corsair NA"))
-arenaDangerRoomEarly = Encounter(Creature.load("Cyclops Early"), Creature.load("Corsair NA"))
+arenaDangerRoom = Encounter(Creature.load("Cyclops"), Creature.load("Nightcrawler"))
+#arenaDangerRoomNA = Encounter(Creature.load("Cyclops NA"), Creature.load("Corsair NA"))
+#arenaDangerRoomEarly = Encounter(Creature.load("Cyclops Early"), Creature.load("Corsair NA"))
 
 print(arenaDangerRoom.go_to_war(1))
 #print(arenaDangerRoom.go_to_war(10))

@@ -70,7 +70,7 @@ class EncounterAction(EncounterBase):
 			#if init_roll > 1:
 				
         #self.combattants = sorted(self.combattants, key=lambda fighter: fighter.initiative.roll_initiative()+fighter.initiative.modifier, reverse=True)  #need a d10 initiative roll
-        self.combattants = sorted(self.combattants, key=lambda fighter: fighter.initiative.roll_initiative(fighter.initiative.modifier), reverse=True)  #need a d10 initiative roll        #for x in self.combattants:
+        self.combattants = sorted(self.combattants, key=lambda fighter: fighter.initiative.roll_initiative(fighter, fighter.initiative.modifier), reverse=True)  #need a d10 initiative roll        #for x in self.combattants:
         for x in self.combattants:
             print(x.name, x.initiative.modifier)
 		

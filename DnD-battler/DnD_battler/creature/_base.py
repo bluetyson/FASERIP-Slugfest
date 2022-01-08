@@ -54,6 +54,7 @@ class CreatureBase:
         self.armor = Armor(ability_dice=[self.a], bonus=0)
         # other
         self.initiative = SkillRoll(self.i, modifier=0, success_on_crit=False)
+        self.initiativeFASERIP = 0
         self.attacks = [AttackRoll(name='slugfest', ability_die=self.f, damage_dice=Dice(1,5), modifier=0)]
         self.alt_attack = {'throwing-blunt':0,'throwing-edged':0,'blunt':0,'edged':0,'shooting':0,'energy':0,'force':0,'grappling':0}  #put other abilities/weapons here
         self.powers = {}  #put other abilities/weapons here		

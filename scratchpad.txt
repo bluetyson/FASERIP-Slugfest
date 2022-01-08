@@ -132,6 +132,8 @@ Costume: Silk has had practice creating a costume from her webbing in a pinch
 Dimensional Spells: Ex
 Faralloh: Ex
 
+-Resist:Fire: Mn protection vs. Heat
+
 
 
 

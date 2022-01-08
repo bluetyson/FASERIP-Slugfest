@@ -1,6 +1,6 @@
 from ..victory import Victory
 from ._adv_base import CreatureAdvBase
-from ..dice.ranks import dict_faserip, universal_table, universal_color, column_shift, faserip_index
+from ..dice.ranks import faserip, dict_faserip, universal_table, universal_color, column_shift, faserip_index
 import random
 import time
 
@@ -141,7 +141,7 @@ class CreatureAction(CreatureAdvBase):
         fighting_rank = self.frank
         fighting_cs = 0
         level = self.level
-        fighting_cs = fighting_cs + level  #ad hoc bonus for extra skils like Hawkeye, Cyclops Spatial Geometry
+        fighting_cs = fighting_cs + level  #ad hoc bonus for extra skills like Hawkeye, Cyclops Spatial Geometry
         ##check martial arts adjustment - put other weapon skill type adjustments etc in a place similarly
 		# only on slugfest
         #print("alt attacks", self.alt_attack)
@@ -163,8 +163,45 @@ class CreatureAction(CreatureAdvBase):
         if assess:
             return 0  # the default
 
+        #check for opponent defensive abilities - eventually all functions these should be want the flow first
+        initiative_condition = 0
+        ability_test = 0
+        if 'Initiative' in opponent.defense['Ability']:
+            initiative_condition = 1
+            print('have an initiative condition')			            
+            self.initiativeFASERIP = 0
+            print(opponent.defense['Ability'])			            
+        for key in faserip.keys():
+            print(key)			            
+            if key in opponent.defense['Ability']:
+                print("has a defensive ability")			                
+                if initiative_condition == 1 and self.initiativeFASERIP < opponent.initiativeFASERIP: #need to know the roll??
+                    result_needed_index = faserip_index[opponent.defense['Ability'][key].split(';')[0]]
+                    if key == "I":
+                        ability_used_rank = self.irank					
+                    ability_used_index = faserip_index[ability_used_rank]
+                    defense_check = random.randint(1,100)
+                    if defense_check == "R" and (ability_used_index + 1) >= result_needed_index:
+                        print(self.name, " finds ", opponent.name, "on red")
+                    else:
+                        print(self.name, " can't find ", opponent.name, "on red no action")
+                        return
+                    if defense_check == "Y" and ability_used_index >= result_needed_index:
+                        print(self.name, " finds ", opponent.name, "on red")
+                    else:
+                        print(self.name, " can't find ", opponent.name, "on yellow no action")
+                        return
+                    if defense_check == "G" and ability_used_index > result_needed_index:
+                        print(self.name, " finds ", opponent.name, "on red")
+                    else:
+                        print(self.name, " can't find ", opponent.name, "on green no action")
+                        return
+                else:				
+                    pass
         #want to find damage rank
         body_armour_rank = opponent.body_armour["Physical"]
+        if self.alt_attack['energy'] == 1:
+            body_armour_rank = opponent.body_armour["Energy"]		
 		
         if slugfest == 1:
             if self.talents['martial_arts']['B'] == 1:
@@ -284,9 +321,13 @@ class CreatureAction(CreatureAdvBase):
         if fighting_cs != 0:
             fighting_rank = column_shift(fighting_rank, fighting_cs)
             print("fighting cs rank 2 for Combat Rolls", fighting_rank)
-        ## loop for extra attacks
+        ## loop for extra attacks #check for characters with extra arms or tails or some speed quirks etc.
         print("extra attacks", extra_attacks)
-        for ea in range(extra_attacks + 1): #if no extra attacks and not a mook make a -4CS
+        if 'Extra Attacks' in self.powers_adj_rank:
+            extra_attacks_rank_multiplier = faserip_index[self.powers_adj_rank['Extra Attacks'].split(';')[0]]
+        else:
+            extra_attacks_rank_multiplier = 1
+        for ea in range(extra_attacks*extra_attacks_rank_multiplier + 1*extra_attacks_rank_multiplier): #if no extra attacks and not a mook make a -4CS
             for i in range(len(self.attacks)):  ##multi attack check here? #boost for Martial arts B to F rank
                 try:
                     opponent = self.arena.find(self.arena.target, self)[0]
