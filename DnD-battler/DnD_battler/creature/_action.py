@@ -162,7 +162,12 @@ class CreatureAction(CreatureAdvBase):
             raise Victory()
         if assess:
             return 0  # the default
-
+        #CAN HURT CHECK
+        if 'Phasing' in opponent.powers_adj_rank:
+            #need mental or mystical attack
+            print(self.name, "cannot hurt ", opponent.name)
+            return
+            
         #check for opponent defensive abilities - eventually all functions these should be want the flow first
         initiative_condition = 0
         ability_test = 0
@@ -243,6 +248,8 @@ class CreatureAction(CreatureAdvBase):
             elif self.alt_attack['force'] == 1:  #compare to body armour
                 print("Force Fighting")
                 damage_list = self.attack['Force']['R'].split(';')
+                if ';' not in damage_list[0]:
+                    damage_list = self.attack['Force']['A'].split(';')
                 bypass_flag = 0
             print("Damage List", damage_list)
 				

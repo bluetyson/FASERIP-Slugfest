@@ -3,7 +3,7 @@ import pandas as pd
 
 arenaDangerRoom = Encounter(Creature.load("Cyclops"), Creature.load("Storm"))
 
-#print(arenaDangerRoom.go_to_war(1))
+print(arenaDangerRoom.go_to_war(1))
 #print(arenaDangerRoom.go_to_war(10))
 #print(arenaDangerRoom.go_to_war(100))
 #print(arenaDangerRoom.go_to_war(500))

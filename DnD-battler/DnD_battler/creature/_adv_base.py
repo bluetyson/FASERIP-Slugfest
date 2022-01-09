@@ -159,42 +159,42 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
 
         #reset for best attack
         for key in self.alt_attack:
-            self.alt_attack[key] = 0
+            self.alt_attack[key] = 0  ##DON'T DO THIS FOR A MORE SOPHISTICATED ATTACK SOMEONE VERSION
         #print(self.attack_preferred.keys()[0])
         #print(list(self.attack_preferred.keys())
         print("attack check")
-        print (self.attack)
+        print (self.attack)  #armour piercing, just make a default rank for now
         if list(self.attack_preferred.keys()) == 'Blunt':
             self.alt_attack['blunt'] = 1
-            if self.attack['Blunt']['AP'] == 1:
+            if self.attack['Blunt']['AP'] == "Sh0":
                 self.alt_attack['armour-piercing'] = 1
         if list(self.attack_preferred.keys())[0] == 'Edged':
             self.alt_attack['edged'] = 1
-            if self.attack['Edged']['AP'] == 1:
+            if self.attack['Edged']['AP'] == "Sh0":
                 self.alt_attack['armour-piercing'] = 1
         if list(self.attack_preferred.keys())[0] == 'Throwing Blunt':
             self.alt_attack['throwing-blunt'] = 1
-            if self.attack['Throwing Blunt']['AP'] == 1:
+            if self.attack['Throwing Blunt']['AP'] == "Sh0":
                 self.alt_attack['armour-piercing'] = 1
         if list(self.attack_preferred.keys())[0] == 'Throwing Edged':
             self.alt_attack['throwing-edged'] = 1
-            if self.attack['Throwing Edged']['AP'] == 1:
+            if self.attack['Throwing Edged']['AP'] == "Sh0":
                 self.alt_attack['armour-piercing'] = 1
         if list(self.attack_preferred.keys())[0] == 'Shooting':
             self.alt_attack['shooting'] = 1
-            if self.attack['Shooting']['AP'] == 1:
+            if self.attack['Shooting']['AP'] == "Sh0":
                 self.alt_attack['armour-piercing'] = 1
         if list(self.attack_preferred.keys())[0] == 'Force':
             self.alt_attack['force'] = 1
-            if self.attack['Force']['AP'] == 1:
+            if self.attack['Force']['AP'] == "Sh0":
                 self.alt_attack['armour-piercing'] = 1
         if list(self.attack_preferred.keys())[0] == 'Energy':
             self.alt_attack['energy'] = 1
-            if self.attack['Energy']['AP'] == 1:
+            if self.attack['Energy']['AP'] == "Sh0":
                 self.alt_attack['armour-piercing'] = 1
         if list(self.attack_preferred.keys())[0] == 'Grappling':
             self.alt_attack['grappling'] = 1
-            if self.attack['Grappling']['AP'] == 1:
+            if self.attack['Grappling']['AP'] == "Sh0":
                 self.alt_attack['armour-piercing'] = 1
 			
         print("best alt attack", self.alt_attack)
