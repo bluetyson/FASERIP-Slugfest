@@ -45,7 +45,7 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
             if key in settings:
                 self[key] = settings[key]
         for key in ('powers_adj_rank','equipment_adj_rank','talents','talents_adj','attack','defense','body_armour'):
-            #print(key)		
+            print(key)		
             if key in settings:
                 json_acceptable_string = settings[key].replace("'", "\"")
                 self[key] = json.loads(json_acceptable_string)

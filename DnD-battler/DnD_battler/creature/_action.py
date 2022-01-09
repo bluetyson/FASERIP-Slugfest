@@ -167,7 +167,19 @@ class CreatureAction(CreatureAdvBase):
             #need mental or mystical attack
             print(self.name, "cannot hurt ", opponent.name)
             return
-            
+        #SPEED CHECK default
+        if 'Hyper-Speed' in opponent.powers_adj_rank:
+            #need mental or mystical attack
+            print(self.name, "attacking speedester ", opponent.name)
+            speed_rank = opponent.powers_adj_rank['Hyper-Speed'].split(';')[0]
+            speed_index = faserip_index[speed_rank]
+            if speed_index < 5:
+                fighting_cs = fighting_cs - 1
+            elif speed_index < 10:
+                fighting_cs = fighting_cs - 2
+            else:
+                fighting_cs = fighting_cs - 3
+
         #check for opponent defensive abilities - eventually all functions these should be want the flow first
         initiative_condition = 0
         ability_test = 0
@@ -246,9 +258,9 @@ class CreatureAction(CreatureAdvBase):
                 bypass_flag = 0
                 damage_list = self.attack['Energy']['R'].split(';') 
             elif self.alt_attack['force'] == 1:  #compare to body armour
-                print("Force Fighting")
+                print("Force Fighting")  ##need checks for the max for these or a more sophisticated preferred for ranged, area, etc. and alt_attack
                 damage_list = self.attack['Force']['R'].split(';')
-                if ';' not in damage_list[0]:
+                if ';' not in self.attack['Force']['R']:
                     damage_list = self.attack['Force']['A'].split(';')
                 bypass_flag = 0
             print("Damage List", damage_list)

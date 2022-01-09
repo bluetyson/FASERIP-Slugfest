@@ -2281,8 +2281,8 @@ Invulnerability to Electricity CL1000 protection vs. Electricity	Resist:Electric
 "Inexhaustible If defeated, they will lay as dead for 3 rounds, then rise up and begin fighting again. Karma is granted as normal for defeating them"	Resist:Exertion
 Resistance to falling Up to 50 ft	Resist:Falling
 Resistance to Falling Up to 50 feet	Resist:Falling
-Balance fall up to 30' without damage	Resist:Falling-30
-Balence fall up to 30' w/o damage	Resist:Falling-30
+Balance fall up to 30' without damage	Resist:Falling
+Balence fall up to 30' w/o damage	Resist:Falling
 "Fire Resistance CL1000 resistance to fire under his control, but no resistance to flames not under his control or controled by others."	Resist:Fire
 Resistance to Fire Rm	Resist:Fire
 Trance Immunity to Fire	Resist:Fire
