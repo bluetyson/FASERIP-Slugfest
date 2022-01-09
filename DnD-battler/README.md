@@ -31,6 +31,8 @@ These now have Powers, Equipment, Talents, Contacts columns with _Adj_ and _Rank
 - Code is a work in progress, so breaking changes will happen to abilities in the CSV and old runtest* files.  Copy the latest version into the bestiaryFASERIP to run in that case.
 - If stuck, open an issue, or ask on the blog if you prefer.  Probably notice here more quickly
 
+# Tests
+- Note that Hawkeye has a Bow and a Wrist Crossbow so if in Powers or Equipment data someone has two of the same type, the second will overwrite the first - you can rearrange the character sheet to fix, or just edit in beastiaryFASERIP.
 
 # Documentation
 This module allows the simulation of a FASERIP encounter.
