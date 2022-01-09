@@ -167,18 +167,6 @@ class CreatureAction(CreatureAdvBase):
             #need mental or mystical attack
             print(self.name, "cannot hurt ", opponent.name)
             return
-        #SPEED CHECK default
-        if 'Hyper-Speed' in opponent.powers_adj_rank:
-            #need mental or mystical attack
-            speed_rank = opponent.powers_adj_rank['Hyper-Speed'].split(';')[0]
-            speed_index = faserip_index[speed_rank]
-            if speed_index < 5:
-                fighting_cs = fighting_cs - 1
-            elif speed_index < 10:
-                fighting_cs = fighting_cs - 2
-            else:
-                fighting_cs = fighting_cs - 3
-            print(self.name, "attacking speedester ", opponent.name, fighting_cs)
 
         #check for opponent defensive abilities - eventually all functions these should be want the flow first
         initiative_condition = 0
@@ -345,6 +333,22 @@ class CreatureAction(CreatureAdvBase):
             ##check martial arts adjustment - put other weapon skill type adjustments etc in a place similarly
         #if self.talents['martial_arts']['B'] == 1:
             #fighting_cs = fighting_cs + 1
+        #SPEED CHECK default to after multiple attack roll
+        if 'Hyper-Speed' in opponent.powers_adj_rank:
+            #need mental or mystical attack
+            speed_rank = opponent.powers_adj_rank['Hyper-Speed'].split(';')[0]
+            speed_index = faserip_index[speed_rank]
+            if speed_index < 5:
+                speed_cs = 1
+                fighting_cs = fighting_cs - speed_cs
+            elif speed_index < 10:
+                speed_cs = 2
+                fighting_cs = fighting_cs - speed_cs
+            else:
+                speed_cs = 3
+                fighting_cs = fighting_cs - speed_cs
+            print(self.name, "attacking speedster ", opponent.name, speed_cs)
+
         if fighting_cs != 0:
             fighting_rank = column_shift(fighting_rank, fighting_cs)
             print("fighting cs rank 2 for Combat Rolls", fighting_rank)
