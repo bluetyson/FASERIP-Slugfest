@@ -88,11 +88,11 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
         print("FINAL AC CHECK",self.armor.ac, self.body_armour)
 
         #checking for best attack purely based on damage, not hit rate - perhaps work that out too - Fighting or Agility with specialist skills 
-        best_attack_type = {'Slugfest'}
+        best_attack_type = 'Slugfest'
         best_attack_rank = self.srank
         best_attack_rank_index = 0
-        best_attack = {}
-        #print(self.attack)
+        best_attack = {best_attack_type : self.srank + ";"}
+        print("FOR BEST ATTACK", self.attack)
         for key in self.attack.keys():
             for subkey in self.attack[key].keys():
                 #print(subkey)

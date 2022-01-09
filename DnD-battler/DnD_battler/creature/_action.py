@@ -265,13 +265,12 @@ class CreatureAction(CreatureAdvBase):
                         body_armour_rank = "Sh0"
 						
                     #weapon could penetrate and ignore
-                if 1==2 : #put an AP check here
-                    print("Armour Piercing chip")
+                if self.alt_attack['armour-piercing'] == 1:
+                    print("Armour Piercing Attack")
                     damage_index = faserip_index[damage_rank]
                     armour_index = faserip_index[body_armour_rank]
-                    if damage_index >= armour_index:
-                        print("Body Armour Penetrated")					                    
-                        body_armour_rank = "Sh0"
+                    #need to implement if armour piercing is just a CS reduction or bypasses entirely - e.g. Shadowcat.
+                    body_armour_rank = "Sh0"
             
 
         if fighting_cs != 0:
