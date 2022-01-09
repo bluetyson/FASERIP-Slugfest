@@ -80,8 +80,7 @@ class CreatureBase:
         self.healing_spells = self.starting_healing_spells
         self.healing = None  # Normally dice object
         # internal stuff
-        self.tally = {'damage': 0, 'hits': 0, 'dead': 0, 'misses': 0, 'battles': 0, 'rounds': 0, 'hp': 0,
-                      'healing_spells': 0, 'stun':0, 'slam':0, 'stunned':0, 'slammed':0}
+        self.tally = {'damage': 0, 'hits': 0, 'dead': 0, 'misses': 0, 'battles': 0, 'rounds': 0, 'hp': 0,'healing_spells': 0, 'stun':0, 'slam':0, 'stunned':0, 'slammed':0}
         self.copy_index = 1
         self.condition = 'normal'
         self.dodge = 0

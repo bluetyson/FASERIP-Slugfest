@@ -30,6 +30,7 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
             raise ValueError(f'Creature "{creature_name}" not found.')
         self.base = creature_name
         self.apply_settings(**settings)
+        #print(self.tally)
         return self
 
     def apply_settings(self, **settings):

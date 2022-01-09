@@ -142,12 +142,13 @@ class EncounterAction(EncounterBase):
                 if verbose: self.masterlog.append('**NEW ROUND**')
                 self.tally['rounds'] += 1
                 for character in self:
-                    #print("ready",character.name)
+                    #print("ready",character)
                     character.ready()
                     if character.isaliveFASERIP():
-                        if not character.isconscious():
-                            character.tally['stunned'] += 1
+                        #if not character.isconscious():  #encounter character, creature not character
+                            #character.tally['stunned'] += 1
                         self.active = character
+                        #print(character.tally)
                         character.tally['rounds'] += 1
                         character.act(self.masterlog)
                     else:
@@ -206,7 +207,8 @@ class EncounterAction(EncounterBase):
             return [query for query in folk if (query.alignment == team)]
 
         def _alive(folk):
-            return [query for query in folk if (query.hp > 0)]
+            #return [query for query in folk if (query.hp > 0 )]
+            return [query for query in folk if (query.hp > 0 and query.kill < 1 )]  #faserip check here
 
         def _normal(folk):
             return [joe for joe in folk if joe.condition == 'normal']

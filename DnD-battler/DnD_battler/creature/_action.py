@@ -8,8 +8,8 @@ class CreatureAction(CreatureAdvBase):
 
     def ready(self):
         self.dodge = 0
-        self.stun = 0
-        self.slam = 0
+        #self.stun = 0 #makes them stun proof
+        #self.slam = 0 #makes them slam proof
         # there should be a few more.
         # conditions.
 
@@ -170,7 +170,6 @@ class CreatureAction(CreatureAdvBase):
         #SPEED CHECK default
         if 'Hyper-Speed' in opponent.powers_adj_rank:
             #need mental or mystical attack
-            print(self.name, "attacking speedester ", opponent.name)
             speed_rank = opponent.powers_adj_rank['Hyper-Speed'].split(';')[0]
             speed_index = faserip_index[speed_rank]
             if speed_index < 5:
@@ -179,6 +178,7 @@ class CreatureAction(CreatureAdvBase):
                 fighting_cs = fighting_cs - 2
             else:
                 fighting_cs = fighting_cs - 3
+            print(self.name, "attacking speedester ", opponent.name, fighting_cs)
 
         #check for opponent defensive abilities - eventually all functions these should be want the flow first
         initiative_condition = 0
@@ -470,6 +470,7 @@ class CreatureAction(CreatureAdvBase):
         #print("ECONOMY", economy)
         #print("condition", self.condition)
         # Buff?
+        print("stun condition is ", self.stun)
         if self.condition == 'netted':
             # NOT-RAW: DC10 strength check or something equally easy for monsters
             if verbose:
@@ -477,8 +478,10 @@ class CreatureAction(CreatureAdvBase):
             self.condition = 'normal'
         elif self.stun > 0:
             if verbose:
-                print(self.name + " stunned for ", self.stun, "rounds")
+                print(self.name + " stunned for ", self.stun, "rounds so skip")
+            print(self.name + " stunned for ", self.stun, "rounds so skip")
             self.stun -= 1
+            print(" now down to", self.stun)
             #self.condition = 'normal'
         elif self.slam > 0:
             if verbose:
