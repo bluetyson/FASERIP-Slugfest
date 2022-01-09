@@ -264,9 +264,9 @@ class CreatureAction(CreatureAdvBase):
                         print("Body Armour Penetrated")					                    
                         body_armour_rank = "Sh0"
 						
-                if "Armour Piercing" in self.equipment_adj_rank:# and "Body Armour" not in opponent.power_adj_rank:  #make this for edged things only eventually
                     #weapon could penetrate and ignore
-                    print("Body Armour is Equipment")
+                if 1==2 : #put an AP check here
+                    print("Armour Piercing chip")
                     damage_index = faserip_index[damage_rank]
                     armour_index = faserip_index[body_armour_rank]
                     if damage_index >= armour_index:
