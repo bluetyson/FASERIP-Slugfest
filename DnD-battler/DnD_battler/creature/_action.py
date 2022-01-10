@@ -1,6 +1,6 @@
 from ..victory import Victory
 from ._adv_base import CreatureAdvBase
-from ..dice.ranks import faserip, dict_faserip, universal_table, universal_color, column_shift, faserip_index
+from ..dice.ranks import faserip, dict_faserip, universal_table, universal_color, column_shift, faserip_index, feat
 import random
 import time
 
@@ -298,7 +298,10 @@ class CreatureAction(CreatureAdvBase):
                     body_armour_rank = "Sh0"
             
         ###FORCE FIELD CHECK
-        		
+        force_field_rank = "Sh0"		        
+        if 'Force Field' in opponent.powers_adj_rank:
+            force_field_rank = opponent.powers_adj_rank['Force Field'].split(';')[0]  #could check if two ranks here for Physical/Energy version
+        #print(self.name, " is attacking force field of ", force_field_rank)
         if fighting_cs != 0:
             fighting_rank = column_shift(fighting_rank, fighting_cs)
             print("fighting cs rank 1", fighting_rank)
@@ -414,7 +417,27 @@ class CreatureAction(CreatureAdvBase):
                 #damage, effect_type, effect = self.attacks[i].attackFASERIP(dict_faserip[opponent.body_armour["Physical"]], advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=self.srank, #endurance_rank=opponent.erank,other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
 				
                 #damage, effect_type, effect = self.attacks[i].attackFASERIP(dict_faserip[opponent.body_armour["Physical"]], advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=damage_rank, endurance_rank=opponent.erank,other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
-                damage, effect_type, effect = self.attacks[i].attackFASERIP(dict_faserip[body_armour_rank], advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=damage_rank, endurance_rank=opponent.erank,other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
+                if force_field_rank == "Sh0":
+                    damage, effect_type, effect = self.attacks[i].attackFASERIP(dict_faserip[body_armour_rank], advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=damage_rank, endurance_rank=opponent.erank,other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
+                else:
+                    effect_type = ''
+                    force_field_index = faserip_index[force_field_rank]
+                    damage_index = faserip_index[damage_rank]
+                    if damage_index > force_field_index:
+                        damage_taken = dict_faserip[damage_rank] - dict_faserip[force_field_rank]					
+                        print("Force Field fails!", opponent.name, " takes ", damage_taken)					
+                        stun_roll = random.randint(1,100)
+                        feat_check = feat(force_field_rank, damage_rank, stun_roll)
+                        if feat_check:
+                            print(opponent.name,  "survived Force Field going down")
+                        else:
+                            effect_type = "STUN"
+                            stun_rounds = random.randint(1,10)
+                            opponent.stun = opponent.stun + stun_rounds
+                    else:
+                        print(opponent.name, "Force Field absorbs all ", damage_rank, "from ", self.name)					
+                        damage = 0
+
 				
                 #print("DAMAGE", damage, "OPPONENTAC:", opponent.body_armour["Physical"])
                 print("DAMAGE", damage, "OPPONENTAC:", body_armour_rank)

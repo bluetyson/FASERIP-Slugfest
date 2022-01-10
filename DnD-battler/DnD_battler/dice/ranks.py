@@ -55,6 +55,19 @@ def column_shift(rank, shift):
 		
 	return rank_list[new_index] #give back adjusted rank
 
+def feat(rank, intensity, roll):
+	rank_index = dict_faserip[rank]
+	intensity_index = dict_faserip[intensity]
+	rank_color = universal_color(rank, roll)
+	
+	if intensity_index > rank_index + 1 or rank_color == 'W':
+		return False
+	if rank_color == 'R':
+		return True
+	if rank_color == 'Y' and intensity_index <= rank_index:
+		return True
+	if rank_color == 'G' and intensity_index < rank_index:
+		return True
 	
 def slam_check(endurance_rank):
 	endurance_roll = random.randint(1,100)
