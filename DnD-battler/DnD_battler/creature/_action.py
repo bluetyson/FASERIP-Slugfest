@@ -41,7 +41,39 @@ class CreatureAction(CreatureAdvBase):
                 if verbose:
                     print(self.name + ' has lost their concentration')
 
-    def take_damageFASERIP(self, points, effect_type, effect, verbose=0):
+    def take_damageFASERIP(self, points, effect_type, effect, alt_attack, verbose=0):
+        #check for energy absorption #need to check attack type too for this
+        if alt_attack['energy'] == 1 or alt_attack['force'] == 1:
+            if ';' in self.defense['Energy']['AB']:
+                absorption_list = self.defense['Energy']['AB'].split(';')
+                if len(absorption_list) == 3:
+                    absorption_red = absorption_list[2]
+                    absorption_yellow = absorption_list[1]
+                    absorption_green = absorption_list[0]
+                elif len(absorption_list) == 2:
+                    absorption_red = absorption_list[1]
+                    absorption_yellow = absorption_list[1]
+                    absorption_green = absorption_list[0]
+                else:
+                    absorption_red = absorption_list[0]
+                    absorption_yellow = absorption_list[0]
+                    absorption_green = absorption_list[0]
+                endurance_roll = random.randint(1,100)
+                absorption_color = universal_color(self.erank, endurance_roll)
+                absorption_points = dict_faserip[absorption_green]			            
+                if absorption_color == 'R':
+                    absorption_points = dict_faserip[absorption_red]			            
+                if absorption_color == 'Y':
+                    absorption_points = dict_faserip[absorption_yellow]			            
+                if absorption_points >= points :
+                    points = 0
+                    self['attack']['Energy']['AB'] = points				
+                    print(self.name, "Absorbed", points, "of energy")
+                else:
+                    self['attack']['Energy']['AB'] = points - absorption_points				
+                    points = points - absorption_points				
+                    print(self.name, "Absorbed", absorption_points, "of energy and took", points)
+    				
         self.hp -= points
         if effect_type == "STUN" or effect_type == "POWER ABSORPTION":
             self.stun = self.stun + effect
@@ -474,12 +506,12 @@ class CreatureAction(CreatureAdvBase):
                         #print("beating on Mooks")
                         #time.sleep(10)	
                         for mook in possible_opponents:
-                            mook.take_damageFASERIP(damage, effect_type, effect, verbose)
+                            mook.take_damageFASERIP(damage, effect_type, effect, self.alt_attack, verbose)
                             self.tally['damage'] += damage
                             self.tally['hits'] += 1
                     else:
                         #print("not finding mook")
-                        opponent.take_damageFASERIP(damage, effect_type, effect, verbose)
+                        opponent.take_damageFASERIP(damage, effect_type, effect, self.alt_attack, verbose)
                         self.tally['damage'] += damage
                         self.tally['hits'] += 1
                 else:
