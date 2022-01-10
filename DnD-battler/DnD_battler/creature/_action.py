@@ -420,23 +420,41 @@ class CreatureAction(CreatureAdvBase):
                 if force_field_rank == "Sh0":
                     damage, effect_type, effect = self.attacks[i].attackFASERIP(dict_faserip[body_armour_rank], advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=damage_rank, endurance_rank=opponent.erank,other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
                 else:
-                    effect_type = ''
+                    effect_type = None
+                    effect = None
+					
                     force_field_index = faserip_index[force_field_rank]
                     damage_index = faserip_index[damage_rank]
-                    if damage_index > force_field_index:
-                        damage_taken = dict_faserip[damage_rank] - dict_faserip[force_field_rank]					
-                        print("Force Field fails!", opponent.name, " takes ", damage_taken)					
-                        stun_roll = random.randint(1,100)
-                        feat_check = feat(force_field_rank, damage_rank, stun_roll)
+                    phase_check = 0
+                    if 'Phasing' in self.powers_adj_rank:
+                        phasing_rank = self.powers_adj_rank['Phasing'].split(';')[0]
+                        phasing_roll = random.randint(1,100)
+                        feat_check = feat(phasing_rank, force_field_rank, phasing_roll)
                         if feat_check:
-                            print(opponent.name,  "survived Force Field going down")
+                            print(self.name,  "phased through Force Field for full damage")
+                            phase_check = 1
+                        else: 
+                            print(self.name,  "failed to Phase through Force Field")
+							
+                    if phase_check == 0:							
+                        if damage_index > force_field_index:
+                            damage = dict_faserip[damage_rank] - dict_faserip[force_field_rank]					
+                            print("Force Field fails!", opponent.name, " takes ", damage)					
+                            stun_roll = random.randint(1,100)
+                            feat_check = feat(force_field_rank, damage_rank, stun_roll)
+                            if feat_check:
+                                print(opponent.name,  "survived Force Field going down")
+                            else:
+                                stun_rounds = random.randint(1,10)
+                                opponent.stun = opponent.stun + stun_rounds
+                                effect_type = "STUN"
+                                effect = stun_rounds
                         else:
-                            effect_type = "STUN"
-                            stun_rounds = random.randint(1,10)
-                            opponent.stun = opponent.stun + stun_rounds
-                    else:
-                        print(opponent.name, "Force Field absorbs all ", damage_rank, "from ", self.name)					
-                        damage = 0
+                            print(opponent.name, "Force Field absorbs all ", damage_rank, "from ", self.name)					
+                            damage = 0
+                    else:						
+                        damage = dict_faserip[damage_rank]
+                        print(self.name, "passes through Force Field", opponent.name, " takes ", damage)					
 
 				
                 #print("DAMAGE", damage, "OPPONENTAC:", opponent.body_armour["Physical"])
