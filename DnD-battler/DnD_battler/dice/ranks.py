@@ -107,3 +107,8 @@ def kill_check(endurance_rank):
 	if color == "R":
 		result = "No"
 	return result
+
+def nearest_rank(rank_no):
+	for key in dict_faserip.keys():
+		if dict_faserip[key] >= rank_no:
+			return key

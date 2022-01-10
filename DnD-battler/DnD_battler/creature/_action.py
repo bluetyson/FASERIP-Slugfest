@@ -1,6 +1,6 @@
 from ..victory import Victory
 from ._adv_base import CreatureAdvBase
-from ..dice.ranks import faserip, dict_faserip, universal_table, universal_color, column_shift, faserip_index, feat
+from ..dice.ranks import faserip, dict_faserip, universal_table, universal_color, column_shift, faserip_index, feat, nearest_rank
 import random
 import time
 
@@ -66,11 +66,12 @@ class CreatureAction(CreatureAdvBase):
                 if absorption_color == 'Y':
                     absorption_points = dict_faserip[absorption_yellow]			            
                 if absorption_points >= points :
-                    points = 0
+                    #need a nearest rank function
                     self['attack']['Energy']['AB'] = points				
+                    points = 0
                     print(self.name, "Absorbed", points, "of energy")
                 else:
-                    self['attack']['Energy']['AB'] = points - absorption_points				
+                    self['attack']['Energy']['AB'] = absorption_points				
                     points = points - absorption_points				
                     print(self.name, "Absorbed", absorption_points, "of energy and took", points)
     				
@@ -281,9 +282,16 @@ class CreatureAction(CreatureAdvBase):
             ## Attacks that can't bypass armour
             print("sussing out :", self.alt_attack)
             if self.alt_attack['energy'] == 1:  #compare to body armour
-                print("Energy Fighting")
+                #print("Energy Fighting", "abs", self.attack['Energy']['AB'])
+                print("Energy Fighting", "abs", self.attack['Energy']['AB'])
                 bypass_flag = 0
                 damage_list = self.attack['Energy']['R'].split(';') 
+                if self.attack['Energy']['AB'] != '':
+                    if int(self.attack['Energy']['AB']) > dict_faserip[damage_list[0]]:
+                        ###this needs to be a string rank
+                        damage_list[0] = nearest_rank(int(self.attack['Energy']['AB'])) 				
+                        self.attack['Energy']['AB'] = 0
+                        print("Blasting Back with ", damage_list[0], "absorbed energy!")
             elif self.alt_attack['force'] == 1:  #compare to body armour
                 print("Force Fighting")  ##need checks for the max for these or a more sophisticated preferred for ranged, area, etc. and alt_attack
                 damage_list = self.attack['Force']['R'].split(';')

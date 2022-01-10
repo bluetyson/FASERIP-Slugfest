@@ -4,7 +4,7 @@ import pandas as pd
 arenaDangerRoom = Encounter(Creature.load("Storm"), Creature.load("Bishop"))
 
 
-print(arenaDangerRoom.go_to_war(100))
+print(arenaDangerRoom.go_to_war(1))
 #print(arenaDangerRoom.go_to_war(10))
 #print(arenaDangerRoom.go_to_war(100))
 #print(arenaDangerRoom.go_to_war(500))
