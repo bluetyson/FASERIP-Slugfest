@@ -47,7 +47,7 @@ The muchkinishness has a deleterious side-effect when the method deathmatch of t
 >>> arena = DnD.Encounter(level1, billybob)  #Encounter accepts both Creature and strings.
 >>> print(arena.go_to_war(10000)) #simulate 10,000 times
 >>> print(arena.battle()) # simulate one encounter and tell what happens.
->>> print(Creature.load('Cyclops').generate_character_sheet())  #md character sheet.
+>>> print(Creature.load('Cyclops').generate_character_sheet())  #md character sheet.  ### this won't be much use for FASERIP
 >>> print(Encounter.load("Cyclops").addmob(12).go_to_war(10))  .Shang-Chi vs a dozen Plumbers.
 
 ```
