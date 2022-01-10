@@ -14,16 +14,6 @@ The simulator relies on creature information present in the `beastiaryFASERIP.cs
 This is basically taken from my FATERIP hack table https://docs.google.com/document/d/1Rmk-3fX2JG3tJPJrtTnhWatT8gcQfGf4e_nqK-4lNz0/edit
 There are also characters added for the various sample ```runtestFASERIP.py``` type scripts.
 These now have Powers, Equipment, Talents, Contacts columns with _Adj_ and _Rank_ additional columns to attempt some standardisation and simplication for purposes of combat simulation, never going to be perfect unless go back and edit all the characters - which won't happen, but anyone could do, especially for those they are interested in,
-- stated_ac = a Body Armour string from the data.
-- body_armour - attempt at approximate parsing of vs Physical and Energy versions - applied a - 2CS not a -20 points for now for Physical to Energy where not stated.  These need to be checked when you use them, as just an algorithmic guess at counting which one is where in the description.
-- Sp = speed rank in usual terrain, relative to humans.
-- BA = Body Armour rank
-- T = Type of Damage: E = Edged, B= Blunt, S = Shooting, H = Advanced Technology, 2 = Blunt and Edged, W = S and 2
-    - It will currently check to see if a Killing type is possible - but doesn't do anything about ranged anything or movement.
-- martial_arts - add one letter to a string for each type, eg ABCDE, AE etc.
-    - other Talents can be handled similarly and put them in self.talents in the Creature class
-- H, K, Res, Pop should be self-explanatory from the character data - the first two are calculated in code anyway 
-- Climbing, Escaping [other standard type actions will likely get columns at some stage]
    
 - If you want to simulate a -4 CS multiattack on everyone at once - set mook = 1 for one side and leave zero on the other.  To turn off, have everyone be mooks.
     - still need a mode where can attack, say in groups of 6 at any given time.
@@ -43,22 +33,22 @@ It has three main classes:  Dice (and its derivatives), Character, Encounter.
 **Tactics.** Tactics are highly problematic both in targetting and actions to take. Players do not play as strategically as they should due to heroism and kill tallies, while the GM might play enemies really dumbly to avoid a TPD.
 **Targeting.** The simulator is set up as a munchkin combat where everyone targets the weakest opponent (The global variable `TARGET="enemy alive weakest"` makes the `find_weakest_target` method of the `Encounter` be used, but could be changed (unwisely) to a permutation of enemy/ally alive/dead weakest/random/fiercest.
 The muchkinishness has a deleterious side-effect when the method deathmatch of the Encounter class is invoked —this allocates each Creature object in the Encounter object in a different team.
-- e.g. have a 25 Martial Artist contest and 'enemy alive weakest' means that the characters will basically be eliminated in general reverse order of Health, so those with the highest will win all the time, even if just slightly more.   Use 'enemy alive random' for this setting.
+- e.g. have a 25 Martial Artist contest and 'enemy alive weakest' means that the characters will basically be eliminated in general reverse order of Health, so those with the highest will win all the time, even if just slightly more.   Use 'enemy alive random' for this setting, instead.
 - 
 **Actions.** Action choice is dictated by turn economy. A character of a team with the greater turn economy will dodge (if it knows itself a target) or throw a net (if it has one), and so forth while a creature on the opposed side will opt for a slugfest.  This needs to be updated and implemented for FASERIP, no grappling yet.
 
 ```
 >>> from DnD_battler import Creature, Encounter
->>> Creature.load('Amazing Martial Artist') # get from beastiary
->>> level1 = Creature(name="Cat")
->>> billybob = Creature("Rat")
->>> billybob.alignment = "rodent"
->>> level1.alignment = "feline"
+>>> Creature.load('Cyclops') # get from beastiary
+>>> level1 = Creature(name="Wolverine")
+>>> billybob = Creature("Sabretooth")
+>>> billybob.alignment = "psychopath"
+>>> level1.alignment = "x-men"
 >>> arena = DnD.Encounter(level1, billybob)  #Encounter accepts both Creature and strings.
 >>> print(arena.go_to_war(10000)) #simulate 10,000 times
 >>> print(arena.battle()) # simulate one encounter and tell what happens.
->>> print(Creature.load('Cat').generate_character_sheet())  #md character sheet.
->>> print(Encounter.load("GHOTMU Amazing Martial Artist").addmob(12).go_to_war(10))  .Shang-Chi vs a dozen Plumbers.
+>>> print(Creature.load('Cyclops').generate_character_sheet())  #md character sheet.
+>>> print(Encounter.load("Cyclops").addmob(12).go_to_war(10))  .Shang-Chi vs a dozen Plumbers.
 
 ```
 
@@ -69,7 +59,7 @@ The creature class can be started from scratch or from a monster from the manual
 ```python
 from DnD_battler import Creature
 Creature()
-Creature.load('Scientist')
+Creature.load('Cyclops')
 ```
 Both accept several arguments. 
 
@@ -79,6 +69,32 @@ An ongoing work in progress, see the bestiaryFASERIP.csv an benriely.csv for the
 - Attack - dictionary to approximate different types of attacks
 - Defense - dictionary to approximate different types of attacks
 - a basic heuristic attack_preferred best attack calculation is done
+- - stated_ac = a Body Armour string from the data.
+- body_armour - attempt at approximate parsing of vs Physical and Energy versions - applied a - 2CS not a -20 points for now for Physical to Energy where not stated.  These need to be checked when you use them, as just an algorithmic guess at counting which one is where in the description.
+- resistances - parsed list of resitance powers
+- level use to put added CS bonus for power related Weapon Specialists etc.
+- FASERIP - self explantaory, String rank 2 character abbreviation
+- Powers, Powers_Rank, Powers_Adj, Powers_Adj_Rank, various stages of parsing of the character writeups to attempt to assign ranks heuristically to things and standardise
+- Equipment, see Powers above
+- Vehicle - not done yet
+- Talents, Talents_Adj, parsing them out to standardise
+- Contacts, see Talents
+- Weakness, not really attempted yet, but some will have
+- Powers_Form - bonus powers from the Form for random characters [which still have to update the sheet for]
+- Sp = speed rank in usual terrain, relative to humans.
+- Attack - standardising combat types simply to allow for simulation algorithms to work
+- Defense - as above, but most of these not implemented in simulation yet
+- Dam - for some esoteric Damage bonus if needed
+- Climbing
+- Escaping - probably not needed with Defense, likely will remove eventually when change parsing
+- T = Type of Damage: E = Edged, B= Blunt, S = Shooting, H = Advanced Technology, 2 = Blunt and Edged, W = S and 2
+    - It will currently check to see if a Killing type is possible - but doesn't do anything about ranged anything or movement.
+- martial_arts - add one letter to a string for each type, eg ABCDE, AE etc.
+    - other Talents can be handled similarly and put them in self.talents in the Creature class
+- mook - set to allow simulation of hero vs hoods
+- H, K, Res, Pop should be self-explanatory from the character data - the first two are calculated in code anyway 
+- Climbing, Escaping [other standard type actions will likely get columns at some stage]
+
 
 - to use characters in Simulations may require a bit of editing of the csv or the character parsing routines if many instances that can be handled, the csvs are designed so most of the handcoding is done.
 
