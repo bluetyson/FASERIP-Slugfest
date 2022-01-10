@@ -157,6 +157,11 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
             self.alt_attack['energy'] = 1
         if self.attack['Energy']['A'] != '':
             self.alt_attack['energy'] = 1
+        if self.attack['Mental']['R'] != '':
+            self.alt_attack['mental'] = 1
+        if self.attack['Mental']['C'] != '':
+            self.alt_attack['mental'] = 1
+
 
         #reset for best attack
         for key in self.alt_attack:
@@ -164,7 +169,7 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
         #print(self.attack_preferred.keys()[0])
         #print(list(self.attack_preferred.keys())
         print("attack check")
-        print (self.attack)  #armour piercing, just make a default rank for now
+        print (self.attack)  #armour piercing, just make a default rank for now - all Mental Powers?
         if list(self.attack_preferred.keys()) == 'Blunt':
             self.alt_attack['blunt'] = 1
             if self.attack['Blunt']['AP'] == "Sh0":
@@ -197,6 +202,14 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
             self.alt_attack['grappling'] = 1
             if self.attack['Grappling']['AP'] == "Sh0":
                 self.alt_attack['armour-piercing'] = 1
+
+        if list(self.attack_preferred.keys())[0] == 'Mental':
+            self.alt_attack['mental'] = 1
+            self.alt_attack['armour-piercing'] = 1
+        if list(self.attack_preferred.keys())[0] == 'Magic':
+            self.alt_attack['magic'] = 1
+            self.alt_attack['armour-piercing'] = 1
+
 			
         print("best alt attack", self.alt_attack)
         

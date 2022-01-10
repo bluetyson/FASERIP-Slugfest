@@ -136,8 +136,7 @@ class CreatureAction(CreatureAdvBase):
         damage_rank = self.srank
 		### need to check for attack type using
 		### eg Edged for Wolverine and Sabretooth
-		
-		### if Agility attack - e.g. Hawkeye, make fighting rank agility rank
+		### if Agility attack - e.g. Hawkeye, make fighting rank agility rank or Mental - e.g. Jean Grey, make it Psyche
         fighting_rank = self.frank
         fighting_cs = 0
         level = self.level
@@ -152,6 +151,11 @@ class CreatureAction(CreatureAdvBase):
             fighting_rank = self.arank
             print ("Agility Based Combat: Agility Rank", self.arank)
             slugfest = 0
+        if self.alt_attack['mental'] == 1 or self.alt_attack['magic'] == 1:
+            fighting_rank = self.prank
+            print ("Mind Based Combat: Psyche Rank", self.prank)
+            slugfest = 0
+
         
         try:
             opponent = self.arena.find(self.arena.target, self)[0]
@@ -165,9 +169,11 @@ class CreatureAction(CreatureAdvBase):
         #CAN HURT CHECK
         if 'Phasing' in opponent.powers_adj_rank:
             #need mental or mystical attack
-            print(self.name, "cannot hurt ", opponent.name)
-            return
-
+            if self.alt_attack['mental'] == 0 and self.alt_attack['magic'] == 0:
+                print(self.name, "cannot hurt phased ", opponent.name)
+                return
+            else:
+                print(self.name, "can hurt phased ", opponent.name)			
         #check for opponent defensive abilities - eventually all functions these should be want the flow first
         initiative_condition = 0
         ability_test = 0
@@ -251,6 +257,12 @@ class CreatureAction(CreatureAdvBase):
                 if ';' not in self.attack['Force']['R']:
                     damage_list = self.attack['Force']['A'].split(';')
                 bypass_flag = 0
+            elif self.alt_attack['mental'] == 1:  #compare to body armour
+                print("Mental Fighting")  ##need checks for the max for these or a more sophisticated preferred for ranged, area, etc. and alt_attack
+                damage_list = self.attack['Mental']['R'].split(';')
+                if ';' not in self.attack['Mental']['R']:
+                    damage_list = self.attack['Mental']['C'].split(';')
+                bypass_flag = 1				
             print("Damage List", damage_list)
 				
 
@@ -273,7 +285,13 @@ class CreatureAction(CreatureAdvBase):
 						
                     #weapon could penetrate and ignore
                 if self.alt_attack['armour-piercing'] == 1:
-                    print("Armour Piercing Attack")
+                    print("Armour Piercing Attack - no armour")
+                    damage_index = faserip_index[damage_rank]
+                    armour_index = faserip_index[body_armour_rank]
+                    #need to implement if armour piercing is just a CS reduction or bypasses entirely - e.g. Shadowcat.
+                    body_armour_rank = "Sh0"
+                elif self.alt_attack['mental'] == 1:
+                    print("Mental Attack - no armour")
                     damage_index = faserip_index[damage_rank]
                     armour_index = faserip_index[body_armour_rank]
                     #need to implement if armour piercing is just a CS reduction or bypasses entirely - e.g. Shadowcat.
