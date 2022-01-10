@@ -43,9 +43,10 @@ class CreatureAction(CreatureAdvBase):
 
     def take_damageFASERIP(self, points, effect_type, effect, verbose=0):
         self.hp -= points
-        if effect_type == "STUN":
+        if effect_type == "STUN" or effect_type == "POWER ABSORPTION":
             self.stun = self.stun + effect
-            print(self.name, " Stunned for: ", effect, "total:", self.stun, " rounds")
+            print(self.name, " Stunned for: ", effect, "total:", self.stun, " rounds from ", effect_type)
+            self.kill = 1  #need a better than this for power absorption when not 1 on 1
         if effect_type == "KILL":
             if effect == "En Loss" or effect == "E S":
                 print(self.name, " Killed!")

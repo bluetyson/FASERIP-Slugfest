@@ -161,6 +161,10 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
             self.alt_attack['mental'] = 1
         if self.attack['Mental']['C'] != '':
             self.alt_attack['mental'] = 1
+        if self.attack['Power']['AB'] != '':
+            self.alt_attack['power'] = 1
+        if self.attack['Power']['N'] != '':
+            self.alt_attack['power'] = 1
 
 
         #reset for best attack
@@ -208,6 +212,10 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
             self.alt_attack['armour-piercing'] = 1
         if list(self.attack_preferred.keys())[0] == 'Magic':
             self.alt_attack['magic'] = 1
+            self.alt_attack['armour-piercing'] = 1
+
+        if list(self.attack_preferred.keys())[0] == 'Power':
+            self.alt_attack['power'] = 1
             self.alt_attack['armour-piercing'] = 1
 
 			
