@@ -56,7 +56,7 @@ class CreatureBase:
         self.initiative = SkillRoll(self.i, modifier=0, success_on_crit=False)
         self.initiativeFASERIP = 0
         self.attacks = [AttackRoll(name='slugfest', ability_die=self.f, damage_dice=Dice(1,5), modifier=0)]
-        self.alt_attack = {'throwing-blunt':0,'throwing-edged':0,'blunt':0,'edged':0,'shooting':0,'energy':0,'force':0,'grappling':0,'armour-piercing':0}  #put other abilities/weapons here
+        self.alt_attack = {'throwing-blunt':0,'throwing-edged':0,'blunt':0,'edged':0,'shooting':0,'energy':0,'force':0,'grappling':0,'armour-piercing':0,'mental':0,'magic':0}  #put other abilities/weapons here
         self.powers = {}  #put other abilities/weapons here		
         self.powers_rank = {}  #put other abilities/weapons here		
         self.powers_adj = {}  #put other abilities/weapons here		
@@ -80,7 +80,7 @@ class CreatureBase:
         self.healing_spells = self.starting_healing_spells
         self.healing = None  # Normally dice object
         # internal stuff
-        self.tally = {'damage': 0, 'hits': 0, 'dead': 0, 'misses': 0, 'battles': 0, 'rounds': 0, 'hp': 0,'healing_spells': 0, 'stun':0, 'slam':0, 'stunned':0, 'slammed':0}
+        self.tally = {'damage': 0, 'hits': 0, 'dead': 0, 'misses': 0, 'battles': 0, 'rounds': 0, 'hp': 0,'healing_spells': 0, 'stun':0, 'slam':0, 'stunned':0, 'slammed':0,'controlled':0}
         self.copy_index = 1
         self.condition = 'normal'
         self.dodge = 0

@@ -145,8 +145,8 @@ class EncounterAction(EncounterBase):
                     #print("ready",character)
                     character.ready()
                     if character.isaliveFASERIP():
-                        #if not character.isconscious():  #encounter character, creature not character
-                            #character.tally['stunned'] += 1
+                        if not character.isconscious():  #encounter character, creature not character
+                            character.tally['stunned'] += 1
                         self.active = character
                         #print(character.tally)
                         character.tally['rounds'] += 1
