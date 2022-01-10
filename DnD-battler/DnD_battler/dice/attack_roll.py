@@ -106,21 +106,27 @@ class AttackRoll(SkillRoll):
                elif attack_roll >= universal_table[attack_rank]['Y']:
                   #slam eligible
                   if kill_flag == 0:
-                      slam_result = slam_check(endurance_rank)
-                      print("SLAM?", attack_roll, damage_rank, slam_result)
-                      if slam_result == "Slam": #assume 30 rank wall smash into for now
-                          #damage_roll = damage_roll + max(dict_faserip[endurance_rank],30) + 2 
-                          damage_roll = damage_armour + max(0, 30 - enemy_ac) 				
-                          
-                      elif slam_result == "Grand Slam":
-                          #damage_roll = damage_roll + max(dict_faserip[endurance_rank]) + faserip_index[damage_rank]*2 #many areas simulation hack #assuming no body armour
-                          #damage_roll = damage_armour + max(dict_faserip[endurance_rank],30) + faserip_index[damage_rank]*2 #many areas simulation hack #assuming no body armour
-                          #damage_roll = damage_armour + max(0, max(dict_faserip[endurance_rank] + faserip_index[damage_rank]*2, 30) - enemy_ac) 				
-                          damage_roll = damage_armour + max(0, 30 - enemy_ac) 				
+                      if other_attacks['mental'] == 1:
+                          print("STUN from MENTAL?", attack_roll, damage_rank)
+                          stun_result = stun_check(endurance_rank)
+                          effect = stun_result
+                          effect_type = "STUN"
                       else:
-                          pass					  
-                      effect = slam_result
-                      effect_type = "SLAM"
+                          slam_result = slam_check(endurance_rank)
+                          print("SLAM?", attack_roll, damage_rank, slam_result)
+                          if slam_result == "Slam": #assume 30 rank wall smash into for now
+                              #damage_roll = damage_roll + max(dict_faserip[endurance_rank],30) + 2 
+                              damage_roll = damage_armour + max(0, 30 - enemy_ac) 				
+                              
+                          elif slam_result == "Grand Slam":
+                              #damage_roll = damage_roll + max(dict_faserip[endurance_rank]) + faserip_index[damage_rank]*2 #many areas simulation hack #assuming no body armour
+                              #damage_roll = damage_armour + max(dict_faserip[endurance_rank],30) + faserip_index[damage_rank]*2 #many areas simulation hack #assuming no body armour
+                              #damage_roll = damage_armour + max(0, max(dict_faserip[endurance_rank] + faserip_index[damage_rank]*2, 30) - enemy_ac) 				
+                              damage_roll = damage_armour + max(0, 30 - enemy_ac) 				
+                          else:
+                              pass					  
+                          effect = slam_result
+                          effect_type = "SLAM"
                   else:
                       print("STUN from KILL?", attack_roll, damage_rank)
                       stun_result = stun_check(endurance_rank)

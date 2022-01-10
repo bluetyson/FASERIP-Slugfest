@@ -297,7 +297,8 @@ class CreatureAction(CreatureAdvBase):
                     #need to implement if armour piercing is just a CS reduction or bypasses entirely - e.g. Shadowcat.
                     body_armour_rank = "Sh0"
             
-
+        ###FORCE FIELD CHECK
+        		
         if fighting_cs != 0:
             fighting_rank = column_shift(fighting_rank, fighting_cs)
             print("fighting cs rank 1", fighting_rank)
