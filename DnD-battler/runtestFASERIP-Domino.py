@@ -2,6 +2,8 @@ from DnD_battler import Creature, Encounter
 import pandas as pd
 
 arenaDangerRoom = Encounter(Creature.load("Longshot"), Creature.load("Domino"))
+#arenaDangerRoom = Encounter(Creature.load("Domino No Luck"), Creature.load("Domino"))
+#arenaDangerRoom = Encounter(Creature.load("Longshot No Luck"), Creature.load("Longshot"))
 
 
 print(arenaDangerRoom.go_to_war(1))
@@ -12,6 +14,7 @@ print(arenaDangerRoom.go_to_war(1))
 #print(arenaDangerRoom.go_to_war(2000))
 #print(arenaDangerRoom.go_to_war(5000))
 #print(arenaDangerRoom.go_to_war(10000))
+#print(arenaDangerRoom.go_to_war(100000))
 #print(arenaDangerRoom.go_to_war(5000))
 
 #print(arenaDangerRoomNA.go_to_war(10000))

@@ -106,7 +106,7 @@ class AttackRoll(SkillRoll):
                 damage_roll = 1 # to get to take damage, neglibible amount
             else:
                 #if dict_faserip[damage_rank] >= dict_faserip[endurance_rank] and damage_armour >= 0:
-                if (dict_faserip[damage_rank] >= dict_faserip[endurance_rank] or talents['martial_arts']['A'] == 1) and (damage_armour >= 0 or talents['martial_arts']['D'] == 1):			
+                if (dict_faserip[damage_rank] >= dict_faserip[endurance_rank] or talents['martial_arts']['A'] == 1 or kill_flag == 1) and (damage_armour >= 0 or talents['martial_arts']['D'] == 1):			
                    if attack_roll >= universal_table[attack_rank]['R']:
                       #stun or kill eligible
                       if kill_flag == 0:
@@ -116,7 +116,7 @@ class AttackRoll(SkillRoll):
                           effect_type = "STUN"
                       else:
                           print("KILL?", attack_roll, damage_rank)
-                          kill_result = kill_check(endurance_rank)
+                          kill_result = kill_check(endurance_rank, pc=opp_pc)
                           effect = kill_result
                           effect_type = "KILL"
     
