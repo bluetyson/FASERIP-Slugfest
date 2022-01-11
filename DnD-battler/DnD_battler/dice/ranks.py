@@ -42,6 +42,48 @@ def universal_color(rank, roll):
 		color = 'W'
 	return color
 
+def roll_faserip(pc = None):
+	if pc == "good":
+		tens = random.randint(0,9)
+		ones = random.randint(0,9)
+		original_roll = int(str(tens) + str(ones)) 
+		if ones > tens:
+			rollstr = str(ones) + str(tens)
+			if rollstr == "00":
+				roll = 100
+			else:
+				roll = int(str(ones) + str(tens))
+				print("Luck helped! from ", original_roll, " to ", roll)    
+		else:
+			rollstr = str(tens) + str(ones)
+			if rollstr == "00":
+				roll = 100
+			else:
+				roll = int(str(tens) + str(ones))
+		print("Good luck check ", original_roll, " to ", roll)    
+
+	elif pc == "bad":
+		tens = random.randint(0,9)
+		ones = random.randint(0,9)
+		original_roll = int(str(tens) + str(ones)) 
+		if tens > ones:
+			rollstr = str(ones) + str(tens)
+			if rollstr == "00":
+				roll = 100
+			else:
+				roll = int(str(ones) + str(tens))
+				print("Luck bad! from ", original_roll, " to ", roll)    
+		else:
+			rollstr = str(tens) + str(ones)
+			if rollstr == "00":
+				roll = 100
+			else:
+				roll = int(str(tens) + str(ones))
+		print("Bad luck check ", original_roll, " to ", roll)    
+	else:
+		roll = random.randint(1,100)
+	return roll
+		
 def column_shift(rank, shift):
 	rank_list = []
 	for key in faserip_index.keys():
@@ -69,8 +111,9 @@ def feat(rank, intensity, roll):
 	if rank_color == 'G' and intensity_index < rank_index:
 		return True
 	
-def slam_check(endurance_rank):
-	endurance_roll = random.randint(1,100)
+def slam_check(endurance_rank, pc = None):
+	#endurance_roll = random.randint(1,100)
+	endurance_roll = roll_faserip(pc = pc)
 	color = universal_color(endurance_rank, endurance_roll)
 	if color == "W":
 		result = "Grand Slam"
@@ -82,8 +125,9 @@ def slam_check(endurance_rank):
 		result = "No"
 	return result
 	
-def stun_check(endurance_rank):
-	endurance_roll = random.randint(1,100)
+def stun_check(endurance_rank, pc = None):
+	#endurance_roll = random.randint(1,100)
+	endurance_roll = roll_faserip(pc = pc)
 	color = universal_color(endurance_rank, endurance_roll)
 	if color == "W":
 		result = random.randint(1,10)
@@ -95,8 +139,9 @@ def stun_check(endurance_rank):
 		result = 0
 	return result
 	
-def kill_check(endurance_rank):
-	endurance_roll = random.randint(1,100)
+def kill_check(endurance_rank, pc = None):
+	#endurance_roll = random.randint(1,100)
+	endurance_roll = roll_faserip(pc = pc)
 	color = universal_color(endurance_rank, endurance_roll)
 	if color == "W":
 		result = "En Loss"

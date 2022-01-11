@@ -1,6 +1,6 @@
 from ..victory import Victory
 from ._adv_base import CreatureAdvBase
-from ..dice.ranks import faserip, dict_faserip, universal_table, universal_color, column_shift, faserip_index, feat, nearest_rank
+from ..dice.ranks import faserip, dict_faserip, universal_table, universal_color, column_shift, faserip_index, feat, nearest_rank, roll_faserip
 import random
 import time
 
@@ -165,6 +165,12 @@ class CreatureAction(CreatureAdvBase):
     #def multiattack(self, verbose=0, assess=0):
     def multiattack(self, verbose=1, assess=0):	
         print(self.name, "is multiattacking", self.stun) #attack all at once - 6 at once? if more than 2 worth it maybe
+        probability_control = None
+        opponent_probability_control = None
+        if 'Probability Manipulation' in self.powers_adj_rank:
+            probability_control = "good"		        
+        pc = probability_control
+		
         extra_attacks = 0
         slugfest = 1		
         damage_rank = self.srank
@@ -190,7 +196,7 @@ class CreatureAction(CreatureAdvBase):
             print ("Mind Based Combat: Psyche Rank", self.prank)
             slugfest = 0
 
-        
+        ##Opponent checks section
         try:
             opponent = self.arena.find(self.arena.target, self)[0]
             possible_opponents = self.arena.find(self.arena.target, self)
@@ -207,7 +213,12 @@ class CreatureAction(CreatureAdvBase):
                 print(self.name, "cannot hurt phased ", opponent.name)
                 return
             else:
-                print(self.name, "can hurt phased ", opponent.name)			
+                print(self.name, "can hurt phased ", opponent.name)	
+
+        if 'Probability Manipulation' in opponent.powers_adj_rank:
+            opponent_probability_control = "good"		        
+        opp_pc = opponent_probability_control
+				
         #check for opponent defensive abilities - eventually all functions these should be want the flow first
         initiative_condition = 0
         ability_test = 0
@@ -225,7 +236,9 @@ class CreatureAction(CreatureAdvBase):
                     if key == "I":
                         ability_used_rank = self.irank					
                     ability_used_index = faserip_index[ability_used_rank]
-                    defense_check = random.randint(1,100)
+                    #defense_roll = random.randint(1,100)
+                    defense_roll = roll_faserip(pc = pc)
+                    defense_check = universal_color(ability_used_rank, defense_roll)
                     if defense_check == "R" and (ability_used_index + 1) >= result_needed_index:
                         print(self.name, " finds ", opponent.name, "on red")
                     else:
@@ -379,7 +392,8 @@ class CreatureAction(CreatureAdvBase):
     
             else:
                 #Amazing fighting or better Amazing intensity, try for three
-                fighting_roll = random.randint(1,100)
+                #fighting_roll = random.randint(1,100)
+                fighting_roll = roll_faserip(pc = pc)
                 fighting_cs = -3  #going to need to change below to have an effective fighting rank from fighting_cs type things
                 fighting_color = universal_color(fighting_rank, fighting_roll)
                 if fighting_color == "Y" or fighting_color == "R":
@@ -422,14 +436,13 @@ class CreatureAction(CreatureAdvBase):
         else:
             extra_attacks_rank_multiplier = 1
         for ea in range(extra_attacks*extra_attacks_rank_multiplier + 1*extra_attacks_rank_multiplier): #if no extra attacks and not a mook make a -4CS
-            for i in range(len(self.attacks)):  ##multi attack check here? #boost for Martial arts B to F rank
+            for i in range(len(self.attacks)):  
                 try:
                     opponent = self.arena.find(self.arena.target, self)[0]
                     #print(opponent)
                 except IndexError:
                     raise Victory()
                 self.log.debug(f"{self.name} attacks {opponent.name} with {self.attacks[i].name}")
-                # This was the hit method. put here for now.
                 # THE IMPORTANT PART TO WRITE, UNIVERSAL TABLE TIME!
                 #print(self.stated_ac,self.armor.ac,opponent.body_armour["Physical"])
                 #print("ATTACKS", self.attacks[i], "FIGHTING", self.frank, "STRENGTH", self.srank, "OPPEND", opponent.erank, "BA", dict_faserip[opponent.armour_name])
@@ -459,7 +472,7 @@ class CreatureAction(CreatureAdvBase):
 				
                 #damage, effect_type, effect = self.attacks[i].attackFASERIP(dict_faserip[opponent.body_armour["Physical"]], advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=damage_rank, endurance_rank=opponent.erank,other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
                 if force_field_rank == "Sh0":
-                    damage, effect_type, effect = self.attacks[i].attackFASERIP(dict_faserip[body_armour_rank], advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=damage_rank, endurance_rank=opponent.erank,other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
+                    damage, effect_type, effect = self.attacks[i].attackFASERIP(dict_faserip[body_armour_rank], advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=damage_rank, endurance_rank=opponent.erank,other_attacks=self.alt_attack, talents=self.talents, pc = pc, opp_pc = opp_pc)  #put attack rank in
                 else:
                     effect_type = None
                     effect = None
@@ -469,7 +482,8 @@ class CreatureAction(CreatureAdvBase):
                     phase_check = 0
                     if 'Phasing' in self.powers_adj_rank:
                         phasing_rank = self.powers_adj_rank['Phasing'].split(';')[0]
-                        phasing_roll = random.randint(1,100)
+                        #phasing_roll = random.randint(1,100)
+                        phasing_roll = roll_faserip(pc = pc)
                         feat_check = feat(phasing_rank, force_field_rank, phasing_roll)
                         if feat_check:
                             print(self.name,  "phased through Force Field for full damage")
@@ -481,7 +495,8 @@ class CreatureAction(CreatureAdvBase):
                         if damage_index > force_field_index:
                             damage = dict_faserip[damage_rank] - dict_faserip[force_field_rank]					
                             print("Force Field fails!", opponent.name, " takes ", damage)					
-                            stun_roll = random.randint(1,100)
+                            #stun_roll = random.randint(1,100)
+                            stun_roll = roll_faserip(pc = pc)
                             feat_check = feat(force_field_rank, damage_rank, stun_roll)
                             if feat_check:
                                 print(opponent.name,  "survived Force Field going down")

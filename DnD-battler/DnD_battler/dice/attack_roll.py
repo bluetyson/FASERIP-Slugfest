@@ -2,7 +2,7 @@ from .skill_roll import SkillRoll
 from .ability_die import AbilityDie
 from .dice import Dice
 from typing import *
-from .ranks import dict_faserip, universal_table, faserip_index, column_shift, slam_check, stun_check, kill_check
+from .ranks import dict_faserip, universal_table, faserip_index, column_shift, slam_check, stun_check, kill_check, roll_faserip
 import random
 
 class AttackRoll(SkillRoll):
@@ -48,6 +48,8 @@ class AttackRoll(SkillRoll):
                add_ability_to_damage=False,
                other_attacks: Dict=None,
                talents: Dict=None,
+               pc: str = None,
+               opp_pc: str = None,
                munchkin=False) -> int:
         """
         Returns an integer of the damage incurred. 0 is fail.
@@ -59,7 +61,8 @@ class AttackRoll(SkillRoll):
         :param munchkin: proficiency is not added to damage RAW, however munchkins always do....
         :return:
         """
-        attack_roll = random.randint(1,100)
+        #attack_roll = random.randint(1,100)
+        attack_roll = roll_faserip(pc = pc)
         effect_type = None
         effect = None
         #print("ATTACK ROLL:", attack_roll, "BA:", enemy_ac)
@@ -108,7 +111,7 @@ class AttackRoll(SkillRoll):
                       #stun or kill eligible
                       if kill_flag == 0:
                           print("STUN?", attack_roll, damage_rank)
-                          stun_result = stun_check(endurance_rank)
+                          stun_result = stun_check(endurance_rank, pc=opp_pc)
                           effect = stun_result
                           effect_type = "STUN"
                       else:
@@ -122,11 +125,11 @@ class AttackRoll(SkillRoll):
                       if kill_flag == 0:
                           if other_attacks['mental'] == 1:
                               print("STUN from MENTAL?", attack_roll, damage_rank)
-                              stun_result = stun_check(endurance_rank)
+                              stun_result = stun_check(endurance_rank, pc=opp_pc)
                               effect = stun_result
                               effect_type = "STUN"
                           else:
-                              slam_result = slam_check(endurance_rank)
+                              slam_result = slam_check(endurance_rank, pc=opp_pc)
                               print("SLAM?", attack_roll, damage_rank, slam_result)
                               if slam_result == "Slam": #assume 30 rank wall smash into for now
                                   #damage_roll = damage_roll + max(dict_faserip[endurance_rank],30) + 2 
@@ -143,7 +146,7 @@ class AttackRoll(SkillRoll):
                               effect_type = "SLAM"
                       else:
                           print("STUN from KILL?", attack_roll, damage_rank)
-                          stun_result = stun_check(endurance_rank)
+                          stun_result = stun_check(endurance_rank, pc=opp_pc)
                           effect = stun_result
                           effect_type = "STUN"
     				   
