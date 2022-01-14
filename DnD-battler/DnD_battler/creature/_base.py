@@ -101,7 +101,8 @@ class CreatureBase:
         self.defense = {}
         self.attack_preferred = {}  ##attempt to configure?
         self.defense_preferred = {}
-
+        self.identity = ""
+        self.form = ""		
     @property
     def abilities(self):
         """
@@ -116,5 +117,12 @@ class CreatureBase:
     def hurtful(self):
         # this is the average damage it can do. But omits if it hits or not...
         return sum([roll.damage_dice.mean() for roll in self.attacks])
+
+    def hurtfulFASERIP(self):
+        # this is the average damage it can do. But omits if it hits or not...
+        #return sum([roll.damage_dice.mean() for roll in self.attacks])
+        #hurtful needs a multi attack possibility
+        attack_modes = {"F":self.frank, "A" : self.arank, "P": self.prank}
+        return [self.attack_preferred, attack_modes]
 
     ac = property(lambda self: self.armor.get_ac(), lambda self, value: self.armor.set_ac(value))

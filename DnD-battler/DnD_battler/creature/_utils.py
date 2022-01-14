@@ -6,25 +6,13 @@ class CreatureUtils(CreatureBase):
 
     def generate_character_sheet(self) -> str:
         """
-        An markdown character sheet.
+        A markdown character sheet.
         
         :return: a string
         """
         rows = ['# ' + self.name.upper()]
         rows.append(self._makeline('Name', self.name))
         rows.append(self._makeline('Alignment', self.alignment))
-        if self.cr:
-            level = self.cr
-            lname = 'CR'
-        else:
-            level = self.level
-            lname = 'Level'
-        if self.hit_die:
-            rows.append(self._makeline(lname + ' (hit dice)', level, self.hit_die))
-        else:
-            rows.append(self._makeline(lname, level))
-        if self.xp:
-            rows.append(self._makeline('XP', self.xp))
         rows.append('## Abilities')
         for ab in self.ability_names:
             rows.append(self._makeline(ab, self[ab].score, self[ab].bonus))
@@ -41,12 +29,65 @@ class CreatureUtils(CreatureBase):
         rows.append('### Raw data')
         rows.append(str(self.__dict__).replace('<br/>', '\n'))
         return '\n'.join(rows)
+
+    def generate_character_sheetFASERIP(self) -> str:
+        """
+        A markdown character sheet.
+        
+        :return: a string
+        """
+        rows = ['# ' + self.name.upper()]
+        rows.append(self._makeline('Name', self.name))
+        rows.append(self._makeline('Identity', self.identity))
+        rows.append(self._makeline('Form', self.form))
+        rows.append(self._makeline('Alignment', self.alignment))
+        rows.append('## Abilities')
+        for index, ab in enumerate(self.ability_names):
+            if index == 0:
+                abrank = self.frank
+            elif index == 1:
+                abrank = self.arank
+            elif index == 2:
+                abrank = self.srank
+            elif index == 3:
+                abrank = self.erank
+            elif index == 4:
+                abrank = self.rrank
+            elif index == 5:
+                abrank = self.irank
+            else:
+                abrank = self.prank
+			
+            rows.append(self._makeline(ab, abrank))
+        rows.append('## Combat')
+        rows.append(self._makeline('Health', self.hp))
+        rows.append(self._makeline('Karma', self.karma))
+        rows.append(self._makeline('Body Armour', self.body_armour))
+        rows.append(self._makeline('Martial Arts', self.talents['martial_arts']))
+        rows.append(self._makeline('Powers', self.powers_adj_rank))		
+        rows.append(self._makeline('Equipment', self.equipment_adj_rank))				
+        rows.append(self._makeline('Talents', self.talents_adj))				
+        rows.append(self._makeline('Contacts', self.contacts))						
+        rows.append('### Attacks')
+        rows.append(self._makeline('Condition', self.condition))
+        rows.append(self._makeline('Initiative', self.initiative.modifier))
+        rows.append(self._makeline('Alt', self.alt_attack))
+        rows.append(self._makeline('Potential average damage per turn', self.hurtfulFASERIP()))
+        rows.append(self._makeline('Esoteric CS Bonus', self.level))
+        rows.append(self._makeline('Attack', self.attack))
+        rows.append(self._makeline('Defense', self.defense))
+        for d in self.attacks:
+            #rows.append("* " + self['AbilityDie']._makeline(d['name'], d['attack'], d['damage']))
+            pass			
+        rows.append('### Raw data')
+        rows.append(str(self.__dict__).replace('<br/>', '\n'))
+        return '\n'.join(rows)
     
     def _makeline(self, field: str, value: Any, secvalue: Optional[Any]=None) -> str:
         """
         dependent method for generate_character_sheet only.
         returns _field_: value (secvalue)
-        secvalues is if has a secondary value to be added in brachets
+        secvalues is if has a secondary value to be added in brackets
         """
         if secvalue is None:
             return '_' + str(field).replace("_", " ") + '_: ' + str(value)

@@ -38,7 +38,7 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
         print("CHECK_SETTINGS", settings)		
         # -------------- assign fluff values ---------------------------------------------------------------------------
         #print(settings['stated_ac'])
-        for key in ('name', 'base', 'type', 'alignment','stated_ac'):
+        for key in ('name', 'identity', 'base', 'type', 'alignment','stated_ac'):
             #print("key",key)
             if key in settings:
                 self[key] = settings[key]
