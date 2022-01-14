@@ -128,7 +128,6 @@ def slam_check(endurance_rank, pc = None):
 def stun_check(endurance_rank, pc = None):
 	#endurance_roll = random.randint(1,100)
 	endurance_roll = roll_faserip(pc = pc)
-	print("pc check", pc)
 	color = universal_color(endurance_rank, endurance_roll)
 	if color == "W":
 		result = random.randint(1,10)
@@ -142,7 +141,6 @@ def stun_check(endurance_rank, pc = None):
 	
 def kill_check(endurance_rank, pc = None):
 	#endurance_roll = random.randint(1,100)
-	print("pc check", pc)
 	endurance_roll = roll_faserip(pc = pc)
 	color = universal_color(endurance_rank, endurance_roll)
 	if color == "W":
