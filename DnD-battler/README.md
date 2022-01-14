@@ -98,7 +98,6 @@ An ongoing work in progress, see the bestiaryFASERIP.csv an benriely.csv for the
 
 - to use characters in Simulations may require a bit of editing of the csv or the character parsing routines if many instances that can be handled, the csvs are designed so most of the handcoding is done.
 
-## SOME OF THE BELOW WILL NOT CURRENTLY BE RELEVANT
 
 
 ## Logging
@@ -192,6 +191,8 @@ In;
 BEST ATTACK: {'Force': {'S': '', 'R': 'Mn;', 'A': 'In;'}} <class 'dict'>
 best alt attack {'throwing-blunt': 0, 'throwing-edged': 0, 'blunt': 0, 'edged': 0, 'shooting': 0, 'energy': 0, 'force': 1, 'grappling': 0}`
 
+## SOME OF THE BELOW WILL NOT CURRENTLY BE RELEVANT
+
 __str__(self)
     Return str(self).
 
@@ -199,16 +200,10 @@ act(self, verbose=0)
 
 assess_wounded(self, verbose=0)
 
-cast_barkskin(self)
-
-cast_healing(self, weakling, verbose=0)
-
-cast_nothing(self, state='activate')
 
 check_action(self, action, verbose)
     # TODO
 
-check_advantage(self, opponent)
 
 copy(self)
     :return: a copy of the creature.
@@ -216,7 +211,7 @@ copy(self)
 do_action(self, action, verbose)
     # TODO
 
-generate_character_sheet(self)
+generate_character_sheet(self)  #needs updating to FASERIP version
     An markdown character sheet.
     :return: a string
 
@@ -258,9 +253,9 @@ __weakref__
 ----------------------------------------------------------------------
 Data and other attributes defined here:
 
-ability_names = ['str', 'dex', 'con', 'wis', 'int', 'cha']
+ability_names = ['F', 'A', 'S', 'E', 'R', 'I', 'P']
 
-beastiary = {'aboleth': {'AB_Cha': '4', 'AB_Con': '0', 'AB_Dex': '0', ...
+beastiary = {'aboleth': {'AB_Cha': '4', 'AB_Con': '0', 'AB_Dex': '0', ...  ##update to FASERIP version
     
 # class Dice(builtins.object)
 Methods defined here:
@@ -283,17 +278,7 @@ __str__(self)
     This is rather inelegant piece of code and is not overly flexible. If the dice fail to show, they will still work.
     :return: string in dice notation.
 
-icosaroll(self, verbose=0)
-    A roll that is a d20. It rolls advantage and disadvatage and calls `_critcheck`.
-    :param verbose:
-    :return:
-
-multiroll(self, verbose=0)
-    A roll that is not a d20. It adds the bonus and rolls (x2 if a crit).
-    :param verbose:
-    :return:
-
-roll(self, verbose=0)
+roll(self, verbose=0)  ##update to FASERIP
     The roll method, which calls either icosaroll or multiroll.
     :param verbose: debug
     :return: the value rolled (and alters the dice too if need be)
@@ -306,11 +291,7 @@ two-weapon attack —
     Stacks with bonuses such as sneak attack or poisoned weapons —neither are in the model.
     Due to the 1 action for donning/doffing a shield, switch to two handed is valid for unshielded folk only.
     Best keep two weapon fighting as a prebuild not a combat switch.
-AoE spell attack — Layout…
-targetted spell attack —produce flame is a cantrip so could be written up as a weapon. The bigger ones. Spell slots need to be re-written.
-spell buff —Barkskin is a druidic imperative. Haste? Too much complication.
-spell debuff —Bane…
-dodge —targetted and turn economy
+dodge —targetted and turn economy  #institute FASERIP version
 help —high AC target (>18), turn economy, beefcake ally
 ready —teamwork preplanning. No way.
 grapple/climb —very situational. grapple/shove combo or barring somatic.
