@@ -100,56 +100,6 @@ An ongoing work in progress, see the bestiaryFASERIP.csv an benriely.csv for the
 
 ## SOME OF THE BELOW WILL NOT CURRENTLY BE RELEVANT
 
-```python
-from DnD_battler import Creature
-Creature(name="Lawyer", alignment='capital')
-Creature.load(creature_name='Lawyer', name="Cecil", alignment='capital')
-```
-
-Technically, these are set via `apply_parameters`. These are:
-
-* _name_ (`str`) name of creature for logs, stored in `creature.name`
-* _base_ (`str`) No longer accepted as parameter. Please use ``Creature.load(creature_name)``.
-    The attribute ``.base`` is just a keepsake, altering does nothing.
-* _xp_ (`int`) Experience points, does nothing. Stored in `creature.xp`.
-* _size_ (`str`) sets the size. Note the attribute `creature.size` is a Size instance. alter `.size.name` for effects.
-* _alignment_ (`str`) not quite the alignment but the side in the encounter.
-    In future I **may** split these and use alignment to determine side.
-* _arena_ (`Encounter`) the encounter object itself. Stored in `creature.arena`.
-* _level_ (`int`) the level. Stored in `creature.level`, but use `set_level` to alter 
-    and it affects the `.proficiency` attribute.
-* _proficiency_ (`int`) the proficiency bonus, however, the `.proficiency` attribute is a `Proficiency` instance.
-    the `.proficiency.bonus` attribute is the bonus. It scales automatically with level.
-* _hd_ (`int`) hit dice number of faces. Alters `.hit_die.num_faces`. Trigger hp recalculation if no hp specified.
-* _hp_ (`int`) hit points. Note this is calculated automatically otherwise. `.hp` is the current `.hp`,
-    `.starting_hp` is the pre-battle one.
-* _abilities_ (`dict`), _ability_bonuses_ (`dict`), _str_ (`int`), _f_ (`int`) etc. `ab_f` (`int`) etc.: 
-    _abilities_ and _ability_bonuses_ are potentially incomplete dict of 3-letter ability and score/bonus. 
-    3-letter ability take presendence. Bonus takes precedence over score
-    (note that if a mismatching score/bonus is given the score will be kept
-    and not corrected —it has no effect.
-    The abilities are stored as 3-letter attributes with a unique `Ability` die. Proficiency is already added.
-    so `creature.str.bonus` is the bonus, `creature.str.temp_modifier` is a temp modifier and
-    `creature.str.score` is the score. Note that derived abilities, such as attack rolls and skill checks
-    (`AttackRoll` and `SkillRoll`) are dependent on this die, so change the properties as opposed to setting a new one.
-    This allows AttackRolls to have a weapon-specific attack bonus (in addition to a damage bonus) which gets added to
-    a `.proficiency.bonus`, `ability_die.temp_modifier` and `ability_die.bonus`.
-* _initiative_bonus_ (`int`): this alters the `.initiative.modifier` as `initiative` is a `SkillRoll`.
-    
-## Dice
-
-The `Dice` object is easy. It has `.num_faces`, a `.bonus` and a `.avg` boolean flag which controls whether rolls are 
-always an average (NPC style). The method `roll` rolls the dice and adds the bonus (`base_roll` does not). 
-
-Then `Ability` extends this by taking into account `Proficiency` stored in the `.proficiency` attribute.
-`temp_modifier` and taking account of advantage. `score` does nothing really.
-
-Then `SkillRoll` wraps around an ability die adding a `modifier`. Note that `bonuses` (plural) 
-gives the sum of the bonuses. The attribute `bonus` is not used.
-Altering an ability die will automatically affect the dependent skill rolls.
-
-Then `AttackRoll` extends `SkillRoll` further and has a bound damage dice. `attack` against an AC value
-rolls and returns damage.
 
 ## Logging
 
@@ -185,47 +135,11 @@ Specifically, the simulations runs _n_ encounters via `Encounter(<...>).go_to_wa
 If you want to override the behaviour of say a creature to attack regardlessly and at random you can change the class's method `act()`
 
 ```
-import random, DnD, types
-
-donald=Creature("Donald", alignment='Murica')
-kim=DnD.Creature("Kim",alignment='NKorea')
-rex=DnD.Creature.load(creature_name="owlbear", name="Rex", alignment='Murica', int=1, wis=1)
-
-# new method
-def trumpconomy(self,verbose=0, assess=0):
-    if not self.arena.find('alive enemy') and len(self.arena.find('alive ally')) == 1: #TrumpMod: Win when all bar one.
-        raise Encounter.Victory()
-    for i in range(len(self.attacks)):
-        try:
-            opponent = random.choice([other for other in self.arena.combattants if other is not self]) #TrumpMod kill all bar self.
-        except IndexError:
-            raise self.arena.Victory()
-        self.log.debug(self.name + ' attacks ' + opponent.name + ' with ' + str(self.attacks[i]['name']))
-        # This was the hit method. put here for now.
-        self.attacks[i]['attack'].advantage = self.check_advantage(opponent)
-        if self.attacks[i]['attack'].roll(verbose) >= opponent.ac:
-            # self.attacks[i]['damage'].crit = self.attacks[i]['attack'].crit  #Pass the crit if present.
-            h = self.attacks[i]['damage'].roll(verbose)
-            opponent.take_damage(h, verbose)
-            self.tally['damage'] += h
-            self.tally['hits'] += 1
-        else:
-            self.tally['misses'] += 1
-
-
-# adding the unbound method as a bound method...
-donald.act=types.MethodType(trumpconomy, donald)
-
-print(Encounter(donald,rex,kim).battle(verbose=1).masterlog)
-```
-
-In round one Donald attacks his ally Rex, thus proving the behavior is altered.
-
 
 # Class summary
 ## Dice
-Dice accepts bonus plus an int —8 is a d8— or a list of dice —[6,6] is a 2d6— or nothing —d20.
-    roll() distinguishes between a d20 and not. d20 crits have to be passed manually.
+There is a roll_faserip function in ranks module instead, here.  An initiative roll as well.
+
 ## Character
 Character has a boatload of attributes. It can be initialised with a dictionary or an unpacked one... or a single name matching a preset.  The boatload will get bigger for FASERIP to eventually deal with powers, different types of attacks, etc.
 ## Encounter
