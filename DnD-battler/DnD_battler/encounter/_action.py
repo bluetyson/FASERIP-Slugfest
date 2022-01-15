@@ -80,7 +80,7 @@ class EncounterAction(EncounterBase):
         print(f"Turn order: {[x.name for x in self]}")
 
     def predict(self):
-        #print("doing predict")
+        #TODO: Needs work for FASERIP
         def safediv(a, b, default=0):
             try:
                 return a / b
@@ -115,6 +115,7 @@ class EncounterAction(EncounterBase):
                 #move = move1.ability_die
                 #move.avg = True
                 #damage[character.alignment] += safediv((20 + move.bonus - ac[not_us(character.alignment)]), 20 * move.roll())
+                #this would need to have powers etc. in as well, complicated
                 damage[character.alignment] += safediv((dict_faserip[character.srank] - ac[not_us(character.alignment)]), 1) * universal_table[character.frank]['G'] / 100.0
                 #move.avg = False
                 hp[character.alignment] += character.starting_hp
@@ -129,32 +130,26 @@ class EncounterAction(EncounterBase):
                     round(safediv(rate[b], (rate[a] + rate[b]) * 100))) + '%' + N)
 
     def battle(self, reset=1, verbose=1):
-        #print("in battle")
         if verbose: self.masterlog.append('==NEW BATTLE==')
         self.tally['battles'] += 1
-        #print("reset",reset)
 		
         if reset: self.reset()
         for schmuck in self: schmuck.tally['battles'] += 1
-        #for schmuck in self: print(schmuck.name)
         self.roll_for_initiative(self.masterlog)
         while True:
             try:
                 if verbose: self.masterlog.append('**NEW ROUND**')
                 self.tally['rounds'] += 1
                 for character in self:
-                    #print("ready",character)
                     character.ready()
                     if character.isaliveFASERIP():
                         if not character.isconscious():  #encounter character, creature not character
                             character.tally['stunned'] += 1
                         self.active = character
-                        #print(character.tally)
                         character.tally['rounds'] += 1
                         character.act(self.masterlog)
                     else:
                         character.tally['dead'] += 1
-                #break #got to take this one out
             except Victory:
                 break
         # closing up maths
@@ -178,7 +173,7 @@ class EncounterAction(EncounterBase):
         # return self or side?
         return self
 
-    #TQDM the war?
+    #TODO: TQDM the war? Would add a dependency
     def go_to_war(self, rounds=1000):
         #for i in tqdm(range(rounds), total=rounds):
         for i in range(rounds):
@@ -208,8 +203,9 @@ class EncounterAction(EncounterBase):
             return [query for query in folk if (query.alignment == team)]
 
         def _alive(folk):
-            #return [query for query in folk if (query.hp > 0 )]
-            return [query for query in folk if (query.hp > 0 and query.kill < 1 )]  #faserip check here
+            #return [query for query in folk if (query.hp > 0 ) - DnD version could have a death save fail condition]
+            #faserip check here, could include other conditions 
+            return [query for query in folk if (query.hp > 0 and query.kill < 1 )]  
 
         def _normal(folk):
             return [joe for joe in folk if joe.condition == 'normal']
