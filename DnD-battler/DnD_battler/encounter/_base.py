@@ -9,7 +9,7 @@ class EncounterBase:
     #target = 'enemy alive bloodiest'
     #target = 'enemy alive fiersomest'
     #target = 'enemy alive weakest'
-    target = 'enemy alive random'
+    target = 'enemy alive random' #for simulation, otherwise you get ordered pick on results in Battle Royales
     # target='enemy alive weakest', target='enemy alive random', target='enemy alive fiersomest'
 
     def __init__(self, *lineup):
@@ -22,7 +22,6 @@ class EncounterBase:
         self.masterlog = []
         self.note = ''
         self.combattants : List[Creature] = []
-        #self.combattants.extend(lineup)
         for chap in lineup:
             self.append(chap)
 
