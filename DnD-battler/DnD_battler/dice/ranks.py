@@ -65,7 +65,8 @@ def universal_color(rank: str, roll: int) -> str:
 def roll_faserip(pc :str = None) -> int:
 	"""
 	returns a universal table dice roll
-	if pc is good, probability manipulates the dice in the roller's favour, if bad, the reverse
+	if pc = good, probability manipulates the dice in the roller's favour
+	if pc = bad, the reverse (swapping tens and ones die as per power)
 	"""
 
 	if pc == "good":
