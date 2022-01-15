@@ -30,7 +30,6 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
             raise ValueError(f'Creature "{creature_name}" not found.')
         self.base = creature_name
         self.apply_settings(**settings)
-        #print(self.tally)
         return self
 
     def apply_settings(self, **settings):
@@ -46,13 +45,16 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
             if key in settings:
                 self[key] = settings[key]
         for key in ('powers_adj_rank','equipment_adj_rank','talents','talents_adj','attack','defense','body_armour'):
-            print(key)		
+            print("FASERIP assignations")		
+            print(key)
             if key in settings:
+                #take the dictionary format from character generator/others and make it work with jason
                 json_acceptable_string = settings[key].replace("'", "\"")
                 self[key] = json.loads(json_acceptable_string)
 
         # -------------- set complex values ----------------------------------------------------------------------------
         # abilities
+        #Armour check tests, turn off eventually
         if 'stated_ac' in settings: #everyone has Armour here in code, just Sh0 for default, so no effect
             print("STATED AC CHECK",self.armor.ac)
             self.armour_name = settings['stated_ac'] 
@@ -69,26 +71,22 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
                 print(type(self.body_armour))
                 if len(ranklist) == 1:  #if 3, good question
                     self.body_armour["Physical"] = ranklist[0]
-                    self.body_armour["Energy"] = column_shift(ranklist[0], -2)
+                    self.body_armour["Energy"] = column_shift(ranklist[0], -2) #hack, could be -20, so not RAW currently
                 if len(ranklist) > 1:  #if 3, good question
                 ###need to make an Energy AC as well
                     self.body_armour["Physical"] = ranklist[0]
                     self.body_armour["Energy"] = ranklist[1]
                     
         else: #need a length
-            #print("STATED AC CHECK AFTER!",self.armour_name)
-            #default is good
             pass
-            #self.body_armour["Physical"] = self.armour_name
-            #self.body_armour["Energy"] = column_shift(self.armour_name, -2)
-                
-            #self.armour_name = "Sh0"
+
+        #doesn't really do much
         self.armor.ac = dict_faserip[self.body_armour["Physical"]]
         
-		
         print("FINAL AC CHECK",self.armor.ac, self.body_armour)
 
         #checking for best attack purely based on damage, not hit rate - perhaps work that out too - Fighting or Agility with specialist skills 
+        #assign default Punching type
         best_attack_type = 'Slugfest'
         best_attack_rank = self.srank
         best_attack_rank_index = 0
@@ -111,8 +109,8 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
                         best_attack = {key : self.attack[key]}
         self.attack_preferred = best_attack
         print("BEST ATTACK:", best_attack, type(best_attack))
-				
-        
+
+        #some default categorisations made up from FATERIP list of default Creatures, Mooks, Aliens and Monsters        
         #T = Type of Damage: E = Edged, B= Blunt, S = Shooting, H = Advanced Technology, 2 = Blunt and Edged, W = S and 2
 		
         if 'att' in settings: #this is for default character list, but could put them in for
@@ -145,6 +143,12 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
             self.alt_attack['shooting'] = 1
         #powers section
         #differential ranged and not eventually for powers when have ranges
+        #S = abbreviation for close damage
+        #R = abbreviation for ranged damage
+        #A = abbreviation for Area effect e.g. grenades
+        #AB = Absorption power/capability
+        #C = Control for mental - could use for other classers
+
         if self.attack['Force']['S'] != '':
             self.alt_attack['force'] = 1
         if self.attack['Force']['R'] != '':
@@ -169,11 +173,12 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
 
         #reset for best attack
         for key in self.alt_attack:
-            self.alt_attack[key] = 0  ##DON'T DO THIS FOR A MORE SOPHISTICATED ATTACK SOMEONE VERSION
+            self.alt_attack[key] = 0  ##DON'T DO THIS FOR A MORE SOPHISTICATED ATTACK SOMEONE VERSION Algo
         #print(self.attack_preferred.keys()[0])
         #print(list(self.attack_preferred.keys())
         print("attack check")
-        print (self.attack)  #armour piercing, just make a default rank for now - all Mental Powers?
+        #armour piercing, just make a default rank for now - all Mental Powers?
+        print (self.attack) 
         if list(self.attack_preferred.keys()) == 'Blunt':
             self.alt_attack['blunt'] = 1
             if self.attack['Blunt']['AP'] == "Sh0":
@@ -223,7 +228,9 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
         
         martial_arts = {"A":0,"B":0,"C":0,"D":0,"E":0}	
         self.talents['martial_arts'] = martial_arts
-        if 'martial_arts' in settings:  #adds a 1 for each of Martial Arts A to E found in beastiaryFASERIP - string ABCDE, ABCD etc.
+        #need to change this if add more martial arts types
+        #adds a 1 for each of Martial Arts A to E found in beastiaryFASERIP - string ABCDE, ABCD etc.
+        if 'martial_arts' in settings:  
             #print("MARTIAL ARTS:", settings['martial_arts'])
             for ma in settings['martial_arts']:
                 self.talents['martial_arts'][ma] = 1
@@ -237,7 +244,7 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
             #print("MOOKL", self.mook)
 
         self.set_ability_dice(**settings)
-        # arena - battle the caracter is in
+        # arena - battle the character is in
         if 'arena' in settings:
             self.arena = settings['arena']
         # size
@@ -246,11 +253,11 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
         # level
         if 'level' in settings:
             self.set_level(**settings)
-        # proficiency
+        # proficiency not used in FASERIP-Slugfest
         if 'proficiency' in settings:
             self.proficiency.bonus = int(settings['proficiency'])
         # hit dice
-        if 'hd' in settings:  #cound use to store Endurance Ranks?
+        if 'hd' in settings:  #could use to store Endurance Ranks?
             self.hit_die.num_faces = [int(settings['hd'])]
             if 'hp' not in settings:
                 self.recalculate_hp()
@@ -261,7 +268,7 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
             self.spellcasting_ability_name = sc_a
         # ac
         self.set_ac(**settings)
-        if 'initiative_bonus' in settings:
+        if 'initiative_bonus' in settings: #set from elsewhere for FASERIP
             self.initiative.modifier = int(settings['initiative_bonus'])
         # attacks
         if 'attack_parameters' in settings or 'attacks' in settings:  #not used currently, likely break things
