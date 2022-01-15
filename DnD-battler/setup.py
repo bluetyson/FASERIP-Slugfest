@@ -25,4 +25,6 @@ setup(
     description=description,
     long_description=__doc__,
     long_description_content_type='text/markdown',
+    #install_requires=['pandas','tqdm']  #for notebook
+    #extras_require={'chargen': ['pandas,, 'tqdm'], }
 )
