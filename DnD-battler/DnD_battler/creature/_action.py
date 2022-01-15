@@ -534,7 +534,7 @@ class CreatureAction(CreatureAdvBase):
 				
                 if damage > 0:
 						
-                    if int(self.mook) == 0 and len(possible_opponents) > 2:
+                    if int(self.mook) == 1 and len(possible_opponents) > 2:
                         print("beating on Mooks")
                         #time.sleep(10)	
                         for mook in possible_opponents:
