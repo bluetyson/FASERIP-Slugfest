@@ -168,9 +168,11 @@ class CreatureAction(CreatureAdvBase):
         print(self.name, "is multiattacking", self.stun) #attack all at once - 6 at once? if more than 2 worth it maybe
         probability_control = None
         opponent_probability_control = None
+        print(self.powers_adj_rank)		
         if 'Probability Manipulation' in self.powers_adj_rank:
             probability_control = "good"		        
         pc = probability_control
+        print("Probability Control", pc)
 		
         extra_attacks = 0
         slugfest = 1		

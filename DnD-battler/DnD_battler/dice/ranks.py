@@ -59,6 +59,7 @@ def universal_color(rank, roll):
 	return color
 
 def roll_faserip(pc = None):
+	print(pc)
 	if pc == "good":
 		tens = random.randint(0,9)
 		ones = random.randint(0,9)
