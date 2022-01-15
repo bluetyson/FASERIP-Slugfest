@@ -3,11 +3,8 @@ import random
 Data structures and functions to implement FASERIP rules
 
 faserip : Dictionary of the FASERIP ability abbreviations.
-
 dict_faserip : Dictionary of the set rank numbers for FASERIP ranks.
-
 faserip_index: Dictionary of the order of ranks for FASERIP ranks, starting at zero.
-
 universal_table: Dictionary of the cutoffs for required rolls for Green, Yellow and Red roll results.  
                  Built from dictionaries for each rank in a list.
 
