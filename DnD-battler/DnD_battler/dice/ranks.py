@@ -22,6 +22,7 @@ dict_faserip={"Sh0":0,"Fb":2,"Pr":4,"Ty":6,"Gd":10,"Ex":20,"Rm":30,"In":40,"Am":
 
 faserip_index={"Sh0":0,"Fb":1,"Pr":2,"Ty":3,"Gd":4,"Ex":5,"Rm":6,"In":7,"Am":8,"Mn":9,"Un":10,"ShX":11,"ShY":12,"ShZ":13,"Cl1000":14,"Cl3000":15,"Cl5000":16,"Beyond":17}
 
+#building the universal table
 Sh0 = {"W":-1, "G":66, "Y":95, "R":100}
 Fb = {"W":-1, "G":61, "Y":91, "R":100}
 Pr = {"W":-1, "G":56, "Y":86, "R":100}
@@ -61,7 +62,12 @@ def universal_color(rank: str, roll: int) -> str:
 		color = 'W'
 	return color
 
-def roll_faserip(pc = None):
+def roll_faserip(pc :str = None) -> int:
+	"""
+	returns a universal table dice roll
+	if pc is good, probability manipulates the dice in the roller's favour, if bad, the reverse
+	"""
+
 	if pc == "good":
 		tens = random.randint(0,9)
 		ones = random.randint(0,9)
