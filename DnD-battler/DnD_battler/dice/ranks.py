@@ -113,7 +113,8 @@ def roll_faserip(pc :str = None) -> int:
 def column_shift(rank : str, shift : int) -> str:
 	"""
 	returns the adjusted Rank name based on an integer Column Shift (CS): positive/negative
-	example column_shift("In", -2) will return "Ex"
+	example:
+	    column_shift("In", -2) will return "Ex"
 	"""
 	rank_list = []
 	for key in faserip_index.keys():
@@ -128,6 +129,21 @@ def column_shift(rank : str, shift : int) -> str:
 	return rank_list[new_index] #give back adjusted rank
 
 def feat(rank, intensity, roll):
+	"""
+	Parameters
+	__________
+	rank: str
+	    Acting Rank
+	intensity: str
+		Intensity Rank
+	roll: int
+		universal table roll
+
+    Returns
+	_______
+	A boolean success or failure for an intensity FEAT roll
+	"""
+	
 	rank_index = dict_faserip[rank]
 	intensity_index = dict_faserip[intensity]
 	rank_color = universal_color(rank, roll)
