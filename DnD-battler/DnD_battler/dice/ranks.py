@@ -50,7 +50,16 @@ for index, key in enumerate(universal_table.keys()):
 
 def universal_color(rank: str, roll: int) -> str:
 	"""
-	returns the color of a universal table roll, given a rank and a number from 1 to 100 (d100 representation)
+	Parameters
+	__________
+	rank: str
+	    Acting Rank used for the result
+	roll:
+	    The universal table roll
+
+	Returns
+	_______	
+	The color of a universal table roll, given a rank and a number from 1 to 100 (d100 representation)
 	"""
 	if roll >= universal_table[rank]['R']:
 		color = 'R'
@@ -64,9 +73,16 @@ def universal_color(rank: str, roll: int) -> str:
 
 def roll_faserip(pc :str = None) -> int:
 	"""
-	returns a universal table dice roll
-	if pc = good, probability manipulates the dice in the roller's favour
-	if pc = bad, the reverse (swapping tens and ones die as per power)
+	Parameters
+	__________
+	pc: str
+	    Only necessary for probability manipulation power, good = in favour, bad = opposite
+     	if pc = good, probability manipulates the dice in the roller's favour
+	    if pc = bad, the reverse (swapping tens and ones die as per power)
+
+	Returns
+	_______
+	A universal table dice roll
 	"""
 
 	if pc == "good":
@@ -112,7 +128,18 @@ def roll_faserip(pc :str = None) -> int:
 		
 def column_shift(rank : str, shift : int) -> str:
 	"""
-	returns the adjusted Rank name based on an integer Column Shift (CS): positive/negative
+	Parameters
+	__________
+
+    rank: str
+	    The Ability rank to adjust
+	shift: int
+		The Column shifts to move the rank
+
+	Returns
+	_______
+	The adjusted Rank name based on an integer Column Shift (CS): positive/negative
+	
 	example:
 	    column_shift("In", -2) will return "Ex"
 	"""
@@ -158,7 +185,17 @@ def feat(rank, intensity, roll):
 		return True
 	
 def slam_check(endurance_rank, pc = None):
-	#endurance_roll = random.randint(1,100)
+	"""
+	Parameters
+	__________
+    endurance_rank: str
+	    Endurance Rank of the character possibly slammed.
+	pc : str
+	    Probability Manipulation rare case.
+	Returns
+	_______
+	Slam result description appropriate to the color.
+	"""
 	endurance_roll = roll_faserip(pc = pc)
 	color = universal_color(endurance_rank, endurance_roll)
 	if color == "W":
