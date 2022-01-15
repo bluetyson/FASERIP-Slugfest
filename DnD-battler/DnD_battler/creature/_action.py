@@ -59,6 +59,8 @@ class CreatureAction(CreatureAdvBase):
             TODO: Alter Ego characters - absorbed powers and abilities could be checked from making a clone of opponent
         alt_attack: Dict
             Basic attack types for simplifying combat simulation branching
+
+        Reduces Health (hp in class) of target taking the damage
         """
         if alt_attack['energy'] == 1 or alt_attack['force'] == 1:
             if ';' in self.defense['Energy']['AB']:
@@ -102,8 +104,7 @@ class CreatureAction(CreatureAdvBase):
             if effect == "En Loss" or effect == "E S":  #Abbreviation for Edged/Slashing damage
                 print(self.name, " Killed!")
                 self.kill = 1
-		
-            
+		 
         if verbose:
             print(self.name + ' took ' + str(points) + ' damage. Now ' + str(self.hp) + ' Health.')
 
@@ -310,7 +311,7 @@ class CreatureAction(CreatureAdvBase):
             elif 'Thrown Objects' in self.talents: #stacks with Thrown Weapons
                 fighting_cs = fighting_cs + 1
             else:
-                pass #no weapon skills
+                pass #no weapon talents
             bypass_flag = 1					
             if self.alt_attack['edged'] == 1:  #compare to body armour
                 print("Edged Fighting")
@@ -338,6 +339,7 @@ class CreatureAction(CreatureAdvBase):
                 print("Energy Fighting", "abs", self.attack['Energy']['AB'])
                 bypass_flag = 0
                 damage_list = self.attack['Energy']['R'].split(';') 
+                #checking if Energy Absorption capabilities - TODO: other Absorptions
                 if self.attack['Energy']['AB'] != '':
                     if int(self.attack['Energy']['AB']) > dict_faserip[damage_list[0]]:
                         ###this needs to be a string rank
@@ -345,12 +347,12 @@ class CreatureAction(CreatureAdvBase):
                         self.attack['Energy']['AB'] = 0
                         print("Blasting Back with ", damage_list[0], "absorbed energy!")
             elif self.alt_attack['force'] == 1:  #compare to body armour
-                print("Force Fighting")  ##need checks for the max for these or a more sophisticated preferred for ranged, area, etc. and alt_attack
+                print("Force Fighting")  ##need check for the max for these or a more sophisticated preferred for ranged, area, etc. and alt_attack
                 damage_list = self.attack['Force']['R'].split(';')
                 if ';' not in self.attack['Force']['R']:
                     damage_list = self.attack['Force']['A'].split(';')
                 bypass_flag = 0
-            elif self.alt_attack['mental'] == 1:  #compare to body armour
+            elif self.alt_attack['mental'] == 1:  #don't compare to body armour
                 print("Mental Fighting")  ##need checks for the max for these or a more sophisticated preferred for ranged, area, etc. and alt_attack
                 damage_list = self.attack['Mental']['R'].split(';')
                 if ';' not in self.attack['Mental']['R']:
@@ -365,7 +367,6 @@ class CreatureAction(CreatureAdvBase):
             else:
                 damage_rank = damage_list[0]
                 material_strength = damage_list[0]
-                #print(opponent.equipment_adj_rank)
             if bypass_flag == 1:
                 if "Body Armour" in opponent.equipment_adj_rank:# and "Body Armour" not in opponent.power_adj_rank:  #make this for edged things only eventually
                     #weapon could penetrate and ignore
@@ -390,21 +391,23 @@ class CreatureAction(CreatureAdvBase):
                     #need to implement if armour piercing is just a CS reduction or bypasses entirely - e.g. Shadowcat.
                     body_armour_rank = "Sh0"
             
-        ###FORCE FIELD CHECK
+        ###Force Field Check
         force_field_rank = "Sh0"		        
         if 'Force Field' in opponent.powers_adj_rank:
             force_field_rank = opponent.powers_adj_rank['Force Field'].split(';')[0]  #could check if two ranks here for Physical/Energy version
         #print(self.name, " is attacking force field of ", force_field_rank)
+        #Apply fighting column shifts
         if fighting_cs != 0:
             fighting_rank = column_shift(fighting_rank, fighting_cs)
             print("fighting cs rank 1", fighting_rank)
         
         print("checking self.mook", type(self.mook))
+        #note mook should be an integer - not worth mooking only 2 mooks, should check for extra attacks instead
         if int(self.mook) == 0 and len(possible_opponents) > 2:  #no extra attacks
             fighting_cs = -4
             print('Mook Rule can be Used')
         else:
-            ##multi attack check here? add to range self.attacks #boost for Martial arts B to F rank
+            ##multi attack check here? add to range self.attacks 
             print('checking Fighting Feat')
             #if dict_faserip[self.frank] < 30:
             if dict_faserip[fighting_rank] < 30:
@@ -416,7 +419,7 @@ class CreatureAction(CreatureAdvBase):
                 #Rm or In fighting no point trying for 3 as Amazing intensity, try for two
                 fighting_roll = random.randint(1,100)
                 fighting_cs = -3  #going to need to change below to have an effective fighting rank from fighting_cs type things
-                #if dict_faserip[self.frank] < 40:
+
                 if dict_faserip[fighting_rank] < 40:
                 #Rm
                     fighting_color = universal_color(fighting_rank, fighting_roll)
@@ -432,7 +435,6 @@ class CreatureAction(CreatureAdvBase):
     
             else:
                 #Amazing fighting or better Amazing intensity, try for three
-                #fighting_roll = random.randint(1,100)
                 fighting_roll = roll_faserip(pc = pc)
                 fighting_cs = -3  #going to need to change below to have an effective fighting rank from fighting_cs type things
                 fighting_color = universal_color(fighting_rank, fighting_roll)
@@ -444,15 +446,12 @@ class CreatureAction(CreatureAdvBase):
                 #put adjustment for green and Monstrous or better
                     extra_attacks = 2
                     fighting_cs = -1
-                #if self.level > 0: #code to simulate set extra attacks  comment out and write a function - another attribute?
-                #    extra_attacks = 2
-                #    fighting_cs = -1
-            ##check martial arts adjustment - put other weapon skill type adjustments etc in a place similarly
-        #if self.talents['martial_arts']['B'] == 1:
-            #fighting_cs = fighting_cs + 1
+
         #SPEED CHECK default to after multiple attack roll
         if 'Hyper-Speed' in opponent.powers_adj_rank:
             #need mental or mystical attack
+            #TODO consider 'level' type bonus for Quicksilver and other ridiculously fast that won't go in standard parameters to Unearthly?
+            #same for Northstar
             speed_rank = opponent.powers_adj_rank['Hyper-Speed'].split(';')[0]
             speed_index = faserip_index[speed_rank]
             if speed_index < 5:
@@ -476,39 +475,18 @@ class CreatureAction(CreatureAdvBase):
         else:
             extra_attacks_rank_multiplier = 1
         for ea in range(extra_attacks*extra_attacks_rank_multiplier + 1*extra_attacks_rank_multiplier): #if no extra attacks and not a mook make a -4CS
+            #should be just 1 here at this level
+            assert len(self.attacks) == 1
             for i in range(len(self.attacks)):  
                 try:
                     opponent = self.arena.find(self.arena.target, self)[0]
-                    #print(opponent)
                 except IndexError:
                     raise Victory()
                 self.log.debug(f"{self.name} attacks {opponent.name} with {self.attacks[i].name}")
                 # THE IMPORTANT PART TO WRITE, UNIVERSAL TABLE TIME!
-                #print(self.stated_ac,self.armor.ac,opponent.body_armour["Physical"])
-                #print("ATTACKS", self.attacks[i], "FIGHTING", self.frank, "STRENGTH", self.srank, "OPPEND", opponent.erank, "BA", dict_faserip[opponent.armour_name])
-                #print("ATTACKS", self.attacks[i], "FIGHTING", self.frank, "STRENGTH", self.srank, "OPPEND", opponent.erank, "BA", dict_faserip[opponent.stated_ac])
-                #print("ATTACKS", self.attacks[i], "FIGHTING", fighting_rank, "STRENGTH", self.srank, "OPPEND", opponent.erank, "BA", dict_faserip[opponent.body_armour["Physical"]])
-                #print("ATTACKS", self.attacks[i], "FIGHTING", fighting_rank, "DAMAGE RANK", damage_rank, "OPPEND", opponent.erank, "BA", dict_faserip[opponent.body_armour["Physical"]])
-                #print("ATTACKS", "FIGHTING", fighting_rank, "DAMAGE RANK", damage_rank, "OPPEND", opponent.erank, "BA", dict_faserip[opponent.body_armour["Physical"]], "BA-Used", dict_faserip[body_armour_rank])
+                #quite a few evolutions of this
                 print("ATTACKS", "FIGHTING", fighting_rank, "DAMAGE RANK", damage_rank, "OPPEND", opponent.erank, "BA", dict_faserip[opponent.body_armour["Physical"]], "BA-Used", dict_faserip[body_armour_rank])
 
-                #if ";" in opponent.armour_name:
-                    #ranklist = opponent.armour_name.split(';')
-                    #del ranklist[-1]
-                    #opponent.armour_name = ranklist[0]
-                    #print("STATED AC CHECK AFTER!",opponent.armour_name)
-                    #print("ranklist0",ranklist[0])
-                    #if len(ranklist) > 1:  #if 3, good question
-                    ##need to make an Energy AC as well
-                       #pass
-				
-                #damage = self.attacks[i].attack(opponent.armor.ac, advantage=self.check_advantage(opponent))
-                #damage, effect_type, effect = self.attacks[i].attackFASERIP(opponent.armor.ac, advantage=self.check_advantage(opponent), attack_rank=self.frank, damage_rank=self.srank, endurance_rank=opponent.erank, #other_attacks=self.alt_attack)  #put attack rank in
-                #damage, effect_type, effect = self.attacks[i].attackFASERIP(opponent.armor.ac, advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=self.srank, endurance_rank=opponent.erank,
-				#other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
-                #damage, effect_type, effect = self.attacks[i].attackFASERIP(dict_faserip[opponent.armour_name], advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=self.srank, endurance_rank=opponent.erank,other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
-                #damage, effect_type, effect = self.attacks[i].attackFASERIP(dict_faserip[opponent.stated_ac], advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=self.srank, #endurance_rank=opponent.erank,other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
-                #damage, effect_type, effect = self.attacks[i].attackFASERIP(dict_faserip[opponent.body_armour["Physical"]], advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=self.srank, #endurance_rank=opponent.erank,other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
 				
                 #damage, effect_type, effect = self.attacks[i].attackFASERIP(dict_faserip[opponent.body_armour["Physical"]], advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=damage_rank, endurance_rank=opponent.erank,other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
                 if force_field_rank == "Sh0":
