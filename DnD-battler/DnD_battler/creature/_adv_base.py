@@ -44,8 +44,9 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
         for key in ('xp', 'hp'):
             if key in settings:
                 self[key] = settings[key]
+        print("FASERIP assignations")						
         for key in ('powers_adj_rank','equipment_adj_rank','talents','talents_adj','attack','defense','body_armour'):
-            print("FASERIP assignations")		
+            
             print(key)
             if key in settings:
                 #take the dictionary format from character generator/others and make it work with jason

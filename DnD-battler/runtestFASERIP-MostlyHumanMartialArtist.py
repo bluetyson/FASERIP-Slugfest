@@ -10,10 +10,11 @@ MHMA = pd.read_csv(r'J:\CLONE\WORK2\FASERIP-Slugfest\Mostly-Human-Martial-Arts-A
 print(MHMA)
 for index, row in MHMA.iterrows():
 	#if 'Shang' in 
+	print(index, row)
 	arenaKunLun.append(Creature.load(row["Name"]))
 
 
 #print(arenaKunLun.set_deathmatch())
-print(arenaKunLun.go_to_war(10000))
+print(arenaKunLun.go_to_war(10))
 #print(level1.hp)
 
