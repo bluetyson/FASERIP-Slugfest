@@ -259,7 +259,7 @@ Data and other attributes defined here:
 
 ability_names = ['F', 'A', 'S', 'E', 'R', 'I', 'P']
 
-beastiary = {'aboleth': {'AB_Cha': '4', 'AB_Con': '0', 'AB_Dex': '0', ...  ##update to FASERIP version
+beastiary = {'name': 'Cyclops', 'identity': 'Scott Summers', 'alignment': 'Cyclops', 'stated_ac': 'Ex;', 'body_armour': "{'Physical': 'Ex', 'Energy': 'Ex'}", 'resistances': "{'Havok': ''}", etc.
     
 # class Dice(builtins.object)
 Methods defined here:
