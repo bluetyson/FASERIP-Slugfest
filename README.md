@@ -6,7 +6,7 @@ The base module folder is there.
 - pip install -e . to tinker with code.
 
 # Binder link
-- https://gesis.mybinder.org/binder/v2/gh/bluetyson/FASERIP-Slugfest/v0.1.0-alpha
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/bluetyson/FASERIP-Slugfest/v0.1.0-alpha)
 - at the moment you will need for the Character Generator Notebook:-
 - !pip install pandas
 - !pip install tqdm
