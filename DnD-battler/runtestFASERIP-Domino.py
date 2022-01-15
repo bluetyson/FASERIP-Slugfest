@@ -7,7 +7,7 @@ arenaDangerRoom = Encounter(Creature.load("Longshot No Luck"), Creature.load("Lo
 
 
 #print(arenaDangerRoom.go_to_war(1))
-print(arenaDangerRoom.go_to_war(10))
+print(arenaDangerRoom.go_to_war(1))
 #print(arenaDangerRoom.go_to_war(100))
 #print(arenaDangerRoom.go_to_war(500))
 #print(arenaDangerRoom.go_to_war(1000))

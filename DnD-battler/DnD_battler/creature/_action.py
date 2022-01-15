@@ -172,7 +172,7 @@ class CreatureAction(CreatureAdvBase):
         if 'Probability Manipulation' in self.powers_adj_rank:
             probability_control = "good"		        
         pc = probability_control
-        print("Probability Control", pc)
+        #print("Probability Control", pc)
 		
         extra_attacks = 0
         slugfest = 1		
