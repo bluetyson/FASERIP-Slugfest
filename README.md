@@ -27,14 +27,17 @@ Work in progress on an Ultimate Powers Book version -
   - Equipment.csv
 - Probably will do some standardising on Advanced powers, more notes to come here.
 
-## Powers Attempted
+## Powers Attempted or sort of looked at
 - Generally speaking, must be changed to be spelled like this:
 - Body Armour
 - Claws - generic Edged mapping
-- Energy Absorption
+- Energy Absorption [not kinetic]
 - Energy Blast
+- Extra Attacks
+- Extra Body Parts [see above]
 - Force Blast
 - Force Field
+- Hyper-Speed [defensive bonus from moving]
 - Phasing
 - Power Absorption - just as a takedown
 - Probability Manipulation [just the good side]
