@@ -10,7 +10,8 @@ class CreatureAction(CreatureAdvBase):
         self.dodge = 0
         #self.stun = 0 #makes them stun proof
         #self.slam = 0 #makes them slam proof
-        # there should be a few more.
+        #self.kill = 0 #makes them kill proof
+        # there should be a few more. e.g. Evasion, Blocking, Grabbing, Catching
         # conditions.
 
     def isalive(self):
@@ -18,7 +19,7 @@ class CreatureAction(CreatureAdvBase):
             return True
 
     def isaliveFASERIP(self):
-        if self.hp > 0 and not self.kill == 1:
+        if self.hp > 0 and not self.kill == 1:  #or other things like that that last a long time
             return True
 
     def isconscious(self):
@@ -42,7 +43,23 @@ class CreatureAction(CreatureAdvBase):
                     print(self.name + ' has lost their concentration')
 
     def take_damageFASERIP(self, points, effect_type, effect, alt_attack, verbose=0):
-        #check for energy absorption #need to check attack type too for this
+        #check for energy absorption #need to check attack type too for this AB = Absorption abbreviation
+        #template for dealing with strange defenses - a kinetic energy defense - e.g. Sebastian Shaw would work similarly
+        #checks for overload, too
+        """
+        Parameters
+        __________
+        points: int
+            damage possibly taken
+        effect_type: str
+            the effect type of the attack, to tell if POWER ABSORPTION or STUN etc.
+        effect:
+            consequence of the effect, stun rounds, slam distance, etc
+            POWER ABSORPTION currently counting as Kill as have just been trialling one on ones with Rogue so far
+            TODO: Alter Ego characters - absorbed powers and abilities could be checked from making a clone of opponent
+        alt_attack: Dict
+            Basic attack types for simplifying combat simulation branching
+        """
         if alt_attack['energy'] == 1 or alt_attack['force'] == 1:
             if ';' in self.defense['Energy']['AB']:
                 absorption_list = self.defense['Energy']['AB'].split(';')
@@ -82,7 +99,7 @@ class CreatureAction(CreatureAdvBase):
             if effect_type == "POWER ABSORPTION":
                 self.kill = 1
         if effect_type == "KILL":
-            if effect == "En Loss" or effect == "E S":
+            if effect == "En Loss" or effect == "E S":  #Abbreviation for Edged/Slashing damage
                 print(self.name, " Killed!")
                 self.kill = 1
 		
@@ -100,7 +117,8 @@ class CreatureAction(CreatureAdvBase):
         if self.concentrating:
             self.conc_fx()  # TODO this looks fishy
         self.healing_spells = self.starting_healing_spells
-        self.stun = 0
+        #back to new battle conditions for FASERIP
+        self.stun = 0 
         self.slam = 0
         self.kill = 0
         if hard:
