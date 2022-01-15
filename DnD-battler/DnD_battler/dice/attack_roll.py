@@ -83,14 +83,14 @@ class AttackRoll(SkillRoll):
         :param munchkin: proficiency is not added to damage RAW, however munchkins always do....
         :return:
         """
-        #attack_roll = random.randint(1,100)
+        
         attack_roll = roll_faserip(pc = pc)
         effect_type = None
         effect = None
         #print("ATTACK ROLL:", attack_roll, "BA:", enemy_ac)
-        #need slam - endurance check - need opponent endurance for save and opponent armour #could get slammed too far but more complicated using movement and map
+        #need slam - endurance check - need opponent endurance for save and opponent armour 
+        #could get slammed too far but more complicated using movement and map
         #need stun - endurance check - need opponent endurance for save and opponent armour		
-        #need start with edged just relying on strength as claws or bite for test
         #max rank or max prob attack somehow from list 
         
 		##have to set these or update how now done from powers
@@ -111,6 +111,8 @@ class AttackRoll(SkillRoll):
         else:
             power_flag = 0
 		
+        #check for colour result and apply various results and powers as necessary
+
         if attack_roll >= universal_table[attack_rank]['G']:  #basic green roll - other possibilities below
             damage_roll = dict_faserip[damage_rank]
             damage_armour = damage_roll - enemy_ac
@@ -122,12 +124,11 @@ class AttackRoll(SkillRoll):
                 total_rounds = 0
                 for r in range(6):
                     total_rounds = total_rounds + random.randint(1,10)
-                effect_type = "POWER ABSORPTION"
+                effect_type = "POWER ABSORPTION"  TODO: Alter Ego clone for multi character combats to allow upgrades
                 effect = total_rounds
                 print("Powers_Absorbed! for ", total_rounds)
                 damage_roll = 1 # to get to take damage, neglibible amount
             else:
-                #if dict_faserip[damage_rank] >= dict_faserip[endurance_rank] and damage_armour >= 0:
                 if (dict_faserip[damage_rank] >= dict_faserip[endurance_rank] or talents['martial_arts']['A'] == 1 or kill_flag == 1) and (damage_armour >= 0 or talents['martial_arts']['D'] == 1):			
                    if attack_roll >= universal_table[attack_rank]['R']:
                       #stun or kill eligible
@@ -161,7 +162,7 @@ class AttackRoll(SkillRoll):
                                   #damage_roll = damage_roll + max(dict_faserip[endurance_rank]) + faserip_index[damage_rank]*2 #many areas simulation hack #assuming no body armour
                                   #damage_roll = damage_armour + max(dict_faserip[endurance_rank],30) + faserip_index[damage_rank]*2 #many areas simulation hack #assuming no body armour
                                   #damage_roll = damage_armour + max(0, max(dict_faserip[endurance_rank] + faserip_index[damage_rank]*2, 30) - enemy_ac) 				
-                                  damage_roll = damage_armour + max(0, 30 - enemy_ac) 				
+                                  damage_roll = damage_armour + max(0, 30 - enemy_ac)  #TODO adjust this based on materials passed in to Simulation, e.g. danger room 				
                               else:
                                   pass					  
                               effect = slam_result
