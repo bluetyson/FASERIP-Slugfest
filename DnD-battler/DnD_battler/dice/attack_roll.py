@@ -17,6 +17,8 @@ class AttackRoll(SkillRoll):
                add_ability_to_damage=True,
                munchkin=False) -> int:
         """
+        Unused in FASERIP-Slugfest
+
         Returns an integer of the damage incurred. 0 is fail.
         If there is a bonus on the damage, alter the ``.damage_dice.bonus`` first.
 
@@ -52,8 +54,28 @@ class AttackRoll(SkillRoll):
                opp_pc: str = None,
                munchkin=False) -> int:
         """
-        Returns an integer of the damage incurred. 0 is fail.
-        If there is a bonus on the damage, alter the ``.damage_dice.bonus`` first.
+        Parameters
+        __________
+        enemy_ac: int
+            Body Armour as a number
+        attack_rank: str
+            Rank of the particular attack
+        damage_rank: str
+            Damage Rank of the particular attack as relevant
+        endurance_rank: str
+            Target of attack's endurance rank
+        other_attacks: Dict
+            Alternate attacks to parse preferred type of attack and method from
+        talents: Dict
+            The Talents of the character attacking
+        pc: str
+            Attacker Probability Manipulation power descriptor, if applicable
+        opp_pc: str
+            Target Probability Manipulation power descriptor, if applicable
+
+        Returns
+        _______
+        An integer of the damage incurred. 0 is fail to damage.
 
         :param enemy_ac:
         :param advantage:
@@ -158,6 +180,10 @@ class AttackRoll(SkillRoll):
 
     @classmethod  # old input
     def parse_list_attack(cls, attack: list, ability_die):
+        """
+        Unused in FASERIP-Slugfest
+        """
+
         # old input. ['club', 2, 0, 4]
         return cls.parse_attack(name=attack[0],
                                 ability_die=ability_die,
@@ -171,6 +197,8 @@ class AttackRoll(SkillRoll):
                      damage_dice: Union[str, Dice],
                      attack_modifier: int):
         """
+        Unused in FASERIP-Slugfest
+
         Returns an Attack roll
 
         :param name: name of weapon...
