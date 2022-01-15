@@ -288,7 +288,7 @@ roll(self, verbose=0)  ##update to FASERIP
     :return: the value rolled (and alters the dice too if need be)
     
 # class Encounter(builtins.object)
-In a dimentionless model, move action and the main actions dash, disengage, hide, shove back/aside, tumble and overrun are meaningless.
+In a dimensionless model, move action and the main actions dash, disengage, hide, shove back/aside, tumble and overrun are meaningless.
 weapon attack —default
 two-weapon attack —
     Good when the opponent has low AC (<12) if 2nd attack is without proficiency.
