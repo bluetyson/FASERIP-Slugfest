@@ -20,6 +20,12 @@ Work in progress on an Ultimate Powers Book version -
 - Metamorphic robots can also generate an extra form, this is not currently implemented either.
 - Some types like animal, vegetable, mineral of course would pick something on creation - another could make a customised list for each, same with Extra Parts, others like that.
 
+## Notes on Character Parsing
+- To turn a list of 3000 characters with many varied made up things into something a little more standardised, a bit of mapping of some uniques
+  - PowersFix.csv and .txt
+  - TalentsFix.csv
+  - Equipment.csv
+
 ## Other versions
 - Java - You can find a java GUI FASERIP Character Generator at http://sourceforge.net/projects/javamcc/files/JMCC%28betav4.5%29.jar/download
 - Javascript - https://github.com/jinniaflyer450/Jins-FASERIP-Char-Creator
