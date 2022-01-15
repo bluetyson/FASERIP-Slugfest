@@ -110,7 +110,11 @@ def roll_faserip(pc :str = None) -> int:
 		roll = random.randint(1,100)
 	return roll
 		
-def column_shift(rank, shift):
+def column_shift(rank : str, shift : int) -> str:
+	"""
+	returns the adjusted Rank name based on an integer Column Shift (CS): positive/negative
+	example column_shift("In", -2) will return "Ex"
+	"""
 	rank_list = []
 	for key in faserip_index.keys():
 		rank_list.append(key)
