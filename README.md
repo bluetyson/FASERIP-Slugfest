@@ -26,6 +26,8 @@ Work in progress on an Ultimate Powers Book version -
   - TalentsFix.csv
   - Equipment.csv
 - Probably will do some standardising on Advanced powers, more notes to come here.
+- General theory is to make things more generic as you can, add to the Riely character parser
+- Tweak for new characters you want to use and add code as necessary/request such
 
 ## Powers Attempted or sort of looked at
 - Generally speaking, must be changed to be spelled like this:
@@ -45,10 +47,11 @@ Work in progress on an Ultimate Powers Book version -
 
 ## Equipment Attempted
 - Generally speaking, should transform these into the generic attack types, Shooting, Thrown Edged etc.
+- Blaster Pistols
 - Boomerangs
 - Bows
 - Guns
-- Blaster Pistols
+- Swords
 
 
 ## Other versions
