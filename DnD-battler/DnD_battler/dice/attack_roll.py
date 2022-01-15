@@ -124,7 +124,7 @@ class AttackRoll(SkillRoll):
                 total_rounds = 0
                 for r in range(6):
                     total_rounds = total_rounds + random.randint(1,10)
-                effect_type = "POWER ABSORPTION"  TODO: Alter Ego clone for multi character combats to allow upgrades
+                effect_type = "POWER ABSORPTION"  #TODO: Alter Ego clone for multi character combats to allow upgrades
                 effect = total_rounds
                 print("Powers_Absorbed! for ", total_rounds)
                 damage_roll = 1 # to get to take damage, neglibible amount
