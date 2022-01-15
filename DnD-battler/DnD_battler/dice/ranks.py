@@ -1,12 +1,19 @@
 import random
-"""
-Data structures and functions to implement FASERIP rules
 
-faserip : Dictionary of the FASERIP ability abbreviations.
-dict_faserip : Dictionary of the set rank numbers for FASERIP ranks.
-faserip_index: Dictionary of the order of ranks for FASERIP ranks, starting at zero.
-universal_table: Dictionary of the cutoffs for required rolls for Green, Yellow and Red roll results.  
-                 Built from dictionaries for each rank in a list.
+"""
+Data structures and functions to implement FASERIP rules based on Rank strings.
+
+faserip : dict
+    The FASERIP ability abbreviations.
+dict_faserip : dict
+    The set rank numbers for FASERIP ranks.
+faserip_index: dict
+    The order of ranks for FASERIP ranks, starting at zero.
+universal_table: dict
+    The cutoffs for required rolls for Green, Yellow and Red roll results.  
+    Built from dictionaries for each rank the universal_table_list.
+universal_table_list: list
+    List containing Rank dictionaries for building the universal table.
 
 """
 
