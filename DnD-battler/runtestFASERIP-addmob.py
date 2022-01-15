@@ -10,6 +10,7 @@ billbybob2 = Creature.load('Rat Pack')
 billbybob2 = Creature.load('Cat')
 
 level1 = Creature.load('Amazing Martial Artist')
+#level1 = Creature.load('Shang-Chi')
 
 billbybob2 = Creature.load('Lawyer')
 #billbybob3 = Creature.load('Lawyer')
