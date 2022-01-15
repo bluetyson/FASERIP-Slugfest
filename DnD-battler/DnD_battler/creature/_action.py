@@ -126,6 +126,9 @@ class CreatureAction(CreatureAdvBase):
                           'dead': 0, 'stun':0, 'slam':0, 'kill':0, 'stunned':0, 'slammed':0, 'killed':0}
 
     def check_advantage(self, opponent):
+        """
+        Unused in FASERIP-Slugfest
+        """
         adv = 0
         if opponent.dodge:
             adv += -1
@@ -137,6 +140,9 @@ class CreatureAction(CreatureAdvBase):
         return adv
 
     def net(self, opponent, verbose=0):
+        """
+        Unused in FASERIP-Slugfest - Grapple Attack eventually
+        """
         self.alt_attack['attack'].advantage = self.check_advantage(opponent)
         if self.alt_attack['attack'].roll(verbose) >= opponent.armor.ac:
             opponent.condition = 'netted'
@@ -147,6 +153,9 @@ class CreatureAction(CreatureAdvBase):
             self.tally['misses'] += 1
 
     def cast_barkskin(self):
+        """
+        Unused in FASERIP-Slugfest - Grapple Attack eventually
+        """
         if self.concentrating == 0:
             self.temp = self.armor.ac
             self.armor.ac = 16
@@ -156,9 +165,13 @@ class CreatureAction(CreatureAdvBase):
             self.concentrating = 0
 
     def cast_nothing(self, state='activate'):  # Something isn't quite right if this is invoked.
+        """
+        Unused in FASERIP-Slugfest - Grapple Attack eventually
+        """
         pass
 
     def heal(self, points, verbose=0):
+        #TODO: Could use for Healing Powers? Already put in regeneration
         self.hp += points
         if verbose:
             print(self.name + ' was healed by ' + str(points) + '. Now on ' + str(self.hp) + ' hp.')
@@ -181,26 +194,28 @@ class CreatureAction(CreatureAdvBase):
             weakling.heal(self.healing.roll(), verbose)
             self.healing_spells -= 1
 
-    #def multiattack(self, verbose=0, assess=0):
     def multiattack(self, verbose=1, assess=0):	
         print(self.name, "is multiattacking", self.stun) #attack all at once - 6 at once? if more than 2 worth it maybe
         probability_control = None
         opponent_probability_control = None
         print(self.powers_adj_rank)		
         if 'Probability Manipulation' in self.powers_adj_rank:
-            probability_control = "good"		        
-        pc = probability_control
-        #print("Probability Control", pc)
+            #opposite is bad - could theoretically have this - e.g. Longshot		                    
+            #opponent could be given it too
+            probability_control = "good" 
+        pc = probability_control #for length
 		
-        extra_attacks = 0
-        slugfest = 1		
-        damage_rank = self.srank
-		### need to check for attack type using
-		### eg Edged for Wolverine and Sabretooth
-		### if Agility attack - e.g. Hawkeye, make fighting rank agility rank or Mental - e.g. Jean Grey, make it Psyche
+        extra_attacks = 0   
+        #default attack type and damage type, with no column shifts originally		
+        slugfest = 1  
+        damage_rank = self.srank 
         fighting_rank = self.frank
         fighting_cs = 0
         level = self.level
+
+		### need to check for attack type using
+		### eg Edged for Wolverine and Sabretooth
+		### if Agility attack - e.g. Hawkeye, make fighting rank agility rank or Mental - e.g. Jean Grey, make it Psyche
         fighting_cs = fighting_cs + level  #ad hoc bonus for extra skills like Hawkeye, Cyclops Spatial Geometry
         ##check martial arts adjustment - put other weapon skill type adjustments etc in a place similarly
 		# only on slugfest
