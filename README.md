@@ -64,3 +64,9 @@ Work in progress on an Ultimate Powers Book version -
 - Java - You can find a java GUI FASERIP Character Generator at http://sourceforge.net/projects/javamcc/files/JMCC%28betav4.5%29.jar/download
 - Javascript - https://github.com/jinniaflyer450/Jins-FASERIP-Char-Creator
 
+## Resources
+- DnD Battler : https://github.com/matteoferla/DnD-battler
+- Ben Riely Marvel : https://www.angelfire.com/comics/benriely/index.html
+
+
+
