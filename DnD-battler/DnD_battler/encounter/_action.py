@@ -2,9 +2,7 @@ from ._base import EncounterBase
 from ..creature import Creature
 from ..victory import Victory
 from ..dice.ranks import dict_faserip, universal_table
-#print("BATTLE:", dict_faserip)
 import math, random, logging
-#from tqdm import tqdm
 
 N = "\n"
 
@@ -22,12 +20,23 @@ class EncounterAction(EncounterBase):
 
     def addmobFASERIP(self, n:int):
         """
-        Adds _n_ commoners to the battle
-        :param n: number of commoners
+        Adds _n_ mooks to the battle
+        :param n: number of standard human types (or animals etc), in this case plumber: TODO: Allow a name to be passed in
         :return: self
         """
         for x in range(int(n)):
             self.append(Creature.load("Plumber", alignment='mob'))
+        return self
+
+    def addmobFASERIP_vary(self, n:int, name:str):
+        """
+        Adds _n_ mooks to the battle
+        :param n: number of standard human types (or animals etc), in this case plumber: TODO: Allow a name to be passed in
+        :param name: name of type of character from bestiaryFASERIP.csv to add
+        :return: self
+        """
+        for x in range(int(n)):
+            self.append(Creature.load(name, alignment='mob'))
         return self
 
     def set_deathmatch(self):
