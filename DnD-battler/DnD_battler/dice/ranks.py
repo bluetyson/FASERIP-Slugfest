@@ -47,7 +47,7 @@ universal_table = {"Sh0":0,"Fb":2,"Pr":4,"Ty":6,"Gd":10,"Ex":20,"Rm":30,"In":40,
 for index, key in enumerate(universal_table.keys()):
 	universal_table[key] = universal_table_list[index]
 
-def universal_color(rank, roll):
+def universal_color(rank: str, roll: int) -> str:
 	"""
 	returns the color of a universal table roll, given a rank and a number from 1 to 100 (d100 representation)
 	"""
