@@ -44,6 +44,7 @@ Work in progress on an Ultimate Powers Book version -
 - Force Field
 - Hyper-Speed [defensive bonus from moving, can substitute for multiple attacks roll - or just flat out hand out at a level]
   - This is handled in various ways in character writeups
+  - Generally will lump Lightning Speed and these together in the interests of simplification
 - Phasing
 - Power Absorption - just as a takedown
 - Probability Manipulation [just the good side]
