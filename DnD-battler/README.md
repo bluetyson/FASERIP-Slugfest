@@ -25,6 +25,7 @@ These now have Powers, Equipment, Talents, Contacts columns with _Adj_ and _Rank
     - if a 0, that character will multiattack everyone available [which currently is everyone, not a max say six]
 
 # Tests
+- You can find them in the DnD-battler directory with runtestFASERIP* type names.
 - Note that Hawkeye has a Bow and a Wrist Crossbow so if in Powers or Equipment data someone has two of the same type, the second will overwrite the first - you can rearrange the character sheet to fix, or just edit in beastiaryFASERIP.
 
 # Documentation
