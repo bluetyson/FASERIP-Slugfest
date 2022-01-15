@@ -21,3 +21,4 @@ print(Creature.load('Cat').generate_character_sheetFASERIP())
 print(Creature.load('Cyclops').generate_character_sheetFASERIP())
 
 
+print(arenaRodent.go_to_war(1))

@@ -361,6 +361,7 @@ class CreatureAction(CreatureAdvBase):
             fighting_rank = column_shift(fighting_rank, fighting_cs)
             print("fighting cs rank 1", fighting_rank)
         
+        print("checking self.mook", type(self.mook))
         if int(self.mook) == 0 and len(possible_opponents) > 2:  #no extra attacks
             fighting_cs = -4
             print('Mook Rule can be Used')

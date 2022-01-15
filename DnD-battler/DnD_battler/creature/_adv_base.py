@@ -230,7 +230,10 @@ class CreatureAdvBase(CreatueInitAble, CreatureSafeProp, CreatureLoader, Creatur
             print(self.talents['martial_arts'])
 			
         if 'mook' in settings:  #mook rules if a 0 then character will attack everything at -4CS by default.  For testing heroes versus mobs, thugs etc.
-            self.mook = settings['mook']
+            if '1' in settings['mook']:		
+                self.mook = 1
+            else:
+                self.mook = 0
             #print("MOOKL", self.mook)
 
         self.set_ability_dice(**settings)
