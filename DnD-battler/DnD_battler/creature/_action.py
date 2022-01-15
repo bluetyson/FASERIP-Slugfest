@@ -220,17 +220,17 @@ class CreatureAction(CreatureAdvBase):
         ##check martial arts adjustment - put other weapon skill type adjustments etc in a place similarly
 		# only on slugfest
         #print("alt attacks", self.alt_attack)
-        if self.alt_attack['edged'] == 1 or self.alt_attack['blunt'] == 1 or self.alt_attack['shooting'] == 1 or self.alt_attack['energy'] == 1 or self.alt_attack['force'] == 1:
+        #if self.alt_attack['edged'] == 1 or self.alt_attack['blunt'] == 1 or self.alt_attack['shooting'] == 1 or self.alt_attack['energy'] == 1 or self.alt_attack['force'] == 1:
+        if self.alt_attack['edged'] == 1 or self.alt_attack['blunt'] == 1 :
             slugfest = 0
-            #fighting_rank = self.arank
         if self.alt_attack['throwing-blunt'] == 1 or self.alt_attack['throwing-edged'] == 1 or self.alt_attack['shooting'] == 1 or self.alt_attack['energy'] == 1 or self.alt_attack['force'] == 1:
             fighting_rank = self.arank
-            print ("Agility Based Combat: Agility Rank", self.arank)
             slugfest = 0
+            print ("Agility Based Combat: use Agility Rank", self.arank)
         if self.alt_attack['mental'] == 1 or self.alt_attack['magic'] == 1:
             fighting_rank = self.prank
-            print ("Mind Based Combat: Psyche Rank", self.prank)
             slugfest = 0
+            print ("Mind Based Combat: use Psyche Rank", self.prank)
 
         ##Opponent checks section
         try:
