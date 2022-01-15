@@ -72,9 +72,10 @@ class EncounterAction(EncounterBase):
         return self
 
     def roll_for_initiative(self, verbose=0):
+        #initiative modifier from Intuition Rank
         self.combattants = sorted(self.combattants, key=lambda fighter: fighter.initiative.roll_initiative(fighter, fighter.initiative.modifier), reverse=True)  #need a d10 initiative roll        #for x in self.combattants:
         for x in self.combattants:
-            print(x.name, x.initiative.modifier)
+            print(x.name, "INIT MOD:", x.initiative.modifier)
 		
         self.log.debug(f"Turn order: {[x.name for x in self]}")
         print(f"Turn order: {[x.name for x in self]}")
@@ -142,11 +143,11 @@ class EncounterAction(EncounterBase):
                 self.tally['rounds'] += 1
                 for character in self:
                     character.ready()
-                    if character.isaliveFASERIP():
+                    if character.isaliveFASERIP(): #change from DnD version
                         if not character.isconscious():  #encounter character, creature not character
-                            character.tally['stunned'] += 1
+                            character.tally['stunned'] += 1 #eg character stunned etc.
                         self.active = character
-                        character.tally['rounds'] += 1
+                        character.tally['rounds'] += 1  #alive count TODO: map distribution in battles
                         character.act(self.masterlog)
                     else:
                         character.tally['dead'] += 1
