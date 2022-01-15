@@ -95,7 +95,7 @@ An ongoing work in progress, see the bestiaryFASERIP.csv an benriely.csv for the
     - It will currently check to see if a Killing type is possible - but doesn't do anything about ranged anything or movement.
 - martial_arts - add one letter to a string for each type, eg ABCDE, AE etc. Occasionally parser may find multiples, so could trim to 5 characters max.
     - other Talents can be handled similarly and put them in self.talents in the Creature class
-- mook - set to allow simulation of hero vs hoods
+- mook - set to allow simulation of hero vs hoods, needs to be 1 in characters to not have attack everything at -4 CS
 - H, K, Res, Pop should be self-explanatory from the character data - the first two are calculated in code anyway 
 - Climbing, Escaping [other standard type actions will likely get columns at some stage]
 
