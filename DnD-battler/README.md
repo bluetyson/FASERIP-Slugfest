@@ -80,16 +80,16 @@ An ongoing work in progress, see the bestiaryFASERIP.csv an benriely.csv for the
 - Talents, Talents_Adj, parsing them out to standardise
 - Contacts, see Talents
 - Weakness, not really attempted yet, but some will have
-- Powers_Form - bonus powers from the Form for random characters [which still have to update the sheet for]
-- Sp = speed rank in usual terrain, relative to humans.
+- Powers_Form - bonus powers from the Form for random characters from the Ultimate Powers Book.
+- Spd = speed rank in usual terrain, relative to humans.  Not used as yet.
 - Attack - standardising combat types simply to allow for simulation algorithms to work
 - Defense - as above, but most of these not implemented in simulation yet
-- Dam - for some esoteric Damage bonus if needed
+- Dam - for some esoteric Damage bonus if needed, not implemented yet. e.g. if someone has an attack not doing a set Rank if Damage - Great Sword, Axe perhaps.
 - Climbing
 - Escaping - probably not needed with Defense, likely will remove eventually when change parsing
 - T = Type of Damage: E = Edged, B= Blunt, S = Shooting, H = Advanced Technology, 2 = Blunt and Edged, W = S and 2
     - It will currently check to see if a Killing type is possible - but doesn't do anything about ranged anything or movement.
-- martial_arts - add one letter to a string for each type, eg ABCDE, AE etc.
+- martial_arts - add one letter to a string for each type, eg ABCDE, AE etc. Occasionally parser may find multiples, so could trim to 5 characters max.
     - other Talents can be handled similarly and put them in self.talents in the Creature class
 - mook - set to allow simulation of hero vs hoods
 - H, K, Res, Pop should be self-explanatory from the character data - the first two are calculated in code anyway 
