@@ -533,8 +533,8 @@ class CreatureAction(CreatureAdvBase):
                 print("DAMAGE", damage, "OPPONENTAC:", body_armour_rank)
 				
                 if damage > 0:
-						
-                    if int(self.mook) == 1 and len(possible_opponents) > 2:
+					#need to set characters to 1 in combats if don't want them to try and attack everyone left	
+                    if int(self.mook) == 0 and len(possible_opponents) > 2:
                         print("beating on Mooks")
                         #time.sleep(10)	
                         for mook in possible_opponents:
