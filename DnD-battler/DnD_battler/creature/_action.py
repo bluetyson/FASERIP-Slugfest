@@ -232,17 +232,17 @@ class CreatureAction(CreatureAdvBase):
             slugfest = 0
             print ("Mind Based Combat: use Psyche Rank", self.prank)
 
-        ##Opponent checks section
+        ##Opponent checks section - see if Armour makes sense for testing
         try:
             opponent = self.arena.find(self.arena.target, self)[0]
             possible_opponents = self.arena.find(self.arena.target, self)
             #print("POSS OPPONENTS", len(possible_opponents), possible_opponents)
-            print("checking opponent armour",opponent.body_armour["Physical"])
+            print("checking opponent armour: P, E",opponent.body_armour["Physical"],opponent.body_armour["Physical"])
         except IndexError:
             raise Victory()
         if assess:
             return 0  # the default
-        #CAN HURT CHECK
+        #Can't physically hurt phasing type characters - e.g. Kitty Pryde
         if 'Phasing' in opponent.powers_adj_rank:
             #need mental or mystical attack
             if self.alt_attack['mental'] == 0 and self.alt_attack['magic'] == 0:
@@ -250,12 +250,12 @@ class CreatureAction(CreatureAdvBase):
                 return
             else:
                 print(self.name, "can hurt phased ", opponent.name)	
-
+        #TODO Work out how to handle more and more powers - Library?
         if 'Probability Manipulation' in opponent.powers_adj_rank:
             opponent_probability_control = "good"		        
         opp_pc = opponent_probability_control
 				
-        #check for opponent defensive abilities - eventually all functions these should be want the flow first
+        #check for opponent defensive abilities - eventually all functions these should be want but the flow first for understanding
         initiative_condition = 0
         ability_test = 0
         if 'Initiative' in opponent.defense['Ability']:
@@ -265,6 +265,7 @@ class CreatureAction(CreatureAdvBase):
             print(opponent.defense['Ability'])			            
         for key in faserip.keys():
             #print(key)			            
+            #complex - a more powerful Nightcrawler - have to make intuition roll to even notice him! TODO: might hack to work for Invisible too?
             if key in opponent.defense['Ability']:
                 print("has a defensive ability", self.name, self.initiativeFASERIP, opponent.name, opponent.initiativeFASERIP)			                
                 if initiative_condition == 1 and self.initiativeFASERIP < opponent.initiativeFASERIP: #need to know the roll??
@@ -292,7 +293,7 @@ class CreatureAction(CreatureAdvBase):
                         return
                 else:				
                     pass
-        #want to find damage rank #more sophisticated version has resistances as well
+        #want to find damage rank #more sophisticated version has resistances as well for Physical and energy
         body_armour_rank = opponent.body_armour["Physical"]
         if self.alt_attack['energy'] == 1:
             body_armour_rank = opponent.body_armour["Energy"]		
@@ -305,6 +306,8 @@ class CreatureAction(CreatureAdvBase):
                 fighting_cs = fighting_cs + 2
                 print("Weapon Specialist Fighter:", self.name)
             elif 'Weapon Master' in self.talents or 'Sharp Weapons' in self.talents or 'Oriental Weapons' in self.talents or 'Thrown Weapons' in self.talents or 'Marksman' in self.talents or 'Guns' in self.talents or 'Bows' in self.talents:
+                fighting_cs = fighting_cs + 1
+            elif 'Thrown Objects' in self.talents: #stacks with Thrown Weapons
                 fighting_cs = fighting_cs + 1
             else:
                 pass #no weapon skills
