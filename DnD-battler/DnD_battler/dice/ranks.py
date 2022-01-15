@@ -48,6 +48,9 @@ for index, key in enumerate(universal_table.keys()):
 	universal_table[key] = universal_table_list[index]
 
 def universal_color(rank, roll):
+	"""
+	returns the color of a universal table roll, given a rank and a number from 1 to 100 (d100 representation)
+	"""
 	if roll >= universal_table[rank]['R']:
 		color = 'R'
 	elif roll >= universal_table[rank]['Y']:
