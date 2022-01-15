@@ -28,11 +28,24 @@ class SkillRoll:
         return self.base_roll(advantage=advantage) + self.bonuses
 		
     def roll_initiative(self, fighter, advantage:Optional[int]=None) -> int:
+        """
+        Parameters
+        __________
+        fighter: Creature
+            The Creature rolling initiative
+        advantage: int
+            Using for initiative modifier from FASERIP - TODO: could rename
+
+        Returns
+        _______
+        d10 initiative roll with appropriate modifiers
+        """
         initiative_roll = random.randint(1,10)
         print("INIT ROLL", initiative_roll, advantage)
+        # any character rolling a one scores a 1, no modifier
         if initiative_roll == 1:
             fighter.initiativeFASERIP = initiative_roll		
-            return initiative_roll  #on a 1, no modifiers
+            return initiative_roll 
         else:
             fighter.initiativeFASERIP = initiative_roll + advantage
             return initiative_roll + advantage
