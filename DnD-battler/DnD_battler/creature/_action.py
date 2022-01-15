@@ -568,6 +568,7 @@ class CreatureAction(CreatureAdvBase):
 
     # TODO
     def TBA_act(self, verbose=0):
+        #some sort of best action matrix etc.
         if not self.arena.find('alive enemy'):
             raise Victory()
         x = {'nothing': 'cast_nothing'}
@@ -579,7 +580,6 @@ class CreatureAction(CreatureAdvBase):
         if not self.arena.find('alive enemy'):
             raise Victory()
 			
-        #print("ALIVE opponents", len(self.arena.find('alive enemy')), self.arena.find('alive enemy'))
         # BONUS ACTION
         # heal  -healing word, a bonus action.
         if "Regeneration" in self.powers_adj_rank:
@@ -590,16 +590,17 @@ class CreatureAction(CreatureAdvBase):
             self.hp = min(self.stated_hp, self.hp + regen_points)
             print("Regenerating:", regen_points, "New Health", self.hp)
 
+        #note currently used but can put Healing Powers here
         if self.healing_spells > 0:
             weakling = self.assess_wounded(verbose)
             if weakling != 0:
                 self.cast_healing(weakling, verbose)
         # Main action!
         economy = len(self.arena.find('allies')) > len(self.arena.find('opponents')) > 0
-        #print("ECONOMY", economy)
-        #print("condition", self.condition)
+
         # Buff?
         print("stun condition is ", self.stun)
+        ## not used but for Grappled will be useful
         if self.condition == 'netted':
             # NOT-RAW: DC10 strength check or something equally easy for monsters
             if verbose:
@@ -623,12 +624,11 @@ class CreatureAction(CreatureAdvBase):
                 print(self.name + ' buffs up!')
             # greater action economy: waste opponent's turn.
         elif economy and self is self.arena.find('weakest allies')[0]:
+            #dodging not currently implemented or doing anything
             if verbose:
                 print(self.name + " is dodging")
             self.dodge = 1
-        #elif economy and self.alt_attack['name'] == 'net':  #work out if an entangle attack to put in that lot
         elif economy and self.alt_attack['grapple'] == 'net':  #work out if an entangle attack to put in that lot
-            #print(self.alt_attack)
             opponent = self.arena.find('fearsomest enemy alive', self)[0]
             if opponent.condition != 'netted':
                 self.net(opponent, verbose)
