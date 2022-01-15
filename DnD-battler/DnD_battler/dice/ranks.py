@@ -257,6 +257,16 @@ def kill_check(endurance_rank, pc = None):
 	return result
 
 def nearest_rank(rank_no):
+	"""
+	Parameters
+	__________
+	rank_no: int
+	    Rank index as per structure above
+		
+	Returns
+	_______
+	Nearest (next highest) Rank to the rank index given
+	"""
 	for key in dict_faserip.keys():
 		if dict_faserip[key] >= rank_no:
 			return key
