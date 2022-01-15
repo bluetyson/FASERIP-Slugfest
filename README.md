@@ -6,7 +6,7 @@ The base module folder is there.
 - pip install -e . to tinker with code.
 
 # Binder link
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/bluetyson/FASERIP-Slugfest/v0.1.0-alpha)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/bluetyson/FASERIP-Slugfest/HEAD?urlpath=https%3A%2F%2Fgithub.com%2Fbluetyson%2FFASERIP-Slugfest%2Fblob%2Fmain%2FFASERIP%2520Character%2520Generator.ipynb)
 - at the moment you will need for the Character Generator Notebook:-
 - !pip install pandas
 - !pip install tqdm
