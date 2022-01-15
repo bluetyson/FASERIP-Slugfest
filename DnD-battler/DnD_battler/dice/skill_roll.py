@@ -22,9 +22,15 @@ class SkillRoll:
         self.modifier = modifier
 
     def base_roll(self, advantage:Optional[int]=None) -> int:
+        """
+        Unused in FASERIP-Slugfest
+        """
         return self.ability_die.base_roll(advantage=advantage, success_on_crit=self.success_on_crit)
 
     def roll(self, advantage:Optional[int]=None) -> int:
+        """
+        Unused in FASERIP-Slugfest
+        """
         return self.base_roll(advantage=advantage) + self.bonuses
 		
     def roll_initiative(self, fighter, advantage:Optional[int]=None) -> int:
@@ -42,7 +48,7 @@ class SkillRoll:
         """
         initiative_roll = random.randint(1,10)
         print("INIT ROLL", initiative_roll, advantage)
-        # any character rolling a one scores a 1, no modifier
+        # any character rolling initiative scores a 1, no modifier
         if initiative_roll == 1:
             fighter.initiativeFASERIP = initiative_roll		
             return initiative_roll 
@@ -53,8 +59,14 @@ class SkillRoll:
 
     @property
     def bonuses(self):
+        """
+        Unused in FASERIP-Slugfest
+        """
         return self.ability_die.bonus + self.ability_die.proficiency.bonus + self.modifier
 
     def __str__(self):
+        """
+        Unused in FASERIP-Slugfest  TODO: change to get useful modifiers?
+        """
         return f'{self.ability_die}+{self.ability_die.proficiency.bonus}+{self.modifier}'
 
