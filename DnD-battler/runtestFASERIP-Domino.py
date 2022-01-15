@@ -7,8 +7,8 @@ arenaDangerRoom = Encounter(Creature.load("Longshot No Luck"), Creature.load("Lo
 
 
 #print(arenaDangerRoom.go_to_war(1))
-print(arenaDangerRoom.go_to_war(1))
-#print(arenaDangerRoom.go_to_war(100))
+#print(arenaDangerRoom.go_to_war(1))
+print(arenaDangerRoom.go_to_war(100))
 #print(arenaDangerRoom.go_to_war(500))
 #print(arenaDangerRoom.go_to_war(1000))
 #print(arenaDangerRoom.go_to_war(2000))
@@ -22,3 +22,15 @@ print(arenaDangerRoom.go_to_war(1))
 #print(arenaDangerRoomNA.go_to_war(10000))
 #print(arenaDangerRoomEarly.go_to_war(1000))
 #print(arenaDangerRoomEarly.go_to_war(10000))
+
+beastiary2 = Creature.load_beastiary(r'J:\CLONE\WORK2\FASERIP-Slugfest\DnD-battler\DnD_battler\beastiaryFASERIP.csv')
+
+
+#print(beastiary2)
+
+for key in beastiary2:
+	print (beastiary2[key])
+	break
+	
+print (beastiary2['Cyclops'])
+	
