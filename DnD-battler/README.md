@@ -38,7 +38,8 @@ It has three main classes:  Dice (and its derivatives), Character, Encounter.
 The muchkinishness has a deleterious side-effect when the method deathmatch of the Encounter class is invoked —this allocates each Creature object in the Encounter object in a different team.
 - e.g. have a 25 Martial Artist contest and 'enemy alive weakest' means that the characters will basically be eliminated in general reverse order of Health, so those with the highest will win all the time, even if just slightly more.   Use 'enemy alive random' for this setting, instead.
 - 
-**Actions.** Action choice is dictated by turn economy. A character of a team with the greater turn economy will dodge (if it knows itself a target) or throw a net (if it has one), and so forth while a creature on the opposed side will opt for a slugfest.  This needs to be updated and implemented for FASERIP, no grappling yet.
+**Actions.** Action choice is dictated by turn economy. A character of a team with the greater turn economy will dodge (if it knows itself a target) or throw a net (if it has one), and so forth while a creature on the opposed side will opt for a slugfest.  
+This needs to be updated and implemented for FASERIP, no grappling yet, only been doing one or one or many on one so far.
 
 ```
 >>> from DnD_battler import Creature, Encounter
@@ -50,8 +51,8 @@ The muchkinishness has a deleterious side-effect when the method deathmatch of t
 >>> arena = DnD.Encounter(level1, billybob)  #Encounter accepts both Creature and strings.
 >>> print(arena.go_to_war(10000)) #simulate 10,000 times
 >>> print(arena.battle()) # simulate one encounter and tell what happens.
->>> print(Creature.load('Cyclops').generate_character_sheet())  #md character sheet.  ### this won't be much use for FASERIP
->>> print(Encounter.load("Cyclops").addmob(12).go_to_war(10))  .Shang-Chi vs a dozen Plumbers.
+>>> print(Creature.load('Cyclops').generate_character_sheet())  #md character sheet.  ### basic FASERIP version done
+>>> print(Encounter.load("Cyclops").addmob(12).go_to_war(10))  Shang-Chi vs a dozen Plumbers.
 
 ```
 
