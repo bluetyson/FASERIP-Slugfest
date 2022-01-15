@@ -71,10 +71,6 @@ def universal_color(rank: str, roll: int) -> str:
 		color = 'W'
 	return color
 
-<<<<<<< HEAD
-def roll_faserip(pc = None):
-	print(pc)
-=======
 def roll_faserip(pc :str = None) -> int:
 	"""
 	Parameters
