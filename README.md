@@ -25,6 +25,28 @@ Work in progress on an Ultimate Powers Book version -
   - PowersFix.csv and .txt
   - TalentsFix.csv
   - Equipment.csv
+- Probably will do some standardising on Advanced powers, more notes to come here.
+
+## Powers Attempted
+- Generally speaking, must be changed to be spelled like this:
+- Body Armour
+- Claws - generic Edged mapping
+- Energy Absorption
+- Energy Blast
+- Force Blast
+- Force Field
+- Phasing
+- Power Absorption - just as a takedown
+- Probability Manipulation [just the good side]
+- Regeneration
+
+## Equipment Attempted
+- Generally speaking, should transform these into the generic attack types, Shooting, Thrown Edged etc.
+- Boomerangs
+- Bows
+- Guns
+- Blaster Pistols
+
 
 ## Other versions
 - Java - You can find a java GUI FASERIP Character Generator at http://sourceforge.net/projects/javamcc/files/JMCC%28betav4.5%29.jar/download
