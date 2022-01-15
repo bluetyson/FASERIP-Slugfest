@@ -209,7 +209,17 @@ def slam_check(endurance_rank, pc = None):
 	return result
 	
 def stun_check(endurance_rank, pc = None):
-	#endurance_roll = random.randint(1,100)
+	"""
+	Parameters
+	__________
+    endurance_rank: str
+	    Endurance Rank of the character possibly stunned.
+	pc : str
+	    Probability Manipulation rare case.
+	Returns
+	_______
+	Stun result description appropriate to the color.
+	"""
 	endurance_roll = roll_faserip(pc = pc)
 	color = universal_color(endurance_rank, endurance_roll)
 	if color == "W":
@@ -223,7 +233,17 @@ def stun_check(endurance_rank, pc = None):
 	return result
 	
 def kill_check(endurance_rank, pc = None):
-	#endurance_roll = random.randint(1,100)
+	"""
+	Parameters
+	__________
+    endurance_rank: str
+	    Endurance Rank of the character possibly killed.
+	pc : str
+	    Probability Manipulation rare case.
+	Returns
+	_______
+	Kill result description appropriate to the color.
+	"""
 	endurance_roll = roll_faserip(pc = pc)
 	color = universal_color(endurance_rank, endurance_roll)
 	if color == "W":
