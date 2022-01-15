@@ -4,7 +4,7 @@ import random
 Data structures and functions to implement FASERIP rules based on Rank strings.
 
 faserip : dict
-    The FASERIP ability abbreviations.
+    The FASERIP ability abbreviations used for iterating and skeletons.
 dict_faserip : dict
     The set rank numbers for FASERIP ranks.
 faserip_index: dict
@@ -14,7 +14,6 @@ universal_table: dict
     Built from dictionaries for each rank the universal_table_list.
 universal_table_list: list
     List containing Rank dictionaries for building the universal table.
-
 """
 
 faserip = {"F":'',"A":'',"S":'',"E":'',"R":'',"I":'',"P":'',}
