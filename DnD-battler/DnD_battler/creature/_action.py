@@ -487,20 +487,18 @@ class CreatureAction(CreatureAdvBase):
                 #quite a few evolutions of this
                 print("ATTACKS", "FIGHTING", fighting_rank, "DAMAGE RANK", damage_rank, "OPPEND", opponent.erank, "BA", dict_faserip[opponent.body_armour["Physical"]], "BA-Used", dict_faserip[body_armour_rank])
 
-				
-                #damage, effect_type, effect = self.attacks[i].attackFASERIP(dict_faserip[opponent.body_armour["Physical"]], advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=damage_rank, endurance_rank=opponent.erank,other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
-                if force_field_rank == "Sh0":
+				#damage, effect_type, effect = self.attacks[i].attackFASERIP(dict_faserip[opponent.body_armour["Physical"]], advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=damage_rank, endurance_rank=opponent.erank,other_attacks=self.alt_attack, talents=self.talents)  #put attack rank in
+                if force_field_rank == "Sh0": #dummy, e.g. everyone doesn't really have a forcefield, but they are 'commonish' in superhero games
                     damage, effect_type, effect = self.attacks[i].attackFASERIP(dict_faserip[body_armour_rank], advantage=self.check_advantage(opponent), attack_rank=fighting_rank, damage_rank=damage_rank, endurance_rank=opponent.erank,other_attacks=self.alt_attack, talents=self.talents, pc = pc, opp_pc = opp_pc)  #put attack rank in
                 else:
                     effect_type = None
                     effect = None
-					
+					#Need to check if forcefield can be phased through - or density control or other powers could add here
                     force_field_index = faserip_index[force_field_rank]
                     damage_index = faserip_index[damage_rank]
                     phase_check = 0
                     if 'Phasing' in self.powers_adj_rank:
                         phasing_rank = self.powers_adj_rank['Phasing'].split(';')[0]
-                        #phasing_roll = random.randint(1,100)
                         phasing_roll = roll_faserip(pc = pc)
                         feat_check = feat(phasing_rank, force_field_rank, phasing_roll)
                         if feat_check:
@@ -508,7 +506,8 @@ class CreatureAction(CreatureAdvBase):
                             phase_check = 1
                         else: 
                             print(self.name,  "failed to Phase through Force Field")
-							
+
+                    #assuming all Force Fields are projected and can collapse - if individual maybe handle as Armour Pierced Body Armour?		
                     if phase_check == 0:							
                         if damage_index > force_field_index:
                             damage = dict_faserip[damage_rank] - dict_faserip[force_field_rank]					
@@ -531,27 +530,19 @@ class CreatureAction(CreatureAdvBase):
                         print(self.name, "passes through Force Field", opponent.name, " takes ", damage)					
 
 				
-                #print("DAMAGE", damage, "OPPONENTAC:", opponent.body_armour["Physical"])
                 print("DAMAGE", damage, "OPPONENTAC:", body_armour_rank)
 				
-                #damage = 2
                 if damage > 0:
-                    #opponent.take_damage(damage, verbose)
-                    #if damage > 6:
-                        #print("damage - checking mook", self.mook, type(self.mook), len(possible_opponents), fighting_cs)
-                        #assert self.mook == 0
-                        #assert len(possible_opponents) > 2
-                        #time.sleep(6)	
 						
                     if int(self.mook) == 0 and len(possible_opponents) > 2:
-                        #print("beating on Mooks")
+                        print("beating on Mooks")
                         #time.sleep(10)	
                         for mook in possible_opponents:
                             mook.take_damageFASERIP(damage, effect_type, effect, self.alt_attack, verbose)
                             self.tally['damage'] += damage
                             self.tally['hits'] += 1
                     else:
-                        #print("not finding mook")
+                        print("not finding mook")
                         opponent.take_damageFASERIP(damage, effect_type, effect, self.alt_attack, verbose)
                         self.tally['damage'] += damage
                         self.tally['hits'] += 1
