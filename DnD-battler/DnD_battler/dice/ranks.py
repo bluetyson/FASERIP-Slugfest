@@ -22,6 +22,7 @@ dict_faserip={"Sh0":0,"Fb":2,"Pr":4,"Ty":6,"Gd":10,"Ex":20,"Rm":30,"In":40,"Am":
 
 faserip_index={"Sh0":0,"Fb":1,"Pr":2,"Ty":3,"Gd":4,"Ex":5,"Rm":6,"In":7,"Am":8,"Mn":9,"Un":10,"ShX":11,"ShY":12,"ShZ":13,"Cl1000":14,"Cl3000":15,"Cl5000":16,"Beyond":17}
 
+#building the universal table
 Sh0 = {"W":-1, "G":66, "Y":95, "R":100}
 Fb = {"W":-1, "G":61, "Y":91, "R":100}
 Pr = {"W":-1, "G":56, "Y":86, "R":100}
@@ -47,7 +48,19 @@ universal_table = {"Sh0":0,"Fb":2,"Pr":4,"Ty":6,"Gd":10,"Ex":20,"Rm":30,"In":40,
 for index, key in enumerate(universal_table.keys()):
 	universal_table[key] = universal_table_list[index]
 
-def universal_color(rank, roll):
+def universal_color(rank: str, roll: int) -> str:
+	"""
+	Parameters
+	__________
+	rank: str
+	    Acting Rank used for the result
+	roll:
+	    The universal table roll
+
+	Returns
+	_______	
+	The color of a universal table roll, given a rank and a number from 1 to 100 (d100 representation)
+	"""
 	if roll >= universal_table[rank]['R']:
 		color = 'R'
 	elif roll >= universal_table[rank]['Y']:
@@ -58,8 +71,24 @@ def universal_color(rank, roll):
 		color = 'W'
 	return color
 
+<<<<<<< HEAD
 def roll_faserip(pc = None):
 	print(pc)
+=======
+def roll_faserip(pc :str = None) -> int:
+	"""
+	Parameters
+	__________
+	pc: str
+	    Only necessary for probability manipulation power, good = in favour, bad = opposite
+     	if pc = good, probability manipulates the dice in the roller's favour
+	    if pc = bad, the reverse (swapping tens and ones die as per power)
+
+	Returns
+	_______
+	A universal table dice roll
+	"""
+
 	if pc == "good":
 		tens = random.randint(0,9)
 		ones = random.randint(0,9)
@@ -101,7 +130,23 @@ def roll_faserip(pc = None):
 		roll = random.randint(1,100)
 	return roll
 		
-def column_shift(rank, shift):
+def column_shift(rank : str, shift : int) -> str:
+	"""
+	Parameters
+	__________
+
+    rank: str
+	    The Ability rank to adjust
+	shift: int
+		The Column shifts to move the rank
+
+	Returns
+	_______
+	The adjusted Rank name based on an integer Column Shift (CS): positive/negative
+	
+	example:
+	    column_shift("In", -2) will return "Ex"
+	"""
 	rank_list = []
 	for key in faserip_index.keys():
 		rank_list.append(key)
@@ -115,6 +160,21 @@ def column_shift(rank, shift):
 	return rank_list[new_index] #give back adjusted rank
 
 def feat(rank, intensity, roll):
+	"""
+	Parameters
+	__________
+	rank: str
+	    Acting Rank
+	intensity: str
+		Intensity Rank
+	roll: int
+		universal table roll
+
+    Returns
+	_______
+	A boolean success or failure for an intensity FEAT roll
+	"""
+	
 	rank_index = dict_faserip[rank]
 	intensity_index = dict_faserip[intensity]
 	rank_color = universal_color(rank, roll)
@@ -129,7 +189,17 @@ def feat(rank, intensity, roll):
 		return True
 	
 def slam_check(endurance_rank, pc = None):
-	#endurance_roll = random.randint(1,100)
+	"""
+	Parameters
+	__________
+    endurance_rank: str
+	    Endurance Rank of the character possibly slammed.
+	pc : str
+	    Probability Manipulation rare case.
+	Returns
+	_______
+	Slam result description appropriate to the color.
+	"""
 	endurance_roll = roll_faserip(pc = pc)
 	color = universal_color(endurance_rank, endurance_roll)
 	if color == "W":
