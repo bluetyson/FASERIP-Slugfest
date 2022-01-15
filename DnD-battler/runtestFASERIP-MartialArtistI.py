@@ -6,7 +6,7 @@ import pandas as pd
 #arena215 = Encounter(level1, billbybob4, billbybob5, billbybob6, billbybob7, billbybob8, billbybob9, billbybob15, billbybob16, billbybob17, billbybob18, billbybob19, billbybob20, billbybob21, billbybob22, billbybob23)
 arenaKunLun = Encounter()
 
-MHMA = pd.read_csv(r'J:\CLONE\WORK2\FASERIP-Slugfest\AmazingMartialArtistI.csv')
+MHMA = pd.read_csv('../AmazingMartialArtistI.csv')
 #print(MHMA)
 count = 0
 for index, row in MHMA.iterrows():
