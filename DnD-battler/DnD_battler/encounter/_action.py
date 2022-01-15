@@ -72,20 +72,12 @@ class EncounterAction(EncounterBase):
         return self
 
     def roll_for_initiative(self, verbose=0):
-        #self.combattants = sorted(self.combattants, key=lambda fighter: fighter.initiative.roll(), reverse=True)  #need a d10 initiative roll below
-		#init_list = []
-		#for x in self.combatants:
-		    #init_roll = fighter.initiative.roll_initiative()
-			#if init_roll > 1:
-				
-        #self.combattants = sorted(self.combattants, key=lambda fighter: fighter.initiative.roll_initiative()+fighter.initiative.modifier, reverse=True)  #need a d10 initiative roll
         self.combattants = sorted(self.combattants, key=lambda fighter: fighter.initiative.roll_initiative(fighter, fighter.initiative.modifier), reverse=True)  #need a d10 initiative roll        #for x in self.combattants:
         for x in self.combattants:
             print(x.name, x.initiative.modifier)
 		
-        #print(self.combattants)
         self.log.debug(f"Turn order: {[x.name for x in self]}")
-        #print(f"Turn order: {[x.name for x in self]}")
+        print(f"Turn order: {[x.name for x in self]}")
 
     def predict(self):
         #print("doing predict")
