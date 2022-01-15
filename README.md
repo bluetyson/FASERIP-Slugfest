@@ -29,6 +29,9 @@ Work in progress on an Ultimate Powers Book version -
 - General theory is to make things more generic as you can, add to the Riely character parser
 - Tweak for new characters you want to use and add code as necessary/request such
 
+## Attacking
+- At the moment, assuming Bullseyes can be Stuns for faster combat
+
 ## Powers Attempted or sort of looked at
 - Generally speaking, must be changed to be spelled like this:
 - Body Armour
@@ -44,6 +47,7 @@ Work in progress on an Ultimate Powers Book version -
 - Power Absorption - just as a takedown
 - Probability Manipulation [just the good side]
 - Regeneration
+- Resistances [framework, but not implemented]
 
 ## Equipment Attempted
 - Generally speaking, should transform these into the generic attack types, Shooting, Thrown Edged etc.
