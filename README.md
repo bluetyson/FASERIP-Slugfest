@@ -70,6 +70,10 @@ Work in progress on an Ultimate Powers Book version -
 ## Resources
 - DnD Battler : https://github.com/matteoferla/DnD-battler
 - Ben Riely Marvel : https://www.angelfire.com/comics/benriely/index.html
+- Classic Marvel Forever
+- FASERIP
+- 4CS
+- FASERIPING
 
 
 
