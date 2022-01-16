@@ -1,7 +1,6 @@
 # FASERIP-Slugfest
 A fighting simulator for the FASERIP and other compatible RPGs..
 
-See https://github.com/bluetyson/FASERIP-Slugfest/blob/main/DnD-battler/README.md for more technical details.
 The base Simulation module folder is at that level. 
 
 # Installation
@@ -12,6 +11,10 @@ The base Simulation module folder is at that level.
 
 # Binder link
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/bluetyson/FASERIP-Slugfest/HEAD?urlpath=https%3A%2F%2Fgithub.com%2Fbluetyson%2FFASERIP-Slugfest%2Fblob%2Fmain%2FFASERIP%2520Character%2520Generator.ipynb)
+- You can run Simulations and the Character generator here in a Jupyter Hub - download results, etc.  Use the FASERIP Character Generator Notebook, not the test version.  First cell of characters runs 100 of the original style, the second runs in beastiaryFASERIP style for the simulator.
+
+# Simulation
+See https://github.com/bluetyson/FASERIP-Slugfest/blob/main/DnD-battler/README.md for more technical details.
 
 ## Discussion
 Some here:- http://cosmicheroes.space/blog/index.php/tag/faserip-slugfest/
@@ -66,7 +69,6 @@ Work in progress on an Ultimate Powers Book version -
 - Bows
 - Guns
 - Swords
-
 
 ## Other versions
 - Java - You can find a java GUI FASERIP Character Generator at http://sourceforge.net/projects/javamcc/files/JMCC%28betav4.5%29.jar/download
