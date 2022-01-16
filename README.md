@@ -1,8 +1,13 @@
 # FASERIP-Slugfest
 A fighting simulator for the FASERIP and other compatible RPGs..
 
-See https://github.com/bluetyson/FASERIP-Slugfest/blob/main/DnD-battler/README.md for more details.
-The base module folder is there. 
+See https://github.com/bluetyson/FASERIP-Slugfest/blob/main/DnD-battler/README.md for more technical details.
+The base Simulation module folder is at that level. 
+
+# Installation
+- git clone
+- change directory to DnD Battler
+- pip install .
 - pip install -e . to tinker with code.
 
 # Binder link
