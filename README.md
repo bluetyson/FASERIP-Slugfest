@@ -1,8 +1,6 @@
 # FASERIP-Slugfest
 A fighting simulator for the FASERIP and other compatible RPGs..
 
-The base Simulation module folder is at that level. 
-
 # Installation
 - git clone
 - change directory to DnD Battler
@@ -15,6 +13,7 @@ The base Simulation module folder is at that level.
 
 # Simulation
 See https://github.com/bluetyson/FASERIP-Slugfest/blob/main/DnD-battler/README.md for more technical details.
+For developers, the base DnD-battler Simulation module folder is at that level. 
 
 ## Discussion
 Some here:- http://cosmicheroes.space/blog/index.php/tag/faserip-slugfest/
@@ -41,7 +40,7 @@ Work in progress on an Ultimate Powers Book version -
 - Tweak for new characters you want to use and add code as necessary/request such
 
 ## Attacking
-- At the moment, assuming Bullseyes can be Stuns for faster combat
+- At the moment, assuming Bullseyes are Stuns for faster combat
 
 ## Powers Attempted or sort of looked at
 - Generally speaking, must be changed to be spelled like this:
