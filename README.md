@@ -77,9 +77,9 @@ Work in progress on an Ultimate Powers Book version -
 - DnD Battler : https://github.com/matteoferla/DnD-battler
 - Ben Riely Marvel : https://www.angelfire.com/comics/benriely/index.html
 - Classic Marvel Forever
-- FASERIP
-- 4CS
-- FASERIPING
+- FASERIP : https://gurbintrollgames.wordpress.com/faserip/
+- 4CS - https://www.drivethrurpg.com/product/50837/Four-Color-System-Core-Rules
+- FASERIPing - http://cosmicheroes.space/blog/index.php/tag/faserip/
 
 
 
