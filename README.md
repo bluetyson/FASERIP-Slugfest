@@ -3,9 +3,14 @@ A fighting simulator for the FASERIP and other compatible RPGs..
 
 # Installation
 - git clone
-- change directory to DnD Battler
+- change directory to DnD-Battler
 - pip install .
 - pip install -e . to tinker with code.
+
+# Tests / Examples
+- change to the DnD-Battler directory
+- python runtestFASERIP.py
+  - see code as examples
 
 # Binder link
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/bluetyson/FASERIP-Slugfest/HEAD?urlpath=https%3A%2F%2Fgithub.com%2Fbluetyson%2FFASERIP-Slugfest%2Fblob%2Fmain%2FFASERIP%2520Character%2520Generator.ipynb)
