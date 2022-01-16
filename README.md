@@ -10,7 +10,15 @@ A fighting simulator for the FASERIP and other compatible RPGs..
 # Tests / Examples
 - change to the DnD-Battler directory
 - python runtestFASERIP.py
-  - see code as examples
+  - the below loads two characters that are in beastiaryFASERIP.csv and runs 100 battles
+```python
+from DnD_battler import Creature, Encounter
+import pandas as pd
+
+arenaDangerRoom = Encounter(Creature.load("Cyclops"), Creature.load("Corsair"))
+
+print(arenaDangerRoom.go_to_war(100))
+```
 
 # Binder link
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/bluetyson/FASERIP-Slugfest/HEAD?urlpath=https%3A%2F%2Fgithub.com%2Fbluetyson%2FFASERIP-Slugfest%2Fblob%2Fmain%2FFASERIP%2520Character%2520Generator.ipynb)
